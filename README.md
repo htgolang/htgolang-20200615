@@ -1,23 +1,24 @@
-# htgolang-201906
+# htgolang-201906 #
 手撕Golang 201906期
 
-## 不要删除别人的代码！
+## 不要删除别人的代码!!! ##
 
-## 目录结构
-
-* homework/20190615/ 第一次作业提交的目录
+## 目录结构 ##
+ 
++ homework/20190615/ 第一次作业提交的目录
     - kk kk的目录
         + table.go 作业代码文件
 
 
-### 1.桌面软件添加代码（推荐初学者）
+## Git使用方法 ##
+
+### 视频 ###
+
++ git使用 [百度下载](https://pan.baidu.com/s/13aXQVZ0VkHkUZxqRiqXm1Q "08.git使用") 提取码：re96
++ git windows使用 [百度下载](https://pan.baidu.com/s/1ezf4-fox_glUy3WmeUdigQ "09.git windows使用") 提取码：tct0
 
 
-[详细说明](https://github.com/shengxinjing/my_blog/issues/4)
-
-
-
-### 2.命令行添加代码
+### 命令行添加代码 ###
 
 ```
 第一次使用
@@ -61,5 +62,5 @@ vim ~/.ssh/id_rsa.pub
 
 ```
 
-账号没有加到reboot群组里的，请随时联系我！
+账号没有加到群组里的，请随时联系我！
 
