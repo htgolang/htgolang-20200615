@@ -21,13 +21,15 @@ func randNumVerson1(num int) int {
 	return rand.Intn(num)
 }
 
-func main() {
+func gameStartVerson1() {
 	// 生成随机数
 	random_number := randNumVerson1(100)
 	// fmt.Println("random_number: ", random_number)
 
 	// 只能猜五次
 	max := 5
+
+	// 猜的次数
 	count := 1
 
 	fmt.Println("猜数字游戏开始.")
@@ -39,20 +41,30 @@ func main() {
 
 		// 判断用户输入是否等于随机数
 		if num > random_number {
+			// 判断是否已经结束, 已经结束直接结束游戏.
+			if max == count {
+				fmt.Println("您的次数已经用完,你太弱了,游戏结束。")
+				goto END
+			}
 			fmt.Printf("您猜大了. 您还有%d次机会.\n", max-count)
+
 		} else if num < random_number {
+			// 判断是否已经结束, 已经结束直接结束游戏.
+			if max == count {
+				fmt.Println("您的次数已经用完,你太弱了,游戏结束。")
+				goto END
+			}
 			fmt.Printf("您猜小了. 您还有%d次机会.\n", max-count)
 		} else {
 			fmt.Println("恭喜您, 猜对了. 你太棒了.")
 			return
 		}
 
-		if count == max {
-			fmt.Println("您的次数已经用完,你太弱了,游戏结束。")
-			return
-		}
-
 		count += 1
 	}
+END:
+}
 
+func main() {
+	gameStartVerson1()
 }

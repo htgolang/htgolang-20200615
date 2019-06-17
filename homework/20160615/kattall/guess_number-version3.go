@@ -21,7 +21,7 @@ func randNumVerson3(num int) int {
 	return rand.Intn(num)
 }
 
-func main() {
+func gameStartVerson3() {
 	// 循环让用户玩游戏
 	for {
 		// 生成随机数
@@ -64,4 +64,8 @@ func main() {
 			count += 1
 		}
 	}
+}
+
+func main() {
+	gameStartVerson3()
 }
