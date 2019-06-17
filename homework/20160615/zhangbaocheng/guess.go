@@ -18,7 +18,7 @@ START:
 		fmt.Scan(&input_num)
 		if input_num  == num  {
 			fmt.Println("恭喜你，你猜对了！你是我肚子里的蛔虫吗？")
-			goto START
+			goto END
 		}else if input_num > num {
 			if j==1{
 				fmt.Println("你太笨了，这都没猜到, 游戏重新开始 ！")
@@ -39,5 +39,5 @@ START:
 		}
 	}
 
-
+END:
 }
