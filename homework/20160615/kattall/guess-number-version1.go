@@ -21,13 +21,10 @@ func randNumVerson1(num int) int {
 	return rand.Intn(num)
 }
 
-func gameStartVerson1() {
+func gameStartVerson1(max int) {
 	// 生成随机数
 	random_number := randNumVerson1(100)
 	// fmt.Println("random_number: ", random_number)
-
-	// 只能猜五次
-	max := 5
 
 	// 猜的次数
 	count := 1
@@ -59,12 +56,12 @@ func gameStartVerson1() {
 			fmt.Println("恭喜您, 猜对了. 你太棒了.")
 			return
 		}
-
 		count += 1
 	}
 END:
 }
 
 func main() {
-	gameStartVerson1()
+	// 传入参数, 最多失败的次数。
+	gameStartVerson1(5)
 }
