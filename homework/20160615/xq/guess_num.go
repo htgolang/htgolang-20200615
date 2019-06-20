@@ -9,7 +9,7 @@ import (
 func createRandNum() int {
 	rand.Seed(time.Now().Unix())
 	rnd := rand.Intn(100)
-
+	//fmt.Printf("rand is %v\n", rnd)
 	return rnd
 }
 
