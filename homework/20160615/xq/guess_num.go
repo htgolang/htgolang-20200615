@@ -22,7 +22,7 @@ func main(){
 		fmt.Scan(&input_num)
 
 		if input_num >100 || input_num < 0 {
-			fmt.Println("请输入0-100内的整数。")
+			fmt.Printf("请输入0-100内的整数。")
 			continue
 		}
 
