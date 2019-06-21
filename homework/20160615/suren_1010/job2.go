@@ -16,7 +16,7 @@ func main() {
 		fmt.Printf("猜数游戏即将开始(共有5次机会), 请确认是否继续<yes/no>")
 		fmt.Scan(&gameSwitch)
 
-        //控制玩家只能输入yes或no
+		//控制玩家只能输入yes或no
 		switch gameSwitch {
 		case "yes":
 			break
@@ -27,7 +27,7 @@ func main() {
 			continue
 		}
 
-        //如果是no, 结束游戏
+		//如果是no, 结束游戏
 		if gameSwitch == "no" {
 			break
 		}
@@ -58,7 +58,7 @@ func main() {
 			}
 		}
 
-        //控制是否重新开始游戏
+		//控制是否重新开始游戏
 		if gameRes == false {
 			fmt.Println("菜鸡, 让我们重新开始游戏吧.")
 		} else {
@@ -66,3 +66,7 @@ func main() {
 		}
 	}
 }
+
+/*
+	评分: 8
+*/

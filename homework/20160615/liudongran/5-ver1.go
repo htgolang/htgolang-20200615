@@ -8,7 +8,7 @@ import (
 func main() {
 	a := rand.Intn(100)
 	//fmt.Printf(a)
-	for c := 0; c <=5; c++ {
+	for c := 0; c <= 5; c++ {
 		fmt.Printf("请输入1-100之间的数 \n")
 		var num int
 		fmt.Scan(&num)
@@ -20,8 +20,13 @@ func main() {
 			fmt.Printf("你猜对了 \n")
 			break
 		}
-	if c == 5{
+		if c == 5 {
 			fmt.Print("你好笨啊！\n")
 		}
 	}
 }
+
+/*
+ 评分: 7
+ 尝试: num只定义一次
+*/

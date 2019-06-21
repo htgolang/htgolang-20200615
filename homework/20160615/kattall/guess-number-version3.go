@@ -77,3 +77,8 @@ func main() {
 	// 传入参数, 最多失败的次数。
 	gameStartVerson3(5)
 }
+
+/*
+	评分: 6
+	优化: 考虑在if else中相同逻辑是如何合并
+*/

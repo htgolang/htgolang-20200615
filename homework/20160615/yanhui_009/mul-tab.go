@@ -24,3 +24,8 @@ func main() {
 		fmt.Println("\n")
 	}
 }
+
+/*
+ 评分: 7
+ 尝试: 使用fmt.Println(""), fmt.Println(),fmt.Println("\n")区别
+*/

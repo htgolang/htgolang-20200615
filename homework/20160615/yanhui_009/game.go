@@ -52,3 +52,9 @@ func main() {
 	}
 
 }
+
+/*
+ 评分: 6
+ 思考： continue用途
+        if else中相同的逻辑如何合并
+*/

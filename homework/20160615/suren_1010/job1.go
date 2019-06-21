@@ -24,3 +24,8 @@ func main() {
 		fmt.Println()
 	}
 }
+
+/*
+ 评分: 6
+ 尝试: 考虑使用Printf设置占位宽度来进行对齐
+*/
