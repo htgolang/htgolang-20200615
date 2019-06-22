@@ -15,9 +15,10 @@ func createRandNum() int {
 
 func main() {
 	var input_num, rnd int
+    const max_num = 5
 	rnd = createRandNum()
 
-	for i := 1; i <= 5; i++ {
+	for i := 1; i <= max_num; i++ {
 		fmt.Printf("请输入一个0-100的整数： ")
 		fmt.Scan(&input_num)
 
@@ -27,18 +28,18 @@ func main() {
 		}
 
 		if input_num > rnd {
-			fmt.Printf("太大了，还有 %d 次机会。", 5-i)
+			fmt.Printf("太大了，还有 %d 次机会。\n", max_num-i)
 		} else if input_num < rnd {
-			fmt.Printf("太小了，还有 %d 次机会。", 5-i)
+			fmt.Printf("太小了，还有 %d 次机会。\n", max_num-i)
 		} else if input_num == rnd {
-			fmt.Printf("恭喜你猜对了！！！")
+			fmt.Printf("恭喜你猜对了！！！\n")
 			break
 
 		}
 
-		if i == 5 {
+		if i == max_num {
 			fmt.Printf("数字是： %d\n", rnd)
-			fmt.Printf("真笨！！！")
+			fmt.Printf("真笨！！！\n")
 		}
 
 	}
