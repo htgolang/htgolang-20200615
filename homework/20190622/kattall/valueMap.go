@@ -3,9 +3,6 @@ package main
 import "fmt"
 
 func gainValue(kmap map[string]string) (valueSlice []string) {
-	// 定义一个 切片 默认为空 作为返回值
-	valueSlice = []string{}
-
 	// 循环map, 并且把value加入到切片中
 	for _, v := range kmap {
 		valueSlice = append(valueSlice, v)

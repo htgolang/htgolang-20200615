@@ -3,9 +3,6 @@ package main
 import "fmt"
 
 func gainKey(kmap map[string]string) (keySlice []string) {
-	// 定义一个 切片 默认为空 作为返回值
-	keySlice = []string{}
-
 	// 循环map, 并且把key加入到切片中
 	for k, _ := range kmap {
 		keySlice = append(keySlice, k)
