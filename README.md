@@ -22,7 +22,7 @@
 
 ```
 第一次使用
-git clone https://github.com/51reboot/actual_06_homework_mage.git
+git clone https://github.com/htgolang/htgolang-201906.git
 
 更新本地代码
 git pull
