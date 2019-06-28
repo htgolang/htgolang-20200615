@@ -19,3 +19,7 @@ func main() {
 	fmt.Printf("user的value slice: %v\n", value_slice)
 
 }
+
+/*
+ 评分: 8
+*/

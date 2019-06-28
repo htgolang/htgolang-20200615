@@ -10,3 +10,7 @@ func main() {
 	}
 	fmt.Println(mapslice)
 }
+
+/*
+ 评分: 7
+*/

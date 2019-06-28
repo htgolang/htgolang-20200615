@@ -16,3 +16,7 @@ func main() {
 	}
 	fmt.Println(numslice[len(numslice)-1])
 }
+
+/*
+ 评分: 8
+*/

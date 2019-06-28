@@ -27,8 +27,8 @@ func main() {
 
 	//2 找int切片中第二个最大元素(不准用排序)
 	nums = []int{100, 3, 30, 21, 9, 10, 20}
-	j = nums[0] //赋予j初始值
-	x = nums[1] //赋予x初始值
+	j = nums[0]                      //赋予j初始值
+	x = nums[1]                      //赋予x初始值
 	for i := 2; i < len(nums); i++ { //跳过初始赋值索引进行比较
 		if nums[i] > x && nums[i] < j { //如果元素比x大且元素比j小
 			x = nums[i] //第二大
@@ -149,7 +149,7 @@ func main() {
 	//按照大小写字母顺序输出统计次数
 	nums_dream := map[int][]rune{} //定义空映射
 	nums_sort := []int{}           //定义切片对key值进行排序
-	for _, i := range dream { //遍历变量内容
+	for _, i := range dream {      //遍历变量内容
 		if (i >= 'A' && i <= 'Z') || (i >= 'a' && i <= 'z') {
 			//fmt.Println(nums_dream[1][0])
 			//fmt.Println(strings.Count(dream,string(i)),i)
@@ -195,8 +195,8 @@ func main() {
 	nums = []int{16, 5, 3, 56, 7} //5<16;n=0;j=5;n>=0 && 16>5;0:5,1:16;{5,16,3,56,7};[16 5 3 56 7][5 16 3 56 7][3 5 16 56 7][3 5 7 16 56]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < nums[i-1] {
-			n := i - 1   //记录前一个元素位置
-			j := nums[i] //记录当前值
+			n := i - 1                  //记录前一个元素位置
+			j := nums[i]                //记录当前值
 			for n >= 0 && nums[n] > j { //使用n作为条件，判断前一个元素值是否大于当前值，如是从当前位置进行交换(一直往前进行比较交换直到循环结束)
 				nums[n+1], nums[n] = nums[n], nums[n+1] //交换位置
 				n--
@@ -214,8 +214,12 @@ func main() {
 	//fmt.Printf("%#v\n",guess)
 	fmt.Println("开始生成100以内的随机数...")
 	rand.Seed(time.Now().Unix())
-	guess_num := rand.Intn(100) //随机生成100以内的数
-	i := sort.Search(len(guess), func(i int) bool {return guess[i] >= guess_num}) //通过查找将index赋值给变量i
-	fmt.Printf("查找结果:在切片中查询出来的位置是%d,切片值:%d\t随机生成的数字为:%d",i,guess[i],guess_num)
+	guess_num := rand.Intn(100)                                                     //随机生成100以内的数
+	i := sort.Search(len(guess), func(i int) bool { return guess[i] >= guess_num }) //通过查找将index赋值给变量i
+	fmt.Printf("查找结果:在切片中查询出来的位置是%d,切片值:%d\t随机生成的数字为:%d", i, guess[i], guess_num)
 
 }
+
+/*
+	评分: 7.5
+*/

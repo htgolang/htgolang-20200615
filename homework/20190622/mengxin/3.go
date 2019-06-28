@@ -25,3 +25,7 @@ func main() {
 	}
 	fmt.Println(s2[1])
 }
+
+/*
+ 评分: 6
+*/

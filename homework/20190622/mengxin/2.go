@@ -13,3 +13,7 @@ func main() {
 	}
 	fmt.Println(max)
 }
+
+/*
+ 评分: 8
+*/

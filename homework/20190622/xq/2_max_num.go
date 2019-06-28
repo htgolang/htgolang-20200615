@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	test_slice := []int{1, 0, 4, 3, -2, -1, 10}
 
 	var max_num int
@@ -16,3 +16,7 @@ func main()  {
 
 	fmt.Printf("最大的值为：%d\n", max_num)
 }
+
+/*
+	评分: 7
+*/

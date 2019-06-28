@@ -94,25 +94,29 @@ var article string = `
     Thank God Almighty, we are free at last!
     `
 
-func main()  {
+func main() {
 	// 2 = ['a', 'b']
 
-    test_slice := make(map[rune]int)
-    world_slice := make(map[int][]rune)
+	test_slice := make(map[rune]int)
+	world_slice := make(map[int][]rune)
 
-    for _, v := range article {
-        if v >= 'z' && v <= 'z' || v >= 'A' && v <= 'z' {
-            test_slice[v]++
-        }
-    }
+	for _, v := range article {
+		if v >= 'z' && v <= 'z' || v >= 'A' && v <= 'z' {
+			test_slice[v]++
+		}
+	}
 
-    for k, v := range test_slice {
-        world_slice[v] = append(world_slice[v], k)
-    }
-    //fmt.Println(world_slice)
+	for k, v := range test_slice {
+		world_slice[v] = append(world_slice[v], k)
+	}
+	//fmt.Println(world_slice)
 
-    for k, ch := range world_slice {
-        fmt.Printf("%d = %c \n", k, ch)
-    }
+	for k, ch := range world_slice {
+		fmt.Printf("%d = %c \n", k, ch)
+	}
 
 }
+
+/*
+	评分: 8
+*/

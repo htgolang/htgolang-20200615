@@ -48,7 +48,7 @@ func main() {
     From every mountainside, let freedom ring.
     And when this happens, when we allow freedom ring, when we let it ring from every village and every hamlet, from every state and every city, we will be able to speed up that day when all of God's children, black men and white men, Jews and Gentiles, Protestants and Catholics, will be able to join hands and sing in the words of the old Negro spiritual:
     Free at last! Free at last!
-    Thank God Almighty, we are free at last! 
+    Thank God Almighty, we are free at last!
 	`
 	word_count_map := map[rune]int{}
 	word_count_map1 := map[int][]rune{}
@@ -58,10 +58,10 @@ func main() {
 		}
 	}
 	for key, value := range word_count_map {
-		if v, ok := word_count_map1[value];!ok {
+		if v, ok := word_count_map1[value]; !ok {
 			word_count_map1[value] = []rune{key}
 
-		}else {
+		} else {
 			v = append(v, key)
 		}
 
@@ -72,3 +72,8 @@ func main() {
 	fmt.Println()
 
 }
+
+/*
+	评分: 7
+	考虑61-66如何简化，原理是什么
+*/

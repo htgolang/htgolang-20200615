@@ -25,3 +25,7 @@ func main() {
 	keySlice := gainKey(keyMap)
 	fmt.Println("获取映射中所有key组成的切片: ", keySlice)
 }
+
+/*
+ 评分: 8
+*/

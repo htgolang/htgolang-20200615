@@ -12,3 +12,7 @@ func main() {
 	}
 	fmt.Println(sliceData)
 }
+
+/*
+ 评分: 8
+*/

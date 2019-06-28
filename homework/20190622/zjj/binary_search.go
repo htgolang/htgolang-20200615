@@ -9,9 +9,9 @@ import (
 func binary_search(input []int, guess int) (index int, stat int) {
 	v_low := 0                //取切片第一位
 	v_heigh := len(input) - 1 //取切片最后一位
-	for { //循环查找，直到出现结果
+	for {                     //循环查找，直到出现结果
 		v_middle := (v_low + v_heigh) / 2 //取中间数
-		if v_heigh < v_low { //查询不出结果的条件
+		if v_heigh < v_low {              //查询不出结果的条件
 			index = v_middle //将查询最后结果赋值给index
 			stat = 0
 			break
@@ -39,3 +39,7 @@ func main() {
 		fmt.Println("查找结果失败，最后查询位置:", guess_index, "近似值为:", guess_num[guess_index]) //查找不到，列出近似值
 	}
 }
+
+/*
+	评分: 8
+*/

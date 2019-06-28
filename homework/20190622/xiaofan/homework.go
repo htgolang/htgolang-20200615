@@ -166,3 +166,8 @@ var article = `
 
     Thank God Almighty, we are free at last!
     `
+
+/*
+	评分: 7
+	考虑54-58如何简化，原理是什么
+*/

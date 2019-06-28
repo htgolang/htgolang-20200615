@@ -15,3 +15,7 @@ func main() {
 	fmt.Printf("int_slice 切片中最大的数：%d", int_slice[len(int_slice)-1])
 
 }
+
+/*
+ 评分: 8
+*/

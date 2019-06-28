@@ -23,3 +23,7 @@ func main() {
 	fmt.Printf("按从小到大排序之后的结果是: %v\n", sort_int)
 
 }
+
+/*
+ 评分: 8
+*/

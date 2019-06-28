@@ -24,3 +24,8 @@ func main() {
 	fmt.Println(sliceData)
 
 }
+
+/*
+ 评分: 6
+ 二分查找算法 用于对数据的查询
+*/

@@ -21,3 +21,7 @@ func main() {
 	fmt.Printf("从小到大排序为: %v", sort_int)
 
 }
+
+/*
+ 评分: 8
+*/

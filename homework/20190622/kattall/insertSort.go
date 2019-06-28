@@ -27,3 +27,7 @@ func main() {
 	sortNums := sortInt(nums)
 	fmt.Println("插入排序后的切片为：", sortNums)
 }
+
+/*
+ 评分: 8
+*/

@@ -22,3 +22,7 @@ func main() {
 	sli := bubble(height)
 	fmt.Println("排序后的切片为：", sli)
 }
+
+/*
+ 评分: 8
+*/

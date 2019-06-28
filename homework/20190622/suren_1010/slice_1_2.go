@@ -13,3 +13,7 @@ func main() {
 	fmt.Println("Slice Max is: ", sliceData[len(sliceData)-1:])
 	fmt.Println("Slice Second is: ", sliceData[len(sliceData)-2:len(sliceData)-1])
 }
+
+/*
+ 评分: 8
+*/

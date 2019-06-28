@@ -15,3 +15,7 @@ func main() {
 	fmt.Println(keySlice)
 	fmt.Println(valueSlice)
 }
+
+/*
+ 评分: 8
+*/

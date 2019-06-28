@@ -14,3 +14,7 @@ func main() {
 	}
 	fmt.Println(k1, v1)
 }
+
+/*
+ 评分: 8
+*/

@@ -17,3 +17,7 @@ func main() {
 	fmt.Println(s1)
 
 }
+
+/*
+ 评分: 8
+*/

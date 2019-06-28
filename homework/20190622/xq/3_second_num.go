@@ -18,10 +18,9 @@ import "fmt"
 //	fmt.Printf("第二大值: %d\n", test_slice[1])
 //}
 
-
 // 第二种
 
-func main()  {
+func main() {
 	max_num, second_num := 0, 0
 	test_slice := []int{1, 0, 4, 3, -2, -1, 10}
 
@@ -29,7 +28,7 @@ func main()  {
 		if test_slice[i] > max_num {
 			max_num = test_slice[i]
 			second_num = max_num
-		}else if test_slice[i] > second_num {
+		} else if test_slice[i] > second_num {
 			second_num = test_slice[i]
 		}
 
@@ -37,3 +36,7 @@ func main()  {
 
 	fmt.Printf("第二大值是： %d\n", second_num)
 }
+
+/*
+	评分: 7
+*/

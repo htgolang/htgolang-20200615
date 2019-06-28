@@ -34,3 +34,7 @@ func main() {
 	fmt.Println("第二个最大的元素是：", max)
 
 }
+
+/*
+ 评分: 8
+*/

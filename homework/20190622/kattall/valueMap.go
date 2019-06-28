@@ -25,3 +25,7 @@ func main() {
 	valueSlice := gainValue(keyMap)
 	fmt.Println("获取映射中所有value组成的切片: ", valueSlice)
 }
+
+/*
+ 评分: 8
+*/
