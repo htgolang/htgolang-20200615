@@ -51,7 +51,7 @@ func scanId() (id string) {
 	return id
 }
 
-// 判断users是否为空, 为空就不让查询，删除等操作。 返回 users长度和是否为空
+// 判断users是否为空, 为空就不让查询，删除等操作。 返回 是否为空
 func isEmptyUser(users map[string]map[string]string) (flag bool) {
 	if len(users) == 0 {
 		return true
