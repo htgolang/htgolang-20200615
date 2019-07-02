@@ -19,8 +19,9 @@ func auth(passwd string) bool {
 		fmt.Scan(&inputpwd)
 		if inputpwd != passwd {
 			count++
+			fmt.Printf("密码错误, 您还有%d次机会.\n", max - count)
 			if count >= max {
-				fmt.Println("密码错误, 退出系统。")
+				fmt.Println("错误次数过多, 退出系统。")
 				return false
 			}
 		} else {
