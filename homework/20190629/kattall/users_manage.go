@@ -40,18 +40,18 @@ func scanData() (name, age, tel, addr string) {
 	fmt.Scan(&tel)
 	fmt.Print("请输入家庭住址：")
 	fmt.Scan(&addr)
+	fmt.Println()
 	return
 }
 
-// 用户输入id
-func scanId() (id string) {
-	fmt.Print("请输入ID: ")
-	fmt.Scan(&id)
+// 用户输入
+func scanfunc() (str string) {
+	fmt.Scan(&str)
 	fmt.Println()
-	return id
+	return str
 }
 
-// 判断users是否为空, 为空就不让查询，删除等操作。 返回 是否为空
+// 判断users是否为空, 为空就不让查询，删除等操作。 返回 users长度和是否为空
 func isEmptyUser(users map[string]map[string]string) (flag bool) {
 	if len(users) == 0 {
 		return true
@@ -59,7 +59,7 @@ func isEmptyUser(users map[string]map[string]string) (flag bool) {
 	return false
 }
 
-// 打印信息头信息
+// 打印头信息
 func titleString() {
 	title := fmt.Sprintf("%5s|%20s|%5s|%20s|%50s", "id", "name", "age", "tel", "addr")
 	fmt.Println(title)
@@ -84,25 +84,23 @@ func formatUser(user map[string]string) {
 // 添加用户
 func adduser(pk int, users map[string]map[string]string) {
 	var (
-		id   string = strconv.Itoa(pk)
-		name string
-		age  string
-		tel  string
-		addr string
+		id     string = strconv.Itoa(pk)
+		name   string
+		age    string
+		tel    string
+		addr   string
 		choice string
 	)
 
 	// 调用用户输入函数，直接返回数据
 	name, age, tel, addr = scanData()
 
-	fmt.Println()
 	fmt.Println("你输入的信息如下：")
 	titleString()
 	fmt.Printf("%5s|%20s|%5s|%20s|%50s\n", id, name, age, tel, addr)
 
-	fmt.Println()
 	fmt.Print("请确定是否插入数据?(y/n) ")
-	fmt.Scan(&choice)
+	choice = scanfunc()
 
 	if choice == "y" || choice == "Y" {
 		users[id] = map[string]string{
@@ -132,13 +130,11 @@ func queryUser(users map[string]map[string]string) {
 	}
 
 	fmt.Print("请输入想要查询信息：")
-	fmt.Scan(&queryStr)
+	queryStr = scanfunc()
 
-	// 打印titile
 	titleString()
 	for _, user := range users {
 		if strings.Contains(user["name"], queryStr) || strings.Contains(user["tel"], queryStr) || strings.Contains(user["addr"], queryStr) {
-			// 调用格式化输出函数
 			formatUser(user)
 		}
 	}
@@ -147,13 +143,13 @@ func queryUser(users map[string]map[string]string) {
 // 修改用户
 func modifyUser(users map[string]map[string]string) {
 	var (
-		id string
-		choice string
+		id      string
+		choice  string
 		isEmpty bool
-		name string
-		age  string
-		tel  string
-		addr string
+		name    string
+		age     string
+		tel     string
+		addr    string
 	)
 
 	// 判断users是否是空
@@ -162,33 +158,28 @@ func modifyUser(users map[string]map[string]string) {
 		return
 	}
 
-	// 用户输入id
-	id = scanId()
+	fmt.Print("请输入你想修改的ID: ")
+	id = scanfunc()
 	if user, ok := users[id]; ok {
 		titleString()
 		formatUser(user)
 		fmt.Print("请确定是否修改此用户(y/n):")
-		fmt.Scan(&choice)
+		choice = scanfunc()
 		if choice == "y" || choice == "Y" {
 			name, age, tel, addr = scanData()
-			titleString()
-			fmt.Printf("%5s|%20s|%5s|%20s|%50s\n", id, name, age, tel, addr)
-			fmt.Print("请确定是否修改数据?(y/n) ")
-			fmt.Scan(&choice)
-			if choice == "y" || choice == "Y" {
-				users[id] = map[string]string{
-					"id":   id,
-					"name": name,
-					"age":  age,
-					"tel":  tel,
-					"addr": addr,
-				}
+			users[id] = map[string]string{
+				"id":   id,
+				"name": name,
+				"age":  age,
+				"tel":  tel,
+				"addr": addr,
 			}
 			fmt.Println("信息修改如下：")
 			titleString()
 			queryId(id, users)
-			return
 		}
+	} else {
+		fmt.Println("你输入的ID不存在.")
 	}
 }
 
@@ -205,7 +196,8 @@ func deleteUser(users map[string]map[string]string) {
 		return
 	}
 
-	id = scanId()
+	fmt.Print("请输入你想删除的ID: ")
+	id = scanfunc()
 	if user, ok := users[id]; ok {
 		titleString()
 		formatUser(user)
@@ -220,9 +212,7 @@ func deleteUser(users map[string]map[string]string) {
 	}
 }
 
-// 主函数
 func main() {
-	// 用户列表
 	var (
 		users  map[string]map[string]string = map[string]map[string]string{}
 		op     string
@@ -245,7 +235,7 @@ func main() {
 5. 退出
 请输入你想要操作的指令：`)
 
-		fmt.Scan(&op)
+		op = scanfunc()
 		fmt.Println("你输入的指令为：", op)
 
 		if op == "1" {
