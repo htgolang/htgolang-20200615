@@ -15,7 +15,7 @@ var (
 )
 /*
 func auth()(b bool){
-	password := "123"
+	password := "123abc!@#"
 	var pass string
 	num := 3
 	for i := 1; i <= num; i++ {
