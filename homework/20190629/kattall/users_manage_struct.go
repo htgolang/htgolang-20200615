@@ -18,7 +18,7 @@ func auth(passwd string) bool {
 		fmt.Scan(&inputpwd)
 		if inputpwd != passwd {
 			count++
-			fmt.Printf("密码错误, 您还有%d次机会.\n", max - count)
+			fmt.Printf("密码错误, 您还有%d次机会.\n", max-count)
 			if count >= max {
 				fmt.Println("错误次数过多, 退出系统。")
 				return false
@@ -173,10 +173,10 @@ func modifyUser(users []user) {
 			choice = scanFunc()
 			if choice == "y" || choice == "Y" {
 				name, age, tel, addr = scanData()
-				users[i].name= name
-				users[i].age= age
-				users[i].tel= tel
-				users[i].addr= addr
+				users[i].name = name
+				users[i].age = age
+				users[i].tel = tel
+				users[i].addr = addr
 				fmt.Println("信息修改如下：")
 				titleString()
 				queryId(id, users)
@@ -273,3 +273,10 @@ func main() {
 		}
 	}
 }
+
+/*
+评分: 7.5
+考虑：
+1. 尝试多利用简短声明减少不必要的变量声明
+2. 思考if else-if else如何使用switch-case替代，更深入思考利用函数类型如何简写
+*/

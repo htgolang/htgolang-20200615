@@ -16,7 +16,7 @@ func outFormat(i string, users map[string]map[string]string) {
 	title := fmt.Sprintf("%5s|%20s|%5s|%20s|%50s\n", "id", "name", "age", "tel", "addr")
 	fmt.Println(title)
 	fmt.Println(strings.Repeat("-", len(title)))
-	fmt.Printf("%5s|%20s|%5s|%20s|%50s\n", users[i]["id"], users[i]["name"],users[i]["age"], users[i]["tel"], users[i]["addr"])
+	fmt.Printf("%5s|%20s|%5s|%20s|%50s\n", users[i]["id"], users[i]["name"], users[i]["age"], users[i]["tel"], users[i]["addr"])
 
 }
 
@@ -34,8 +34,8 @@ func addUser(pk int, users map[string]map[string]string) {
 		id string = fmt.Sprintf("%d", pk)
 		// id string = strconv.Itoa(pk)
 		name string
-		age string
-		tel string
+		age  string
+		tel  string
 		addr string
 	)
 
@@ -51,10 +51,10 @@ func addUser(pk int, users map[string]map[string]string) {
 
 	//fmt.Println(id, name, age, tel, addr)
 	users[id] = map[string]string{
-		"id": id,
+		"id":   id,
 		"name": name,
-		"age": age,
-		"tel": tel,
+		"age":  age,
+		"tel":  tel,
 		"addr": addr,
 	}
 	fmt.Println(users)
@@ -70,8 +70,8 @@ func selectUser(users map[string]map[string]string) {
 
 	for i, v := range users {
 
-		if len(q) == 0||strings.Contains(v["name"], q) ||
-			strings.Contains(v["age"], q) ||strings.Contains(v["tel"], q) ||
+		if len(q) == 0 || strings.Contains(v["name"], q) ||
+			strings.Contains(v["age"], q) || strings.Contains(v["tel"], q) ||
 			strings.Contains(v["addr"], q) || strings.Contains(v["id"], q) {
 
 			outFormat(i, users)
@@ -91,12 +91,12 @@ func selectUser(users map[string]map[string]string) {
 func modifyUser(users map[string]map[string]string) {
 
 	var (
-		d string
+		d    string
 		name string
-		age string
-		tel string
+		age  string
+		tel  string
 		addr string
-		ch string
+		ch   string
 	)
 	fmt.Println("请输入需要修改的用户ID：")
 	fmt.Scan(&d)
@@ -118,22 +118,22 @@ func modifyUser(users map[string]map[string]string) {
 			fmt.Println()
 
 			users[d] = map[string]string{
-				"id": d,
+				"id":   d,
 				"name": name,
-				"age": age,
-				"tel": tel,
+				"age":  age,
+				"tel":  tel,
 				"addr": addr,
 			}
 			fmt.Println("修改后的内容为：")
 			outFormat(d, users)
 
-		}else if ch == "n"{
+		} else if ch == "n" {
 			fmt.Println("你已放弃修改。")
-		}else {
+		} else {
 			fmt.Println("非法输入，请重新输入。")
 		}
 
-	}else {
+	} else {
 		fmt.Println("用户不存在！")
 	}
 
@@ -145,7 +145,7 @@ func modifyUser(users map[string]map[string]string) {
 // 提示用户是否删除（y/n）
 // y 删除
 //
-func deleteUser(users map[string]map[string]string){
+func deleteUser(users map[string]map[string]string) {
 	var d, ch string
 	fmt.Println("请输入需要删除用户的ID：")
 	fmt.Scan(&d)
@@ -156,12 +156,12 @@ func deleteUser(users map[string]map[string]string){
 		if ch == "y" {
 			delete(users, d)
 			fmt.Println("已删除！")
-		}else if ch == "n"{
+		} else if ch == "n" {
 			fmt.Println("你已放弃删除！")
-		}else {
+		} else {
 			fmt.Println("非法输入，请重新输入。")
 		}
-	}else {
+	} else {
 		fmt.Println("用户不存在！")
 	}
 }
@@ -185,22 +185,22 @@ func initUser() {
 		if op == "1" {
 			id++
 			addUser(id, users)
-		}else if op == "2" {
+		} else if op == "2" {
 			modifyUser(users)
-		}else if op == "3" {
+		} else if op == "3" {
 			deleteUser(users)
-		}else if op == "4" {
+		} else if op == "4" {
 			selectUser(users)
-		}else if op == "5" {
+		} else if op == "5" {
 			break
-		}else {
+		} else {
 			fmt.Println("指令错误!!!")
 		}
 
 	}
 }
 
-func main()  {
+func main() {
 	// 验证密码
 	// 定义用户密码，让用户提示输入密码，passowrd=123abc!@#
 	// 3 次失败，提示失败并退出
@@ -209,22 +209,22 @@ func main()  {
 	var p string
 	pass := "123abc!@#"
 
-	for i:=3;i>=0;i-- {
+	for i := 3; i >= 0; i-- {
 		fmt.Print(`你现在登陆的是用户管理系统，请输入密码。
 (直接退出请输入q): `)
 
 		fmt.Scan(&p)
-		if pass == p{
+		if pass == p {
 			fmt.Println("密码正确，已进入用户管理系统。")
 			initUser()
-		}else if p == "q" {
+		} else if p == "q" {
 			fmt.Println("已退出。")
 			break
-		}else {
-			if i-1 ==0 {
+		} else {
+			if i-1 == 0 {
 				fmt.Println("三次密码错误，退出！")
 				break
-			}else{
+			} else {
 				fmt.Printf("密码错误，你还有 %d 次机会！\n", i-1)
 			}
 		}
@@ -237,3 +237,10 @@ bug： 检索时 条件为空，不会显示全部用户信息
 bug： 操作 5 退出后，外面密码验证依然会循环2次
 */
 
+/*
+评分: 7.5
+考虑：
+1. add和update有一对堆用户信息输入，是否可以重构为一个函数
+2. 思考if else-if else如何使用switch-case替代，更深入思考利用函数类型如何简写
+3. 减少不必要的函数定义, 如checkUser
+*/

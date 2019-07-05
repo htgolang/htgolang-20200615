@@ -165,3 +165,10 @@ func main() {
 		}
 	}
 }
+
+/*
+评分: 8
+考虑：
+1. 思考if else-if else如何使用switch-case替代，更深入思考利用函数类型如何简写
+2. 考虑代码单一职责，一个函数只提供一个职责 printCommon
+*/
