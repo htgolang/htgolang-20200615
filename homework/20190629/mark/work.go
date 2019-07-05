@@ -39,7 +39,7 @@ func auth()(err error){
 			err = fmt.Errorf("%v",e)  //  这样以来，如果有错误返回错误信息，如果没有则返回nil
 		}
 	}()
-	password := "123"
+	password := "123abc!@#"
 	var pass string
 	num := 3
 	for i := 1; i <= num; i++ {
