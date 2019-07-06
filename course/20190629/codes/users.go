@@ -7,9 +7,15 @@ import (
 )
 
 // 添加用户
-func add(pk int, users map[string]map[string]string) {
+func add(users map[string]map[string]string) {
+	pk := 0
+	for k := range users {
+		if v, err := strconv.Atoi(k); err == nil && v > pk {
+			pk = v
+		}
+	}
 	var (
-		id   string = strconv.Itoa(pk)
+		id   string = strconv.Itoa(pk + 1)
 		name string
 		age  string
 		tel  string
@@ -58,8 +64,13 @@ func query(users map[string]map[string]string) {
 func main() {
 	// 存储用户信息
 	users := make(map[string]map[string]string)
-	id := 0
 	fmt.Println("欢迎使用马哥用户系统")
+
+	callbacks := map[string]func(map[string]map[string]string){
+		"1": add,
+		"4": query,
+	}
+
 	for {
 		var op string
 		fmt.Print(`
@@ -70,17 +81,9 @@ func main() {
 5. 退出
 请输入指令:`)
 		fmt.Scan(&op)
-		if op == "1" {
-			id++
-			add(id, users)
-		} else if op == "2" {
 
-		} else if op == "3" {
-
-		} else if op == "4" {
-			query(users)
-		} else if op == "5" {
-			break
+		if callback, ok := callbacks[op]; ok {
+			callback(users)
 		} else {
 			fmt.Println("指令错误")
 		}

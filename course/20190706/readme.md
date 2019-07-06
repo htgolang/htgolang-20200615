@@ -1,0 +1,7 @@
+func name() {
+
+}
+
+
+name
+name()
