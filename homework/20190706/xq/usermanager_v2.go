@@ -42,11 +42,14 @@ END:
 	}
 }
 
+const (
+	pass = "123456"
+	maxAuth = 3
+)
 func main() {
 
-
-	if !gopkg.AuthPass(){
-		fmt.Printf("密码%d次错误， 程序退出\n", 3)
+	if !gopkg.AuthPass(pass, maxAuth){
+		fmt.Printf("密码%d次错误， 程序退出\n", maxAuth)
 		return
 	}
 
