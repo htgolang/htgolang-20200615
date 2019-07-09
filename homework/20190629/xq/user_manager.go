@@ -9,6 +9,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"github.com/howeyc/gopass"
 )
 
 // 用户信息输出格式
@@ -171,64 +172,109 @@ func initUser() {
 	// 存储用户的信息
 	users := make(map[string]map[string]string)
 	id := 0
+
+	// 第一种结构 if else
+	//for {
+	//	var op string
+	//	fmt.Print(`请输入操作指令:
+   //1：add
+   //2: modify
+   //3: delete
+   //4: select
+   //5: exit
+   //      `)
+	//	fmt.Scan(&op)
+   //
+	//	if op == "1" {
+	//		id++
+	//		addUser(id, users)
+	//	} else if op == "2" {
+	//		modifyUser(users)
+	//	} else if op == "3" {
+	//		deleteUser(users)
+	//	} else if op == "4" {
+	//		selectUser(users)
+	//	} else if op == "5" {
+	//		break
+	//	} else {
+	//		fmt.Println("指令错误!!!")
+	//	}
+   //
+	//}
+
+	// 第二种结构 switch case
+
+	END:
 	for {
 		var op string
 		fmt.Print(`请输入操作指令:
-   1：add
-   2: modify
-   3: delete
-   4: select
-   5: exit
-         `)
-		fmt.Scan(&op)
+		1：add
+		2: modify
+		3: delete
+		4: select
+		5: exit
+		     `)
 
-		if op == "1" {
+		fmt.Scan(&op)
+		switch op {
+		case "1":
 			id++
 			addUser(id, users)
-		} else if op == "2" {
+		case "2":
 			modifyUser(users)
-		} else if op == "3" {
+		case "3":
 			deleteUser(users)
-		} else if op == "4" {
+		case "4":
 			selectUser(users)
-		} else if op == "5" {
-			break
-		} else {
-			fmt.Println("指令错误!!!")
+		case "5":
+			break END
+		default:
+			fmt.Println("指令错误！")
 		}
-
 	}
 }
 
-func main() {
+// 从命令行输入密码，并进行验证
+// 通过返回值告知验证是否成功
+const (
+	maxAuth = 3
+	pass = "123abc!@#"
+)
+
+func auth() bool {
 	// 验证密码
 	// 定义用户密码，让用户提示输入密码，passowrd=123abc!@#
 	// 3 次失败，提示失败并退出
 	// 成功，用户管理操作
 
 	var p string
-	pass := "123abc!@#"
 
-	for i := 3; i >= 0; i-- {
-		fmt.Print(`你现在登陆的是用户管理系统，请输入密码。
-(直接退出请输入q): `)
+	for i := 0; i < maxAuth; i++ {
+
+		fmt.Print(`你现在登陆的是用户管理系统，请输入密码: `)
 
 		fmt.Scan(&p)
 		if pass == p {
 			fmt.Println("密码正确，已进入用户管理系统。")
-			initUser()
-		} else if p == "q" {
-			fmt.Println("已退出。")
-			break
-		} else {
-			if i-1 == 0 {
-				fmt.Println("三次密码错误，退出！")
-				break
-			} else {
-				fmt.Printf("密码错误，你还有 %d 次机会！\n", i-1)
-			}
+
+			return true
+		}else {
+				fmt.Println("密码错误")
 		}
 	}
+
+	return false
+}
+
+func main() {
+
+
+	if !auth(){
+		fmt.Printf("密码%d次错误， 程序退出\n", maxAuth)
+		return
+	}
+
+	initUser()
 
 }
 
