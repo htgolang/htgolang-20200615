@@ -2,21 +2,22 @@ package main
 
 import (
 	"fmt"
-	"github.com/marksugar/GoStudynotes/useredit"
 )
+
 const (
-	maxAuth =3
+	maxAuth  = 3
 	password = "123"
 )
-func main(){
-	if !GoStudynotes.Auth(password,maxAuth){
-		fmt.Printf("密码输入%d次错误，程序退出",maxAuth)
+
+func main() {
+	if !GoStudynotes.Auth(password, maxAuth) {
+		fmt.Printf("密码输入%d次错误，程序退出", maxAuth)
 		return
 	}
 	userMenu()
 }
-func userMenu(){
-	menu:= 	`===========================================
+func userMenu() {
+	menu := `===========================================
 1.查询
 2.添加
 3.修改
@@ -41,12 +42,19 @@ END:
 			GoStudynotes.ModifyUser(users)
 		case "4":
 			GoStudynotes.DeleteUser(users)
-		case "5" :
+		case "5":
 			break END
 		case "q":
 			break END
 		default:
-		    fmt.Println("[err]指令无效!")
+			fmt.Println("[err]指令无效!")
 		}
 	}
 }
+
+/*
+评分: 7
+建议：
+1. 包名使用全小写英文字母，并且与所在文件名一致
+2. 注意代码组织方式，按代码按照操作对象或逻辑按文件存放
+*/

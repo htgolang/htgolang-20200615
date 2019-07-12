@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/xlotz/gopkg"
 )
 
@@ -10,7 +11,6 @@ func initUser() {
 	// 存储用户的信息
 	users := make(map[string]map[string]string)
 	id := 0
-
 
 END:
 	for {
@@ -43,12 +43,13 @@ END:
 }
 
 const (
-	pass = "123456"
+	pass    = "123456"
 	maxAuth = 3
 )
+
 func main() {
 
-	if !gopkg.AuthPass(pass, maxAuth){
+	if !gopkg.AuthPass(pass, maxAuth) {
 		fmt.Printf("密码%d次错误， 程序退出\n", maxAuth)
 		return
 	}
@@ -57,3 +58,8 @@ func main() {
 
 }
 
+/*
+评分: 8
+建议：
+1. 内置密码使用md5形式，避免看到源码知晓输入密码
+*/

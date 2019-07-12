@@ -41,3 +41,9 @@ func main() {
 		}
 	}
 }
+
+/*
+评分: 7.5
+建议：
+1. 后续模块名称使用github.com/username/module模式
+*/
