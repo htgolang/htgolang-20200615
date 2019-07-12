@@ -20,7 +20,5 @@ func ModifyUser(users map[int]map[string]string){
 		}else {
 			fmt.Println("[err]用户id不存在\n")
 		}
-	}else {
-		fmt.Println("输入id正确")
 	}
 }
