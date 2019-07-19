@@ -1,0 +1,41 @@
+package users
+
+import (
+	"fmt"
+	"sort"
+	"strings"
+)
+func QueryUser() {
+	userSlice := []UserDescribe{}
+	for _, v := range users {
+		userSlice = append(userSlice, v)
+	}
+	in := InputString("\n请输入排序属性:[id/name/]，立即退出输入5:")
+	quits(in)
+	sort.Slice(userSlice, func(i, j int) bool{
+		switch in {
+		case "id":
+			return userSlice[i].id < userSlice[j].id
+		case "name":
+			return userSlice[i].name < userSlice[j].name
+		default:
+			return false
+		}})
+	title := fmt.Sprintf("%5s|%15s|%15s|%20s|%30s","id","Name","birthday","Tel","Addr")
+	fmt.Println(title)
+	fmt.Println(strings.Repeat("-",len(title)))
+	for _,v := range userSlice {
+		fmt.Printf("%5v|%15s|%15s|%20s|%30s",v.id, v.name, v.birthday, v.tel, v.addr)
+		fmt.Println()
+	}
+
+	q := InputString("请输入查询内容:")
+	quits(q)
+	for _, v := range userSlice {
+		if strings.Contains(v.name, q) || strings.Contains(v.addr, q) || strings.Contains(v.tel, q)  {
+			fmt.Printf("`````````````````````**START ID%v**`````````````````````````````\n",v.id)
+			printUser(v)
+			fmt.Printf("`````````````````````**ENDIN ID%v**`````````````````````````````\n",v.id)
+		}
+	}
+}
