@@ -10,8 +10,6 @@ import (
 	"path/filepath"
 )
 
-
-
 // 命令输入
 func Input_flag() {
 	// 设置日志文件
@@ -40,18 +38,25 @@ Options:
 
 // 拷贝目录  src_dir 源目录  dest目录
 func cdir(src_dir, dest_dir, log_file string) {
-	writeLog(log_file)
+	// 判断源目录是否存在, 不存在则退出
+	if exist, _ := PathExists(src_dir);  !exist {
+		fmt.Println("源目录不存在, 请确认原目录是否存在.")
+		return
+	}
 
 	// 打开源目录
 	src, err := os.Open(src_dir)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("源目录打开失败: %s\n", err)
 	} else {
 		// 循环源目录
 		fileinfo, err := src.Readdir(-1)
 
 		// 判断打开目录是否成功
 		if err == nil {
+			// 写入日志
+			writeLog(log_file)
+
 			// 打开成功, 创建dest_dir
 			err := os.MkdirAll(dest_dir, 0644)
 			if err != nil {
@@ -117,9 +122,22 @@ func copyfile(srcfile, destfile string) {
 	}
 }
 
+// 写入日志
 func writeLog(log_file string) {
 	logfile, err := os.OpenFile(log_file, os.O_APPEND|os.O_CREATE, os.ModePerm)
 	if err == nil {
 		log.SetOutput(logfile)
 	}
+}
+
+// 判断目录或者文件是否存在
+func PathExists(path string) (bool, error) {
+	_, err := os.Stat(path)
+	if err == nil {
+		return true, nil
+	}
+	if os.IsNotExist(err) {
+		return false, nil
+	}
+	return false, err
 }
