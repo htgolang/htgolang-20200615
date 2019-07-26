@@ -71,32 +71,18 @@ func Test() {
 func Auth(N bool) bool {
 	p := Passwd{}
 	if !p.ReaderFile() {
-		fmt.Println("请先设置您的密码后，再使用。")
+		fmt.Println("请先设置您的密码，只有正确设置密码后，才可以使用该系统。")
 		for {
 			if p.SetPasswd() {
 				break
 			}
 		}
 	}
-
-	if N != true {
-		for {
-			if count < 3 {
-				fmt.Print("请输入系统登录密码: ")
-				bytes, _ := gopass.GetPasswd()
-				input_passwd := fmt.Sprintf("%X", md5.Sum(bytes))
-				if input_passwd == passwd {
-					return true
-				}
-				count++
-				fmt.Println("密码错误，请重试: ")
-			} else {
-				fmt.Println("尝试次数过多，退出管理系统")
-				return false
-			}
-		}
-	} else {
+	//通过N判断，是否需要验证密码
+	if N == true {
 		return true
+	} else {
+		return p.CheckPasswd()
 	}
 }
 
@@ -111,13 +97,19 @@ func Inputstring(tips string) string {
 //系统方法2，密码文件的md5转换存储和读取
 
 func (p *Passwd) CheckPasswd() bool {
-	fmt.Print("请输入系统登录密码: ")
-	bytes, _ := gopass.GetPasswd()
-	inputpasswd := fmt.Sprintf("%X", md5.Sum(bytes))
-	if inputpasswd == passwd {
-		return true
-	} else {
-		return false
+	for {
+		if count < 3 {
+			fmt.Print("请输入系统登录密码: ")
+			bytes, _ := gopass.GetPasswd()
+			inputpasswd := fmt.Sprintf("%X", md5.Sum(bytes))
+			if inputpasswd == passwd {
+				return true
+			}
+			count++
+			fmt.Println("密码错误，请重试: ")
+		} else {
+			return false
+		}
 	}
 }
 
