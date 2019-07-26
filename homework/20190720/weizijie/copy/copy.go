@@ -60,7 +60,10 @@ func dircopy(spath, dpath string) {
 		for _, dir := range sdir {
 			destdir_path = filepath.Join(dpath, dir)
 			srcdir_path = filepath.Join(spath, dir)
-			os.Mkdir(destdir_path, 0644)
+
+			// 获取源文件的属性
+			srcdirfileinfo, _ := os.Stat(srcdir_path)
+			os.Mkdir(destdir_path, srcdirfileinfo.Mode())
 			log.Printf("%s 目录已创建\n", destdir_path)
 			dircopy(srcdir_path, destdir_path)
 		}
@@ -149,7 +152,10 @@ Optime:
 		dpath := os.Args[5]
 
 		if fileinfo.IsDir() {
-			os.Mkdir(dpath, 0644)
+			// 获取源文件的属性
+			srcfileinfo, _ := os.Stat(spath)
+
+			os.Mkdir(dpath, srcfileinfo.Mode())
 			log.Printf("%s 目录已创建\n", dpath)
 
 			dircopy(spath, dpath)

@@ -237,7 +237,7 @@ func GetUserfile() []string {
 		//fmt.Printf("%T", flies[len(flies)-1:])
 		return flies[len(flies)-1:]
 	} else {
-		for i := 0; i < len(flies)-2; i++ {
+		for i := 0; i < len(flies)-3; i++ {
 			os.Remove(filepath.Join(dir, flies[i]))
 			log.Printf("%s文件已移除\n", filepath.Join(dir, flies[i]))
 		}
@@ -293,6 +293,7 @@ func stdin() string {
 	return str
 }
 
+// 设置密码
 func Setepasswd() {
 	_, err := os.Open(passwdfilegob)
 	if err != nil {
@@ -303,6 +304,8 @@ func Setepasswd() {
 		}
 	}
 }
+
+// 修改密码
 func resetpasswd() bool {
 	os.Stdout.Write([]byte("请输入原始密码："))
 
@@ -367,22 +370,29 @@ func Birthday_time(s string) (time.Time, error) {
 
 }
 
-// 获取用户的最大ID，且返回ID+1
+// 获取新用户的ID，若users文件中有空闲ID，则复用
 func GetId() int {
-	Id := 0
+	var Id int
+	var numslice []int
 	users := Userdecode()
 
 	if len(users) == 0 {
 		return 1
 	}
 
-	for k := range users {
-		if Id < k {
-			Id = k
-		}
+	for id := range users {
+		numslice = append(numslice, id)
 	}
-	return Id + 1
 
+	sort.Ints(numslice)
+	for Id = 1; Id <= numslice[len(numslice)-1]; Id++ {
+		if Id != numslice[Id-1] {
+			return Id
+		}
+
+	}
+
+	return numslice[len(numslice)-1] + 1
 }
 
 // 定义用户输入函数，将从键盘输入的每个值对应传入Users结构体的元素中
@@ -461,6 +471,7 @@ func Add() {
 
 	// 调用用户函数，新增用户
 	Inputuser(id)
+	_ = GetUserfile()
 	log.Printf("ID为 %d 的用户已添加\n", id)
 }
 
@@ -491,6 +502,7 @@ func Deluser() {
 					delete(users, id)
 					// 将users信息重新写入gob文件中
 					Userencode(users)
+					_ = GetUserfile()
 					fmt.Printf("ID为%d的用户已删除\n", id)
 					log.Printf("%s 用户已删除\n", user.Name)
 				}
@@ -532,6 +544,9 @@ func Modify() {
 				if in == "Y" || in == "y" {
 					// 输入用户信息
 					Inputuser(id)
+
+					// 只保留三个用户文件
+					_ = GetUserfile()
 					log.Printf("%s 用户修改成功\n", user.Name)
 				}
 			} else {
