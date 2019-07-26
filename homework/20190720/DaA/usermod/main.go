@@ -10,11 +10,13 @@ import (
 )
 
 func main() {
+	//测试
+	//users.Test()
 
 	//认证
 	auth := flag.Bool("N", false, "no auth")
 	flag.Parse()
-	fmt.Println(*auth)
+	//fmt.Println(*auth)
 	if !users.Auth(*auth) {
 		return
 	}
@@ -22,10 +24,11 @@ func main() {
 	//功能测试
 	menu := `
 1. 新建用户
-2. 修改用户
+2. 查询用户
 3. 删除用户
-4. 查询用户
-5. 退出
+4. 更新用户
+5. 修改登录密码
+6. 退出
 *********************************`
 
 	callbacks := map[int]func(){
@@ -33,7 +36,8 @@ func main() {
 		2: users.Query,
 		3: users.Del,
 		4: users.Update,
-		5: func() { os.Exit(0) },
+		5: users.UpdatePasswd,
+		6: func() { os.Exit(0) },
 	}
 
 	for {
@@ -49,5 +53,5 @@ func main() {
 			fmt.Println(err)
 		}
 	}
-	users.Test()
+
 }
