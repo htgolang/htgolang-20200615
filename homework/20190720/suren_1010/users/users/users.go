@@ -2,6 +2,7 @@ package users
 
 import (
 	"crypto/md5"
+	"encoding/csv"
 	"encoding/gob"
 	"errors"
 	"fmt"
@@ -25,6 +26,8 @@ var users = make(map[int]User)
 //const PASSWD string = "123abc!@#"
 //const PASSWD string = "8c13b5750412d922b01b2da95d24f8b6"
 const PasswdFile string = "passwd.gob"
+const UserFileCsv string = "user.csv"
+const UserFileGod string = "user.gob"
 
 func Auth() bool {
 	var inputPass string
@@ -48,15 +51,18 @@ func Auth() bool {
 func Add() {
 	uid := getUid()
 	user := userInfo(uid)
+	users, _ := userFile()
 	if err := checkName(user); err != nil {
 		fmt.Println(err)
 	} else {
 		users[uid] = user
+		userFileWrite(users)
 		fmt.Println("添加成功")
 	}
 }
 
 func Query() {
+	users, _ := userFile()
 	keyword := InputString("请输入要查询的信息: ")
 	list := make([]User, 0)
 	for _, user := range users {
@@ -90,6 +96,7 @@ func Query() {
 }
 
 func Modify() {
+	users, _ := userFile()
 	uid, _ := strconv.Atoi(InputString("请输入要修改的用户ID: "))
 	if checkUID(uid) == true {
 		pirntTitle()
@@ -100,6 +107,7 @@ func Modify() {
 				fmt.Println(err)
 			} else {
 				users[uid] = userInfo(uid)
+				userFileWrite(users)
 				fmt.Println("用户修改成功！！！")
 			}
 		case "no":
@@ -111,6 +119,7 @@ func Modify() {
 }
 
 func Del() {
+	users, _ := userFile()
 	uid, _ := strconv.Atoi(InputString("请输入要删除的用户ID: "))
 	if checkUID(uid) == true {
 		pirntTitle()
@@ -118,6 +127,7 @@ func Del() {
 		switch InputString("请确认是否删除(yes/no): ") {
 		case "yes":
 			delete(users, uid)
+			userFileWrite(users)
 			fmt.Println("用户删除成功！！！")
 		case "no":
 			break
@@ -181,6 +191,7 @@ func printUserInfo(user User) {
 
 func getUid() int {
 	uid := 0
+	users, _ := userFile()
 	for k := range users {
 		if k > uid {
 			uid = k
@@ -219,4 +230,38 @@ func file2passwd() string {
 		decode.Decode(&passwd)
 	}
 	return passwd
+}
+
+func userFile() (map[int]User, error) {
+	users := make(map[int]User)
+	file, err := os.Open(UserFileGod)
+	if err != nil {
+		defer file.Close()
+		if os.IsNotExist(err) {
+			return users, errors.New("文件不存在")
+		}
+	} else {
+		decode := gob.NewDecoder(file)
+		decode.Decode(&users)
+	}
+	return users, nil
+}
+
+func userFileWrite(users map[int]User) {
+	godfile, err := os.Create(UserFileGod)
+	if err == nil {
+		defer godfile.Close()
+		encode := gob.NewEncoder(godfile)
+		encode.Encode(users)
+	}
+	csvfile, err := os.Create(UserFileCsv)
+	if err == nil {
+		defer csvfile.Close()
+		w := csv.NewWriter(csvfile)
+		w.Write([]string{"ID", "Name", "Birthday", "Tal", "Addr"})
+		for _, v := range users {
+			w.Write([]string{strconv.Itoa(v.ID), v.Name, v.Birthday.Format("2006-01-02"), v.Tal, v.Addr})
+		}
+		w.Flush()
+	}
 }
