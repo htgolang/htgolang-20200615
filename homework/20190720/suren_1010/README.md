@@ -1,2 +1,3 @@
-copy 完成
-密码持久化、初始化完成
+除挑战题目外，其他已完成
+
+copy 使用方法: go run copy.go -R -s /tmp/a -d /tmp/b/
