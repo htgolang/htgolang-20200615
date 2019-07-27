@@ -23,6 +23,8 @@ func (dog Dog) test(dog2 Dog) {
 }
 
 func main() {
+
+	var a int
 	dog := Dog{"豆豆"}
 
 	dog.Call()
