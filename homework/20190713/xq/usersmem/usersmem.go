@@ -121,9 +121,15 @@ func inputUser() User {
 	END:
 	user.Name = InputString("请输入名字:")
 	for _, u :=range users{
-		if user.Name == "" || user.Name == u.Name{
-			fmt.Println("该用户已存在，请重新输入。")
+		// 修改自己，名字不变时
+		if user.Name == "" {
+			fmt.Println("用户名不能为空，请重新输入。")
 			goto END
+		}
+		if user.Name == u.Name && user.ID != u.ID {
+			fmt.Println("用户已存在，请重新输入。")
+			goto END
+
 		}
 	}
 	user.Birthday, _ = time.Parse("2006-01-02",InputString("请输入出生日期(2006-01-02):"))
