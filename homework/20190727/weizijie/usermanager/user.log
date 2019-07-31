@@ -1,0 +1,569 @@
+C:\Users\jevon\AppData\Local\Temp\go-build255378610\b001\exe\main.exe:2019/07/25 21:00:02 users.go:158: passwd序列化到csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build255378610\b001\exe\main.exe:2019/07/25 21:00:47 users.go:232: map[2:ID: 2
+名字: dan
+出生日期: 2000/01/01
+联系方式: 12
+联系地址: 12
+备注: 12 4:ID: 4
+名字: qq
+出生日期: 2010/01/01
+联系方式: 12
+联系地址: 12
+备注: 12 5:ID: 5
+名字: wei
+出生日期: 2019/01/01
+联系方式: 12
+联系地址: 12
+备注: 12]数据已写入到users_dir\1564059647user.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build126444398\b001\exe\main.exe:2019/07/25 21:35:17 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build126444398\b001\exe\main.exe:2019/07/25 21:35:24 users.go:529: 用户按照ID排序显示
+C:\Users\jevon\AppData\Local\Temp\go-build126444398\b001\exe\main.exe:2019/07/25 21:35:24 users.go:529: 用户按照ID排序显示
+C:\Users\jevon\AppData\Local\Temp\go-build126444398\b001\exe\main.exe:2019/07/25 21:35:24 users.go:529: 用户按照ID排序显示
+C:\Users\jevon\AppData\Local\Temp\go-build126444398\b001\exe\main.exe:2019/07/25 21:35:24 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build126444398\b001\exe\main.exe:2019/07/25 21:35:24 users.go:94: 打印 qq 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build126444398\b001\exe\main.exe:2019/07/25 21:35:24 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build183266922\b001\exe\main.exe:2019/07/25 21:44:11 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build097581762\b001\exe\main.exe:2019/07/25 21:46:14 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build097581762\b001\exe\main.exe:2019/07/25 21:46:21 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build097581762\b001\exe\main.exe:2019/07/25 21:46:21 users.go:94: 打印 qq 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build097581762\b001\exe\main.exe:2019/07/25 21:46:21 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build822704894\b001\exe\main.exe:2019/07/25 21:48:47 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build706708026\b001\exe\main.exe:2019/07/25 21:48:57 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build706708026\b001\exe\main.exe:2019/07/25 21:48:57 users.go:308: 密码输入错误，请重新输入
+C:\Users\jevon\AppData\Local\Temp\go-build706708026\b001\exe\main.exe:2019/07/25 21:49:01 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build333878230\b001\exe\main.exe:2019/07/25 21:51:42 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build258530178\b001\exe\main.exe:2019/07/25 22:00:55 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build812845210\b001\exe\main.exe:2019/07/25 22:03:04 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build812845210\b001\exe\main.exe:2019/07/25 22:03:15 users.go:405: dan用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build812845210\b001\exe\main.exe:2019/07/25 22:03:15 users.go:432: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build790214818\b001\exe\main.exe:2019/07/25 22:06:12 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build790214818\b001\exe\main.exe:2019/07/25 22:06:15 users.go:257: 用户文件不存在，创建了用户空文件: &{0xc000083400}
+C:\Users\jevon\AppData\Local\Temp\go-build790924610\b001\exe\main.exe:2019/07/25 22:10:27 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build790924610\b001\exe\main.exe:2019/07/25 22:10:39 users.go:257: 用户文件不存在，创建了用户空文件: &{0xc000083400}
+C:\Users\jevon\AppData\Local\Temp\go-build858286546\b001\exe\main.exe:2019/07/25 22:14:11 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build602102874\b001\exe\main.exe:2019/07/25 22:18:30 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build913214578\b001\exe\main.exe:2019/07/25 22:19:44 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build591083762\b001\exe\main.exe:2019/07/25 22:38:05 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build822859818\b001\exe\main.exe:2019/07/25 22:38:32 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build967278890\b001\exe\main.exe:2019/07/25 22:38:47 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build485266202\b001\exe\main.exe:2019/07/25 22:38:57 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build485266202\b001\exe\main.exe:2019/07/25 22:39:03 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build485266202\b001\exe\main.exe:2019/07/25 22:39:05 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build489580082\b001\exe\main.exe:2019/07/25 22:41:00 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build581841806\b001\exe\main.exe:2019/07/25 22:43:55 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build581841806\b001\exe\main.exe:2019/07/25 22:44:11 users.go:302: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build581841806\b001\exe\main.exe:2019/07/25 22:45:35 users.go:302: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build581841806\b001\exe\main.exe:2019/07/25 22:45:36 users.go:302: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build250651658\b001\exe\main.exe:2019/07/25 22:45:43 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build639094090\b001\exe\main.exe:2019/07/25 22:45:58 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build639094090\b001\exe\main.exe:2019/07/25 22:46:00 users.go:302: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build639094090\b001\exe\main.exe:2019/07/25 22:49:32 users.go:126: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build639094090\b001\exe\main.exe:2019/07/25 22:49:32 users.go:165: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build639094090\b001\exe\main.exe:2019/07/25 22:49:32 users.go:298: 用户密码更新成功
+C:\Users\jevon\AppData\Local\Temp\go-build272207690\b001\exe\main.exe:2019/07/25 22:50:25 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build272207690\b001\exe\main.exe:2019/07/25 22:50:27 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build272207690\b001\exe\main.exe:2019/07/25 22:50:29 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build691389634\b001\exe\main.exe:2019/07/25 22:50:45 users.go:126: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build691389634\b001\exe\main.exe:2019/07/25 22:50:45 users.go:165: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build691389634\b001\exe\main.exe:2019/07/25 22:50:45 users.go:288: 密码设置成功
+C:\Users\jevon\AppData\Local\Temp\go-build691389634\b001\exe\main.exe:2019/07/25 22:50:49 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build913554786\b001\exe\main.exe:2019/07/25 22:51:05 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build913554786\b001\exe\main.exe:2019/07/25 22:51:06 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build913554786\b001\exe\main.exe:2019/07/25 22:51:58 users.go:126: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build913554786\b001\exe\main.exe:2019/07/25 22:51:58 users.go:165: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build913554786\b001\exe\main.exe:2019/07/25 22:51:58 users.go:299: 用户密码更新成功
+C:\Users\jevon\AppData\Local\Temp\go-build250913538\b001\exe\main.exe:2019/07/25 22:52:04 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build759232274\b001\exe\main.exe:2019/07/25 22:52:52 users.go:143: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build759232274\b001\exe\main.exe:2019/07/25 22:52:54 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build759232274\b001\exe\main.exe:2019/07/25 22:53:00 users.go:126: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build759232274\b001\exe\main.exe:2019/07/25 22:53:00 users.go:165: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build759232274\b001\exe\main.exe:2019/07/25 22:53:00 users.go:300: 用户密码更新成功
+C:\Users\jevon\AppData\Local\Temp\go-build780780502\b001\exe\main.exe:2019/07/25 22:54:40 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build780780502\b001\exe\main.exe:2019/07/25 22:54:41 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build780780502\b001\exe\main.exe:2019/07/25 22:54:43 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build780780502\b001\exe\main.exe:2019/07/25 22:54:45 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build790837482\b001\exe\main.exe:2019/07/25 22:59:01 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build790837482\b001\exe\main.exe:2019/07/25 22:59:07 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build790837482\b001\exe\main.exe:2019/07/25 22:59:14 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build790837482\b001\exe\main.exe:2019/07/25 22:59:15 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build166874514\b001\exe\main.exe:2019/07/25 23:01:59 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build166874514\b001\exe\main.exe:2019/07/25 23:02:02 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build166874514\b001\exe\main.exe:2019/07/25 23:02:07 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build166874514\b001\exe\main.exe:2019/07/25 23:02:08 users.go:303: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build785207210\b001\exe\main.exe:2019/07/25 23:03:09 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build785207210\b001\exe\main.exe:2019/07/25 23:03:11 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build785207210\b001\exe\main.exe:2019/07/25 23:03:15 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build785207210\b001\exe\main.exe:2019/07/25 23:03:15 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build807850234\b001\exe\main.exe:2019/07/25 23:03:59 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build807850234\b001\exe\main.exe:2019/07/25 23:04:01 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build807850234\b001\exe\main.exe:2019/07/25 23:04:05 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build807850234\b001\exe\main.exe:2019/07/25 23:04:05 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build226358250\b001\exe\main.exe:2019/07/25 23:08:32 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build013338218\b001\exe\main.exe:2019/07/25 23:09:13 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build367219138\b001\exe\main.exe:2019/07/25 23:09:52 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build153697802\b001\exe\main.exe:2019/07/25 23:10:03 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build919149230\b001\exe\main.exe:2019/07/25 23:10:31 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build206252146\b001\exe\main.exe:2019/07/25 23:11:02 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build280237902\b001\exe\main.exe:2019/07/25 23:11:20 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build535931702\b001\exe\main.exe:2019/07/25 23:16:34 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build535931702\b001\exe\main.exe:2019/07/25 23:16:35 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build535931702\b001\exe\main.exe:2019/07/25 23:16:35 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build945400874\b001\exe\main.exe:2019/07/25 23:17:49 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build945400874\b001\exe\main.exe:2019/07/25 23:17:50 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build945400874\b001\exe\main.exe:2019/07/25 23:17:50 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build623019182\b001\exe\main.exe:2019/07/25 23:17:58 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build623019182\b001\exe\main.exe:2019/07/25 23:17:59 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build623019182\b001\exe\main.exe:2019/07/25 23:17:59 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build728083862\b001\exe\main.exe:2019/07/25 23:19:30 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build399969098\b001\exe\main.exe:2019/07/25 23:19:46 users.go:125: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build399969098\b001\exe\main.exe:2019/07/25 23:19:46 users.go:164: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build399969098\b001\exe\main.exe:2019/07/25 23:19:46 users.go:287: 密码设置成功
+C:\Users\jevon\AppData\Local\Temp\go-build399969098\b001\exe\main.exe:2019/07/25 23:19:49 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build208251042\b001\exe\main.exe:2019/07/25 23:22:09 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build195207778\b001\exe\main.exe:2019/07/25 23:23:15 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build973064682\b001\exe\main.exe:2019/07/25 23:24:11 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build973064682\b001\exe\main.exe:2019/07/25 23:24:17 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build973064682\b001\exe\main.exe:2019/07/25 23:24:23 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build973064682\b001\exe\main.exe:2019/07/25 23:24:24 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build217863710\b001\exe\main.exe:2019/07/25 23:25:55 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build217863710\b001\exe\main.exe:2019/07/25 23:26:06 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build217863710\b001\exe\main.exe:2019/07/25 23:26:21 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build217863710\b001\exe\main.exe:2019/07/25 23:26:22 users.go:304: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build173001386\b001\exe\main.exe:2019/07/25 23:28:21 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build173001386\b001\exe\main.exe:2019/07/25 23:28:22 users.go:307: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build173001386\b001\exe\main.exe:2019/07/25 23:28:27 users.go:307: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build173001386\b001\exe\main.exe:2019/07/25 23:28:28 users.go:307: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build442968310\b001\exe\main.exe:2019/07/25 23:32:08 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build442968310\b001\exe\main.exe:2019/07/25 23:32:17 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build442968310\b001\exe\main.exe:2019/07/25 23:32:18 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build442968310\b001\exe\main.exe:2019/07/25 23:32:20 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build474567046\b001\exe\main.exe:2019/07/25 23:32:39 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build474567046\b001\exe\main.exe:2019/07/25 23:32:41 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build474567046\b001\exe\main.exe:2019/07/25 23:32:49 users.go:125: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build474567046\b001\exe\main.exe:2019/07/25 23:32:49 users.go:164: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build474567046\b001\exe\main.exe:2019/07/25 23:32:49 users.go:304: 用户密码更新成功
+C:\Users\jevon\AppData\Local\Temp\go-build589511542\b001\exe\main.exe:2019/07/25 23:34:17 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build589511542\b001\exe\main.exe:2019/07/25 23:34:24 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build589511542\b001\exe\main.exe:2019/07/25 23:34:25 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build589511542\b001\exe\main.exe:2019/07/25 23:34:27 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build353328826\b001\exe\main.exe:2019/07/25 23:35:28 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build353328826\b001\exe\main.exe:2019/07/25 23:35:31 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build513372098\b001\exe\main.exe:2019/07/25 23:42:04 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build513372098\b001\exe\main.exe:2019/07/25 23:42:07 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build513372098\b001\exe\main.exe:2019/07/25 23:42:13 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build513372098\b001\exe\main.exe:2019/07/25 23:42:14 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build513372098\b001\exe\main.exe:2019/07/25 23:42:15 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build338071482\b001\exe\main.exe:2019/07/25 23:43:15 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build338071482\b001\exe\main.exe:2019/07/25 23:43:18 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build338071482\b001\exe\main.exe:2019/07/25 23:43:20 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build338071482\b001\exe\main.exe:2019/07/25 23:43:21 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build850822170\b001\exe\main.exe:2019/07/25 23:43:30 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build850822170\b001\exe\main.exe:2019/07/25 23:43:38 users.go:125: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build850822170\b001\exe\main.exe:2019/07/25 23:43:38 users.go:164: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build850822170\b001\exe\main.exe:2019/07/25 23:43:38 users.go:304: 用户密码更新成功
+C:\Users\jevon\AppData\Local\Temp\go-build850822170\b001\exe\main.exe:2019/07/25 23:44:51 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build850822170\b001\exe\main.exe:2019/07/25 23:44:52 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build935377790\b001\exe\main.exe:2019/07/25 23:44:59 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build935377790\b001\exe\main.exe:2019/07/25 23:45:03 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build935377790\b001\exe\main.exe:2019/07/25 23:45:04 users.go:308: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build935377790\b001\exe\main.exe:2019/07/25 23:45:09 users.go:125: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build935377790\b001\exe\main.exe:2019/07/25 23:45:09 users.go:164: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build935377790\b001\exe\main.exe:2019/07/25 23:45:09 users.go:304: 用户密码更新成功
+C:\Users\jevon\AppData\Local\Temp\go-build518138818\b001\exe\main.exe:2019/07/25 23:45:14 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build518138818\b001\exe\main.exe:2019/07/25 23:45:15 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build518138818\b001\exe\main.exe:2019/07/25 23:45:15 users.go:142: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build052272090\b001\exe\main.exe:2019/07/25 23:51:16 users.go:150: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build052272090\b001\exe\main.exe:2019/07/25 23:51:18 users.go:150: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build052272090\b001\exe\main.exe:2019/07/25 23:51:28 users.go:133: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build052272090\b001\exe\main.exe:2019/07/25 23:51:28 users.go:172: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build052272090\b001\exe\main.exe:2019/07/25 23:51:28 users.go:312: 用户密码更新成功
+C:\Users\jevon\AppData\Local\Temp\go-build523452298\b001\exe\main.exe:2019/07/25 23:51:34 users.go:150: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build628568586\b001\exe\main.exe:2019/07/25 23:54:09 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build628568586\b001\exe\main.exe:2019/07/25 23:54:12 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build628568586\b001\exe\main.exe:2019/07/25 23:54:16 users.go:271: 用户文件不存在，创建了用户空文件: &{0xc000081680}
+C:\Users\jevon\AppData\Local\Temp\go-build628568586\b001\exe\main.exe:2019/07/25 23:54:29 users.go:487: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build628568586\b001\exe\main.exe:2019/07/25 23:54:29 users.go:514: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build628568586\b001\exe\main.exe:2019/07/25 23:54:33 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:45:17 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:45:35 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:45:41 users.go:430: 用户名wei已存在,不能新增/修改
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:45:41 users.go:488: ID为 2 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:45:52 users.go:461: dan用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:45:52 users.go:488: ID为 2 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:04 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:04 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:07 users.go:478: [wei dan]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:09 users.go:506: 要删除的用户: wei
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:09 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:10 users.go:519: wei 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:16 users.go:242: users_dir\1564070056user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:16 users.go:242: users_dir\1564070069user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:16 users.go:478: [dan]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:18 users.go:563: 输入的ID不存在，用户修改失败
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:39 users.go:461: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:39 users.go:488: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:40 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build105705234\b001\exe\main.exe:2019/07/26 19:46:40 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:17 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:20 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:20 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:29 users.go:493: [wei dan]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:32 users.go:540: 输入的ID不存在，用户删除失败
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:37 users.go:493: [wei dan]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:39 users.go:522: 要删除的用户: wei
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:39 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:40 users.go:273: users_dir\1564141552user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:40 users.go:273: users_dir\1564141570user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 19:59:40 users.go:536: wei 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:00:00 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:00:00 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:01:16 users.go:476: qq用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:01:16 users.go:504: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:03:19 users.go:493: [dan wei]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:03:44 users.go:522: 要删除的用户: wei
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:03:44 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:03:46 users.go:273: users_dir\1564141599user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:03:46 users.go:273: users_dir\1564142380user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:03:46 users.go:536: wei 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:03:53 users.go:94: 打印 qq 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build785481774\b001\exe\main.exe:2019/07/26 20:03:53 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build854811130\b001\exe\main.exe:2019/07/26 20:04:43 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build854811130\b001\exe\main.exe:2019/07/26 20:04:47 users.go:493: [dan qq]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build854811130\b001\exe\main.exe:2019/07/26 20:04:50 users.go:522: 要删除的用户: dan
+C:\Users\jevon\AppData\Local\Temp\go-build854811130\b001\exe\main.exe:2019/07/26 20:04:50 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build854811130\b001\exe\main.exe:2019/07/26 20:04:51 users.go:94: 打印 qq 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build854811130\b001\exe\main.exe:2019/07/26 20:04:51 users.go:537: dan 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build854811130\b001\exe\main.exe:2019/07/26 20:05:01 users.go:94: 打印 qq 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build854811130\b001\exe\main.exe:2019/07/26 20:05:01 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build965310698\b001\exe\main.exe:2019/07/26 20:05:57 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build965310698\b001\exe\main.exe:2019/07/26 20:06:00 users.go:493: [dan qq]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build965310698\b001\exe\main.exe:2019/07/26 20:06:01 users.go:522: 要删除的用户: qq
+C:\Users\jevon\AppData\Local\Temp\go-build965310698\b001\exe\main.exe:2019/07/26 20:06:01 users.go:94: 打印 qq 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build965310698\b001\exe\main.exe:2019/07/26 20:06:03 users.go:273: users_dir\1564142476user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build965310698\b001\exe\main.exe:2019/07/26 20:06:03 users.go:273: users_dir\1564142626user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build965310698\b001\exe\main.exe:2019/07/26 20:06:03 users.go:537: qq 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build965310698\b001\exe\main.exe:2019/07/26 20:06:10 users.go:94: 打印 qq 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build532557070\b001\exe\main.exe:2019/07/26 20:09:05 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build532557070\b001\exe\main.exe:2019/07/26 20:09:10 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build532557070\b001\exe\main.exe:2019/07/26 20:09:28 users.go:446: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build532557070\b001\exe\main.exe:2019/07/26 20:09:28 users.go:473: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build532557070\b001\exe\main.exe:2019/07/26 20:09:48 users.go:446: qqq用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build532557070\b001\exe\main.exe:2019/07/26 20:09:48 users.go:473: ID为 3 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build532557070\b001\exe\main.exe:2019/07/26 20:09:57 users.go:242: users_dir\1564142691user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build532557070\b001\exe\main.exe:2019/07/26 20:09:57 users.go:242: users_dir\1564142763user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build532557070\b001\exe\main.exe:2019/07/26 20:09:57 users.go:463: [dan wei qqq]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:11:42 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:11:48 users.go:463: [dan wei qqq]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:11:56 users.go:492: 要删除的用户: qqq
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:11:56 users.go:94: 打印 qqq 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:11:58 users.go:505: qqq 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:08 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:08 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:17 users.go:463: [dan wei]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:25 users.go:492: 要删除的用户: dan
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:25 users.go:94: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:26 users.go:505: dan 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:34 users.go:242: users_dir\1564142968user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:34 users.go:242: users_dir\1564142988user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:41 users.go:446: qqq用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:41 users.go:474: ID为 2 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:50 users.go:446: aa用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:50 users.go:242: users_dir\1564143118user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:50 users.go:242: users_dir\1564143146user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:12:50 users.go:474: ID为 3 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:13:27 users.go:463: [wei qqq aa]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:13:32 users.go:492: 要删除的用户: wei
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:13:32 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build345408246\b001\exe\main.exe:2019/07/26 20:13:33 users.go:505: wei 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:25 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:30 users.go:463: [qqq aa]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:33 users.go:492: 要删除的用户: qqq
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:33 users.go:94: 打印 qqq 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:34 users.go:242: users_dir\1564143161user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:34 users.go:506: qqq 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:45 users.go:446: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:45 users.go:242: users_dir\1564143170user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:45 users.go:474: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:51 users.go:463: [aa wei]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:59 users.go:536: 要修改的用户为: aa
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:14:59 users.go:94: 打印 aa 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:09 users.go:446: aa用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:09 users.go:242: users_dir\1564143213user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:09 users.go:547: aa 用户修改成功
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:11 users.go:94: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:11 users.go:94: 打印 aa 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:17 users.go:463: [aa wei]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:22 users.go:551: 输入的ID不存在，用户修改失败
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:35 users.go:446: zz用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:35 users.go:242: users_dir\1564143274user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:35 users.go:474: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:37 users.go:94: 打印 zz 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build583778990\b001\exe\main.exe:2019/07/26 20:15:37 users.go:94: 打印 aa 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:18:26 users.go:157: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:18:33 users.go:94: 打印 zz 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:18:33 users.go:94: 打印 aa 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:31 users.go:446: q用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:31 users.go:242: users_dir\1564143285user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:31 users.go:474: ID为 2 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:32 users.go:94: 打印 zz 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:32 users.go:94: 打印 q 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:32 users.go:94: 打印 aa 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:43 users.go:463: [aa zz q]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:48 users.go:492: 要删除的用户: zz
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:48 users.go:94: 打印 zz 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:49 users.go:242: users_dir\1564143309user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:19:49 users.go:506: zz 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:01 users.go:94: 打印 q 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:01 users.go:94: 打印 aa 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:12 users.go:94: 打印 q 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:12 users.go:94: 打印 aa 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:26 users.go:446: a用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:26 users.go:242: users_dir\1564143335user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:26 users.go:474: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:40 users.go:446: 111用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:40 users.go:242: users_dir\1564143571user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:40 users.go:474: ID为 4 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:20:48 users.go:463: [q 111 aa a]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:04 users.go:536: 要修改的用户为: a
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:04 users.go:94: 打印 a 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:10 users.go:463: [q 111 aa a]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:28 users.go:492: 要删除的用户: q
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:28 users.go:94: 打印 q 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:29 users.go:242: users_dir\1564143589user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:29 users.go:506: q 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:39 users.go:446: z用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:39 users.go:242: users_dir\1564143626user.gob文件已移除
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:39 users.go:474: ID为 2 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:42 users.go:463: [aa a z 111]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:52 users.go:536: 要修改的用户为: 111
+C:\Users\jevon\AppData\Local\Temp\go-build344066422\b001\exe\main.exe:2019/07/26 20:21:52 users.go:94: 打印 111 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build622423414\b001\exe\main.exe:2019/07/29 21:25:16 users.go:159: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build622423414\b001\exe\main.exe:2019/07/29 21:25:34 users.go:142: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build622423414\b001\exe\main.exe:2019/07/29 21:25:34 users.go:181: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build622423414\b001\exe\main.exe:2019/07/29 21:25:34 users.go:324: 用户密码更新成功
+C:\Users\jevon\AppData\Local\Temp\go-build947564286\b001\exe\main.exe:2019/07/29 21:25:39 users.go:159: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build947564286\b001\exe\main.exe:2019/07/29 21:25:48 users.go:142: passwd已写入passwd_dir\passwd.gob文件
+C:\Users\jevon\AppData\Local\Temp\go-build947564286\b001\exe\main.exe:2019/07/29 21:25:48 users.go:181: passwd已序列化到passwd_dir\passwdfile.csv文件
+C:\Users\jevon\AppData\Local\Temp\go-build947564286\b001\exe\main.exe:2019/07/29 21:25:48 users.go:324: 用户密码更新成功
+C:\Users\jevon\AppData\Local\Temp\go-build584679490\b001\exe\main.exe:2019/07/29 21:54:44 users.go:161: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build584679490\b001\exe\main.exe:2019/07/29 21:55:03 users.go:483: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build584679490\b001\exe\main.exe:2019/07/29 21:55:03 users.go:511: ID为 5 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build327862970\b001\exe\main.exe:2019/07/29 22:25:29 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build623193310\b001\exe\main.exe:2019/07/29 22:35:08 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build672280342\b001\exe\main.exe:2019/07/29 22:37:56 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build672280342\b001\exe\main.exe:2019/07/29 22:38:04 users.go:488: 1用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build672280342\b001\exe\main.exe:2019/07/29 22:38:04 users.go:516: ID为 5 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build328973974\b001\exe\main.exe:2019/07/29 22:41:49 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build237142470\b001\exe\main.exe:2019/07/29 22:43:22 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build800777546\b001\exe\main.exe:2019/07/29 22:47:54 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build549322762\b001\exe\main.exe:2019/07/29 22:49:10 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build549322762\b001\exe\main.exe:2019/07/29 22:49:19 users.go:490: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build549322762\b001\exe\main.exe:2019/07/29 22:49:19 users.go:518: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build549322762\b001\exe\main.exe:2019/07/29 22:49:54 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build549322762\b001\exe\main.exe:2019/07/29 22:50:05 users.go:490: dan用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build549322762\b001\exe\main.exe:2019/07/29 22:50:05 users.go:518: ID为 2 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build549322762\b001\exe\main.exe:2019/07/29 22:50:07 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build549322762\b001\exe\main.exe:2019/07/29 22:50:07 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build323825778\b001\exe\main.exe:2019/07/29 22:50:22 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build323825778\b001\exe\main.exe:2019/07/29 22:50:25 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build323825778\b001\exe\main.exe:2019/07/29 22:50:25 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build819267606\b001\exe\main.exe:2019/07/29 23:01:04 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build819267606\b001\exe\main.exe:2019/07/29 23:01:14 users.go:521: [wei dan]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build819267606\b001\exe\main.exe:2019/07/29 23:01:15 users.go:594: 要修改的用户为: wei
+C:\Users\jevon\AppData\Local\Temp\go-build819267606\b001\exe\main.exe:2019/07/29 23:01:15 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build037949286\b001\exe\main.exe:2019/07/29 23:02:50 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build037949286\b001\exe\main.exe:2019/07/29 23:03:07 users.go:507: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build037949286\b001\exe\main.exe:2019/07/29 23:03:07 users.go:535: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build037949286\b001\exe\main.exe:2019/07/29 23:03:20 users.go:507: dan用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build037949286\b001\exe\main.exe:2019/07/29 23:03:20 users.go:535: ID为 2 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build037949286\b001\exe\main.exe:2019/07/29 23:03:32 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build037949286\b001\exe\main.exe:2019/07/29 23:03:32 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:03:39 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:03:41 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:03:41 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:03:45 users.go:524: [wei dan]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:03:46 users.go:597: 要修改的用户为: wei
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:03:46 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:03:53 users.go:507: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:03:53 users.go:610: wei 用户修改成功
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:04:02 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build737979378\b001\exe\main.exe:2019/07/29 23:04:02 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build314829078\b001\exe\main.exe:2019/07/29 23:05:51 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build314829078\b001\exe\main.exe:2019/07/29 23:05:53 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build314829078\b001\exe\main.exe:2019/07/29 23:05:57 users.go:524: [wei dan]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build314829078\b001\exe\main.exe:2019/07/29 23:05:58 users.go:553: 要删除的用户: wei
+C:\Users\jevon\AppData\Local\Temp\go-build314829078\b001\exe\main.exe:2019/07/29 23:05:58 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build314829078\b001\exe\main.exe:2019/07/29 23:06:00 users.go:567: wei 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build204289374\b001\exe\main.exe:2019/07/29 23:09:06 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build204289374\b001\exe\main.exe:2019/07/29 23:09:09 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build204289374\b001\exe\main.exe:2019/07/29 23:09:21 users.go:508: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build204289374\b001\exe\main.exe:2019/07/29 23:09:21 users.go:536: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build520528146\b001\exe\main.exe:2019/07/29 23:11:07 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build520528146\b001\exe\main.exe:2019/07/29 23:11:10 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build520528146\b001\exe\main.exe:2019/07/29 23:11:10 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build520528146\b001\exe\main.exe:2019/07/29 23:11:16 users.go:525: [wei dan]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build520528146\b001\exe\main.exe:2019/07/29 23:11:18 users.go:598: 要修改的用户为: dan
+C:\Users\jevon\AppData\Local\Temp\go-build520528146\b001\exe\main.exe:2019/07/29 23:11:18 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build520528146\b001\exe\main.exe:2019/07/29 23:11:26 users.go:508: dan用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build520528146\b001\exe\main.exe:2019/07/29 23:11:26 users.go:611: dan 用户修改成功
+C:\Users\jevon\AppData\Local\Temp\go-build696623598\b001\exe\main.exe:2019/07/29 23:12:03 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build696623598\b001\exe\main.exe:2019/07/29 23:12:06 users.go:386: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build696623598\b001\exe\main.exe:2019/07/29 23:12:07 users.go:386: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build696623598\b001\exe\main.exe:2019/07/29 23:12:08 users.go:386: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build696623598\b001\exe\main.exe:2019/07/29 23:12:16 users.go:525: [wei dan]用户信息已遍历
+C:\Users\jevon\AppData\Local\Temp\go-build696623598\b001\exe\main.exe:2019/07/29 23:12:17 users.go:554: 要删除的用户: wei
+C:\Users\jevon\AppData\Local\Temp\go-build696623598\b001\exe\main.exe:2019/07/29 23:12:17 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build696623598\b001\exe\main.exe:2019/07/29 23:12:18 users.go:568: wei 用户已删除
+C:\Users\jevon\AppData\Local\Temp\go-build657839154\b001\exe\main.exe:2019/07/29 23:13:09 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build657839154\b001\exe\main.exe:2019/07/29 23:13:20 users.go:508: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build657839154\b001\exe\main.exe:2019/07/29 23:13:20 users.go:536: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build937467774\b001\exe\main.exe:2019/07/29 23:37:41 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build937467774\b001\exe\main.exe:2019/07/29 23:37:44 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build937467774\b001\exe\main.exe:2019/07/29 23:37:44 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:04 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:07 users.go:318: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:08 users.go:318: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:09 users.go:318: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:16 users.go:408: 用户名wei已存在,不能新增/修改
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:16 users.go:468: ID为 3 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:29 users.go:224: users_json\.user.json文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:29 users.go:233: users_json\1564413086.user.json文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:29 users.go:440: ran用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:29 users.go:468: ID为 3 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:31 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:31 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build987119598\b001\exe\main.exe:2019/07/29 23:40:31 users.go:97: 打印 ran 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build512123726\b001\exe\main.exe:2019/07/29 23:41:38 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build512123726\b001\exe\main.exe:2019/07/29 23:41:41 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build512123726\b001\exe\main.exe:2019/07/29 23:41:41 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build512123726\b001\exe\main.exe:2019/07/29 23:41:41 users.go:97: 打印 ran 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build501853242\b001\exe\main.exe:2019/07/30 17:53:21 users.go:171: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build501853242\b001\exe\main.exe:2019/07/30 17:53:37 users.go:513: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build501853242\b001\exe\main.exe:2019/07/30 17:53:37 users.go:541: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build613488006\b001\exe\main.exe:2019/07/30 17:56:32 users.go:171: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build613488006\b001\exe\main.exe:2019/07/30 17:56:38 users.go:513: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build613488006\b001\exe\main.exe:2019/07/30 17:56:38 users.go:541: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build613488006\b001\exe\main.exe:2019/07/30 17:56:52 users.go:345: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build477500090\b001\exe\main.exe:2019/07/30 18:03:37 users.go:171: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build477500090\b001\exe\main.exe:2019/07/30 18:03:41 users.go:346: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build477500090\b001\exe\main.exe:2019/07/30 18:03:41 users.go:346: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build477500090\b001\exe\main.exe:2019/07/30 18:03:43 users.go:346: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build477500090\b001\exe\main.exe:2019/07/30 18:03:47 users.go:298: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build477500090\b001\exe\main.exe:2019/07/30 18:03:47 users.go:514: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build477500090\b001\exe\main.exe:2019/07/30 18:03:47 users.go:542: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build271522698\b001\exe\main.exe:2019/07/30 18:04:25 users.go:171: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build271522698\b001\exe\main.exe:2019/07/30 18:04:28 users.go:347: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build271522698\b001\exe\main.exe:2019/07/30 18:04:28 users.go:347: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build271522698\b001\exe\main.exe:2019/07/30 18:04:29 users.go:347: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build271522698\b001\exe\main.exe:2019/07/30 18:04:43 users.go:298: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build271522698\b001\exe\main.exe:2019/07/30 18:04:43 users.go:106: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build271522698\b001\exe\main.exe:2019/07/30 18:04:43 users.go:515: dan用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build271522698\b001\exe\main.exe:2019/07/30 18:04:43 users.go:543: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build605675966\b001\exe\main.exe:2019/07/30 18:07:10 users.go:171: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build605675966\b001\exe\main.exe:2019/07/30 18:07:13 users.go:347: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build605675966\b001\exe\main.exe:2019/07/30 18:07:13 users.go:347: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build605675966\b001\exe\main.exe:2019/07/30 18:07:14 users.go:347: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build605675966\b001\exe\main.exe:2019/07/30 18:07:17 users.go:298: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build605675966\b001\exe\main.exe:2019/07/30 18:07:17 users.go:515: dan用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build605675966\b001\exe\main.exe:2019/07/30 18:07:17 users.go:543: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build005675266\b001\exe\main.exe:2019/07/30 18:07:51 users.go:171: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build005675266\b001\exe\main.exe:2019/07/30 18:07:55 users.go:347: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build005675266\b001\exe\main.exe:2019/07/30 18:07:55 users.go:347: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build005675266\b001\exe\main.exe:2019/07/30 18:07:57 users.go:347: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build005675266\b001\exe\main.exe:2019/07/30 18:08:00 users.go:298: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build005675266\b001\exe\main.exe:2019/07/30 18:08:00 users.go:307: users_json\1564481027.user.xml文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build005675266\b001\exe\main.exe:2019/07/30 18:08:00 users.go:515: wie用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build005675266\b001\exe\main.exe:2019/07/30 18:08:00 users.go:543: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build931913142\b001\exe\main.exe:2019/07/30 18:09:01 users.go:171: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build931913142\b001\exe\main.exe:2019/07/30 18:09:03 users.go:282: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build931913142\b001\exe\main.exe:2019/07/30 18:09:03 users.go:282: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build931913142\b001\exe\main.exe:2019/07/30 18:09:04 users.go:282: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build931913142\b001\exe\main.exe:2019/07/30 18:09:10 users.go:233: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build931913142\b001\exe\main.exe:2019/07/30 18:09:10 users.go:242: users_json\1564481083.user.xml文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build931913142\b001\exe\main.exe:2019/07/30 18:09:10 users.go:450: wie用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build931913142\b001\exe\main.exe:2019/07/30 18:09:10 users.go:478: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build456818926\b001\exe\main.exe:2019/07/30 19:21:34 users.go:180: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build456818926\b001\exe\main.exe:2019/07/30 19:21:37 users.go:291: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build456818926\b001\exe\main.exe:2019/07/30 19:21:37 users.go:291: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build456818926\b001\exe\main.exe:2019/07/30 19:21:38 users.go:291: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build456818926\b001\exe\main.exe:2019/07/30 19:21:44 users.go:242: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build456818926\b001\exe\main.exe:2019/07/30 19:21:44 users.go:251: users_json\1564481237.user.xml文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build456818926\b001\exe\main.exe:2019/07/30 19:21:44 users.go:459: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build456818926\b001\exe\main.exe:2019/07/30 19:21:44 users.go:487: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build925091522\b001\exe\main.exe:2019/07/30 19:24:30 users.go:180: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build925091522\b001\exe\main.exe:2019/07/30 19:24:32 users.go:292: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build925091522\b001\exe\main.exe:2019/07/30 19:24:32 users.go:292: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build925091522\b001\exe\main.exe:2019/07/30 19:24:34 users.go:292: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build925091522\b001\exe\main.exe:2019/07/30 19:24:37 users.go:242: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build925091522\b001\exe\main.exe:2019/07/30 19:24:37 users.go:251: users_json\1564481280.user.xml文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build925091522\b001\exe\main.exe:2019/07/30 19:24:37 users.go:115: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build925091522\b001\exe\main.exe:2019/07/30 19:24:37 users.go:460: dan用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build925091522\b001\exe\main.exe:2019/07/30 19:24:37 users.go:488: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build921056986\b001\exe\main.exe:2019/07/30 19:53:40 users.go:180: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build921056986\b001\exe\main.exe:2019/07/30 19:53:42 users.go:299: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build921056986\b001\exe\main.exe:2019/07/30 19:53:42 users.go:299: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build921056986\b001\exe\main.exe:2019/07/30 19:53:44 users.go:299: EOF
+C:\Users\jevon\AppData\Local\Temp\go-build921056986\b001\exe\main.exe:2019/07/30 19:53:47 users.go:242: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build921056986\b001\exe\main.exe:2019/07/30 19:53:47 users.go:251: users_json\1564481350.user.xml文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build921056986\b001\exe\main.exe:2019/07/30 19:53:47 users.go:467: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build921056986\b001\exe\main.exe:2019/07/30 19:53:47 users.go:495: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:16 users.go:180: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:19 users.go:299: unknown type map[int]users.Users
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:19 users.go:299: unknown type map[int]users.Users
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:20 users.go:299: unknown type map[int]users.Users
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:24 users.go:242: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:24 users.go:251: users_json\1564485704.user.xml文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:24 users.go:467: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:24 users.go:495: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:32 users.go:299: unknown type map[int]users.Users
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:35 users.go:299: unknown type map[int]users.Users
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:35 users.go:299: unknown type map[int]users.Users
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:38 users.go:299: unknown type map[int]users.Users
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:43 users.go:242: users_json\user.xml文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:43 users.go:251: users_json\1564485877.user.xml文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:43 users.go:467: qq用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build724989226\b001\exe\main.exe:2019/07/30 19:58:43 users.go:495: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build782880970\b001\exe\main.exe:2019/07/30 20:06:07 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build782880970\b001\exe\main.exe:2019/07/30 20:06:09 users.go:97: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build782880970\b001\exe\main.exe:2019/07/30 20:06:09 users.go:97: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build782880970\b001\exe\main.exe:2019/07/30 20:06:09 users.go:97: 打印 ran 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:24:56 users.go:163: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:00 users.go:98: 打印 wei 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:00 users.go:98: 打印 dan 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:00 users.go:98: 打印 ran 的信息
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:05 users.go:422: 用户名wei已存在,不能新增/修改
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:05 users.go:482: ID为 4 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:19 users.go:422: 用户名dan已存在,不能新增/修改
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:19 users.go:482: ID为 4 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:34 users.go:225: users_json\.user.json文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:34 users.go:454: qq用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build018144734\b001\exe\main.exe:2019/07/30 22:25:34 users.go:482: ID为 4 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build301957558\b001\exe\main.exe:2019/07/30 22:26:53 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build301957558\b001\exe\main.exe:2019/07/30 22:26:57 users.go:285: unknown type map[int]users.Users
+C:\Users\jevon\AppData\Local\Temp\go-build610282490\b001\exe\main.exe:2019/07/30 22:32:37 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build610282490\b001\exe\main.exe:2019/07/30 22:32:39 users.go:332: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build610282490\b001\exe\main.exe:2019/07/30 22:32:40 users.go:332: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build610282490\b001\exe\main.exe:2019/07/30 22:32:40 users.go:332: 用户密码输入错误
+C:\Users\jevon\AppData\Local\Temp\go-build610282490\b001\exe\main.exe:2019/07/30 22:32:49 users.go:224: users_json\.user.json文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build610282490\b001\exe\main.exe:2019/07/30 22:32:49 users.go:233: users_json\1564413138.user.json文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build610282490\b001\exe\main.exe:2019/07/30 22:32:49 users.go:454: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build610282490\b001\exe\main.exe:2019/07/30 22:32:49 users.go:482: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:12 users.go:163: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:17 users.go:286: invalid character '<' looking for beginning of value
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:22 users.go:286: invalid character '<' looking for beginning of value
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:22 users.go:286: invalid character '<' looking for beginning of value
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:24 users.go:286: invalid character '<' looking for beginning of value
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:30 users.go:225: users_json\.user.json文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:30 users.go:234: users_json\1564413200.user.json文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:30 users.go:454: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:30 users.go:482: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build533162382\b001\exe\main.exe:2019/07/30 22:34:31 users.go:286: invalid character '<' looking for beginning of value
+C:\Users\jevon\AppData\Local\Temp\go-build136087418\b001\exe\main.exe:2019/07/30 22:35:15 users.go:162: passwd已从passwd_dir\passwd.gob文件读取
+C:\Users\jevon\AppData\Local\Temp\go-build136087418\b001\exe\main.exe:2019/07/30 22:35:18 users.go:272: invalid character '<' looking for beginning of value
+C:\Users\jevon\AppData\Local\Temp\go-build136087418\b001\exe\main.exe:2019/07/30 22:35:18 users.go:272: invalid character '<' looking for beginning of value
+C:\Users\jevon\AppData\Local\Temp\go-build136087418\b001\exe\main.exe:2019/07/30 22:35:19 users.go:272: invalid character '<' looking for beginning of value
+C:\Users\jevon\AppData\Local\Temp\go-build136087418\b001\exe\main.exe:2019/07/30 22:35:22 users.go:224: users_json\.user.json文件已备份
+C:\Users\jevon\AppData\Local\Temp\go-build136087418\b001\exe\main.exe:2019/07/30 22:35:22 users.go:233: users_json\1564496734.user.json文件已删除
+C:\Users\jevon\AppData\Local\Temp\go-build136087418\b001\exe\main.exe:2019/07/30 22:35:22 users.go:440: wei用户信息已添加或修改
+C:\Users\jevon\AppData\Local\Temp\go-build136087418\b001\exe\main.exe:2019/07/30 22:35:22 users.go:468: ID为 1 的用户已添加
+C:\Users\jevon\AppData\Local\Temp\go-build136087418\b001\exe\main.exe:2019/07/30 22:35:23 users.go:97: 打印 wei 的信息
