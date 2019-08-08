@@ -1,45 +1,64 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
-
-	ulist "github.com/huang19910425/usermanager/users"
+	upkg "github.com/huang19910425/usermanager/users"
 )
 
-func main() {
-	if !ulist.Auth() {
-		//fmt.Printf("密码错误%d次, 系统退出.", ulist.MaxAuth)
-		return
+func main(){
+	var persistenceType string
+	var help bool
+
+	flag.StringVar(&persistenceType, "T", "gob", "Persistence Type[json, gob]")
+	flag.BoolVar(&help, "H", false, "Help")
+	flag.Usage = func() {
+		fmt.Println("usage: usermanager.exe -T [gob/json]")
+		flag.PrintDefaults()
 	}
 
+	flag.Parse()
+
+	if help {
+		flag.Usage()
+		os.Exit(0)
+	}
+
+	if !upkg.Auth(){
+		fmt.Printf("[-]密码%d次错误, 程序退出.\n", upkg.MaxAuth)
+		return
+	}
+	
+	upkg.SetPersistence(persistenceType)
+	// fmt.Println("persistenceType:", persistenceType)
 	menu := `*******************************
 1. 查询
 2. 添加
 3. 修改
 4. 删除
-5. 修改密码
-6. 退出
+5. 退出
 *******************************`
 
 	callbacks := map[string]func(){
-		"1": ulist.Query,
-		"2": ulist.Add,
-		"3": ulist.Modify,
-		"4": ulist.Del,
-		"5": ulist.MP,
-		"6": func() {
+		"1": upkg.Query,
+		"2": upkg.Add,
+		"3": upkg.Modify,
+		"4": upkg.Del,
+		"5": func() {
 			os.Exit(0)
 		},
 	}
 
-	fmt.Println("欢迎进入用户管理系统.")
+	fmt.Println("欢迎进入KK的用户管理系统")
 	for {
 		fmt.Println(menu)
-		if callback, ok := callbacks[ulist.InputString("请输入指令:")]; ok {
+		if callback, ok := callbacks[upkg.InputString("请输入指令:")]; ok {
 			callback()
 		} else {
-			fmt.Println("用户指令错误.")
+			fmt.Println("指令错误")
 		}
 	}
+
+
 }
