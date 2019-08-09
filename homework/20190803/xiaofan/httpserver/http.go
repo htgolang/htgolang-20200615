@@ -28,7 +28,6 @@ func notFound(writer *bufio.Writer) {
 
 func Ok(writer *bufio.Writer, file []byte) {
 	_, _ = writer.Write([]byte("HTTP/1.1 200 OK\n"))
-	_, _ = writer.Write([]byte("Date: Sun, 04 Aug 2019 11:46:32 GMT\n"))
 	_, _ = writer.Write([]byte("Server: xfServer\n"))
 	_, _ = writer.Write([]byte("Accept-Ranges: bytes\n"))
 	_, _ = writer.Write([]byte("Content-Type: text/html\n\n"))
@@ -49,30 +48,31 @@ func work(conn net.Conn) {
 			notFound(writer)
 		}
 		log.Println(n, err)
-	}
+	} else {
+		fmt.Printf("%s", bytes)
+		request := strings.Split(string(bytes), "\n")
 
-	fmt.Printf("%s", bytes)
-	request := strings.Split(string(bytes), "\n")
+		client.method = strings.Split(request[0], " ")[0]
+		client.url = strings.Split(request[0], " ")[1]
+		client.proto = strings.Split(request[0], " ")[2]
 
-	client.method = strings.Split(request[0], " ")[0]
-	client.url = strings.Split(request[0], " ")[1]
-	client.proto = strings.Split(request[0], " ")[2]
-
-	log.Println(client.method, client.url, client.proto)
-	if stat, err := os.Stat(path + client.url); err == nil {
-		if stat.IsDir() {
-			if info, err := ioutil.ReadFile(path + client.url + "/index.html"); err == nil {
-				Ok(writer, info)
+		log.Println(client.method, client.url, client.proto)
+		if stat, err := os.Stat(path + client.url); err == nil {
+			if stat.IsDir() {
+				if info, err := ioutil.ReadFile(path + client.url + "/index.html"); err == nil {
+					Ok(writer, info)
+				} else {
+					notFound(writer)
+				}
 			} else {
-				notFound(writer)
+				file, _ := ioutil.ReadFile(path + client.url)
+				Ok(writer, file)
 			}
 		} else {
-			file, _ := ioutil.ReadFile(path + client.url)
-			Ok(writer, file)
+			notFound(writer)
 		}
-	} else {
-		notFound(writer)
 	}
+
 	writer.Flush()
 	conn.Close()
 }
