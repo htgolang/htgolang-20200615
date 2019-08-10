@@ -18,3 +18,19 @@
     / => index.html => 发送给客户端
 
     如何使用例程去处理与客户端的请求
+
+
+http
+
+request
+1: 请求行 \r\n GET/POST url HTTP/1.0
+2-n: key: value \r\n请求头
+\r\n
+请求体
+
+
+response
+1: 响应行 HTTP/1.0 STATUS_CODE STATUS_TEXT
+2-n: key: value 响应头
+\r\n
+响应体

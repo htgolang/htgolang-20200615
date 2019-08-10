@@ -34,6 +34,7 @@ func handleConnection(conn net.Conn) {
 		url := strings.TrimSpace(strings.Split(strings.Fields(n)[1], "/")[1])
 		bb := make([]byte, 0)
 		// 判断url是否存在, 如果不存在, url默认设置为404.html
+		
 		if _, err := os.Stat(url); err != nil {
 			if os.IsNotExist(err) {
 				url = "404.html"
