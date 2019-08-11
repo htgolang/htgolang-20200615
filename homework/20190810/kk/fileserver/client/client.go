@@ -45,13 +45,11 @@ func main() {
 		request := cmds.LsRequest{Path: path}
 		var response cmds.LsResponse
 		if err := conn.Call("Ls.Exec", &request, &response); err == nil {
-			fmt.Printf("%4s %30s %10s %25s %25s %25s\n", "type", "name", "size", "create", "modify", "access")
+			fmt.Printf("%4s %30s %10s %25s\n", "type", "name", "size", "create")
 			for _, fileInfo := range response.FileInfos {
-				fmt.Printf("%4s %30s %10d %25s %25s %25s\n",
+				fmt.Printf("%4s %30s %10d %25s\n",
 					fileInfo.Type, fileInfo.Name, fileInfo.Size,
-					fileInfo.CreateTime.Format(dataFormat),
 					fileInfo.ModifyTime.Format(dataFormat),
-					fileInfo.AccessTime.Format(dataFormat),
 				)
 			}
 		} else {
