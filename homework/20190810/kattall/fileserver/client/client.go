@@ -26,7 +26,7 @@ func main(){
 	flag.BoolVar(&help, "h", false, "Help")
 
 	flag.Usage = func() {
-		fmt.Println("Usage: client.exe [-s 0.0.0.0:8888] [-t ls/cat] [-p /]")
+		fmt.Println("Usage: client.exe [-s 0.0.0.0:8888] [-t ls/cat/put] [-p /]")
 		fmt.Println("ls/cat/delete command usage: \n\t-s specifies server address and port \n\t-t specifies the command -p specifies path")
 		fmt.Println("Usage: client.ext [-s 0.0.0.0:8888] [-t put] [-p /] [-src srcpath]")
 		fmt.Println("put command usage: \n\t-s specifies server address and port  \n\t-t specifies the command \n\t-p specifies upload path \n\t-src specifies local path")
