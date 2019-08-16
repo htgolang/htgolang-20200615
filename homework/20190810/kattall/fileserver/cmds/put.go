@@ -21,20 +21,17 @@ type PutRequest struct {
 
 // 判断目的是否存在,  message返回信息
 type PutResponse struct {
-	ServerIsExist bool
 	Message string
 }
 
 // 服务端
 func (p *Put) Exec(request *PutRequest, response *PutResponse) error {
 	path := filepath.Join(p.Basedir, request.Path)
-	fmt.Printf("put %s %s\n", request.SrcPath, path)
-	response.ServerIsExist = true
+	fmt.Printf("put %s to  %s\n", request.SrcPath, path)
 
 	fileinfo, err := os.Stat(path)
-	if os.IsExist(err) {
+	if os.IsNotExist(err) {
 		// 源不存在, 直接返回，报错 server path is not exist
-		response.ServerIsExist = false
 		response.Message = "源目录不存在, 请检查"
 		return errors.New("server path is not exist.")
 	} else if !fileinfo.IsDir(){

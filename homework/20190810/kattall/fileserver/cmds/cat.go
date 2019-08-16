@@ -17,7 +17,6 @@ type CatRequest struct {
 }
 
 type CatResponse struct {
-	IsExist bool
 	Message string
 	Content []byte
 }
@@ -25,12 +24,10 @@ type CatResponse struct {
 func (c *Cat) Exec(request *CatRequest, response *CatResponse) error {
 	path := filepath.Join(c.Basedir, request.Path)
 	fmt.Printf("cat path: %s\n", path)
-	response.IsExist = true
 
 	info, err := os.Stat(path)
 	if err != nil {
 		if os.IsNotExist(err) {
-			response.IsExist = false
 			response.Message = "文件或目录不存在"
 			fmt.Printf("[error] %s path is not found.\n", path)
 			return errors.New("file is not found.")

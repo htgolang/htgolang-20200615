@@ -31,6 +31,7 @@ type LsResponse struct {
 
 func (l *Ls) Exec(request *LsRequest, response *LsResponse) error {
 	path := filepath.Join(l.Basedir, request.Path)
+	fmt.Printf("ls path: %s\n", path)
 
 	file, err := os.Open(path)
 	if err != nil {
