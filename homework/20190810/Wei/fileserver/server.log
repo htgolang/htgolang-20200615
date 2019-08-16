@@ -1,0 +1,67 @@
+server.exe:2019/08/13 21:52:48 server.go:64: [info] init data dir: d:\Code\goang\JevonWei\usermanager\20190812\fileserver\data
+server.exe:2019/08/13 21:52:48 server.go:315: rpc.Register: reply type of method "Exec" is not a pointer: "obj.LsResponse"
+server.exe:2019/08/13 21:52:48 server.go:274: rpc.Register: type Ls has no exported methods of suitable type
+server.exe:2019/08/13 21:52:48 server.go:70: [info] register obj.Ls
+server.exe:2019/08/13 21:52:48 server.go:73: [info] register obj.Cat
+server.exe:2019/08/13 21:52:48 server.go:82: [info] fileserver listen on: 127.0.0.1:9999
+server.exe:2019/08/13 21:52:48 server.go:83: [info] fileserver data dir: d:\Code\goang\JevonWei\usermanager\20190812\fileserver\data
+server.exe:2019/08/13 21:52:59 server.go:92: [info] client is connection: 127.0.0.1:62594
+server.exe:2019/08/13 21:56:02 server.go:315: rpc.Register: reply type of method "Exec" is not a pointer: "obj.LsResponse"
+server.exe:2019/08/13 21:56:02 server.go:274: rpc.Register: type Ls has no exported methods of suitable type
+server.exe:2019/08/13 21:56:02 server.go:70: [info] register obj.Ls
+server.exe:2019/08/13 21:56:02 server.go:73: [info] register obj.Cat
+server.exe:2019/08/13 21:56:02 server.go:82: [info] fileserver listen on: 127.0.0.1:9999
+server.exe:2019/08/13 21:56:02 server.go:83: [info] fileserver data dir: d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 21:56:06 server.go:92: [info] client is connection: 127.0.0.1:62633
+server.exe:2019/08/13 21:58:16 server.go:315: rpc.Register: reply type of method "Exec" is not a pointer: "obj.LsResponse"
+server.exe:2019/08/13 21:58:16 server.go:274: rpc.Register: type Ls has no exported methods of suitable type
+server.exe:2019/08/13 21:58:16 server.go:70: [info] register obj.Ls
+server.exe:2019/08/13 21:58:16 server.go:73: [info] register obj.Cat
+server.exe:2019/08/13 21:58:16 server.go:82: [info] fileserver listen on: 127.0.0.1:9999
+server.exe:2019/08/13 21:58:16 server.go:83: [info] fileserver data dir: d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:02:55 server.go:92: [info] client is connection: 127.0.0.1:62712
+server.exe:2019/08/13 22:08:30 server.go:92: [info] client is connection: 127.0.0.1:62783
+server.exe:2019/08/13 22:08:54 server.go:92: [info] client is connection: 127.0.0.1:62784
+server.exe:2019/08/13 22:13:34 server.go:92: [info] client is connection: 127.0.0.1:62820
+server.exe:2019/08/13 22:25:37 server.go:92: [info] client is connection: 127.0.0.1:62925
+server.exe:2019/08/13 22:25:57 server.go:70: [info] register obj.Ls
+server.exe:2019/08/13 22:25:57 server.go:73: [info] register obj.Cat
+server.exe:2019/08/13 22:25:57 server.go:82: [info] fileserver listen on: 127.0.0.1:9999
+server.exe:2019/08/13 22:25:57 server.go:83: [info] fileserver data dir: d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:26:01 server.go:92: [info] client is connection: 127.0.0.1:62931
+server.exe:2019/08/13 22:26:01 ls.go:36: [dubug] ls d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:29:15 server.go:70: [info] register obj.Ls
+server.exe:2019/08/13 22:29:15 server.go:73: [info] register obj.Cat
+server.exe:2019/08/13 22:29:15 server.go:82: [info] fileserver listen on: 127.0.0.1:9999
+server.exe:2019/08/13 22:29:15 server.go:83: [info] fileserver data dir: d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:29:19 server.go:92: [info] client is connection: 127.0.0.1:62960
+server.exe:2019/08/13 22:29:19 ls.go:35: [dubug] ls d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:31:17 server.go:70: [info] register obj.Ls
+server.exe:2019/08/13 22:31:17 server.go:73: [info] register obj.Cat
+server.exe:2019/08/13 22:31:17 server.go:82: [info] fileserver listen on: 127.0.0.1:9999
+server.exe:2019/08/13 22:31:17 server.go:83: [info] fileserver data dir: d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:31:22 server.go:92: [info] client is connection: 127.0.0.1:62978
+server.exe:2019/08/13 22:31:22 ls.go:35: [dubug] ls d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:35:10 server.go:70: [info] register obj.Ls
+server.exe:2019/08/13 22:35:10 server.go:73: [info] register obj.Cat
+server.exe:2019/08/13 22:35:10 server.go:82: [info] fileserver listen on: 127.0.0.1:9999
+server.exe:2019/08/13 22:35:10 server.go:83: [info] fileserver data dir: d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:35:18 server.go:92: [info] client is connection: 127.0.0.1:63008
+server.exe:2019/08/13 22:35:18 ls.go:35: [dubug] ls d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:39:20 server.go:92: [info] client is connection: 127.0.0.1:63055
+server.exe:2019/08/13 22:39:20 ls.go:35: [dubug] ls d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:39:26 server.go:92: [info] client is connection: 127.0.0.1:63061
+server.exe:2019/08/13 22:39:26 ls.go:35: [dubug] ls d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:41:34 server.go:70: [info] register obj.Ls
+server.exe:2019/08/13 22:41:34 server.go:73: [info] register obj.Cat
+server.exe:2019/08/13 22:41:34 server.go:82: [info] fileserver listen on: 127.0.0.1:9999
+server.exe:2019/08/13 22:41:34 server.go:83: [info] fileserver data dir: d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:41:41 server.go:92: [info] client is connection: 127.0.0.1:63081
+server.exe:2019/08/13 22:41:41 ls.go:34: [dubug] ls d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:42:16 server.go:92: [info] client is connection: 127.0.0.1:63084
+server.exe:2019/08/13 22:42:16 cat.go:36: [info] cat d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:42:16 cat.go:49: [error] file read file: d:\Code\goang\JevonWei\20190812\fileserver\data
+server.exe:2019/08/13 22:42:26 server.go:92: [info] client is connection: 127.0.0.1:63088
+server.exe:2019/08/13 22:42:26 cat.go:36: [info] cat d:\Code\goang\JevonWei\20190812\fileserver\data\go.mod
+server.exe:2019/08/13 22:42:38 server.go:92: [info] client is connection: 127.0.0.1:63089
+server.exe:2019/08/13 22:42:38 cat.go:36: [info] cat d:\Code\goang\JevonWei\20190812\fileserver\data\server.go
