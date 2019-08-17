@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>我的第一个页面</title>
+    </head>
+    <body>
+        <!--
+            这是显示到浏览器上的信息
+        -->
+        你好
+        <h1>1. h1标题</h1>
+        <h2>2. h2标题</h2>
+        <h3>3. h3标题</h3>
+        <h4>4. h4标题</h4>
+        <h5>5. h5标题</h5>
+        <h6>6. h6标题</h6>
+
+        <a href="http://www.baidu.com?a=b&c=d" target="_blank">百度</a>
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566616361&di=9fbc010177e86a40b69c69e458571fd8&imgtype=jpg&er=1&src=http%3A%2F%2F05imgmini.eastday.com%2Fmobile%2F20190729%2F20190729032358_8849814573177eec46e2bef024bdfd56_1.jpeg" />
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>地址</th>
+                    <th>联系方式</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>KK</td>
+                    <td>男</td>
+                    <td>西安市</td>
+                    <td>1520000000</td>
+                </tr>
+                <tr>
+                    <td>小凡</td>
+                    <td>男</td>
+                    <td>北京市</td>
+                    <td>1530000000</td>
+                </tr>
+                <tr>
+                    <td>祥哥</td>
+                    <td>男</td>
+                    <td>杭州市</td>
+                    <td>1535000000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <ol>
+            <li>KK</li>
+            <li>小凡</li>
+            <li>祥哥</li>
+            <li>xq</li>
+            <li>...</li>
+        </ol>
+
+        <ul>
+            <li>KK</li>
+            <li>小凡</li>
+            <li>祥哥</li>
+            <li>xq</li>
+            <li>...</li>
+        </ul>
+
+        <dl>
+            <dt>教师</dt>
+            <dd>kk</dd>
+
+            <dt>学生</dt>
+            <dd>小凡</dd>
+            <dd>祥哥</dd>
+            <dd>xq</dd>
+            <dd>...</dd>
+        </dl>
+
+        <span>
+            span内容1
+        </span>
+        <br/>
+        <span>
+            span内容2
+        </span>
+        <div>
+            div内容1
+        </div>
+        <div>
+            div内容2
+        </div>
+        <p>
+            p内容1
+        </p>
+        <p>
+            p内容2
+        </p>
+
+
+        <br/>
+        <form action="/login/" method="POST" >
+            <input type="hidden" name="id" value="111111" />
+            <input type="date" name="birthday" />
+            <input type="email" name="birthday" />
+            <div>
+                <label for="username">用户名:</label>
+                <input id="username" name="username" type="text" value="kk" />
+            </div>
+            <div>
+                <label>密码:</label>
+                <input name="password" type="password" />
+            </div>
+            <div>
+                <label>性别:</label>
+                <input id="sex_1" name="sex" type="radio" value="1" checked="checked"/><label for="sex_1">男</label>
+                <input id="sex_0" name="sex" type="radio" value="0" /><label for="sex_0">女</label>
+            </div>
+            <div>
+                <label>学历:</label>
+                <input name="education" type="radio" value="1" /><label>高中</label>
+                <input name="education" type="radio" value="2" /><label>本科</label>
+                <input name="education" type="radio" value="3" checked="checked"/><label>研究生</label>
+            </div>
+            <div>
+                <label>爱好:</label>
+                <input id="hobby_football" name="hobby" type="checkbox" value="football" checked="checked" for="hobby_football"/> <label>足球</label>
+                <input id="hobby_basketball" name="hobby" type="checkbox" value="basketball"/> <label for="hobby_basketball">篮球</label>
+                <input id="hobby_pingpang" name="hobby" type="checkbox" value="pingpong"/> <label for="hobby_pingpang">乒乓球</label>
+            </div>
+            <div>
+                <label>省份:</label>
+                <select name="area" multiple="multiple" size="3">
+                    <option value="shanxi">陕西</option>
+                    <option value="beijing" selected="selected">北京</option>
+                    <option value="jiangsu">江苏</option>
+                    <option value="zhejiang">浙江</option>
+                </select>
+            </div>
+            <div>
+                <label>简介</label>
+                <textarea name="remark" rows="5" cols="50">我叫....</textarea>
+            </div>
+            <div>
+                <input type="submit" value="登陆" />
+            </div>
+        </form>
+
+        <form action="/upload/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="img" />
+            <input type="submit" value="上传" />
+        </form>
+    </body>
+</html>

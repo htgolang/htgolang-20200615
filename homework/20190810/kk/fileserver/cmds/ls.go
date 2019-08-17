@@ -2,7 +2,9 @@ package cmds
 
 import (
 	"errors"
+	"fmt"
 	"log"
+	"net/rpc"
 	"os"
 	"path/filepath"
 	"time"
@@ -60,4 +62,9 @@ func (l *Ls) Exec(request *LsRequest, response *LsResponse) error {
 	}
 
 	return nil
+}
+
+func init() {
+	rpc.Register(&Ls{BaseDir: "."})
+	fmt.Println("[info] register cmds.Ls")
 }

@@ -2,12 +2,11 @@ package main
 
 import (
 	"bufio"
-	"fileserver/cmds"
+	_ "fileserver/cmds"
 	"flag"
 	"fmt"
 	"log"
 	"net"
-	"net/rpc"
 	"net/rpc/jsonrpc"
 	"os"
 	"path/filepath"
@@ -63,12 +62,6 @@ func main() {
 	} else if !info.IsDir() {
 		log.Fatal("[error] data dir is not directory: ", dataDir)
 	}
-
-	rpc.Register(&cmds.Ls{BaseDir: dataDir})
-	log.Print("[info] register cmds.Ls")
-
-	rpc.Register(&cmds.Cat{BaseDir: dataDir})
-	log.Print("[info] register cmds.Cat")
 
 	listener, err := net.Listen("tcp", addr)
 	if err != nil {

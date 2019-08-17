@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>我的第一个模板</title>
+    </head>
+    <body>
+        <ol>
+        {{ range $key, $value := .tasks }}
+            <li>{{ $key }}: {{ $value }}</li>
+        {{ else }}
+            <li>无元素</li>
+        {{ end }}
+    </body>
+</html>

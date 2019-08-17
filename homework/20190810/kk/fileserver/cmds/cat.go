@@ -2,8 +2,10 @@ package cmds
 
 import (
 	"errors"
+	"fmt"
 	"io"
 	"log"
+	"net/rpc"
 	"os"
 	"path/filepath"
 )
@@ -38,4 +40,10 @@ func (c *Cat) Exec(request *CatRequest, response *CatResponse) error {
 	}
 	response.Content = cxt[:n]
 	return nil
+}
+
+func init() {
+	rpc.Register(&Cat{BaseDir: "."})
+
+	fmt.Println("[info] register cmds.Cat")
 }
