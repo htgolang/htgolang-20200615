@@ -21,7 +21,7 @@ func CreateUserAction(w http.ResponseWriter, r *http.Request) {
 
 		name := r.PostFormValue("name")
 		password := fmt.Sprintf("%x", []byte(r.PostFormValue("password")))
-		bir := r.PostFormValue("birthday")
+		bir := r.PostFormValue("year") + "-" + r.PostFormValue("month") + "-" + r.PostFormValue("day")
 		tel := r.PostFormValue("tel")
 		addr := r.PostFormValue("addr")
 		desc := r.PostFormValue("desc")
@@ -55,7 +55,7 @@ func ModifyUserAction(w http.ResponseWriter, r *http.Request) {
 		}
 
 		name := r.PostFormValue("name")
-		bir := r.PostFormValue("birthday")
+		bir := r.PostFormValue("year") + "-" + r.PostFormValue("month") + "-" + r.PostFormValue("day")
 		tel := r.PostFormValue("tel")
 		addr := r.PostFormValue("addr")
 		desc := r.PostFormValue("desc")
@@ -91,7 +91,7 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		if ok := models.CheckUser(username, password); ok == false {
 			w.WriteHeader(http.StatusForbidden)
 		} else {
-			models.SetCookie(username, r.RemoteAddr, r.UserAgent())
+			models.SetSession(username, r.RemoteAddr, r.UserAgent())
 			http.Redirect(w, r, "/tasks/", http.StatusFound)
 
 		}
@@ -100,13 +100,13 @@ func Login(w http.ResponseWriter, r *http.Request) {
 
 func ModifyPasswordAction(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodGet {
-		// 获取cookie
-		cookie := models.GetCookie(r.RemoteAddr, r.UserAgent())
-		if cookie == "" {
+		// 获取session
+		session := models.GetSession(r.RemoteAddr, r.UserAgent())
+		if session == "" {
 			http.Redirect(w, r, "/login/", http.StatusFound)
 		} else {
 			tpl := template.Must(template.New("modify_password.html").ParseFiles("views/modify_password.html"))
-			tpl.Execute(w, cookie)
+			tpl.Execute(w, session)
 		}
 	} else if r.Method == http.MethodPost {
 		fmt.Println("2")
