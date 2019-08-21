@@ -195,6 +195,20 @@ func ReginsterUserAction(responseWriter http.ResponseWriter, request *http.Reque
 		responseWriter.WriteHeader(http.StatusMethodNotAllowed)
 	}
 }
+// 查询用户
+func QueryAction(responseWriter http.ResponseWriter, request *http.Request)  {
+
+	if request.Method == http.MethodPost {
+
+		tpl := template.Must(template.New("queryuserlist.html").ParseFiles("views/users/queryuserlist.html"))
+		name := request.PostFormValue("username")
+		fmt.Println(name)
+		tpl.Execute(responseWriter, models.QueryUsers(name))
+
+	}
+
+
+}
 
 func init()  {
 	http.HandleFunc("/", UserLoginAction)
@@ -204,5 +218,6 @@ func init()  {
 	http.HandleFunc("/users/delete/", UserDeleteAction)
 	http.HandleFunc("/users/modifypass/", UserModifyPassAction)
 	http.HandleFunc("/users/register/", ReginsterUserAction)
+	http.HandleFunc("/users/query/", QueryAction)
 }
 

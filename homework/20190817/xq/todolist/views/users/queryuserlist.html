@@ -2,20 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User List</title>
+    <title>Query List</title>
 </head>
 <body>
 
 <div>
-    <a href="/users/create/">添加</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="/">登出</a>
-
-    <form action="/users/query/" method="post">
-        <input type="text" name="username">
-        <input type="submit" value="查询">
-    </form>
-
+    <a href="/users/list/">返回</a>
 </div>
+
 <div>
     <table border="1">
         <thead>
@@ -42,7 +36,6 @@
                     <a href="/users/modify/?id={{ .ID }}">修改</a>
                     <a href="/users/delete/?id={{ .ID }}">删除</a>
                     <a href="/users/modifypass/?id={{ .ID }}">修改密码</a>
-
                 </td>
 
             </tr>

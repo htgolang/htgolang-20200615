@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"strings"
 )
 
 type User struct {
@@ -233,4 +234,36 @@ func ReginsterUsers(name, brithday, tel, addr, desc, passwd string) (error){
 	users = append(users, newuser)
 	storeUsers(users)
 	return nil
+}
+
+func QueryUsers(args ...string) []User {
+
+	users, err := loadUsers()
+
+	newUsers := make([]User, 0)
+
+	if err == nil {
+
+		for _, user := range users {
+
+			for _, arg := range args {
+
+				if strings.Contains(user.Name, arg) ||
+					strings.Contains(user.Tel, arg) ||
+					strings.Contains(user.Addr, arg) ||
+					strings.Contains(user.Desc, arg) {
+					//strings.Contains(user.Brithday, arg) {
+					newUsers = append(newUsers, user)
+				}
+
+			}
+		}
+
+		return newUsers
+
+	}else {
+		panic(err)
+	}
+	return nil
+
 }
