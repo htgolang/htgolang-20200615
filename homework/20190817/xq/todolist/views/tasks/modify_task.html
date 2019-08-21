@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Task</title>
+</head>
+<body>
+<div>
+    <form method="post" action="/tasks/modify/">
+        <input type="hidden" name="id" value="{{ .Id }}">
+        <div>
+            <label for="name">名称:</label>
+            <input type="text" name="name" value="{{ .Name }}">
+        </div>
+        <div>
+            <label for="users">进度:</label>
+            <input type="range" name="progress" value="{{ .Progress }}">
+        </div>
+        <div>
+            <label for="users">状态:</label>
+            <select t name="status">
+                <option value="new">新建</option>
+                <option value="doing" {{ if eq .Status "doing"}} selected="selected"{{ end}}>进行中</option>
+                <option value="stop" {{ if eq .Status "stop"}} selected="selected"{{ end}}>暂停</option>
+                <option value="complete" {{ if eq .Status "complete"}} selected="selected"{{ end}}>完成</option>
+            </select>
+        </div>
+        <div>
+            <label for="users">负责人:</label>
+            <input type="text" name="users" value="{{ .Users }}">
+        </div>
+        <div>
+            <label for="desc">描述:</label>
+            <input type="text" name="desc" value="{{ .Desc }}">
+        </div>
+        <div>
+
+            <input type="submit" value="修改">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

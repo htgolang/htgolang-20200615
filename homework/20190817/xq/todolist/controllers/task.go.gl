@@ -1,0 +1,103 @@
+package controllers
+
+import (
+	"fmt"
+	//"go/ast"
+	"html/template"
+	"net/http"
+	"github.com/xlotz/todolist/models"
+	"strconv"
+)
+
+func TaskAction(responseWriter http.ResponseWriter, request *http.Request)  {
+
+
+	tpl := template.Must(template.New("task.html").ParseFiles("views/tasks/task.html"))
+
+	tpl.Execute(responseWriter, models.GetTasks())
+}
+
+func TaskCreateAction(responseWriter http.ResponseWriter, request *http.Request)  {
+
+	if request.Method == http.MethodGet {
+		tpl := template.Must(template.New("create_task.html").ParseFiles("views/tasks/create_task.html"))
+		tpl.Execute(responseWriter, nil)
+
+	}else if request.Method == http.MethodPost{
+
+		name := request.PostFormValue("name")
+		desc := request.PostFormValue("desc")
+		users := request.PostFormValue("users")
+
+		models.CreateTasks(name, desc, users)
+		http.Redirect(responseWriter, request, "/", http.StatusFound)
+
+	}else {
+		responseWriter.WriteHeader(http.StatusMethodNotAllowed)
+	}
+
+}
+
+func TaskModifyAction(responseWriter http.ResponseWriter, request *http.Request)  {
+
+	if request.Method == http.MethodGet {
+
+		id, err := strconv.Atoi(request.FormValue("id"))
+
+		if err == nil {
+			task, err := models.GetTaskById(id)
+			if err != nil {
+				responseWriter.WriteHeader(http.StatusBadRequest)
+			}else {
+				tpl := template.Must(template.New("modify_task.html").ParseFiles("views/tasks/modify_task.html"))
+				tpl.Execute(responseWriter, task)
+			}
+		} else {
+			responseWriter.WriteHeader(http.StatusBadRequest)
+		}
+
+
+
+
+	}else if request.Method == http.MethodPost{
+
+		id, err := strconv.Atoi(request.PostFormValue("id"))
+
+		if err != nil {
+			responseWriter.WriteHeader(http.StatusBadRequest)
+		}
+
+		name := request.PostFormValue("name")
+		desc := request.PostFormValue("desc")
+		users := request.PostFormValue("users")
+		status := request.PostFormValue("status")
+		progress, err := strconv.Atoi(request.PostFormValue("progress"))
+		if err != nil {
+			responseWriter.WriteHeader(http.StatusBadRequest)
+		}
+		models.ModifyTasks(id, name, desc, progress, users, status)
+		http.Redirect(responseWriter, request, "/", http.StatusFound)
+
+	}else {
+		responseWriter.WriteHeader(http.StatusMethodNotAllowed)
+	}
+
+}
+
+func TaskDeleteAction(responseWriter http.ResponseWriter, request *http.Request)  {
+	if id, err := strconv.Atoi(request.FormValue("id")); err == nil  {
+
+		models.DeleteTasks(id)
+
+	}else {
+		fmt.Println(err)
+	}
+	http.Redirect(responseWriter, request, "/", http.StatusFound)
+}
+
+func init()  {
+	http.HandleFunc("/", TaskAction)
+	http.HandleFunc("/tasks/create/", TaskCreateAction)
+	http.HandleFunc("/tasks/modify/", TaskModifyAction)
+	http.HandleFunc("/tasks/delete/", TaskDeleteAction)
+}
