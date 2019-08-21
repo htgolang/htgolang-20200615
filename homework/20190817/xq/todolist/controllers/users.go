@@ -201,9 +201,9 @@ func QueryAction(responseWriter http.ResponseWriter, request *http.Request)  {
 	if request.Method == http.MethodPost {
 
 		tpl := template.Must(template.New("queryuserlist.html").ParseFiles("views/users/queryuserlist.html"))
-		name := request.PostFormValue("username")
-		fmt.Println(name)
-		tpl.Execute(responseWriter, models.QueryUsers(name))
+		search := request.PostFormValue("search")
+		fmt.Println(search)
+		tpl.Execute(responseWriter, models.QueryUsers(search))
 
 	}
 
