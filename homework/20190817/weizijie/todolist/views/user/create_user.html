@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>用户添加</title>
+    </head>
+    <body background="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566486141482&di=8d1b235d32f7a43166e66413ad35e6fc&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F03839555742a6c932f875b70fb894f0.jpg">
+        <form action="/user/create/" method="POST">
+            <div>
+                <label style="color: brown; font-size:15px;">名称:</label>
+                <input type="text" name="name" />
+            </div>
+            <div>
+                <label style="color: brown; font-size:15px;">生日:</label>
+                <input type="date" name="birthday" />
+            </div>
+            <div>
+                <label style="color: brown; font-size:15px;">描述:</label>
+                <input type="text" name="desc" />
+            </div>
+            <div>
+                <label style="color: brown; font-size:15px;">地址:</label>
+                <select name="addr">
+                    <option value="河南">河南</option>
+                    <option value="上海">上海</option>
+                    <option value="北京">北京</option>
+                    <option value="湖北">湖北</option>
+                </select>
+            </div>
+            <div>
+                <label style="color: brown; font-size:15px;">电话:</label>
+                <input type="text" name="tel" />
+            </div>
+            <div>
+                <input style="color:black" type="submit" name="添加" />
+            </div>
+        </form>
+    </body>
+</html>
