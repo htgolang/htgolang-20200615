@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户任务添加</title>
+</head>
+<body>
+<form action="/user/userTaskCreate/" method="post">
+    <div>
+        <input type="hidden" name="username" value="{{ . }}">
+    </div>
+    <div>
+        任务名称：<input type="text" name="name"/>
+    </div>
+    <div>
+        描述：<input type="text" name="desc"/>
+    </div>
+    <div>
+        <input type="submit" value="创建">
+    </div>
+</form>
+
+</body>
+</html>
