@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<div>
+    <a href="/users/create/">用户管理</a>
+</div>
+<form action="/users/" method="get">
+    <div>
+        <input type="text" name="query" value="{{ .Query }}">
+        <input type="submit" value="查询">
+    </div>
+</form>
+<table border="1">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>生日</th>
+        <th>联系方式</th>
+        <th>联系地址</th>
+        <th>描述</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range .Users }}
+        <tr>
+            <td>{{ .Name }}</td>
+            <td>{{ .Birthday }}</td>
+            <td>{{ .Tel }}</td>
+            <td>{{ .Addr }}</td>
+            <td>{{ .Desc }}</td>
+            <td>
+                <a href="/users/modify/?id={{ .Id }}">编辑</a>
+                <a href="/users/delete/?id={{ .Id }}">删除</a>
+            </td>
+        </tr>
+    {{ else }}
+        <tr>
+            <td colspan="6">无用户数据</td>
+        </tr>
+    {{ end }}
+    </tbody>
+</table>
+</body>
+</html>

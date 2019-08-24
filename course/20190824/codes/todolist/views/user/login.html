@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>用户登陆</title>
+    </head>
+    <body>
+        <form action="/user/login/" method="POST">
+            {{ .Error }}
+            <div>
+                <lable>用户名:</lable>
+                <input type="text" name="name" value="{{ .Name }}"/>
+            </div>
+            <div>
+                <lable>密码:</lable>
+                <input type="password" name="password" value=""/>
+            </div>
+            <div>
+                <input type="submit" value="登陆" />
+            </div>
+        </form>
+    </body>
+</html>
