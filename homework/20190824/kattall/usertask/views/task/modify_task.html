@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑任务</title>
+</head>
+<body>
+    <form action="/tasks/modify/" method="post">
+        <input type="hidden" name="id" value={{ .Id }} >
+        <div>
+            <label for="name">任务名称：</label>
+            <input id="name" name="name" type="text" value="{{ .Name }}">
+        </div>
+        <div>
+            <label for="progress">进度：</label>
+            <input id="progress" name="progress" type="range" value="{{ .Progress }}">
+        </div>
+        <div>
+            <label for="user">负责人：</label>
+            <input id="user" name="user" type="text" value="{{ .User }}">
+        </div>
+        <div>
+            <label for="desc">描述：</label>
+            <input id="desc" name="desc" type="text" value="{{ .Desc }}">
+        </div>
+        <div>
+            <label for="status">状态：</label>
+            <select name="status">
+                <option value="new" {{ if eq .Status "new" }} selected="selected" {{ end }}>新建</option>
+                <option value="doing" {{ if eq .Status "doing" }} selected="selected" {{ end }}>正在进行</option>
+                <option value="stop" {{ if eq .Status "stop" }} selected="selected" {{ end }}>停止</option>
+                <option value="complate" {{ if eq .Status "complate" }} selected="selected" {{ end }}>完成</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" name="确定">
+        </div>
+    </form>
+</body>
+</html>

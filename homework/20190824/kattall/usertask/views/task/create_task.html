@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加任务</title>
+</head>
+<body>
+    <form action="/tasks/create/" method="post">
+        <div>
+            <label for="name">任务名称：</label>
+            <input id="name" name="name" type="text">
+        </div>
+        <div>
+            <label for="user">负责人：</label>
+            <input id="user" name="user" type="text">
+        </div>
+        <div>
+            <label for="desc">描述：</label>
+            <input id="desc" name="desc" type="text">
+        </div>
+        <div>
+            <input type="submit" name="确定">
+        </div>
+    </form>
+</body>
+</html>
