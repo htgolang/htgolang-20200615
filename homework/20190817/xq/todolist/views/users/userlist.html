@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+</head>
+<body>
+
+<div>
+    <a href="/users/create/">添加</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="/">登出</a>
+
+    <form action="/users/query/" method="post">
+        <input type="text" name="search">
+        <input type="submit" value="查询">
+    </form>
+
+</div>
+<div>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th>生日</th>
+            <th>电话</th>
+            <th>地址</th>
+            <th>描述</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{ range . }}
+            <tr>
+                <td>{{ .ID }}</td>
+                <td>{{ .Name }}</td>
+                <td>{{ .Brithday }}</td>
+                <td>{{ .Tel }}</td>
+                <td>{{ .Addr }}</td>
+                <td>{{ .Desc }}</td>
+                <td>
+                    <a href="/users/modify/?id={{ .ID }}">修改</a>
+                    <a href="/users/delete/?id={{ .ID }}">删除</a>
+                    <a href="/users/modifypass/?id={{ .ID }}">修改密码</a>
+
+                </td>
+
+            </tr>
+        {{ else }}
+            <tr>
+                <td colspan="7">
+                    无数据
+                </td>
+            </tr>
+        {{ end }}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户</title>
+</head>
+<body>
+<!--
+type User struct {
+	Id       int       `json:"id"`
+	Name     string    `json:"name"`
+	Tasks    []Task    `json:"tasks"`
+	Birthday time.Time `json:"birthday"`
+	Addr     string    `json:"addr"`
+	Desc     string    `json:"desc"`
+	Password string    `json:"password"`
+}
+-->
+<form action="/user/modifyUser/" method="POST">
+    <input type="hidden" name="id" value="{{ .Id }}">
+    <div>
+        <lable>姓名：</lable>
+        <input type="text" name="username" value="{{ .UserName }}">
+    </div>
+
+    <div>
+        <lable>生日：</lable>
+        <input type="date" name="birthday" value="{{ .Birthday }}">
+    </div>
+
+    <div>
+        <lable>地址：</lable>
+        <input type="text" name="addr" value="{{ .Addr }}">
+    </div>
+
+    <div>
+        <lable>描述：</lable>
+        <input type="text" name="desc"  value="{{ .Desc }}">
+    </div>
+
+    <div>
+        <input type="submit" name="确定" />
+    </div>
+</form>
+</body>
+</html>

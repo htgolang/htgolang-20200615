@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<a href="/">返回</a>
+<div>
+    <a href="/user/createUser/">添加用户</a>
+</div>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>任务</th>
+        <th>生日</th>
+        <th>地址</th>
+        <th>描述</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range . }}
+        <tr>
+            <td>{{ .Id }}</td>
+            <td>{{ .UserName }}</td>
+            {{ $tlen:=len .Tasks }}
+            {{ if eq $tlen 0 }}
+                <td>无</td>
+            {{ else }}
+                <td>
+                    {{ range .Tasks }}
+                        <span>{{ .Name }}</span>
+                    {{ end }}
+                </td>
+            {{ end }}
+            <td>{{ .Birthday }}</td>
+            <td>{{ .Addr }}</td>
+            <td>{{ .Desc }}</td>
+            <td>
+                <a href="/user/modifyUser/?id={{ .Id }}">修改</a>
+                <a href="/user/deleteUser/?id={{ .Id }}">删除</a>
+            </td>
+        </tr>
+    {{ else }}
+        <tr>
+            <td colspan="7">无用户数据</td>
+        </tr>
+    {{ end }}
+    </tbody>
+</table>
+</body>
+</html>
+
+<!--
+type User struct {
+	Id       int       `json:"id"`
+	Name     string    `json:"name"`
+	Tasks    []Task    `json:"tasks"`
+	Birthday time.Time `json:"birthday"`
+	Addr     string    `json:"addr"`
+	Desc     string    `json:"desc"`
+	Password string    `json:"password"`
+}
+ -->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>用户列表</title>
+    </head>
+    <body background="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566486141482&di=8d1b235d32f7a43166e66413ad35e6fc&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F03839555742a6c932f875b70fb894f0.jpg">
+        <a style="color: blue" href="/user/create/">添加</a>
+        <a style="color: blue" href="/passwd/modify/">修改密码</a>
+        <table style="color: brown; font-size:15px;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>名字</th>
+                    <th>生日</th>
+                    <th>地址</th>
+                    <th>电话</th>
+                    <th>描述</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody  style="color: cyan">
+                {{ range . }}
+                <tr>
+                    <td>{{ .ID }}</td>
+                    <td>{{ .Name }}</td>
+                    <td>{{ .Birthday }}</td>
+                    <td>{{ .Addr }}</td>
+                    <td>{{ .Tel }}</td>
+                    <td>{{ .Desc }}</td>
+                    <td>
+                        <a style="color: blue" href="/user/modify/?id={{ .ID }}">修改</a>
+                        <a style="color: blue" href="/user/delete/?id={{ .ID }}">删除</a>
+                    </td>
+                </tr>
+                {{ else }}
+                <tr>
+                    <td colspan="7"> 无数据 </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+        <p><a style="color: blue" href="/user/operation/">返回主菜单</a></p>
+    </body>
+</html>

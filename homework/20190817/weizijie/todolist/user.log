@@ -1,0 +1,264 @@
+2019/08/22 20:51:18 user.go:52: Account Load Success
+2019/08/22 21:09:13 user.go:52: Account Load Success
+2019/08/22 21:09:14 user.go:153: dan Account Verify Success
+2019/08/22 21:09:14 user.go:175: Users Load Success
+2019/08/22 21:09:14 user.go:55: dan 已登录
+2019/08/22 21:24:40 user.go:52: Account Load Success
+2019/08/22 21:24:40 user.go:153: dan Account Verify Success
+2019/08/22 21:24:40 user.go:175: Users Load Success
+2019/08/22 21:24:40 user.go:56: 用户(dan)已登录
+2019/08/22 21:24:55 user.go:175: Users Load Success
+2019/08/22 21:28:00 user.go:52: Account Load Success
+2019/08/22 21:28:00 user.go:153: dan Account Verify Success
+2019/08/22 21:28:00 user.go:175: Users Load Success
+2019/08/22 21:28:00 user.go:56: 用户(dan)已登录
+2019/08/22 21:28:01 user.go:175: Users Load Success
+2019/08/22 21:28:18 user.go:175: Users Load Success
+2019/08/22 21:28:18 user.go:175: Users Load Success
+2019/08/22 21:28:18 user.go:190: Users Store Success
+2019/08/22 21:28:18 user.go:236: aa user Create Success
+2019/08/22 21:28:18 user.go:175: Users Load Success
+2019/08/22 21:28:20 user.go:175: Users Load Success
+2019/08/22 21:28:25 user.go:175: Users Load Success
+2019/08/22 21:28:27 user.go:175: Users Load Success
+2019/08/22 21:28:27 user.go:190: Users Store Success
+2019/08/22 21:28:27 user.go:287: wei user Create Success
+2019/08/22 21:28:27 user.go:175: Users Load Success
+2019/08/22 21:28:31 user.go:180: Query Users Success
+2019/08/22 21:28:35 user.go:175: Users Load Success
+2019/08/22 21:28:35 user.go:187: {%!s(int=2) dan 2019-08-15 河南 123 dan} Query Success
+2019/08/22 21:28:37 user.go:180: Query Users Success
+2019/08/22 21:28:41 user.go:175: Users Load Success
+2019/08/22 21:28:41 user.go:187: {%!s(int=2) dan 2019-08-15 河南 123 dan} Query Success
+2019/08/22 21:31:38 user.go:180: Query Users Success
+2019/08/22 21:33:56 user.go:180: Query Users Success
+2019/08/22 21:34:03 user.go:175: Users Load Success
+2019/08/22 21:34:03 user.go:187: {%!s(int=2) dan 2019-08-15 河南 123 dan} Query Success
+2019/08/22 21:34:43 user.go:52: Account Load Success
+2019/08/22 21:34:43 user.go:153: dan Account Verify Success
+2019/08/22 21:34:43 user.go:175: Users Load Success
+2019/08/22 21:34:43 user.go:56: 用户(dan)已登录
+2019/08/22 21:37:49 user.go:175: Users Load Success
+2019/08/22 21:38:28 user.go:175: Users Load Success
+2019/08/22 21:39:02 user.go:175: Users Load Success
+2019/08/22 21:39:15 user.go:175: Users Load Success
+2019/08/22 21:41:04 user.go:175: Users Load Success
+2019/08/22 21:42:24 user.go:180: Query Users Success
+2019/08/22 21:42:59 user.go:52: Account Load Success
+2019/08/22 21:42:59 user.go:153: dan Account Verify Success
+2019/08/22 21:42:59 user.go:175: Users Load Success
+2019/08/22 21:42:59 user.go:56: 用户(dan)已登录
+2019/08/22 21:43:01 user.go:175: Users Load Success
+2019/08/22 21:43:06 user.go:52: Account Load Success
+2019/08/22 21:43:06 user.go:99: Name为 dan 的Passwd Modidy Success
+2019/08/22 21:43:06 user.go:66: Password Store Success
+2019/08/22 21:43:06 user.go:36: 用户(dan)密码已修改
+2019/08/22 21:43:06 user.go:175: Users Load Success
+2019/08/22 21:43:11 user.go:175: Users Load Success
+2019/08/22 21:43:14 user.go:175: Users Load Success
+2019/08/22 21:43:14 user.go:190: Users Store Success
+2019/08/22 21:43:14 user.go:287: wei user Create Success
+2019/08/22 21:43:14 user.go:175: Users Load Success
+2019/08/22 21:43:16 user.go:180: Query Users Success
+2019/08/22 21:43:20 user.go:175: Users Load Success
+2019/08/22 21:43:20 user.go:265: Name == 12: Users Get Success
+2019/08/22 21:43:20 user.go:189: Query User Not Exist
+2019/08/22 21:43:22 user.go:180: Query Users Success
+2019/08/22 21:43:26 user.go:175: Users Load Success
+2019/08/22 21:43:26 user.go:187: {%!s(int=2) dan 2019-08-15 河南 123 dan} Query Success
+2019/08/22 21:43:33 user.go:175: Users Load Success
+2019/08/22 21:43:37 user.go:175: Users Load Success
+2019/08/22 21:43:39 user.go:175: Users Load Success
+2019/08/22 21:43:39 user.go:190: Users Store Success
+2019/08/22 21:43:39 user.go:287: wei user Create Success
+2019/08/22 21:43:39 user.go:175: Users Load Success
+2019/08/22 21:43:42 user.go:175: Users Load Success
+2019/08/22 21:43:45 user.go:175: Users Load Success
+2019/08/22 21:43:45 user.go:175: Users Load Success
+2019/08/22 21:43:45 user.go:190: Users Store Success
+2019/08/22 21:43:45 user.go:236:  user Create Success
+2019/08/22 21:43:45 user.go:175: Users Load Success
+2019/08/22 21:43:48 user.go:175: Users Load Success
+2019/08/22 21:43:48 user.go:175: Users Load Success
+2019/08/22 21:43:48 user.go:190: Users Store Success
+2019/08/22 21:43:48 user.go:236:  user Create Success
+2019/08/22 21:43:48 user.go:175: Users Load Success
+2019/08/22 21:43:50 user.go:175: Users Load Success
+2019/08/22 21:43:52 user.go:52: Account Load Success
+2019/08/22 21:43:52 user.go:99: Name为 dan 的Passwd Modidy Success
+2019/08/22 21:43:52 user.go:66: Password Store Success
+2019/08/22 21:43:52 user.go:36: 用户(dan)密码已修改
+2019/08/22 21:43:52 user.go:175: Users Load Success
+2019/08/22 21:43:55 user.go:175: Users Load Success
+2019/08/22 21:43:55 user.go:303: {%!s(int=4)   河南  } user will Delete
+2019/08/22 21:43:55 user.go:306: ID=4 user Delete Success
+2019/08/22 21:43:55 user.go:175: Users Load Success
+2019/08/22 21:43:58 user.go:175: Users Load Success
+2019/08/22 21:43:59 user.go:175: Users Load Success
+2019/08/22 21:43:59 user.go:303: {%!s(int=5)   河南  } user will Delete
+2019/08/22 21:43:59 user.go:306: ID=5 user Delete Success
+2019/08/22 21:43:59 user.go:175: Users Load Success
+2019/08/22 21:44:00 user.go:175: Users Load Success
+2019/08/22 21:44:41 user.go:175: Users Load Success
+2019/08/22 21:44:41 user.go:303: {%!s(int=3) aa 2019-08-08 湖北 12121212 123} user will Delete
+2019/08/22 21:44:41 user.go:306: ID=3 user Delete Success
+2019/08/22 21:44:41 user.go:175: Users Load Success
+2019/08/22 21:44:43 user.go:175: Users Load Success
+2019/08/22 21:44:46 user.go:175: Users Load Success
+2019/08/22 21:44:46 user.go:303: {%!s(int=3) aa 2019-08-08 湖北 12121212 123} user will Delete
+2019/08/22 21:44:46 user.go:306: ID=3 user Delete Success
+2019/08/22 21:44:46 user.go:175: Users Load Success
+2019/08/22 21:44:49 user.go:175: Users Load Success
+2019/08/22 21:48:58 user.go:175: Users Load Success
+2019/08/22 21:49:01 user.go:175: Users Load Success
+2019/08/22 21:49:01 user.go:303: {%!s(int=5)   河南  } user will Delete
+2019/08/22 21:49:01 user.go:306: ID=5 user Delete Success
+2019/08/22 21:49:01 user.go:175: Users Load Success
+2019/08/22 21:49:02 user.go:175: Users Load Success
+2019/08/22 21:52:37 user.go:175: Users Load Success
+2019/08/22 21:52:42 user.go:175: Users Load Success
+2019/08/22 21:52:42 user.go:306: {%!s(int=5)   河南  } user will Delete
+2019/08/22 21:52:42 user.go:309: ID=5 user Delete Success
+2019/08/22 21:52:48 user.go:175: Users Load Success
+2019/08/22 21:53:21 user.go:175: Users Load Success
+2019/08/22 21:53:23 user.go:175: Users Load Success
+2019/08/22 21:53:23 user.go:306: {%!s(int=5)   河南  } user will Delete
+2019/08/22 21:53:23 user.go:309: ID=5 user Delete Success
+2019/08/22 21:53:30 user.go:175: Users Load Success
+2019/08/22 21:55:07 user.go:175: Users Load Success
+2019/08/22 21:55:09 user.go:175: Users Load Success
+2019/08/22 21:55:09 user.go:306: {%!s(int=5)   河南  } user will Delete
+2019/08/22 21:55:09 user.go:309: ID=5 user Delete Success
+2019/08/22 21:55:09 user.go:190: Users Store Success
+2019/08/22 21:55:10 user.go:175: Users Load Success
+2019/08/22 21:56:48 user.go:175: Users Load Success
+2019/08/22 21:57:35 user.go:175: Users Load Success
+2019/08/22 21:58:03 user.go:52: Account Load Success
+2019/08/22 21:58:03 user.go:156: dan Account Verify Failed
+2019/08/22 21:58:03 user.go:62: 用户(dan)验证失败:Verity Failed
+2019/08/22 21:58:19 user.go:52: Account Load Success
+2019/08/22 21:58:19 user.go:153: dan Account Verify Success
+2019/08/22 21:58:19 user.go:175: Users Load Success
+2019/08/22 21:58:19 user.go:56: 用户(dan)已登录
+2019/08/22 21:58:25 user.go:52: Account Load Success
+2019/08/22 21:58:25 user.go:99: Name为 dan 的Passwd Modidy Success
+2019/08/22 21:58:25 user.go:66: Password Store Success
+2019/08/22 21:58:25 user.go:36: 用户(dan)密码已修改
+2019/08/22 21:58:25 user.go:175: Users Load Success
+2019/08/22 21:58:27 user.go:175: Users Load Success
+2019/08/22 21:58:27 user.go:303: {%!s(int=4)   河南  } user will Delete
+2019/08/22 21:58:27 user.go:306: ID=4 user Delete Success
+2019/08/22 21:58:27 user.go:190: Users Store Success
+2019/08/22 21:58:27 user.go:175: Users Load Success
+2019/08/22 21:58:30 user.go:175: Users Load Success
+2019/08/22 21:58:30 user.go:306: ID=4 user Delete Success
+2019/08/22 21:58:30 user.go:190: Users Store Success
+2019/08/22 21:58:30 user.go:175: Users Load Success
+2019/08/22 21:58:56 user.go:175: Users Load Success
+2019/08/22 21:58:56 user.go:306: ID=4 user Delete Success
+2019/08/22 21:58:56 user.go:190: Users Store Success
+2019/08/22 21:58:56 user.go:175: Users Load Success
+2019/08/22 21:59:01 user.go:175: Users Load Success
+2019/08/22 22:00:12 user.go:175: Users Load Success
+2019/08/22 22:00:12 user.go:303: {%!s(int=3) aa 2019-08-08 湖北 12121212 123} user will Delete
+2019/08/22 22:00:12 user.go:306: ID=3 user Delete Success
+2019/08/22 22:00:12 user.go:190: Users Store Success
+2019/08/22 22:00:12 user.go:180: Query Users Success
+2019/08/22 22:00:33 user.go:175: Users Load Success
+2019/08/22 22:00:38 user.go:175: Users Load Success
+2019/08/22 22:00:38 user.go:303: {%!s(int=2) dan 2019-08-15 河南 123 dan} user will Delete
+2019/08/22 22:00:38 user.go:306: ID=2 user Delete Success
+2019/08/22 22:00:38 user.go:190: Users Store Success
+2019/08/22 22:00:38 user.go:180: Query Users Success
+2019/08/22 22:00:45 user.go:175: Users Load Success
+2019/08/22 22:01:59 user.go:175: Users Load Success
+2019/08/22 22:01:59 user.go:175: Users Load Success
+2019/08/22 22:01:59 user.go:190: Users Store Success
+2019/08/22 22:01:59 user.go:236: wei user Create Success
+2019/08/22 22:02:00 user.go:175: Users Load Success
+2019/08/22 22:02:17 user.go:175: Users Load Success
+2019/08/22 22:02:17 user.go:175: Users Load Success
+2019/08/22 22:02:17 user.go:190: Users Store Success
+2019/08/22 22:02:17 user.go:236: aa user Create Success
+2019/08/22 22:02:19 user.go:175: Users Load Success
+2019/08/22 22:02:20 user.go:175: Users Load Success
+2019/08/22 22:02:20 user.go:303: {%!s(int=3) aa 2019-08-20 北京 121212 qqqq} user will Delete
+2019/08/22 22:02:20 user.go:306: ID=3 user Delete Success
+2019/08/22 22:02:20 user.go:190: Users Store Success
+2019/08/22 22:02:20 user.go:175: Users Load Success
+2019/08/22 22:02:45 user.go:52: Account Load Success
+2019/08/22 22:02:45 user.go:153: dan Account Verify Success
+2019/08/22 22:02:45 user.go:175: Users Load Success
+2019/08/22 22:02:45 user.go:56: 用户(dan)已登录
+2019/08/22 22:02:47 user.go:175: Users Load Success
+2019/08/22 22:02:58 user.go:175: Users Load Success
+2019/08/22 22:02:58 user.go:175: Users Load Success
+2019/08/22 22:02:58 user.go:190: Users Store Success
+2019/08/22 22:02:58 user.go:236: aa user Create Success
+2019/08/22 22:02:58 user.go:175: Users Load Success
+2019/08/22 22:02:59 user.go:180: Query Users Success
+2019/08/22 22:03:02 user.go:175: Users Load Success
+2019/08/22 22:03:02 user.go:265: Name == qq: Users Get Success
+2019/08/22 22:03:02 user.go:189: Query User Not Exist
+2019/08/22 22:03:06 user.go:180: Query Users Success
+2019/08/22 22:03:09 user.go:175: Users Load Success
+2019/08/22 22:03:09 user.go:187: {%!s(int=1) wei 2019-08-06 河南 1234111 dan} Query Success
+2019/08/22 22:03:12 user.go:175: Users Load Success
+2019/08/22 22:03:14 user.go:175: Users Load Success
+2019/08/22 22:03:14 user.go:303: {%!s(int=3) aa 2019-08-21 北京 qwqwqw qwqwqw} user will Delete
+2019/08/22 22:03:14 user.go:306: ID=3 user Delete Success
+2019/08/22 22:03:14 user.go:190: Users Store Success
+2019/08/22 22:03:14 user.go:175: Users Load Success
+2019/08/22 22:03:14 user.go:175: Users Load Success
+2019/08/22 22:03:16 user.go:175: Users Load Success
+2019/08/22 22:03:20 user.go:175: Users Load Success
+2019/08/22 22:03:20 user.go:190: Users Store Success
+2019/08/22 22:03:20 user.go:287: wei user Create Success
+2019/08/22 22:03:20 user.go:175: Users Load Success
+2019/08/22 22:03:31 user.go:52: Account Load Success
+2019/08/22 22:03:31 user.go:99: Name为 dan 的Passwd Modidy Success
+2019/08/22 22:03:31 user.go:66: Password Store Success
+2019/08/22 22:03:31 user.go:36: 用户(dan)密码已修改
+2019/08/22 22:03:31 user.go:175: Users Load Success
+2019/08/22 22:05:12 user.go:52: Account Load Success
+2019/08/22 22:05:12 user.go:153: dan Account Verify Success
+2019/08/22 22:05:12 user.go:175: Users Load Success
+2019/08/22 22:05:12 user.go:56: 用户(dan)已登录
+2019/08/22 22:05:33 user.go:52: Account Load Success
+2019/08/22 22:05:33 user.go:153: dan Account Verify Success
+2019/08/22 22:05:33 user.go:175: Users Load Success
+2019/08/22 22:05:33 user.go:56: 用户(dan)已登录
+2019/08/22 22:05:44 user.go:175: Users Load Success
+2019/08/22 22:05:44 user.go:175: Users Load Success
+2019/08/22 22:05:44 user.go:190: Users Store Success
+2019/08/22 22:05:44 user.go:236: qq user Create Success
+2019/08/22 22:05:44 user.go:175: Users Load Success
+2019/08/22 22:05:46 user.go:175: Users Load Success
+2019/08/22 22:05:47 user.go:175: Users Load Success
+2019/08/22 22:05:49 user.go:175: Users Load Success
+2019/08/22 22:05:49 user.go:190: Users Store Success
+2019/08/22 22:05:49 user.go:287: qq user Create Success
+2019/08/22 22:05:49 user.go:175: Users Load Success
+2019/08/22 22:05:50 user.go:175: Users Load Success
+2019/08/22 22:05:52 user.go:175: Users Load Success
+2019/08/22 22:05:52 user.go:303: {%!s(int=3) qq 2019-08-06 北京 1212 12121212} user will Delete
+2019/08/22 22:05:52 user.go:306: ID=3 user Delete Success
+2019/08/22 22:05:52 user.go:190: Users Store Success
+2019/08/22 22:05:52 user.go:175: Users Load Success
+2019/08/22 22:05:52 user.go:175: Users Load Success
+2019/08/22 22:05:55 user.go:180: Query Users Success
+2019/08/22 22:05:59 user.go:175: Users Load Success
+2019/08/22 22:05:59 user.go:187: {%!s(int=1) wei 2019-08-06 河南 1234111 dan} Query Success
+2019/08/22 22:06:00 user.go:180: Query Users Success
+2019/08/22 22:06:04 user.go:175: Users Load Success
+2019/08/22 22:06:04 user.go:265: Name == dan: Users Get Success
+2019/08/22 22:06:04 user.go:189: Query User Not Exist
+2019/08/22 22:06:06 user.go:180: Query Users Success
+2019/08/22 22:06:13 user.go:175: Users Load Success
+2019/08/22 22:06:13 user.go:187: {%!s(int=1) wei 2019-08-06 河南 1234111 dan} Query Success
+2019/08/22 22:06:15 user.go:175: Users Load Success
+2019/08/22 22:07:06 user.go:52: Account Load Success
+2019/08/22 22:07:06 user.go:153: dan Account Verify Success
+2019/08/22 22:07:06 user.go:175: Users Load Success
+2019/08/22 22:07:06 user.go:56: 用户(dan)已登录
+2019/08/22 22:07:07 user.go:175: Users Load Success

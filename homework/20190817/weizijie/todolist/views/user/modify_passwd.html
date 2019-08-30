@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>密码修改</title>
+    </head>
+    <body background="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566486141482&di=8d1b235d32f7a43166e66413ad35e6fc&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F03839555742a6c932f875b70fb894f0.jpg">
+        <form action="/passwd/modify/" method="POST">
+            <div>
+                <label style="color:crimson; font-size:15px;">名字:</label>
+                <input type="text" name="name" {{ range $key, $value := . }} value={{ $key }} {{ end }}/>
+            </div>
+            <div>
+                <label style="color:crimson; font-size:15px;">密码:</label>
+                <input type="password" name="passwd" />
+            </div>
+
+            <div>
+                <input type="submit" name="Login" value="确认修改"/>
+            </div>
+        </form>
+    </body>
+</html>
