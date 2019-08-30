@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>用户修改</title>
+    </head>
+    <body>
+        <form action="/user/modify/" method="POST">
+            <input type="hidden" name="id" value="{{ .ID }}">
+            <div>
+                <label>名字:</label>
+                <input type="text" name="name" value="{{ .Name }}" />
+            </div>
+            <div>
+                <label>生日:</label>
+                <input type="date" name="birthday" value="{{ .Birthday }}"/>
+            </div>
+            <div>
+                <label>电话:</label>
+                <input type="text" name="tel" value="{{ .Tel }}" />
+            </div>
+            <div>
+                <label>地址:</label>
+                <input type="text" name="addr" value="{{ .Addr }}" />
+            </div>
+            <div>
+                <label>描述:</label>
+                <input type="text" name="desc" value="{{ .Desc }}" />
+            </div>
+            <div>
+                <input type="submit" name="添加" />
+            </div>
+        </form>
+    </body>
+</html>

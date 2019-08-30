@@ -1,0 +1,1779 @@
+2019/08/24 14:24:51 user.go:65: 用户(dan)验证失败:Verity Failed
+2019/08/24 14:24:56 user.go:60: 用户(wei)已登录
+2019/08/24 14:28:10 user.go:99: wei Account Verify Failed
+2019/08/24 14:28:10 user.go:65: 用户(wei)验证失败:Verity Failed
+2019/08/24 14:28:19 user.go:99: wei Account Verify Failed
+2019/08/24 14:28:19 user.go:65: 用户(wei)验证失败:Verity Failed
+2019/08/24 14:28:45 user.go:96: wei Account Verify Success
+2019/08/24 14:28:45 user.go:60: 用户(wei)已登录
+2019/08/24 14:30:14 user.go:96: wei Account Verify Success
+2019/08/24 14:30:14 user.go:62: 用户(wei)已登录
+2019/08/24 14:30:47 user.go:96: wei Account Verify Success
+2019/08/24 14:30:47 user.go:62: 用户(wei)已登录
+2019/08/24 16:51:09 user.go:96: wei Account Verify Success
+2019/08/24 16:51:09 user.go:45: 用户(wei)已登录
+2019/08/24 16:52:06 user.go:96: wei Account Verify Success
+2019/08/24 16:52:06 user.go:45: 用户(wei)已登录
+2019/08/24 16:52:32 user.go:96: wei Account Verify Success
+2019/08/24 16:52:32 user.go:45: 用户(wei)已登录
+2019/08/24 17:03:37 user.go:96: wei Account Verify Success
+2019/08/24 17:03:37 user.go:45: 用户(wei)已登录
+2019/08/24 17:12:37 server.go:3012: http: panic serving [::1]:56985: open views/user/users.html: The system cannot find the file specified.
+goroutine 20 [running]:
+net/http.(*conn).serve.func1(0xc0000b0e60)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77baa0, 0xc00006c630)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserAction(0x85df80, 0xc00011a000, 0xc000106100)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:28 +0x232
+net/http.HandlerFunc.ServeHTTP(0x7f6fd0, 0x85df80, 0xc00011a000, 0xc000106100)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadae00, 0x85df80, 0xc00011a000, 0xc000106100)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000b2750, 0x85df80, 0xc00011a000, 0xc000106100)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000b0e60, 0x85e540, 0xc000082480)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/24 17:12:37 server.go:3012: http: panic serving [::1]:56984: open views/user/users.html: The system cannot find the file specified.
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc0000b0f00)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77baa0, 0xc00006c960)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserAction(0x85df80, 0xc00011a0e0, 0xc000106200)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:28 +0x232
+net/http.HandlerFunc.ServeHTTP(0x7f6fd0, 0x85df80, 0xc00011a0e0, 0xc000106200)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadae00, 0x85df80, 0xc00011a0e0, 0xc000106200)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000b2750, 0x85df80, 0xc00011a0e0, 0xc000106200)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000b0f00, 0x85e540, 0xc000082540)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/24 17:12:37 server.go:3012: http: panic serving [::1]:56995: open views/user/users.html: The system cannot find the file specified.
+goroutine 4 [running]:
+net/http.(*conn).serve.func1(0xc000166000)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77baa0, 0xc00006ccf0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserAction(0x85df80, 0xc00011a1c0, 0xc000140100)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:28 +0x232
+net/http.HandlerFunc.ServeHTTP(0x7f6fd0, 0x85df80, 0xc00011a1c0, 0xc000140100)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadae00, 0x85df80, 0xc00011a1c0, 0xc000140100)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000b2750, 0x85df80, 0xc00011a1c0, 0xc000140100)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000166000, 0x85e540, 0xc000050380)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/24 17:16:27 user.go:96: wei Account Verify Success
+2019/08/24 17:16:27 user.go:52: 用户(wei)已登录
+2019/08/24 17:37:43 user.go:96: wei Account Verify Success
+2019/08/24 17:37:44 user.go:41: 用户(wei)已登录
+2019/08/24 17:37:55 user.go:104: dan Account Not Exist
+2019/08/24 17:37:55 user.go:46: 用户(dan)验证失败:Account not Exist
+2019/08/24 17:38:02 user.go:96: wei Account Verify Success
+2019/08/24 17:38:02 user.go:41: 用户(wei)已登录
+2019/08/24 18:10:34 user.go:96: wei Account Verify Success
+2019/08/24 18:10:34 user.go:41: 用户(wei)已登录
+2019/08/24 18:13:08 user.go:104: dan Account Not Exist
+2019/08/24 18:13:08 user.go:51: 用户(dan)验证失败:Account not Exist
+2019/08/24 18:13:14 user.go:96: wei Account Verify Success
+2019/08/24 18:13:14 user.go:46: 用户(wei)已登录
+2019/08/24 18:15:55 user.go:96: wei Account Verify Success
+2019/08/24 18:15:55 user.go:46: 用户(wei)已登录
+2019/08/25 13:24:35 user.go:92: Name == dan: Users Get Success
+2019/08/25 13:24:45 user.go:23: wei Account Verify Success
+2019/08/25 13:24:45 user.go:49: 用户(wei)已登录
+2019/08/25 13:24:52 user.go:23: wei Account Verify Success
+2019/08/25 13:24:52 user.go:49: 用户(wei)已登录
+2019/08/25 13:26:29 user.go:23: wei Account Verify Success
+2019/08/25 13:26:33 user.go:23: wei Account Verify Success
+2019/08/25 13:26:43 user.go:23: wei Account Verify Success
+2019/08/25 13:26:48 user.go:23: wei Account Verify Success
+2019/08/25 13:26:48 user.go:49: 用户(wei)已登录
+2019/08/25 13:27:02 user.go:23: wei Account Verify Success
+2019/08/25 13:27:02 user.go:49: 用户(wei)已登录
+2019/08/25 13:27:32 user.go:23: wei Account Verify Success
+2019/08/25 13:27:32 user.go:49: 用户(wei)已登录
+2019/08/25 13:29:12 user.go:23: wei Account Verify Success
+2019/08/25 13:29:12 user.go:52: 用户(wei)已登录
+2019/08/25 13:34:42 user.go:92: Name == dan: Users Get Success
+2019/08/25 13:35:33 user.go:92: Name == dan: Users Get Success
+2019/08/25 13:35:35 user.go:92: Name == dan: Users Get Success
+2019/08/25 13:35:37 user.go:92: Name == dan: Users Get Success
+2019/08/25 13:35:45 user.go:23: wei Account Verify Success
+2019/08/25 13:35:45 user.go:52: 用户(wei)已登录
+2019/08/25 13:36:00 user.go:92: Name == dan: Users Get Success
+2019/08/25 13:36:11 user.go:92: Name == dan: Users Get Success
+2019/08/25 13:36:19 user.go:23: wei Account Verify Success
+2019/08/25 13:36:19 user.go:52: 用户(wei)已登录
+2019/08/25 21:38:01 user.go:23: wei Account Verify Success
+2019/08/25 21:38:01 user.go:52: 用户(wei)已登录
+2019/08/25 23:05:14 user.go:23: wei Account Verify Success
+2019/08/25 23:05:14 user.go:52: 用户(wei)已登录
+2019/08/25 23:05:17 server.go:3012: http: panic serving [::1]:55329: open views/user/create.html: The system cannot find the file specified.
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc000040fa0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0001c3f50)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00015e2a0, 0xc00012a400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00015e2a0, 0xc00012a400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00015e2a0, 0xc00012a400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc00015e2a0, 0xc00012a400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000040fa0, 0x861160, 0xc00004e480)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:05:17 server.go:3012: http: panic serving [::1]:55330: open views/user/create.html: The system cannot find the file specified.
+goroutine 5 [running]:
+net/http.(*conn).serve.func1(0xc00010e0a0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc00006b8c0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000f60e0, 0xc000130000)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000f60e0, 0xc000130000)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000f60e0, 0xc000130000)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc0000f60e0, 0xc000130000)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00010e0a0, 0x861160, 0xc000032140)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:05:17 server.go:3012: http: panic serving [::1]:55349: open views/user/create.html: The system cannot find the file specified.
+goroutine 13 [running]:
+net/http.(*conn).serve.func1(0xc00010e500)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0001f8300)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00015e380, 0xc000130700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00015e380, 0xc000130700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00015e380, 0xc000130700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc00015e380, 0xc000130700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00010e500, 0x861160, 0xc000032840)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:05:17 server.go:3012: http: panic serving [::1]:55352: open views/user/create.html: The system cannot find the file specified.
+goroutine 37 [running]:
+net/http.(*conn).serve.func1(0xc00017c140)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc000128ba0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001421c0, 0xc00012a600)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001421c0, 0xc00012a600)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001421c0, 0xc00012a600)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc0001421c0, 0xc00012a600)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00017c140, 0x861160, 0xc00013c440)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:05:17 server.go:3012: http: panic serving [::1]:55351: open views/user/create.html: The system cannot find the file specified.
+goroutine 36 [running]:
+net/http.(*conn).serve.func1(0xc00017c0a0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc000128e70)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001422a0, 0xc00012a500)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001422a0, 0xc00012a500)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001422a0, 0xc00012a500)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc0001422a0, 0xc00012a500)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00017c0a0, 0x861160, 0xc00013c340)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:05:17 server.go:3012: http: panic serving [::1]:55353: open views/user/create.html: The system cannot find the file specified.
+goroutine 40 [running]:
+net/http.(*conn).serve.func1(0xc00017c320)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc000129200)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc000142380, 0xc00012a700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc000142380, 0xc00012a700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc000142380, 0xc00012a700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc000142380, 0xc00012a700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00017c320, 0x861160, 0xc00013c780)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:05:22 server.go:3012: http: panic serving [::1]:55359: open views/user/create.html: The system cannot find the file specified.
+goroutine 15 [running]:
+net/http.(*conn).serve.func1(0xc00010e5a0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0001f8690)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00015e460, 0xc000130800)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00015e460, 0xc000130800)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00015e460, 0xc000130800)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc00015e460, 0xc000130800)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00010e5a0, 0x861160, 0xc0000329c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:06:05 server.go:3012: http: panic serving [::1]:55406: open views/user/create.html: The system cannot find the file specified.
+goroutine 51 [running]:
+net/http.(*conn).serve.func1(0xc00010e780)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0001f8b10)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00015e540, 0xc000130a00)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00015e540, 0xc000130a00)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00015e540, 0xc000130a00)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc00015e540, 0xc000130a00)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00010e780, 0x861160, 0xc000032bc0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:06:05 server.go:3012: http: panic serving [::1]:55405: open views/user/create.html: The system cannot find the file specified.
+goroutine 50 [running]:
+net/http.(*conn).serve.func1(0xc00010e6e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0002782d0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00028a000, 0xc000130900)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00028a000, 0xc000130900)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00028a000, 0xc000130900)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc00028a000, 0xc000130900)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00010e6e0, 0x861160, 0xc000032b40)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:06:05 server.go:3012: http: panic serving [::1]:55407: open views/user/create.html: The system cannot find the file specified.
+goroutine 67 [running]:
+net/http.(*conn).serve.func1(0xc0002b8000)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc00006bd40)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000f61c0, 0xc0002bc000)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000f61c0, 0xc0002bc000)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000f61c0, 0xc0002bc000)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc0000f61c0, 0xc0002bc000)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0002b8000, 0x861160, 0xc000282180)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:07:36 server.go:3012: http: panic serving [::1]:55492: open views/user/create.html: The system cannot find the file specified.
+goroutine 35 [running]:
+net/http.(*conn).serve.func1(0xc0000ea0a0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0000da540)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc000112000, 0xc000104100)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:129 +0x5b8
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc000112000, 0xc000104100)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc000112000, 0xc000104100)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000469c0, 0x860ba0, 0xc000112000, 0xc000104100)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000ea0a0, 0x861160, 0xc0000fc180)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:09:02 user.go:23: wei Account Verify Success
+2019/08/25 23:09:02 user.go:52: 用户(wei)已登录
+2019/08/25 23:09:04 server.go:3012: http: panic serving [::1]:55567: open views/user/create.html: The system cannot find the file specified.
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc000041040)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0001846f0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000f62a0, 0xc000120400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:135 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000f62a0, 0xc000120400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000f62a0, 0xc000120400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0000f62a0, 0xc000120400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041040, 0x861160, 0xc00004e480)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:09:04 server.go:3012: http: panic serving [::1]:55568: open views/user/create.html: The system cannot find the file specified.
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc00010e000)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc000105110)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001402a0, 0xc000120000)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:135 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001402a0, 0xc000120000)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001402a0, 0xc000120000)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0001402a0, 0xc000120000)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00010e000, 0x861160, 0xc00011a040)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:09:04 server.go:3012: http: panic serving [::1]:55582: open views/user/create.html: The system cannot find the file specified.
+goroutine 27 [running]:
+net/http.(*conn).serve.func1(0xc000041220)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc000184a20)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000f6380, 0xc000120500)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:135 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000f6380, 0xc000120500)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000f6380, 0xc000120500)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0000f6380, 0xc000120500)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041220, 0x861160, 0xc00011a580)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:09:04 server.go:3012: http: panic serving [::1]:55584: open views/user/create.html: The system cannot find the file specified.
+goroutine 30 [running]:
+net/http.(*conn).serve.func1(0xc000041360)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0001d4a80)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001c00e0, 0xc0000e2a00)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:135 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001c00e0, 0xc0000e2a00)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001c00e0, 0xc0000e2a00)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0001c00e0, 0xc0000e2a00)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041360, 0x861160, 0xc00004eb80)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:09:04 server.go:3012: http: panic serving [::1]:55583: open views/user/create.html: The system cannot find the file specified.
+goroutine 29 [running]:
+net/http.(*conn).serve.func1(0xc0000412c0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc000184e70)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000f6460, 0xc0000e2800)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:135 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000f6460, 0xc0000e2800)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000f6460, 0xc0000e2800)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0000f6460, 0xc0000e2800)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000412c0, 0x861160, 0xc00004eb00)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:09:04 server.go:3012: http: panic serving [::1]:55585: open views/user/create.html: The system cannot find the file specified.
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc000190320)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0001d4e10)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001c01c0, 0xc00014a400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:135 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001c01c0, 0xc00014a400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001c01c0, 0xc00014a400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0001c01c0, 0xc00014a400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000190320, 0x861160, 0xc000032480)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:09:09 server.go:3012: http: panic serving [::1]:55595: open views/user/create.html: The system cannot find the file specified.
+goroutine 10 [running]:
+net/http.(*conn).serve.func1(0xc000190460)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc20, 0xc0001d51a0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001c02a0, 0xc00014a500)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:135 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001c02a0, 0xc00014a500)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001c02a0, 0xc00014a500)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0001c02a0, 0xc00014a500)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000190460, 0x861160, 0xc000032600)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:14:23 user.go:23: wei Account Verify Success
+2019/08/25 23:14:23 user.go:52: 用户(wei)已登录
+2019/08/25 23:14:25 server.go:3012: http: panic serving [::1]:55896: open views/user/create.html: The system cannot find the file specified.
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc000040f00)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001a67e0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc0001301c0, 0xc000104300)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9728, 0x860b80, 0xc0001301c0, 0xc000104300)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc0001301c0, 0xc000104300)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc0001301c0, 0xc000104300)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000040f00, 0x861140, 0xc00004e480)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:14:25 server.go:3012: http: panic serving [::1]:55897: open views/user/create.html: The system cannot find the file specified.
+goroutine 5 [running]:
+net/http.(*conn).serve.func1(0xc0000fa000)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001a6ab0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc0001302a0, 0xc000104000)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9728, 0x860b80, 0xc0001302a0, 0xc000104000)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc0001302a0, 0xc000104000)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc0001302a0, 0xc000104000)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000fa000, 0x861140, 0xc000032080)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:14:25 server.go:3012: http: panic serving [::1]:55905: open views/user/create.html: The system cannot find the file specified.
+goroutine 39 [running]:
+net/http.(*conn).serve.func1(0xc00016a280)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001a6de0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc000130380, 0xc000104400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9728, 0x860b80, 0xc000130380, 0xc000104400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc000130380, 0xc000104400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc000130380, 0xc000104400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00016a280, 0x861140, 0xc000032200)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:14:25 server.go:3012: http: panic serving [::1]:55908: open views/user/create.html: The system cannot find the file specified.
+goroutine 31 [running]:
+net/http.(*conn).serve.func1(0xc000041400)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00013f260)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc0000fc460, 0xc0000e2a00)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9728, 0x860b80, 0xc0000fc460, 0xc0000e2a00)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc0000fc460, 0xc0000e2a00)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc0000fc460, 0xc0000e2a00)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041400, 0x861140, 0xc00004ec00)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:14:25 server.go:3012: http: panic serving [::1]:55907: open views/user/create.html: The system cannot find the file specified.
+goroutine 30 [running]:
+net/http.(*conn).serve.func1(0xc000041360)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001a70b0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc000130460, 0xc0000e2900)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9728, 0x860b80, 0xc000130460, 0xc0000e2900)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc000130460, 0xc0000e2900)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc000130460, 0xc0000e2900)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041360, 0x861140, 0xc00004eb80)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:14:25 server.go:3012: http: panic serving [::1]:55909: open views/user/create.html: The system cannot find the file specified.
+goroutine 33 [running]:
+net/http.(*conn).serve.func1(0xc000041540)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00013f5f0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc0000fc540, 0xc0000e2b00)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9728, 0x860b80, 0xc0000fc540, 0xc0000e2b00)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc0000fc540, 0xc0000e2b00)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc0000fc540, 0xc0000e2b00)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041540, 0x861140, 0xc00004ee80)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:21:14 user.go:23: wei Account Verify Success
+2019/08/25 23:21:14 user.go:52: 用户(wei)已登录
+2019/08/25 23:21:15 server.go:3012: http: panic serving [::1]:56290: open views/user/create.html: The system cannot find the file specified.
+goroutine 35 [running]:
+net/http.(*conn).serve.func1(0xc0000f00a0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0000e17a0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00013a380, 0xc00011e600)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00013a380, 0xc00011e600)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00013a380, 0xc00011e600)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000042820, 0x860ba0, 0xc00013a380, 0xc00011e600)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000f00a0, 0x861160, 0xc000100180)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:21:15 server.go:3012: http: panic serving [::1]:56289: open views/user/create.html: The system cannot find the file specified.
+goroutine 34 [running]:
+net/http.(*conn).serve.func1(0xc0000f0000)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00011d830)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001d00e0, 0xc000108000)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001d00e0, 0xc000108000)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001d00e0, 0xc000108000)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000042820, 0x860ba0, 0xc0001d00e0, 0xc000108000)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000f0000, 0x861160, 0xc000100040)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:21:15 server.go:3012: http: panic serving [::1]:56303: open views/user/create.html: The system cannot find the file specified.
+goroutine 43 [running]:
+net/http.(*conn).serve.func1(0xc0000f0320)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00011db00)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001d01c0, 0xc000108700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001d01c0, 0xc000108700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001d01c0, 0xc000108700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000042820, 0x860ba0, 0xc0001d01c0, 0xc000108700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000f0320, 0x861160, 0xc000100880)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:21:16 server.go:3012: http: panic serving [::1]:56305: open views/user/create.html: The system cannot find the file specified.
+goroutine 11 [running]:
+net/http.(*conn).serve.func1(0xc0000392c0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001dd440)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00010e1c0, 0xc0000d0500)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00010e1c0, 0xc0000d0500)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00010e1c0, 0xc0000d0500)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000042820, 0x860ba0, 0xc00010e1c0, 0xc0000d0500)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000392c0, 0x861160, 0xc0000328c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:21:16 server.go:3012: http: panic serving [::1]:56304: open views/user/create.html: The system cannot find the file specified.
+goroutine 10 [running]:
+net/http.(*conn).serve.func1(0xc000039220)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0000e1b30)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00013a460, 0xc0000d0400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00013a460, 0xc0000d0400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00013a460, 0xc0000d0400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000042820, 0x860ba0, 0xc00013a460, 0xc0000d0400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000039220, 0x861160, 0xc000032840)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:21:16 server.go:3012: http: panic serving [::1]:56306: open views/user/create.html: The system cannot find the file specified.
+goroutine 45 [running]:
+net/http.(*conn).serve.func1(0xc0000f0460)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00011ddd0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001d02a0, 0xc000108800)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001d02a0, 0xc000108800)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001d02a0, 0xc000108800)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000042820, 0x860ba0, 0xc0001d02a0, 0xc000108800)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000f0460, 0x861160, 0xc000100a80)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:41:14 user.go:23: wei Account Verify Success
+2019/08/25 23:41:14 user.go:52: 用户(wei)已登录
+2019/08/25 23:41:15 server.go:3012: http: panic serving [::1]:57402: open views/user/create.html: The system cannot find the file specified.
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc000040fa0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001f6360)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001022a0, 0xc0000e2400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001022a0, 0xc0000e2400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001022a0, 0xc0000e2400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004ca90, 0x860ba0, 0xc0001022a0, 0xc0000e2400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000040fa0, 0x861160, 0xc000032080)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:41:15 server.go:3012: http: panic serving [::1]:57403: open views/user/create.html: The system cannot find the file specified.
+goroutine 22 [running]:
+net/http.(*conn).serve.func1(0xc000041040)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc000194750)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001aa0e0, 0xc0000e2100)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001aa0e0, 0xc0000e2100)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001aa0e0, 0xc0000e2100)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004ca90, 0x860ba0, 0xc0001aa0e0, 0xc0000e2100)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041040, 0x861160, 0xc00004e480)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:41:15 server.go:3012: http: panic serving [::1]:57414: open views/user/create.html: The system cannot find the file specified.
+goroutine 53 [running]:
+net/http.(*conn).serve.func1(0xc00019c0a0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001eac00)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001780e0, 0xc0000e2500)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001780e0, 0xc0000e2500)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001780e0, 0xc0000e2500)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004ca90, 0x860ba0, 0xc0001780e0, 0xc0000e2500)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00019c0a0, 0x861160, 0xc00004e880)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:41:15 server.go:3012: http: panic serving [::1]:57415: open views/user/create.html: The system cannot find the file specified.
+goroutine 25 [running]:
+net/http.(*conn).serve.func1(0xc0000412c0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001eaf90)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001781c0, 0xc0000e2600)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001781c0, 0xc0000e2600)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001781c0, 0xc0000e2600)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004ca90, 0x860ba0, 0xc0001781c0, 0xc0000e2600)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000412c0, 0x861160, 0xc00004ea00)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:41:15 server.go:3012: http: panic serving [::1]:57416: open views/user/create.html: The system cannot find the file specified.
+goroutine 27 [running]:
+net/http.(*conn).serve.func1(0xc000041400)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc000194a80)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001aa1c0, 0xc0000e2700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001aa1c0, 0xc0000e2700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001aa1c0, 0xc0000e2700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004ca90, 0x860ba0, 0xc0001aa1c0, 0xc0000e2700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041400, 0x861160, 0xc00004ebc0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:41:15 server.go:3012: http: panic serving [::1]:57417: open views/user/create.html: The system cannot find the file specified.
+goroutine 55 [running]:
+net/http.(*conn).serve.func1(0xc00019c1e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc000194e10)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001aa2a0, 0xc000196300)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001aa2a0, 0xc000196300)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001aa2a0, 0xc000196300)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004ca90, 0x860ba0, 0xc0001aa2a0, 0xc000196300)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00019c1e0, 0x861160, 0xc0001a4300)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:45:08 user.go:23: wei Account Verify Success
+2019/08/25 23:45:08 user.go:52: 用户(wei)已登录
+2019/08/25 23:45:10 server.go:3012: http: panic serving [::1]:57652: open views/user/create.html: The system cannot find the file specified.
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc000041040)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001a4360)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000f62a0, 0xc0000e2900)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000f62a0, 0xc0000e2900)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000f62a0, 0xc0000e2900)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0000f62a0, 0xc0000e2900)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041040, 0x861160, 0xc00004e480)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:45:10 server.go:3012: http: panic serving [::1]:57653: open views/user/create.html: The system cannot find the file specified.
+goroutine 23 [running]:
+net/http.(*conn).serve.func1(0xc000041180)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00013a6c0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00014a1c0, 0xc0000e2300)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00014a1c0, 0xc0000e2300)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00014a1c0, 0xc0000e2300)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc00014a1c0, 0xc0000e2300)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041180, 0x861160, 0xc00004e680)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:45:10 server.go:3012: http: panic serving [::1]:57662: open views/user/create.html: The system cannot find the file specified.
+goroutine 29 [running]:
+net/http.(*conn).serve.func1(0xc000041360)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001a4690)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000f6380, 0xc00015e200)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000f6380, 0xc00015e200)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000f6380, 0xc00015e200)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0000f6380, 0xc00015e200)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041360, 0x861160, 0xc000144340)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:45:10 server.go:3012: http: panic serving [::1]:57663: open views/user/create.html: The system cannot find the file specified.
+goroutine 9 [running]:
+net/http.(*conn).serve.func1(0xc0001063c0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001a4960)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000f6460, 0xc000120500)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000f6460, 0xc000120500)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000f6460, 0xc000120500)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0000f6460, 0xc000120500)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0001063c0, 0x861160, 0xc0000325c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:45:10 server.go:3012: http: panic serving [::1]:57664: open views/user/create.html: The system cannot find the file specified.
+goroutine 10 [running]:
+net/http.(*conn).serve.func1(0xc000106460)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001a4c30)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000f6540, 0xc000120600)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000f6540, 0xc000120600)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000f6540, 0xc000120600)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc0000f6540, 0xc000120600)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000106460, 0x861160, 0xc000032640)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:45:10 server.go:3012: http: panic serving [::1]:57665: open views/user/create.html: The system cannot find the file specified.
+goroutine 11 [running]:
+net/http.(*conn).serve.func1(0xc000106500)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001c7b30)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00010e1c0, 0xc000120700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:173 +0x676
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00010e1c0, 0xc000120700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00010e1c0, 0xc000120700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c8f0, 0x860ba0, 0xc00010e1c0, 0xc000120700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000106500, 0x861160, 0xc000032740)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:51:41 user.go:23: wei Account Verify Success
+2019/08/25 23:51:42 user.go:52: 用户(wei)已登录
+2019/08/25 23:51:43 server.go:3012: http: panic serving [::1]:58057: open views/user/create.html: The system cannot find the file specified.
+goroutine 5 [running]:
+net/http.(*conn).serve.func1(0xc0000ec000)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0000e86f0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc0000fe1c0, 0xc0000f6400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc0000fe1c0, 0xc0000f6400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc0000fe1c0, 0xc0000f6400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048c30, 0x860b80, 0xc0000fe1c0, 0xc0000f6400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000ec000, 0x861140, 0xc000032080)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:51:43 server.go:3012: http: panic serving [::1]:58113: open views/user/create.html: The system cannot find the file specified.
+goroutine 38 [running]:
+net/http.(*conn).serve.func1(0xc0001201e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc000123b30)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc0001302a0, 0xc0000e2100)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc0001302a0, 0xc0000e2100)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc0001302a0, 0xc0000e2100)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048c30, 0x860b80, 0xc0001302a0, 0xc0000e2100)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0001201e0, 0x861140, 0xc00004e480)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:51:43 server.go:3012: http: panic serving [::1]:58121: open views/user/create.html: The system cannot find the file specified.
+goroutine 24 [running]:
+net/http.(*conn).serve.func1(0xc000041400)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001ee390)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00016e1c0, 0xc0000e2700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00016e1c0, 0xc0000e2700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00016e1c0, 0xc0000e2700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048c30, 0x860b80, 0xc00016e1c0, 0xc0000e2700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041400, 0x861140, 0xc00004e9c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:51:44 server.go:3012: http: panic serving [::1]:58122: open views/user/create.html: The system cannot find the file specified.
+goroutine 25 [running]:
+net/http.(*conn).serve.func1(0xc0000414a0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001ee720)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00016e2a0, 0xc0000e2800)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00016e2a0, 0xc0000e2800)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00016e2a0, 0xc0000e2800)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048c30, 0x860b80, 0xc00016e2a0, 0xc0000e2800)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000414a0, 0x861140, 0xc00004ea40)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:51:44 server.go:3012: http: panic serving [::1]:58123: open views/user/create.html: The system cannot find the file specified.
+goroutine 27 [running]:
+net/http.(*conn).serve.func1(0xc000041540)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc000123e00)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc000130380, 0xc0000e2a00)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc000130380, 0xc0000e2a00)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc000130380, 0xc0000e2a00)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048c30, 0x860b80, 0xc000130380, 0xc0000e2a00)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041540, 0x861140, 0xc00004ec00)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:51:44 server.go:3012: http: panic serving [::1]:58124: open views/user/create.html: The system cannot find the file specified.
+goroutine 10 [running]:
+net/http.(*conn).serve.func1(0xc0000ec1e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0000e8a80)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc0000fe2a0, 0xc0000f6500)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc0000fe2a0, 0xc0000f6500)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc0000fe2a0, 0xc0000f6500)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048c30, 0x860b80, 0xc0000fe2a0, 0xc0000f6500)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000ec1e0, 0x861140, 0xc000032540)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:53:32 user.go:23: wei Account Verify Success
+2019/08/25 23:53:32 user.go:52: 用户(wei)已登录
+2019/08/25 23:53:38 server.go:3012: http: panic serving 127.0.0.1:58244: open views/user/create.html: The system cannot find the file specified.
+goroutine 21 [running]:
+net/http.(*conn).serve.func1(0xc0000410e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001ce900)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00013e380, 0xc0000e2500)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00013e380, 0xc0000e2500)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00013e380, 0xc0000e2500)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc00013e380, 0xc0000e2500)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000410e0, 0x861140, 0xc000032080)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:53:38 server.go:3012: http: panic serving [::1]:58268: open views/user/create.html: The system cannot find the file specified.
+goroutine 24 [running]:
+net/http.(*conn).serve.func1(0xc000041220)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001cebd0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00013e460, 0xc0000e2400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00013e460, 0xc0000e2400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00013e460, 0xc0000e2400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc00013e460, 0xc0000e2400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041220, 0x861140, 0xc00004e600)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:53:38 server.go:3012: http: panic serving [::1]:58276: open views/user/create.html: The system cannot find the file specified.
+goroutine 25 [running]:
+net/http.(*conn).serve.func1(0xc0000412c0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00006bd70)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00016c0e0, 0xc0000e2600)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00016c0e0, 0xc0000e2600)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00016c0e0, 0xc0000e2600)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc00016c0e0, 0xc0000e2600)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000412c0, 0x861140, 0xc00004e680)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:53:39 server.go:3012: http: panic serving [::1]:58278: open views/user/create.html: The system cannot find the file specified.
+goroutine 28 [running]:
+net/http.(*conn).serve.func1(0xc000041400)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc000214210)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00016c1c0, 0xc0000e2800)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00016c1c0, 0xc0000e2800)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00016c1c0, 0xc0000e2800)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc00016c1c0, 0xc0000e2800)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041400, 0x861140, 0xc00004e8c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:53:39 server.go:3012: http: panic serving [::1]:58277: open views/user/create.html: The system cannot find the file specified.
+goroutine 27 [running]:
+net/http.(*conn).serve.func1(0xc000041360)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0002144e0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00016c2a0, 0xc0000e2700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00016c2a0, 0xc0000e2700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00016c2a0, 0xc0000e2700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc00016c2a0, 0xc0000e2700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041360, 0x861140, 0xc00004e840)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:53:39 server.go:3012: http: panic serving [::1]:58279: open views/user/create.html: The system cannot find the file specified.
+goroutine 43 [running]:
+net/http.(*conn).serve.func1(0xc000102320)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001cef60)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00013e540, 0xc000114700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00013e540, 0xc000114700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00013e540, 0xc000114700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc00013e540, 0xc000114700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000102320, 0x861140, 0xc00010e8c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:53:44 server.go:3012: http: panic serving [::1]:58285: open views/user/create.html: The system cannot find the file specified.
+goroutine 9 [running]:
+net/http.(*conn).serve.func1(0xc00018e280)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0000f1fb0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc0001201c0, 0xc0000f6700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc0001201c0, 0xc0000f6700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc0001201c0, 0xc0000f6700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc0001201c0, 0xc0000f6700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00018e280, 0x861140, 0xc000032600)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:53:44 server.go:3012: http: panic serving [::1]:58284: open views/user/create.html: The system cannot find the file specified.
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc00018e1e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0002147b0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00016c380, 0xc0000f6600)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00016c380, 0xc0000f6600)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00016c380, 0xc0000f6600)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc00016c380, 0xc0000f6600)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00018e1e0, 0x861140, 0xc000032500)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:53:44 server.go:3012: http: panic serving [::1]:58286: open views/user/create.html: The system cannot find the file specified.
+goroutine 32 [running]:
+net/http.(*conn).serve.func1(0xc000041680)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001cf230)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860b80, 0xc00013e620, 0xc0000e2900)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:174 +0x76d
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860b80, 0xc00013e620, 0xc0000e2900)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860b80, 0xc00013e620, 0xc0000e2900)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc00004c9c0, 0x860b80, 0xc00013e620, 0xc0000e2900)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000041680, 0x861140, 0xc00004ed40)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:10 user.go:23: wei Account Verify Success
+2019/08/25 23:56:11 user.go:52: 用户(wei)已登录
+2019/08/25 23:56:12 server.go:3012: http: panic serving [::1]:58479: open views/user/create.html: The system cannot find the file specified.
+goroutine 7 [running]:
+net/http.(*conn).serve.func1(0xc00003f0e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00010e690)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001700e0, 0xc00014e300)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7da
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001700e0, 0xc00014e300)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001700e0, 0xc00014e300)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000488f0, 0x860ba0, 0xc0001700e0, 0xc00014e300)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003f0e0, 0x861160, 0xc0000e6040)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:12 server.go:3012: http: panic serving 127.0.0.1:58480: open views/user/create.html: The system cannot find the file specified.
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc00003f220)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0000e5ad0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001001c0, 0xc0000d4200)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7da
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001001c0, 0xc0000d4200)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001001c0, 0xc0000d4200)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000488f0, 0x860ba0, 0xc0001001c0, 0xc0000d4200)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003f220, 0x861160, 0xc000032540)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:12 server.go:3012: http: panic serving 127.0.0.1:58481: open views/user/create.html: The system cannot find the file specified.
+goroutine 9 [running]:
+net/http.(*conn).serve.func1(0xc00003f2c0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001f41b0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001382a0, 0xc0000d4300)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7da
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001382a0, 0xc0000d4300)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001382a0, 0xc0000d4300)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000488f0, 0x860ba0, 0xc0001382a0, 0xc0000d4300)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003f2c0, 0x861160, 0xc000032600)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:12 server.go:3012: http: panic serving [::1]:58491: open views/user/create.html: The system cannot find the file specified.
+goroutine 16 [running]:
+net/http.(*conn).serve.func1(0xc00003f680)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001f44e0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc000138380, 0xc00014e400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7da
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc000138380, 0xc00014e400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc000138380, 0xc00014e400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000488f0, 0x860ba0, 0xc000138380, 0xc00014e400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003f680, 0x861160, 0xc00010c240)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:13 server.go:3012: http: panic serving [::1]:58494: open views/user/create.html: The system cannot find the file specified.
+goroutine 38 [running]:
+net/http.(*conn).serve.func1(0xc000164140)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001f47b0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc000138460, 0xc00014e600)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7da
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc000138460, 0xc00014e600)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc000138460, 0xc00014e600)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000488f0, 0x860ba0, 0xc000138460, 0xc00014e600)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc000164140, 0x861160, 0xc00010c340)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:13 server.go:3012: http: panic serving [::1]:58493: open views/user/create.html: The system cannot find the file specified.
+goroutine 37 [running]:
+net/http.(*conn).serve.func1(0xc0001640a0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001f4a80)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc000138540, 0xc00014e500)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7da
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc000138540, 0xc00014e500)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc000138540, 0xc00014e500)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000488f0, 0x860ba0, 0xc000138540, 0xc00014e500)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0001640a0, 0x861160, 0xc00010c2c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:13 server.go:3012: http: panic serving [::1]:58495: open views/user/create.html: The system cannot find the file specified.
+goroutine 39 [running]:
+net/http.(*conn).serve.func1(0xc0001641e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00010ec90)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001701c0, 0xc00014e700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7da
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001701c0, 0xc00014e700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001701c0, 0xc00014e700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc0000488f0, 0x860ba0, 0xc0001701c0, 0xc00014e700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0001641e0, 0x861160, 0xc00010c4c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:39 user.go:23: wei Account Verify Success
+2019/08/25 23:56:39 user.go:52: 用户(wei)已登录
+2019/08/25 23:56:41 server.go:3012: http: panic serving 127.0.0.1:58542: open views/user/create.html: The system cannot find the file specified.
+goroutine 7 [running]:
+net/http.(*conn).serve.func1(0xc00003efa0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0000e52c0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001102a0, 0xc000140300)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001102a0, 0xc000140300)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001102a0, 0xc000140300)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000046a90, 0x860ba0, 0xc0001102a0, 0xc000140300)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003efa0, 0x861160, 0xc0000324c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:41 server.go:3012: http: panic serving [::1]:58550: open views/user/create.html: The system cannot find the file specified.
+goroutine 19 [running]:
+net/http.(*conn).serve.func1(0xc0000ea000)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc00013ec00)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001540e0, 0xc0000f6000)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001540e0, 0xc0000f6000)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001540e0, 0xc0000f6000)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000046a90, 0x860ba0, 0xc0001540e0, 0xc0000f6000)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000ea000, 0x861160, 0xc0000f2040)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:41 server.go:3012: http: panic serving [::1]:58560: open views/user/create.html: The system cannot find the file specified.
+goroutine 25 [running]:
+net/http.(*conn).serve.func1(0xc0000ea1e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0000e5650)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc000110380, 0xc0000f6400)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc000110380, 0xc0000f6400)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc000110380, 0xc0000f6400)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000046a90, 0x860ba0, 0xc000110380, 0xc0000f6400)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000ea1e0, 0x861160, 0xc0000f2640)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:42 server.go:3012: http: panic serving [::1]:58562: open views/user/create.html: The system cannot find the file specified.
+goroutine 14 [running]:
+net/http.(*conn).serve.func1(0xc00003f400)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001c85a0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000fa2a0, 0xc0000d4b00)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000fa2a0, 0xc0000d4b00)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000fa2a0, 0xc0000d4b00)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000046a90, 0x860ba0, 0xc0000fa2a0, 0xc0000d4b00)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003f400, 0x861160, 0xc000032b80)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:42 server.go:3012: http: panic serving [::1]:58561: open views/user/create.html: The system cannot find the file specified.
+goroutine 13 [running]:
+net/http.(*conn).serve.func1(0xc00003f360)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001c8870)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0000fa380, 0xc0000d4900)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0000fa380, 0xc0000d4900)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0000fa380, 0xc0000d4900)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000046a90, 0x860ba0, 0xc0000fa380, 0xc0000d4900)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003f360, 0x861160, 0xc000032ac0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:56:42 server.go:3012: http: panic serving [::1]:58563: open views/user/create.html: The system cannot find the file specified.
+goroutine 50 [running]:
+net/http.(*conn).serve.func1(0xc00003f5e0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0000e5920)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc000110460, 0xc0000d4c00)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc000110460, 0xc0000d4c00)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc000110460, 0xc0000d4c00)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000046a90, 0x860ba0, 0xc000110460, 0xc0000d4c00)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003f5e0, 0x861160, 0xc000032ec0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:58:19 user.go:23: wei Account Verify Success
+2019/08/25 23:58:19 user.go:52: 用户(wei)已登录
+2019/08/25 23:58:20 server.go:3012: http: panic serving [::1]:58674: open views/user/create.html: The system cannot find the file specified.
+goroutine 7 [running]:
+net/http.(*conn).serve.func1(0xc00003efa0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001c6d80)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc0001002a0, 0xc0000d4700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc0001002a0, 0xc0000d4700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc0001002a0, 0xc0000d4700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc0001002a0, 0xc0000d4700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003efa0, 0x861160, 0xc0000324c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:58:20 server.go:3012: http: panic serving [::1]:58675: open views/user/create.html: The system cannot find the file specified.
+goroutine 8 [running]:
+net/http.(*conn).serve.func1(0xc00003f040)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001c7050)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc000100380, 0xc0000d4200)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc000100380, 0xc0000d4200)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc000100380, 0xc0000d4200)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc000100380, 0xc0000d4200)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003f040, 0x861160, 0xc000032580)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:58:20 server.go:3012: http: panic serving [::1]:58684: open views/user/create.html: The system cannot find the file specified.
+goroutine 25 [running]:
+net/http.(*conn).serve.func1(0xc0000ea320)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc000128870)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00011a1c0, 0xc0000d4800)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00011a1c0, 0xc0000d4800)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00011a1c0, 0xc0000d4800)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc00011a1c0, 0xc0000d4800)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000ea320, 0x861160, 0xc000032a00)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:58:20 server.go:3012: http: panic serving [::1]:58686: open views/user/create.html: The system cannot find the file specified.
+goroutine 27 [running]:
+net/http.(*conn).serve.func1(0xc0000ea460)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc000128b40)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00011a2a0, 0xc000118800)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00011a2a0, 0xc000118800)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00011a2a0, 0xc000118800)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc00011a2a0, 0xc000118800)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000ea460, 0x861160, 0xc0000f66c0)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:58:20 server.go:3012: http: panic serving [::1]:58685: open views/user/create.html: The system cannot find the file specified.
+goroutine 26 [running]:
+net/http.(*conn).serve.func1(0xc0000ea3c0)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc000128e10)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00011a380, 0xc000118700)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00011a380, 0xc000118700)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00011a380, 0xc000118700)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc00011a380, 0xc000118700)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc0000ea3c0, 0x861160, 0xc0000f6640)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/25 23:58:20 server.go:3012: http: panic serving [::1]:58687: open views/user/create.html: The system cannot find the file specified.
+goroutine 16 [running]:
+net/http.(*conn).serve.func1(0xc00003f400)
+	D:/Tools/Go/src/net/http/server.go:1769 +0x140
+panic(0x77dc00, 0xc0001291a0)
+	D:/Tools/Go/src/runtime/panic.go:522 +0x1c3
+html/template.Must(...)
+	D:/Tools/Go/src/html/template/template.go:372
+todolist/controllers.UserCreateAction(0x860ba0, 0xc00011a460, 0xc0000d4900)
+	d:/Code/goang/JevonWei/todolist v2/controllers/user.go:176 +0x7d2
+net/http.HandlerFunc.ServeHTTP(0x7f9748, 0x860ba0, 0xc00011a460, 0xc0000d4900)
+	D:/Tools/Go/src/net/http/server.go:1995 +0x4b
+net/http.(*ServeMux).ServeHTTP(0xadee00, 0x860ba0, 0xc00011a460, 0xc0000d4900)
+	D:/Tools/Go/src/net/http/server.go:2375 +0x1dd
+net/http.serverHandler.ServeHTTP(0xc000048a90, 0x860ba0, 0xc00011a460, 0xc0000d4900)
+	D:/Tools/Go/src/net/http/server.go:2774 +0xaf
+net/http.(*conn).serve(0xc00003f400, 0x861160, 0xc000032d80)
+	D:/Tools/Go/src/net/http/server.go:1878 +0x858
+created by net/http.(*Server).Serve
+	D:/Tools/Go/src/net/http/server.go:2884 +0x2fb
+2019/08/26 00:11:51 user.go:23: wei Account Verify Success
+2019/08/26 00:11:51 user.go:52: 用户(wei)已登录
+2019/08/26 00:13:09 user.go:23: wei Account Verify Success
+2019/08/26 00:13:09 user.go:52: 用户(wei)已登录
+2019/08/26 00:16:53 user.go:23: wei Account Verify Success
+2019/08/26 00:16:53 user.go:52: 用户(wei)已登录
+2019/08/26 00:17:18 user.go:23: wei Account Verify Success
+2019/08/26 00:17:22 user.go:23: wei Account Verify Success
+2019/08/26 00:17:22 user.go:52: 用户(wei)已登录
+2019/08/26 00:17:55 user.go:23: wei Account Verify Success
+2019/08/26 00:17:55 user.go:52: 用户(wei)已登录
+2019/08/26 00:21:49 user.go:23: wei Account Verify Success
+2019/08/26 00:21:49 user.go:52: 用户(wei)已登录
+2019/08/26 00:22:29 user.go:23: wei Account Verify Success
+2019/08/26 00:22:29 user.go:52: 用户(wei)已登录
+2019/08/26 00:24:04 user.go:23: wei Account Verify Success
+2019/08/26 00:24:04 user.go:52: 用户(wei)已登录
+2019/08/27 19:48:25 user.go:23: wei Account Verify Success
+2019/08/27 19:48:25 user.go:53: 用户(wei)已登录
+2019/08/27 19:48:54 user.go:115: 用户ID(0)获取失败
+2019/08/27 20:05:41 user.go:23: wei Account Verify Success
+2019/08/27 20:05:41 user.go:53: 用户(wei)已登录
+2019/08/27 20:05:44 user.go:121: 用户ID(0)获取失败
+2019/08/27 20:09:24 user.go:23: wei Account Verify Success
+2019/08/27 20:09:24 user.go:53: 用户(wei)已登录
+2019/08/27 20:09:26 user.go:121: 用户ID(0)获取失败
+2019/08/27 20:11:21 user.go:121: 用户ID(0)获取失败
+2019/08/27 20:11:25 user.go:121: 用户ID(0)获取失败
+2019/08/27 20:11:27 user.go:121: 用户ID(0)获取失败
+2019/08/27 20:11:41 user.go:23: wei Account Verify Success
+2019/08/27 20:11:41 user.go:53: 用户(wei)已登录
+2019/08/27 20:11:44 user.go:121: 用户ID(0)获取失败
+2019/08/27 20:14:16 user.go:23: wei Account Verify Success
+2019/08/27 20:14:16 user.go:53: 用户(wei)已登录
+2019/08/27 20:14:18 user.go:121: 用户ID(0)获取失败
+2019/08/27 20:18:02 user.go:23: wei Account Verify Success
+2019/08/27 20:18:02 user.go:53: 用户(wei)已登录
+2019/08/27 20:18:46 user.go:23: wei Account Verify Success
+2019/08/27 20:18:47 user.go:53: 用户(wei)已登录
+2019/08/27 20:18:47 user.go:121: 用户ID(0)获取失败
+2019/08/27 20:20:28 user.go:23: wei Account Verify Success
+2019/08/27 20:20:28 user.go:53: 用户(wei)已登录
+2019/08/27 20:22:52 user.go:23: wei Account Verify Success
+2019/08/27 20:22:52 user.go:53: 用户(wei)已登录
+2019/08/27 20:22:58 user.go:180: wei user Create Success
+2019/08/27 20:23:34 user.go:23: wei Account Verify Success
+2019/08/27 20:23:34 user.go:53: 用户(wei)已登录
+2019/08/27 20:31:27 user.go:23: wei Account Verify Success
+2019/08/27 20:31:29 user.go:23: wei Account Verify Success
+2019/08/27 20:31:29 user.go:53: 用户(wei)已登录
+2019/08/27 20:31:55 user.go:92: Name == danran: Users Get Success
+2019/08/27 20:31:59 user.go:92: Name == danran: Users Get Success
+2019/08/27 20:32:17 user.go:92: Name == danran: Users Get Success
+2019/08/27 20:32:27 user.go:92: Name == danran: Users Get Success
+2019/08/27 20:34:38 user.go:23: wei Account Verify Success
+2019/08/27 20:34:38 user.go:53: 用户(wei)已登录
+2019/08/27 20:35:30 user.go:92: Name == danran: Users Get Success
+2019/08/27 20:39:10 user.go:23: wei Account Verify Success
+2019/08/27 20:39:10 user.go:53: 用户(wei)已登录
+2019/08/27 20:39:30 user.go:92: Name == danran: Users Get Success
+2019/08/27 20:42:05 user.go:24: wei Account Verify Success
+2019/08/27 20:42:05 user.go:53: 用户(wei)已登录
+2019/08/27 21:02:38 user.go:23: wei Account Verify Success
+2019/08/27 21:02:38 user.go:53: 用户(wei)已登录
+2019/08/27 21:04:49 user.go:24: danran Account Verify Success
+2019/08/27 21:04:50 user.go:53: 用户(danran)已登录
+2019/08/27 21:08:30 user.go:23: wei Account Verify Success
+2019/08/27 21:08:30 user.go:53: 用户(wei)已登录
+2019/08/27 21:08:36 user.go:195: {%!s(int=2) danran 2019-08-13 123 13 123 fcea920f7412b5da7be0cf42b8c93759} user will Delete
+2019/08/27 21:08:36 user.go:198: ID=2 user Delete Success
+2019/08/27 21:13:14 user.go:23: wei Account Verify Success
+2019/08/27 21:13:14 user.go:53: 用户(wei)已登录
+2019/08/27 21:17:21 user.go:90: Name == dan: Users Get Success
+2019/08/27 21:17:26 user.go:23: wei Account Verify Success
+2019/08/27 21:17:26 user.go:66: 用户(wei)已登录
+2019/08/27 21:17:52 user.go:90: Name == danran: Users Get Success
+2019/08/27 21:18:04 user.go:178: wei user Create Success
+2019/08/27 21:19:33 user.go:23: wei Account Verify Success
+2019/08/27 21:19:33 user.go:66: 用户(wei)已登录
+2019/08/27 21:22:04 user.go:23: wei Account Verify Success
+2019/08/27 21:22:04 user.go:66: 用户(wei)已登录
+2019/08/28 20:57:50 user.go:23: wei Account Verify Success
+2019/08/28 20:57:50 user.go:66: 用户(wei)已登录
+2019/08/28 20:58:50 user.go:23: wei Account Verify Success
+2019/08/28 20:58:50 user.go:66: 用户(wei)已登录
+2019/08/28 21:00:59 user.go:23: wei Account Verify Success
+2019/08/28 21:00:59 user.go:66: 用户(wei)已登录
+2019/08/28 21:05:07 user.go:23: wei Account Verify Success
+2019/08/28 21:05:07 user.go:66: 用户(wei)已登录
+2019/08/28 21:06:51 user.go:90: Name == dan: Users Get Success
+2019/08/28 21:06:57 user.go:23: wei Account Verify Success
+2019/08/28 21:06:57 user.go:66: 用户(wei)已登录
+2019/08/28 21:19:02 user.go:216: Name为 dan 的Passwd Modidy Success
+2019/08/28 21:19:02 user.go:189: 用户(dan)密码已修改
+2019/08/28 21:19:19 user.go:23: wei Account Verify Success
+2019/08/28 21:19:19 user.go:66: 用户(wei)已登录
+2019/08/28 21:20:23 user.go:23: wei Account Verify Success
+2019/08/28 21:20:23 user.go:66: 用户(wei)已登录
+2019/08/28 21:20:31 user.go:216: Name为 dan 的Passwd Modidy Success
+2019/08/28 21:20:31 user.go:189: 用户(dan)密码已修改
+2019/08/28 21:20:56 user.go:90: Name == dan: Users Get Success
+2019/08/28 21:21:01 user.go:90: Name == dan: Users Get Success
+2019/08/28 21:21:47 user.go:23: wei Account Verify Success
+2019/08/28 21:21:47 user.go:66: 用户(wei)已登录
+2019/08/28 21:22:14 user.go:90: Name == danran: Users Get Success
+2019/08/28 21:22:29 user.go:23: danran Account Verify Success
+2019/08/28 21:22:29 user.go:66: 用户(danran)已登录
+2019/08/28 21:22:39 user.go:216: Name为 danran 的Passwd Modidy Success
+2019/08/28 21:22:39 user.go:189: 用户(danran)密码已修改
+2019/08/28 21:22:49 user.go:23: danran Account Verify Success
+2019/08/28 21:22:49 user.go:66: 用户(danran)已登录
+2019/08/30 19:30:36 user.go:23: wei Account Verify Success
+2019/08/30 19:30:36 user.go:66: 用户(wei)已登录
