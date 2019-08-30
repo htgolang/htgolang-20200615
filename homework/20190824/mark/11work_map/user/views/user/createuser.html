@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8" />
+        <title>用户添加</title>
+    </head>
+    <body>
+        <form action="/users/create/" method="Post">
+            <div>
+                <label>用户名:</label>
+                <input type="text" name="name" value="{{ .Name }}"/>
+                <span>{{ .Error.name }}</span>
+            </div>
+            <div>
+                <label>密码:</label>
+                <input type="password" name="password" />
+                <span>{{ .Error.password }}</span>
+            </div>
+            <div>
+                <label>再次输入密码:</label>
+                <input type="password" name="passwordVerify" />
+            </div>
+            <div>
+                <label>出生日期:</label>
+                <input type="date" name="birthday"  value="{{ .Birthday }}" />
+            </div>
+            <div>
+                <label>电话号码:</label>
+                <input type="text" name="tel" value="{{ .Tel }}" />
+                <span>{{ .Error.tel }}</span>
+            </div>
+            <div>
+                <label>住址:</label>
+                <input type="text" name="addr" value="{{ .Addr }}" />
+                <span>{{ .Error.addr }}</span>
+            </div>
+            <div>
+                <label>详细信息:</label>
+                <input type="text" name="desc" value="{{ .Desc }}" />
+                <span>{{ .Error.desc }}</span>
+            </div>                                                
+            <div>
+                    <input type="submit" value="提交" />
+            </div>
+        </form>
+    </body>
+</html>

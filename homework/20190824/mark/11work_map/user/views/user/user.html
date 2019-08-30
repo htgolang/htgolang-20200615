@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+</head>
+<body>
+<div>
+    <a href="/users/create/">添加用户</a> <a href="/users/logout/">退出登陆</a>
+</div>
+
+<div>
+    <form action="/users/list/" method="get">
+        <label>查询</label>
+        <input type="text" value="{{ .Q }}" name="q">
+        <input type="submit" value="查询">
+    </form>
+</div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>生日</th>
+            <th>联系方式</th>
+            <th>联系地址</th>
+            <th>备注</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{ range .Users }}
+        <tr>
+            <td>{{ .Name }}</td>
+            <td>{{ .Birthday }}</td>
+            <td>{{ .Tel }}</td>
+            <td>{{ .Addr }}</td>
+            <td>{{ .Desc }}</td>
+            <td>
+                <a href="/users/modify/?id={{ .Id }}">编辑</a>
+                <a href="/users/delete/?id={{ .Id }}">删除</a>
+            </td>
+        </tr>
+         {{ else }}
+                <tr>
+                    <td>无数据</td>
+                </tr>
+        {{ end }}
+        </tbody>
+    </table>
+</body>
+</html>
