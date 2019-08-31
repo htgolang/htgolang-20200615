@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create User</title>
+</head>
+<body>
+<div>
+    <h5> 添加用户：</h5>
+    <form method="post" action="/users/create/">
+
+        <div>
+            <label for="username">姓名:</label>
+            <input type="text" name="username" value="{{ .Name }}">
+
+        </div>
+        <div>
+            <label for="sex">性别:</label>
+            <input id="sex_1" type="radio" name="sex" value="1" checked="checked"><label for="sex_1">男</label>
+            <input id="sex_2" type="radio" name="sex" value="2" ><label for="sex_2">女</label>
+
+        </div>
+        <div>
+            <label for="brithday">生日:</label>
+            <input type="date" name="brithday" value="{{ .Brithday }}">
+
+        </div>
+        <div>
+            <label for="tel">电话:</label>
+            <input type="text" name="tel" value="{{ .Tel }}">
+
+        </div>
+        <div>
+            <label for="addr">地址:</label>
+            <input type="text" name="addr" value="{{ .Addr }}">
+
+        </div>
+        <div>
+            <label for="desc">描述:</label>
+            <input type="text" name="desc" value="{{ .Desc }}">
+
+        </div>
+        <div>
+            <label for="passwd">密码:</label>
+            <input type="password" name="passwd" value="{{ .Pass }}">
+
+        </div>
+        <div>
+
+            <input type="submit" value="提交">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
