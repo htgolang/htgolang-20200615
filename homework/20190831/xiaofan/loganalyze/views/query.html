@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询日志</title>
+</head>
+<body>
+<div>
+    <span>
+        <a href="/">上传日志</a>
+    </span>
+    <span>
+        <a href="/query/">查询日志</a>
+    </span>
+</div>
+<table border="1">
+    <thead>
+    <tr>
+        <th>IP</th>
+        <th>Method</th>
+        <th>URL</th>
+        <th>Code</th>
+        <th>Count</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range . }}
+        <tr>
+            <td>{{ .Ip }}</td>
+            <td>{{ .Method }}</td>
+            <td>{{ .URL }}</td>
+            <td>{{ .Code }}</td>
+            <td>{{ .Count }}</td>
+        </tr>
+
+    {{ else }}
+        <tr>
+            <td colspan="5">未查询到数据</td>
+        </tr>
+    {{ end }}
+    </tbody>
+</table>
+</body>
+</html>

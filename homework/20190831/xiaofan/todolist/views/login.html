@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<form action="/login/" method="POST">
+    <div>
+        <label for="username">用户名：</label>
+        <input id="username" name="username" type="text" value="{{ .Username }}">
+    </div>
+    <div>
+        <label for="password">密码：</label>
+        <input id="password" name="password" type="password">
+    </div>
+    <div>
+        <input type="submit" name="登录">
+    </div>
+</form>
+<label>{{ .Resp }}</label>
+</body>
+</html>
