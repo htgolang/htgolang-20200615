@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="uft-8" />
+        <title>用户修改</title>
+    </head>
+    <body>
+        <table>
+        <form action="/users/modify/" method="Post">
+          <!-- <input type="hidden" name="id" value="{{ .Id }}" /> -->
+          <input type="hidden" name="id" value="{{ .Id }}">
+            <div>
+                <label>用户名:</label>
+                <input type="text" name="name" value="{{ .Name }}"/>
+            </div>
+            <div>
+                <label>密码:</label>
+                <input type="password" name="password" />
+            </div>
+            <div>
+                <label>再次输入密码:</label>
+                <input type="password" name="passwordVerify" />
+            </div>
+            <div>
+                <label>出生日期:</label>
+                <input type="date" name="birthday"  value="{{ .Birthday }}" />
+            </div>
+            <div>
+                <lable>性别:</lable>
+                <input name="sex" id="sex_1" type="radio" value="男" checked="checked" /><label for="sex_1">男</label>
+                <input name="sex" id="sex_0" type="radio" value="女" /><label for="sex_0">女</label>
+            </div>
+            <div>
+                <label>电话号码:</label>
+                <input type="text" name="tel" value="{{ .Tel }}" />
+
+            </div>
+            <div>
+                <label>住址:</label>
+                <input type="text" name="addr" value="{{ .Addr }}" />
+            </div>
+            <div>
+                <label>详细信息:</label>
+                <input type="text" name="desc" value="{{ .Desc }}" />
+            </div>                                                
+            <div>
+                    <input type="submit" value="提交" />
+            </div>
+        </form>
+    </table>
+    </body>
+</html>
