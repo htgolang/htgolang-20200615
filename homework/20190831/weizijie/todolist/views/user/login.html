@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>用户登录</title>
+    </head>
+    <body>
+        第一次登录请先注册本系统账号
+ 
+        <form action="/login/" method="POST">
+            <div>
+                <label>名字:</label>
+                <input type="text" name="name" value="{{ .Name }}"/>
+                <span>{{ .Error }}</span>
+            </div>
+            <div>
+                <label>密码:</label>
+                <input type="password" name="passwd" />
+            </div>
+            <div>
+                <input type="submit" name="Login" value="登录"/>
+                
+                <input type="submit" name="Register" value="注册"/>
+            </div>
+        </form>
+    </body>
+</html>

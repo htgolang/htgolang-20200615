@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>日志展示</title>
+    </head>
+    <body>
+        <p>
+            <a href="/countlog/">日志统计</a>
+        </p> 
+        <form action="/log/" method="GET">
+            <div>
+                <label>日志查询(IP/logtime/method/url)</label>
+                <input type="text" name="query" value="{{ .Query }}">
+                <input type="submit" value="查询">
+            </div>
+        </form>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>IP</th>
+                    <th>logtime</th>
+                    <th>method</th>
+                    <th>url</th>
+                    <th>status code</th>
+                    <th>bytes</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range .Logs }}
+                <tr>
+                    <td>{{ .ID }}</td>
+                    <td>{{ .IP }}</td>
+                    <td>{{ .Logtime }}</td>
+                    <td>{{ .Method }}</td>
+                    <td>{{ .Url }}</td>
+                    <td>{{ .Status_code }}</td>
+                    <td>{{ .Bytes }}</td>
+                </tr>
+                {{ else }}
+                <tr>
+                    <td colspan="7"> 无数据 </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </body>
+</html>
