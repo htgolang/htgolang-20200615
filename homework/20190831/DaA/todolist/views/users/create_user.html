@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户添加</title>
+</head>
+
+<body>
+<div>
+    <span><a href="/tasks/">任务列表</a></span>
+
+    <span><a href="/users/">用户列表</a></span>
+
+    <span><a href="/users/password">修改密码</a></span>
+    <span><a href="/logout/">退出登录</a></span>
+</div>
+<h1>{{ .Errors }}</h1>
+<form action="/users/create/" method="POST">
+    <div>
+        <lable>用户名</lable>
+        <input type="text" name="name" >
+        <span>{{ .Name }}</span>
+    </div>
+    <div>
+        <lable>密码</lable>
+        <input type="password" name="password" >
+        <span>{{ .Password }}</span>
+    </div>
+    <div>
+        <lable>性别</lable>
+        <input type="radio" name="sex" value="0">女
+        <input type="radio" name="sex" value="1">男
+    </div>
+    <div>
+        <label>出生日期</label>
+        <input type="date" name="birthday">
+        <span>{{ .Birthday }}</span>
+    </div>
+    <div>
+        <lable>联系电话</lable>
+        <input type="text" name="tel">
+        <span>{{ .Tel  }}</span>
+    </div>
+    <div>
+        <lable>联系地址</lable>
+        <input type="text" name="addr" >
+        <span>{{ .Addr  }}</span>
+    </div>
+    <div>
+        <lable>描述</lable>
+        <input type="text" name="desc" >
+        <span>{{ .Desc  }}</span>
+    </div>
+    <div>
+        <input type="submit" name="添加">
+    </div>
+
+</form>
+</body>
+</html>

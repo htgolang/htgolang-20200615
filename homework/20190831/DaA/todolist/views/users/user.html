@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<div>
+    <span><a href="/tasks/">任务列表</a></span>
+
+    <span><a href="/users/">用户列表</a></span>
+
+    <span><a href="/users/password">修改密码</a></span>
+    <span><a href="/logout/">退出登录</a></span>
+</div>
+<br>
+<div> 
+        <form action="/users/" method="POST">
+            <label>  查询用户:</label>
+            <input type="text" name="query" value="{{ .Query }}">
+            <input type="submit" name="查询">
+
+            <a href="/users/create/">添加用户</a>
+        </form>
+</div>
+
+<table border="1" bgcolor="##7FFFD4">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>用户名</th>
+        <th>出生日期</th>
+        <th>联系电话</th>
+        <th>联系地址</th>
+        <th>描述</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range .Users }}
+        <tr>
+            <td>{{ .Id }}</td>
+            <td>{{ .Name }}</td>
+            <td>{{ .Birthday }}</td>
+            <td>{{ .Tel }}</td>
+            <td>{{ .Addr }}</td>
+            <td>{{ .Desc }}</td>
+
+            <td>
+                <a href="/users/modify/?id={{ .Id }}">修改</a>
+                <a href="/users/delete/?id={{ .Id }}">删除</a>
+            </td>
+        </tr>
+    {{ else}}
+        <tr>
+            <td colspan="7">无用户</td>
+        </tr>
+    {{ end }}
+    </tbody>
+</table>
+</body>
+</html>

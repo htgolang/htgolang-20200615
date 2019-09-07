@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户修改</title>
+</head>
+
+<body>
+<div>
+    <span><a href="/tasks/">任务列表</a></span>
+
+    <span><a href="/users/">用户列表</a></span>
+
+    <span><a href="/users/password">修改密码</a></span>
+    <span><a href="/logout/">退出登录</a></span>
+</div>
+<br>
+<h1>调试信息：{{ .Errors  }}</h1>
+<h1>数据信息：{{ .User  }}</h1>
+<form action="/users/modify/" method="POST">
+    <input type="hidden" name="id" value="{{ .User.Id }}">
+    <div>
+        <lable>用户名</lable>
+        <input type="text" name="name" value="{{ .User.Name }}">
+    </div>
+    <div>
+        <lable>性别</lable>
+        <input type="radio" name="sex" value="0">女
+        <input type="radio" name="sex" value="1">男
+    </div>
+    <div>
+        <label>出生日期</label>
+        <input type="date" name="birthday" value="{{ .User.Birthday }}">
+    </div>
+
+    <div>
+        <lable>联系电话</lable>
+        <input type="text" name="tel" value="{{ .User.Tel }}">
+    </div>
+    <div>
+        <lable>联系地址</lable>
+        <input type="text" name="addr" value="{{ .User.Addr }}">
+    </div>
+    <div>
+        <lable>描述</lable>
+        <input type="text" name="desc" value="{{ .User.Desc }}">
+    </div>
+    <div>
+        <input type="submit" name="修改">
+    </div>
+
+</form>
+</body>
+</html>
