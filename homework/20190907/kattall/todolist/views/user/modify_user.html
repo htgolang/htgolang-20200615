@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户修改</title>
+</head>
+<body>
+<form action="/users/modify/" method="post">
+    <div>
+        <input type="hidden" name="id" value="{{ .User.ID }}">
+    </div>
+    <div>
+        <label for="name">用户名：</label>
+        <input id="name" name="name" type="text" value="{{ .User.Name }}">
+        <span>{{ .Errors.name }}</span>
+    </div>
+    <div>
+        <label for="birthday">出生日期：</label>
+        <input id="birthday" name="birthday" type="date" value="{{ .User.Birthday }}">
+    </div>
+    <div>
+        <label for="tel">电话：</label>
+        <input id="tel" name="tel" type="text" value="{{ .User.Tel }}">
+    </div>
+    <div>
+        <label for="addr">地址：</label>
+        <input id="addr" name="addr" type="text" value="{{ .User.Addr }}">
+    </div>
+    <div>
+        <label for="desc">描述：</label>
+        <input id="desc" name="desc" type="text" value="{{ .User.Desc }}">
+    </div>
+    <div>
+        <input type="submit" name="确定">
+    </div>
+</form>
+</body>
+</html>

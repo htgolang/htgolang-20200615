@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/users/create/" method="post">
+    <div>
+        <label for="name">用户名：</label>
+        <input id="name" name="name" type="text" value="{{ .Name }}">
+        <span>{{ .Errors.name }}</span>
+    </div>
+    <div>
+        <label for="password">密码：</label>
+        <input id="password" name="password" type="password">
+    </div>
+    <div>
+        <label for="password2">再次输入密码：</label>
+        <input id="password2" name="password2" type="password">
+        <span>{{ .Errors.password }}</span>
+    </div>
+    <div>
+        <label for="sex">性别：</label>
+        <label><input type="radio" name="sex" value="0">男</label>
+        <label><input type="radio" name="sex" value="1">女</label>
+    </div>
+    <div>
+        <label for="birthday">出生日期：</label>
+        <input id="birthday" name="birthday" type="date" value="{{ .Birthday }}">
+        <span>{{ .Errors.birthday }}</span>
+    </div>
+    <div>
+        <label for="tel">电话：</label>
+        <input id="tel" name="tel" type="text" value="{{ .Tel }}">
+        <span>{{ .Errors.tel }}</span>
+    </div>
+    <div>
+        <label for="addr">地址：</label>
+        <input id="addr" name="addr" type="text" value="{{ .Addr }}">
+        <span>{{ .Errors.addr }}</span>
+    </div>
+    <div>
+        <label for="desc">描述：</label>
+        <input id="desc" name="desc" type="text" value="{{ .Desc }}">
+        <span>{{ .Errors.desc }}</span>
+    </div>
+    <div>
+        <input type="submit" name="确定">
+    </div>
+</form>
+</body>
+</html>
