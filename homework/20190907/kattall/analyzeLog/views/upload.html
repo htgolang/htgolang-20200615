@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>上传日志</title>
+</head>
+<body>
+    <div>
+        <a href="/query/?p=1">查询日志</a>
+    </div>
+    <br>
+    <br>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <div>
+            <input type="file" name="log">
+            <br><br>
+            <input type="submit" name="提交">
+            <span>{{ .Message }}</span>
+        </div>
+    </form>
+
+</body>
+</html>

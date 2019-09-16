@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计每个IP访问URL的次数</title>
+</head>
+<body>
+<div>
+        <span>
+            <a href="/">上传日志</a>
+        </span>
+    <span>
+            <br><a href="/query/ipcount/?p=1">统计每个IP的访问次数</a>
+            <br><a href="/query/statuscount/?p=1">统计每个状态码的出现次数</a>
+            <br><a href="/query/ipurlcount/?p=1">统计每个IP访问URL的次数</a>
+        </span>
+</div>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ip</th>
+        <th>次数</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range $key, $value := .Ipc }}
+        <tr>
+            <td>{{ $key }}</td>
+            <td>{{ $value }}</td>
+        </tr>
+    {{ else }}
+        <tr>
+            <td colspan="5">未查询到数据</td>
+        </tr>
+    {{ end }}
+    </tbody>
+</body>
+</html>

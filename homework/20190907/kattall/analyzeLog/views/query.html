@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询日志</title>
+</head>
+<body>
+    <div>
+        <span>
+            <a href="/">上传日志</a>
+        </span>
+        <span>
+            <br><a href="/query/ipcount/?p=1">统计每个IP的访问次数</a>
+            <br><a href="/query/statuscount/?p=1">统计每个状态码的出现次数</a>
+            <br><a href="/query/ipurlcount/?p=1">统计每个IP访问URL的次数</a>
+        </span>
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ip</th>
+                <th>访问时间</th>
+                <th>请求方法</th>
+                <th>url</th>
+                <th>协议版本</th>
+                <th>状态码</th>
+                <th>大小</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range .Logs }}
+                <tr>
+                    <td>{{ .ID }}</td>
+                    <td>{{ .Ip }}</td>
+                    <td>{{ .AccessTime }}</td>
+                    <td>{{ .Method }}</td>
+                    <td>{{ .Url }}</td>
+                    <td>{{ .Protocol }}</td>
+                    <td>{{ .StatusCode }}</td>
+                    <td>{{ .Length }}</td>
+                </tr>
+            {{ else }}
+                <tr>
+                    <td colspan="8">未查询到数据</td>
+                </tr>
+            {{ end }}
+        </tbody>
+</body>
+</html>
