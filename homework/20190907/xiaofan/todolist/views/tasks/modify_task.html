@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务修改</title>
+</head>
+
+<body>
+<div>
+    <span><a href="/tasks/">任务列表</a></span>
+
+    <span><a href="/users/">用户列表</a></span>
+
+    <span><a href="/users/password">修改个人密码</a></span>
+    <span><a href="/logout/">退出登录</a></span>
+</div>
+
+<form action="/tasks/modify/" method="POST">
+    <input type="hidden" name="id" value="{{ .ID }}">
+    <div>
+        <lable>名称</lable>
+        <input type="text" name="name" value="{{ .Name}}">
+    </div>
+    <div>
+        <lable>负责人</lable>
+        <input type="text" name="user" value="{{ .User }}">
+    </div>
+    <div>
+        <lable>进度</lable>
+        <input type="range" name="progress" value="{{ .Progress }}">
+    </div>
+    <div>
+        <lable>状态</lable>
+        <select name="status">
+            <option value="0" {{ if eq .Status 0 }} selected="selected"{{ end }}>新建</option>
+            <option value="1" {{ if eq .Status 1 }} selected="selected"{{ end }}>正在进行</option>
+            <option value="2" {{ if eq .Status 2 }} selected="selected"{{ end }}>暂停</option>
+            <option value="3" {{ if eq .Status 3 }} selected="selected"{{ end }}>完成</option>
+        </select>
+    </div>
+    <div>
+        <lable>描述</lable>
+        <input type="text" name="desc" value="{{ .Desc}}">
+    </div>
+    <div>
+        <input type="submit" name="修改">
+    </div>
+
+</form>
+</body>
+</html>
