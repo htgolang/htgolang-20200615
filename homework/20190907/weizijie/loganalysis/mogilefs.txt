@@ -1,0 +1,1125 @@
+
+
+
+
+
+
+MogileFS是一个开源的分布式文件存储系统，由LiveJournal旗下的Danga Interactive公司开发。Danga团队开发了包括 Memcached、MogileFS、Perlbal 等多个知名的开源项目。目前使用MogileFS 的公司非常多，如日本排名先前的几个互联公司及国内的yupoo(又拍)、digg、豆瓣、1号店、大众点评、搜狗和安居客等，分别为所在的组织或公司管理着海量的图片。
+
+MogileFS由3个部分组成：
+(1) server：主要包括mogilefsd和mogstored两个应用程序。mogilefsd实现的是tracker，它通过数据库来保存元数据信息，包括站点domain、class、host等；mogstored是存储节点(store node)，它其实是个WebDAV服务，默认监听在7500端口，接受客户端的文件存储请求。在MogileFS安装完后，要运行mogadm工具将所有的store node注册到mogilefsd的数据库里，mogilefsd会对这些节点进行管理和监控。
+(2) utils（工具集）：主要是MogileFS的一些管理工具，例如mogadm等。
+(3) 客户端API：MogileFS的客户端API很多，例如Perl、PHP、Java、Python等，用这个模块可以编写客户端程序，实现文件的备份管理功能等。
+
+
+
+
+
+存储主机(节点)
+这个是 MogileFS 存储文件存放在这些机器上,也是 mogstored 节点,也叫 Storage Server,一台存储主要都要启动一个 mogstored 服务.扩容就是增加这些机器.
+
+设备(device)
+一个存储节点,以就是上面的主机,可以有多个 device, 就是用来存放文件的目录(例如挂载的目录),每个设备都有一个设备id,需要在 mogstored 的配置文件中的 docroot 配置的项目 指定的目录下面创建相应的设备的目录,目录名为 $docroot/dev$id,设备是不能删除的.只能将其设备的状态的值置为dead,当一个设备 dead 之后,就真的 dead了,里面的数据也无法恢复了,且这个dead了的设备的 id 也不能再用.
+
+
+
+
+
+
+
+
+# yum -y install make gcc unzip perl-DBD-MySQL perl perl-CPAN perl-YAML perl-Time-HiRes
+
+# cpan 
+App::cpanminus 
+MogileFS::Server 
+MogileFS::Utils 
+IO::AIO 
+IO::WrapTie 
+Danga::Socket
+
+
+#2
+cpanm安装
+wget http://xrl.us/cpanm -O /usr/bin/cpanm; sudo chmod +x /usr/bin/cpanm
+
+#cpanm DBD::mysql
+#cpanm MogileFS::Server
+#cpanm MogileFS::Utils
+#cpanm MogileFS::Client
+
+
+所有的perl程序可以编译运行：
+	# perl Makefile.PL
+	# make
+	# make test
+	# make install 
+
+
+# cpan -i App::cpanminus
+cpan> install App:cpanminus
+
+
+# cpan MogileFS::Server
+
+conf: 
+	/etc/mogilefs/{mogifsd.conf, mogstored.conf}
+
+
+
+
+
+
+
+
+
+CentOS 7安装rpm包：
+	
+	# yum install perl-Net-Netmask perl-IO-stringy perl-Sys-Syslog perl-IO-AIO
+
+	本地安装的rpm包：
+		MogileFS-Server-2.46-2.el6.noarch.rpm            perl-Danga-Socket-1.61-1.el6.rf.noarch.rpm
+		MogileFS-Server-mogilefsd-2.46-2.el6.noarch.rpm  perl-MogileFS-Client-1.14-1.el6.noarch.rpm
+		MogileFS-Server-mogstored-2.46-2.el6.noarch.rpm  perl-Perlbal-1.78-1.el6.noarch.rpm
+		MogileFS-Utils-2.19-1.el6.noarch.rpm
+
+mogilefs的各种客户端工具：
+http://code.google.com/p/mogilefs/wiki/Clients
+
+
+数据库授权
+GRANT ALL PRIVILEGES ON *.* TO ‘mogile’@‘127.0.0.1’ IDENTIFIED BY ‘mogile’ WITH GRANT OPTION;   
+
+FLUSH   PRIVILEGES; 
+
+设定数据库：
+mogdbsetup --help
+
+	mogdbsetup --dbhost=127.0.0.1 --dbpass=mogpass
+
+	用户名默认为：mogile
+
+	useradd -r mogilefs
+
+	mkdir /var/run/mogilefsd/
+	chown -R mogilefs.mogilefs /var/run/mogilefsd
+
+	修改主配置文件：/etc/mogilefs/mogilefsd.conf
+
+
+
+存储节点：
+
+解决依赖关系，需要安装perl-IO-AIO
+
+启动：
+mogstored -c /etc/mogilefs/mogstored.conf -daemon
+
+
+#通知Trackers有什么host需要添加 有什么Storage需要添加
+mogadm host add 192.168.0.203 –ip=192.168.0.203 –port=7500 –status=alive
+
+
+
+基本操作
+MogileFS 的管理
+
+mogstored 程序的启动将使主机本身成为一个存储的节点,mogstored 的启动后,还需要使用 mogadm 来让当前的这个主机加入到 MogileFS 的系统中.这就是一个存储节点.注意存储节点中还需要添加设备,每个设备有一个 uniq 的 ID 号.同样也要使用 mogadm 来加入到 MogileFS 的系统中.
+
+注意,下面的命令中,如果没有配置照我前面 “设置 MogileFS 中的管理工具的接口” 来配置管理接口的地址的话,都要加一个  –trackers=<tracker_ip>:7001 才能正常.
+
+MogileFS 中的存储主机(节点)管理
+现在加入“存储节点”到 trackers 中.告诉注册自己到 trackers.相当于为每个主机加入 MogileFS 的存储系统
+
+1
+mogadm  host add <storage_node_name> --ip=127.0.0.1 --port=7500 --status=alive 
+ 注,如果配置了前面的管理工具的地址,就简单多了
+
+1
+mogadm  host add <storage_node_name> --ip=127.0.0.1 --port=7500 --status=alive 
+检查这个主机是否加入到 MogileFS 的系统中.
+
+1
+mogadm  host list 
+ 使用 mogadm 来修改 MogileFS 中主机的信息,修改的时候,一定要加上状态  –status=alive,不然不能修改
+
+ 
+
+1
+mogadm host modify storage_node_name --ip=123.xxx.xxx.70 --status=alive
+ 
+
+ 
+
+MogileFS 中的存储设备管理
+建一个目录 ( 并且需要 mount 一个硬盘给这个目录 ) 给这个"设备" 使用, 我们这的例子是使用 dev1在主机中建一个目录,建目录使用 dev + ID 这种格式,记的所有系统中 ID 不能重复.也必须和配置文件中的路径一样.
+如下:
+
+1
+mkdir -p /var/mogdata/dev1
+一定要注意, 给相对应用的块设备 mount 到这个点, 软链也行. 不然写文件都会写到系统硬上, 其它的硬盘都是空的
+
+给"设备"加入”存储的节点“当中,相当于为每个设备加入 MogileFS 的存储系统
+
+1
+mogadm  device add <storage_node_name> ID 
+ 检查我们加入的"设备"信息,这样就能见到上面这个设备了.还能显示加入的大小.
+
+1
+mogadm  device list
+ 标记失效的设备,当硬盘坏了,设备有问题时,这时会自动在一个域内复制到最小设置的保存份数.恢复上面一样在一次 add 设备就好了
+
+1
+mogadm device mark <storage_node_name> <storage_node_name> ID dead
+ 
+
+MogileFS 中域,类的管理
+当上面的准备好了,MogileFS 是运行中时,接下来我们要建一个我们自己的'名字空间'和加入文件到存储当中.
+我们使用 mogadm 的工具来能创建一个"域"和"类".也可以使用这个来增加文件到"类"中.
+
+建"域"
+
+1
+mogadm domain add <domain_name> 
+
+检查"域",显示存在的域
+
+1
+mogadm  domain list 
+
+在"域"中建"类",并加入最小保存份数
+
+1
+mogadm  class add <domain_name> <class_name> --mindevcount=3
+
+检查"类"
+
+1
+mogadm class list 
+ 检查整个系统
+
+1
+mogadm check
+注意, 注意, 建议一个类的最小存储份数建议 3 份, 因为这样可以保证你整个集群挂掉二台机器还能正常的工作. 同时挂三台服务器的机率会比较小. 但同时挂二个机器或者二个硬盘的机会还是比较高, 所以一定要存 3分.
+在加入和修改的时候, 都可以加上如 mindevcount , replpolicy 和 hashtype 的参数, 分别指的是本类中最少要存储的文件份数, 文件存储的复制规则和是否进行文件比较.
+
+MogileFS 中文件管理
+我们可以简单的使用 mog 开头的系列 Linux 命令, 来进行管理, 当然也可以用 Client 的 API 来管理. 新的 MogileFS 的工具, 拆分成多个了. 下面这些命令, 都需要在 /etc/mogilefs/mogilefs.conf 中指定 trackers , 不然就需要在下面的命令都加上 –trackers 来指定.
+1. 上传文件
+
+1
+mogupload  --domain=foo --key=<key_name> --file=<file_path>
+2. 查询文件
+
+1
+mogfileinfo --trackers=host --domain=<domain_name> --key=<key_name>
+例如查询一个叫 crossdomain 的 key .在指定的 domain 中.
+
+1
+# mogfileinfo --domain=he.yinyuetai.com --key=crossdomain 
+会显示如下
+
+- file: crossdomain
+  checksum: MD5:d329f37d82438dd8a1db544f9682db72
+     class:              default
+  devcount:                    3
+    domain:     he.yinyuetai.com
+       fid:              1970425
+       key:          crossdomain
+    length:                  280
+ - http://192.168.1.145:7500/dev205/0/001/970/0001970425.fid
+ - http://192.168.1.240:7500/dev156/0/001/970/0001970425.fid
+ - http://192.168.1.136:7500/dev42/0/001/970/0001970425.fid
+上面的 checksum 是因为我开启了文件检查对比. class 是指定的类名, 还有一些其它的信息.
+3. 检查文件状态
+这个其实和上面的 mogfileinfo 命令基本一样. 但这个会去发一个 http 的请求, 来看看整个集群中的文件是否正确. 还会显示一些其它的信息.
+参数同上.
+例如:
+
+1
+mogfiledebug --domain=he.yinyuetai.com --key=crossdomain
+会显示很多信息
+
+Fetching and summing paths...
+ 
+Results for path: http://192.168.1.240:7500/dev156/0/001/970/0001970425.fid
+ - MD5 Hash: d329f37d82438dd8a1db544f9682db72
+ - Length: 280
+ - HTTP result: 200 OK
+ 
+Results for path: http://192.168.1.136:7500/dev42/0/001/970/0001970425.fid
+ - MD5 Hash: d329f37d82438dd8a1db544f9682db72
+ - Length: 280
+ - HTTP result: 200 OK
+ 
+Results for path: http://192.168.1.145:7500/dev205/0/001/970/0001970425.fid
+ - MD5 Hash: d329f37d82438dd8a1db544f9682db72
+ - Length: 280
+ - HTTP result: 200 OK
+ 
+Tempfile and/or queue rows...
+none.
+ 
+- File Row:
+     class:              default
+   classid:                    0
+  devcount:                    3
+      dkey:          crossdomain
+      dmid:                    8
+    domain:     he.yinyuetai.com
+       fid:              1970425
+    length:                  280
+ 
+- Raw devids: 42,156,205
+ 
+- Stored checksum: MD5:d329f37d82438dd8a1db544f9682db72
+4. 删除指定文件
+
+1
+mogdelete  --domain=<domain_name> --key=<key_name>
+
+5. 列出所有的文件 key
+这个可以列出指定 domain 下面的所有的 key , 也可以指定的一个前缀, 来找特定前缀的所有文件的 key.
+
+1
+moglistkeys  --domain=<domain_name> --key_prefix=<key_name>
+6. 列出指定 fid 的文件
+这个 fromfid 是指 mogileFS 内部的文件 id , 这个是自增的, 你可以指定一个开始的位置, 指定显示多少文件, 这个用于查询指定时间段内上传的文件时很有用. 比如我们在 8 点上传了一个文件, 是 100 的 id, 我们可以查询到从这个之后的所有的 id 的文件.
+
+1
+moglistfids  --fromfid=<file_id> --count=<数量>
+还有一些其它的命令, 在 Linux 中按 mog 加 tab , 就能见到, 使用方式, 各位自己去细看.
+
+以下方式弃用, 请跳过.
+加入文件,到 MogileFS 中
+
+1
+mogtool inject <file_name> <key_name>  --domain=<domain_name> 
+取出文件
+
+1
+mogtool extract <key_name> <file_name> --domain=<domain_name> 
+ 大文件管理（ >64M ),这时,mogtool 会给文件切成 64M 一全的大小
+
+1
+2
+mogtool inject --bigfile <file_name> <key_name>  --domain=<domain_name> 
+mogtool extract --bigfile <key_name> <file_name> --domain=<domain_name>
+ 、
+
+
+
+
+
+添加主机
+添加主机只需要使用简单的使用 "mogadm host add" 的命令
+
+1
+$ mogadm host add mystorage --ip=10.0.0.1
+请注意，这是强烈建议添加指定的主机的时候,写上 IP 地址. MogileFS 要使用这个 IP 地址和存储节点交互.并且这是你的 Web 服务器的地址. 一些人通常在 hosts 文件中使用主机别名,如别名 "mystorage" 指到 "127.0.0.1".这时,如果你不指定 IP,这会导致 MogileFS 生成一个有 127.0.0.1 的路径出来. 注意添加一个新的主机到集群中,它可能需要一两分钟,直到缓存过期.
+
+ 
+
+暂时停止服务器
+如果你需要维护一个服务器,比如更新内存,升级操作系统之类的需要关机的操作,推荐你在操作之前先设置这些为 "down". MogileFS 对这种偶然的故障可以很弹性的处理.
+
+1
+2
+3
+$ mogadm host mark mystorage down
+... 做一些操作 ...
+$ mogadm host mark mystorage alive
+ 
+
+永久关掉服务器
+如果你的主机需要废弃不在使用了,不推荐你给这些主机标成 'alive' or 'down',当你永远不希望再次使用这个主机,你必须给这个设置成 "dead". 如果你给主机标记为'dead',mogilefs 不会重新复制该主机上的文件。你必须标记为'dead'对单个驱动器。 $ mogadm host mark mystorage dead
+
+ 
+
+管理 MogileFS 的硬盘设备
+ 
+
+硬盘设备编号
+添加新的硬盘设备需要给一个唯一的,增量的设备 ID(devid).
+
+如果你用一个新的硬盘来更换坏掉的硬盘,总是需要给一个新的 devid.不能重用老的 devid. 之所以这样做的原因是可以让你从旧设备中给所有文件列表中的文件,重新复制到其它的 Mogilefs 的硬盘中.不然容易引起文件不会复制到这个中和错误的更新,也不会重新复制的旧文件.
+
+ 
+
+添加设备
+添加设备的命令如下:
+
+
+$ mogadm device add mystorage 5 --status=alive
+... or...
+$ mogadm device add mystorage 5 --status=down
+上面这个是教你怎么添加一个存储的硬盘设备到存储的主机(mystorage)上.默认的状态是 alive 和 down.比较好的做法是添加一个新的设备时设置为 "down",然后检查所有的设置.最后设置为 alive.
+有一点很重要,你如果可以最好不要使用 root 的权限来在存储节点上运行,因为底层目录下面的存储设备的所有者会是 root,而不是 mogstored 的用户.如果你卸载设备,MogileFS 将还是会写那个 mount 点.并没有办法知道，该目录是一个挂载点或不。
+
+ 
+
+设备维护
+MogileFS 会自动的对主机和硬盘设备进行检查.各自的 tracker 都有一个 mogitor 的 job 会定期的检查硬盘的设备是否能读,能写和删除文件.如果有一个坏掉的文件系统,重新 mount 后还是 read-only 或完全消失.mogilefs 会停止写入文件到这个硬盘设备.
+
+比如有时我们需要临时停一下主机的情况下，需要找个时间来卸载文件系统，并在其上运行操作系统的 fsck.你需要设置你的硬盘设置的状态为 'down'然后好了后设置为 'alive'.但如果你的操作系统坏了,IO 错误之类,比较安全的做法是设置硬盘设备为 'deal' 来让 MogileFS 给新的文件复本存到好的机器上.
+
+临时维护
+当我们的设备需要临时维护时
+
+
+$ mogadm device mark mystorage 5 down
+... later...
+$ mogadm device mark mystorage 5 alive
+需要避免给设备或主机标记为长时间的为 'down'. MogileFS 可能从队列中删除，复制，fsck 的检查等，等待设备修复。如果一个设备永远是要删除，你必须将它标记为 dead。这这个等的时间并没有讲在几分钟或几小时之类的时间限制。这一切都取决于你想多快的改变您的设置和你的队列是多大。
+
+只读模式和耗尽(Drain) 模式
+如果你想要冻结设备上所有的文件,你要使用只读模式就行了。这将停掉 MogileFS 存放新文件到这个设备上，但它也将阻止删除文件.代替的删除的操作是会给这些内容放到队列中等待为您标记为'alive'着或'drain'。
+
+
+$ mogadm device mark mystorage 5 readonly
+$ mogadm device mark mystorage 5 drain
+耗尽(Drain) 模式, 在 2.40 和更高以上,告诉 MogileFS 不会有新的文件应写入设备. 但是在耗尽(Drain) 模式,文件可能被删除.所以如果你不希望写文件到这个设备上,可以设置为drain 的模式
+
+注:耗尽(Drain) 模式在 MogileFS 的早期版本，,将会从设备删除 FIDS.现在它已经被重新均衡的功能取代。
+
+ 
+
+重新复制文件
+如果有一个硬盘坏了,MogileFS 可以自动的让请求不在访问这个设备,但是不会自动的重新复制这个硬盘的文件,你必须通过 mogadm 来手工来标志成 'dead'. 只要你这样做, MogileFS 将开始删除设备上的文件,并试图在集群间重新复制它们到其它的设备上.
+
+ 
+
+
+
+
+
+mogilefsd服务脚本：
+#!/bin/bash
+#
+# mogilefsd - Startup script for the MogileFS tracker
+#
+# chkconfig: - 85 15
+# description: MogileFS tracker 
+# processname: mogilefsd
+# config: /etc/mogilefs/mogilefsd.conf 
+# pidfile: /var/run/mogilefsd/mogilefsd.pid
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Path to the apachectl script, server binary, and short-form for messages.
+lockfile=${LOCKFILE-/var/lock/subsys/mogilefsd} 
+RETVAL=0
+
+prog=$(which mogilefsd)
+
+start() { 
+	ulimit -n 65535
+	echo -n $"Starting mogilefsd"
+	su - mogilefs -c "$prog -c /etc/mogilefs/mogilefsd.conf --daemon" 
+	RETVAL=$?
+	[ $RETVAL = 0 ] && success && touch ${lockfile} || failure
+	echo
+	return $RETVAL
+}
+
+stop() {
+	echo -n $"Stopping mogilefsd" 
+	netstat -nlp|grep "mogilefsd"|grep -v grep|awk '{print $7}'|awk -F"/" '{print $1}'|xargs kill -9 
+	RETVAL=$?
+	[ $RETVAL = 0 ] && success && rm -f ${lockfile} || failure
+	echo
+}
+
+reload() {
+	echo -n $"Reloading mogilefsd: " 
+	killall mogilefsd -HUP 
+	RETVAL=$?
+	[ $RETVAL = 0 ] && success || failure
+	echo
+}
+
+case "$1" in
+	start) 
+		start
+		;; 
+	stop)
+		stop
+		;; 
+	status) 
+		status mogilefsd 
+		RETVAL=$?
+		;;
+	restart)
+		stop
+		sleep 1
+		start
+		;;
+	reload)
+		reload
+		;; 
+	*) 
+		echo $"Usage: mogilefsd {start|stop|restart|reload|status}" 
+		exit 1
+esac
+exit $RETVAL
+
+
+
+mogstored服务脚本：
+#!/bin/bash
+#
+# mogstored - Startup script for the MogileFS storage
+#
+# chkconfig: - 86 14
+# description: MogileFS storage 
+# processname: mogstored
+# config: /etc/mogilefs/mogstored.conf 
+# pidfile: /var/run/mogilefsd/mogstored.pid
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+# Path to the apachectl script, server binary, and short-form for messages.
+lockfile=${LOCKFILE-/var/lock/subsys/mogstored} 
+RETVAL=0
+
+configfile='/etc/mogilefs/mogstored.conf'
+
+prog=$(which mogstored)
+
+start() { 
+	ulimit -n 65535
+	echo -n $"Starting mogstored"
+	su - mogilefs -c "$prog -c $configfile --daemon"  &> /dev/null
+	RETVAL=$?
+	[ $RETVAL = 0 ] && success && touch ${lockfile} || failure
+	echo
+	return $RETVAL
+}
+
+stop() {
+	echo -n $"Stopping mogstored" 
+	netstat -nlp|grep "mogstored"|grep -v grep|awk '{print $7}'|awk -F"/" '{print $1}'|xargs kill -9 
+	RETVAL=$?
+	[ $RETVAL = 0 ] && success && rm -f ${lockfile} || failure
+	echo
+}
+
+reload() {
+	echo -n $"Reloading mogstored: " 
+	killall mogstored -HUP 
+	RETVAL=$?
+	[ $RETVAL = 0 ] && success || failure
+	echo
+}
+
+case "$1" in
+	start) 
+		start
+		;; 
+	stop)
+		stop
+		;; 
+	status) 
+		status mogstored 
+		RETVAL=$?
+		;;
+	restart)
+		stop
+		sleep 1
+		start
+		;;
+	reload)
+		reload
+		;; 
+	*) 
+		echo $"Usage: mogstored {start|stop|restart|reload|status}" 
+		exit 1
+esac
+exit $RETVAL
+
+回顾：
+	分布式文件系统 
+	分布式存储：用户空间，FUSE
+		MogileFS, FastDFS, SeaweedFS(Weed-FS), TFS
+		GFS、HDFS、Luster、MooseFS(MFS)
+		Ceph、GlusterFS、HeyStack
+	
+	MogileFS：
+		Tracker：NameNode，
+		Tracker DB：MySQL, 
+		Storage Node：DataNode 
+		
+	逻辑组件：
+		Domain, Class,
+		fid, key 
+	
+		
+	
+
+
+
+
+
+
+
+
+Nginx 做为 MogileFS 的前端客户端
+
+我们使用 Nginx 来获取文件,做前端的查询代理时需要使用到mogilefs的这个模块.可以下载这个模块编译进 Nginx 就行了.直接使用 ./configure –add-module= 这个参数就可以了.
+最新的这个模块的下载地址是:https://github.com/vkholodkov/nginx-mogilefs-module
+使用这个需要考虑到网站原来的 url 是什么样的.比如:
+
+http://www.a.com/uploads/front_page/A6B00135E24AB17E043B9B5453762438.png
+这个 URL 中的 UUID 是 A6B00135E24AB17E043B9B5453762438.png.这时我们使用这个做 key 来存成 MogileFS 中就行.
+再结合 rewrite,只要 key 在 url 里有,就能直接代理到后端的 mogilefs.象如下的写法,会直接取 A6B00135E24AB17E043B9B5453762438.png 来做查询用的 key.
+
+location  ~ ([^\/]+)$ {
+        mogilefs_tracker 192.168.1.xxx:7001;
+        mogilefs_domain img;
+        mogilefs_methods GET;
+        mogilefs_noverify on;
+ 
+        mogilefs_pass {
+                proxy_pass $mogilefs_path;
+                proxy_hide_header Content-Ty pe;
+                proxy_buffering off;
+        }
+}
+如果使用了多个 tracker 的话,要配置使用多个 tracker 来进行负载均衡和备份.可以直接配置 tracker 为 upstrame:
+
+
+upstream online_mogilefs {
+  server 10.0.0.1:7001;
+  server 10.0.0.2:7001;
+}
+然后后面配置 tracker 的连接时,直接加上就行了
+
+mogilefs_tracker online_mogilefs;
+如果你还想配置使用 mogilefs 的 Nginx 上传,使用其中的 put 功能然后就不要安装客户端上传送,就需要打个补丁.
+上面的配置其实也是一样,关键对于上传的配置,需要给方法修改为
+
+mogilefs_methods PUT DETEL;
+
+
+
+
+
+
+
+某网友的一个完整的配置文件：
+
+#user  nobody;
+worker_processes  4;
+
+error_log  logs/error.log  notice;
+
+worker_rlimit_nofile 10240;
+
+events {
+    use epoll;
+    worker_connections  10240;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    server_names_hash_bucket_size 128;
+    client_header_buffer_size 32k;
+    large_client_header_buffers 4 32k;
+
+    client_max_body_size 8m;
+    client_body_buffer_size 128k;
+
+    proxy_connect_timeout 600;
+    proxy_read_timeout 600;
+    proxy_send_timeout 600;
+    proxy_buffer_size 16k;
+    proxy_buffers 4 32k;
+    proxy_busy_buffers_size 64k;
+    proxy_temp_file_write_size 64k;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    gzip on;
+    gzip_min_length 1k;
+    gzip_buffers 4 16k;
+    gzip_http_version 1.1;
+    gzip_comp_level 2;
+    gzip_types text/plain application/x-javascript text/css application/xml image/jpg image/jpeg image/gif image/png image/x-xbitmap image/pjpeg application/vnd.ms-excel application/vnd.ms-powerpoint application/msword application/x-shockwave-flash application/octet-stream;
+    gzip_vary on;
+
+    tcp_nodelay on;
+
+    server {
+        listen       80;
+        server_name  yourdomain.com;
+
+        location / {
+        mogilefs_tracker 192.168.33.2:6001;
+        mogilefs_domain test;
+        mogilefs_methods get;
+    
+        mogilefs_pass {
+        proxy_pass $mogilefs_path;
+        proxy_hide_header Content-Type;
+        proxy_buffering off;
+        }
+        expires 1h;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nginx 的mogilefs模块的官方文档地址：
+
+http://www.grid.net.ru/nginx/mogilefs.en.html
+
+
+
+
+
+使用 Nginx 来替换 storage nodes 上 mogstored 中的 Perlbal
+我们可能想使用 Nginx 来替换 Perlbal 来做上传和写入,我们可以使用 Nginx 的 dav 模块来实现这个.只要编译 Nginx 时使用 –with-http_dav_module 就行了.目前这个模块好象是默认的.
+
+server {
+    listen   7500;
+    charset utf-8;
+ 
+    location / {
+            autoindex    on;
+            root     /var/mogdata/;
+            dav_methods put delete mkcol copy move;
+            client_max_body_size            200m;
+            client_body_temp_path           /data/temp;
+            create_full_put_path               on;
+            dav_access user:rw group:rw all:r;
+    }
+ 
+    error_page 500 502 503 504 /50x.html;
+location /50x.html {
+    root html;
+}
+}
+
+在上面配置:
+
+autoindex :   一定需要设置,不然 mogadm check 时会显示出错.不然需要放一个 index.html 的文件到/var/mogdata. 使用 mogadm 来检查时 Nginx 才会返回 200 OK.
+client_max_body_size  如果要上传比较大的文件时,一定要设置这个.象我用来存视频文件,这个需要修改得非常大.
+注意,上面这个 Nginx 是使用 nginx 的用户来进行操作的,所以你需要给你的 /var/mogdata/ 目录修改成 nginx 的用户才行.另外还有一点要非常注意 client_body_temp_path 的这个参数.建议给上面每个 dav 的设备都设置一个.不然会复制二份文件.然后在 copy 会影响性能,如果单独配置就不会 .象我不喜欢配置这么多,就给这个 temp 写到了 ssd 上面,没有你也可以直接写内存中(感谢Daniel Leaberry<leaberry@gmail.com>的建议).
+
+然后修改你的 mogstored.conf 这个文件.关掉原来的 Perlbal 的监听,但注意了 mogstored 这个服务还是必须启动的.因为他会监控硬盘的好坏和 IO 的性能.只要给 server=none 就行了.就不会启动了.
+
+
+server=none
+mgmtlisten=0.0.0.0:7501
+docroot=/var/mogdata
+
+这个可以打开 Nginx 的日志来进行 debug .可以观查下列状态代码：
+
+　　201 (Created)：源资源被成功移动,在目标上创建了一个新资源.这个使用 Nginx 后日志中会常常见到.
+　　204 (No Content)：源资源被成功地移动到一个预先存在的目标资源上.
+　　403 (Forbidden)：这个错误表明至少出现以下两种情况之一：
+
+1) 服务器不允许在其名称空间中的给定位置上创建集合,或者
+2) Uniform Resource Indicator (URI) 请求的父集合存在,但是不接受成员.
+　　405 (Method Not Allowed)： mkcol() 方法只能在被删除或不存在的资源上执行,所以文件夹存在使用这个时会报这个.
+　　409 (Conflict)：只有在创建了一个或多个中间集合之后才能在目标上建立集合.
+　　412 (Precondition Failed)：服务器不能维持 propertybehavior XML 属性中列出的属性的存活,或者 Overwrite 的头是 F,目标资源的状态不为 null.
+　　415 (Unsupported Media Type)：服务器不支持主体的请求类型.
+　　423 (Locked)：源资源或目标资源被锁.
+　　502 (Bad Gateway)：当目标在另一台服务器上,且目标服务器拒绝接受资源时,将出现这种错误.
+　　507 (Insufficient Storage)：在执行该方法后资源没有足够的空间来记录资源的状态.
+
+ FQA: 如果 Nginx 的错误日志报如下错误:
+2012/03/12 17:51:05 [error] 7090#0: *299695 mkdir() "/var/mogdata/dev16/0/000/081" failed (17: File exists), client: 192.168.1.233, server: , request: "MKCOL /dev16/0/000/081/ HTTP/1.0"
+可以直接到配置文件中给
+
+dav_methods put delete mkcol copy move;
+修改成
+
+dav_methods put delete copy move;
+这时就不会报这个错了,记得 create_full_put_path 这个参数一定要打开才行.这样性能也会好些.然后直接在 MogileFS 中关掉 mkcol 就行了,因为 create_full_put_path 会自动创建:
+
+mogadm settings set skip_mkcol  1 
+
+
+
+
+
+安装nginx:
+
+平台为：rhel 6.4 64bits
+
+一、安装Nginx：
+
+1、解决依赖关系
+
+# yum groupinstall "Development Tools" "Server Platform Deveopment"
+# yum install openssl-devel pcre-devel
+
+2、安装
+
+首先添加用户nginx，实现以之运行nginx服务进程：
+# groupadd -r nginx
+# useradd -r -g nginx nginx
+
+接着开始编译和安装：
+# ./configure \
+  --prefix=/usr \
+  --sbin-path=/usr/sbin/nginx \
+  --conf-path=/etc/nginx/nginx.conf \
+  --error-log-path=/var/log/nginx/error.log \
+  --http-log-path=/var/log/nginx/access.log \
+  --pid-path=/var/run/nginx/nginx.pid  \
+  --lock-path=/var/lock/nginx.lock \
+  --user=nginx \
+  --group=nginx \
+  --with-http_ssl_module \
+  --with-http_flv_module \
+  --with-http_stub_status_module \
+  --with-http_gzip_static_module \
+  --http-client-body-temp-path=/var/tmp/nginx/client/ \
+  --http-proxy-temp-path=/var/tmp/nginx/proxy/ \
+  --http-fastcgi-temp-path=/var/tmp/nginx/fcgi/ \
+  --http-uwsgi-temp-path=/var/tmp/nginx/uwsgi \
+  --http-scgi-temp-path=/var/tmp/nginx/scgi \
+  --with-pcre \
+  --with-debug \
+  --add-module=
+# make && make install
+
+如果遇到错误，可使用如下编译命令：
+make CFLAGS="-pipe  -O -W -Wall -Wpointer-arith -Wno-unused-parameter -g"
+
+说明：
+1、Nginx可以使用Tmalloc(快速、多线程的malloc库及优秀性能分析工具)来加速内存分配，使用此功能需要事先安装gperftools，而后在编译nginx添加--with-google_perftools_module选项即可。
+2、如果想使用nginx的perl模块，可以通过为configure脚本添加--with-http_perl_module选项来实现，但目前此模块仍处于实验性使用阶段，可能会在运行中出现意外，因此，其实现方式这里不再介绍。如果想使用基于nginx的cgi功能，也可以基于FCGI来实现，具体实现方法请参照网上的文档。
+
+3、为nginx提供SysV init脚本:
+
+新建文件/etc/rc.d/init.d/nginx，内容如下：
+#!/bin/sh
+#
+# nginx - this script starts and stops the nginx daemon
+#
+# chkconfig:   - 85 15 
+# description:  Nginx is an HTTP(S) server, HTTP(S) reverse \
+#               proxy and IMAP/POP3 proxy server
+# processname: nginx
+# config:      /etc/nginx/nginx.conf
+# config:      /etc/sysconfig/nginx
+# pidfile:     /var/run/nginx.pid
+ 
+# Source function library.
+. /etc/rc.d/init.d/functions
+ 
+# Source networking configuration.
+. /etc/sysconfig/network
+ 
+# Check that networking is up.
+[ "$NETWORKING" = "no" ] && exit 0
+ 
+nginx="/usr/sbin/nginx"
+prog=$(basename $nginx)
+ 
+NGINX_CONF_FILE="/etc/nginx/nginx.conf"
+ 
+[ -f /etc/sysconfig/nginx ] && . /etc/sysconfig/nginx
+ 
+lockfile=/var/lock/subsys/nginx
+ 
+make_dirs() {
+   # make required directories
+   user=`nginx -V 2>&1 | grep "configure arguments:" | sed 's/[^*]*--user=\([^ ]*\).*/\1/g' -`
+   options=`$nginx -V 2>&1 | grep 'configure arguments:'`
+   for opt in $options; do
+       if [ `echo $opt | grep '.*-temp-path'` ]; then
+           value=`echo $opt | cut -d "=" -f 2`
+           if [ ! -d "$value" ]; then
+               # echo "creating" $value
+               mkdir -p $value && chown -R $user $value
+           fi
+       fi
+   done
+}
+ 
+start() {
+    [ -x $nginx ] || exit 5
+    [ -f $NGINX_CONF_FILE ] || exit 6
+    make_dirs
+    echo -n $"Starting $prog: "
+    daemon $nginx -c $NGINX_CONF_FILE
+    retval=$?
+    echo
+    [ $retval -eq 0 ] && touch $lockfile
+    return $retval
+}
+ 
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog -QUIT
+    retval=$?
+    echo
+    [ $retval -eq 0 ] && rm -f $lockfile
+    return $retval
+}
+ 
+restart() {
+    configtest || return $?
+    stop
+    sleep 1
+    start
+}
+ 
+reload() {
+    configtest || return $?
+    echo -n $"Reloading $prog: "
+    killproc $nginx -HUP
+    RETVAL=$?
+    echo
+}
+ 
+force_reload() {
+    restart
+}
+ 
+configtest() {
+  $nginx -t -c $NGINX_CONF_FILE
+}
+ 
+rh_status() {
+    status $prog
+}
+ 
+rh_status_q() {
+    rh_status >/dev/null 2>&1
+}
+ 
+case "$1" in
+    start)
+        rh_status_q && exit 0
+        $1
+        ;;
+    stop)
+        rh_status_q || exit 0
+        $1
+        ;;
+    restart|configtest)
+        $1
+        ;;
+    reload)
+        rh_status_q || exit 7
+        $1
+        ;;
+    force-reload)
+        force_reload
+        ;;
+    status)
+        rh_status
+        ;;
+    condrestart|try-restart)
+        rh_status_q || exit 0
+            ;;
+    *)
+        echo $"Usage: $0 {start|stop|status|restart|condrestart|try-restart|reload|force-reload|configtest}"
+        exit 2
+esac
+
+而后为此脚本赋予执行权限：
+# chmod +x /etc/rc.d/init.d/nginx
+
+添加至服务管理列表，并让其开机自动启动：
+# chkconfig --add nginx
+# chkconfig nginx on
+
+而后就可以启动服务并测试了：
+# service nginx start
+
+
+
+
+
+
+
+
+
+单tracker示例：
+        location /imgs/ {
+            mogilefs_tracker 172.18.0.67:7001;
+            mogilefs_domain imgs;
+            mogilefs_class png jpg;
+
+            mogilefs_pass {
+                proxy_pass $mogilefs_path;
+                proxy_hide_header Content-Type;
+                proxy_buffering off;
+            }
+        }
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+使用curl上传文件。
+curl -X PUT -T '/etc/passwd' http://172.16.100.15/upload/passwd.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FastDFS：
+	Tracker：调度器，负责维持集群的信息，例如各group及其内部的storage node，这些信息也是storage node报告所生成；每个storage node会周期性向tracker发心跳信息； 
+	storage server：以group为单位进行组织，任何一个storage server都应该属于某个group，一个group应该包含多个storage server；在同一个group内部，各storage server的数据互相冗余；
+	
+	文件访问操作：upload, download, append, delete；
+	
+	文件名：
+		group/M00/00/00/FILE_ID
+	
+	Upload File：
+		1、由client发起上传连接请求； 
+		2、由tracker查找可用的storage server；
+		3、找到可用的storage server后，将其（ip:port）返回给client；
+		4、上传文件（文件的属性信息和文件内容）；
+		5、生成文件的fid，将client提交的内容写入选定位置；
+		6、返回fid；
+		7、同步 存储文件信息至同组中的其它节点；
+		
+		tracker如何挑选组：
+			1、rr
+			2、指定组
+			3、基于可用空间进行均衡，可用空间大者胜出；
+			
+		如何在组中挑选storage server：
+			1、rr；
+			2、以ip为次序，找第一个，即IP地址较小者；
+			3、以优先级为序，找第一个；
+			
+		如何选择磁盘（存储路径）：
+			1、rr；
+			2、剩余可用空间大者优先；
+			
+		生成FID：
+			由源头storage server ip、创建时的时间戳、大小、文件的校验码和一个随机数进行hash计算后生成；最后基于base64进行文本编码，转换为可打印字符；
+			
+			groupID/MID/H1ID/H2ID/file_name
+                groupID：组编号
+                MID：存储路径（存储设备）编号
+                H1ID/H2ID：目录分层 
+                file_name：文件名，不同于用户上传时使用文件名，而是由服务器生成hash文件名；
+                    服务器IP、文件创建时的时间戳、文件大小、文件名和扩展名；
+		
+	文件同步：
+		每个storage server在文件存储完成后，会将其信息存于binlog， binlog不包含数据，仅包含文件名等元数据信息；binlog可用于同步；
+		
+	Download File：
+		客户端上传文件完成后，会收到storage server返回的FID，而后再次用到时，client会可根据此文件发出请求；
+		
+		1、client向tracker发请求；
+		2、tracker根据文件名定位到group，并返回此group内的某一个storage server的信息（ip:port）给client；
+		3、client向得到的ip:port发请求；
+		4、storage server查找文件，并返回其内容给client；
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		参考文档：
+			http://www.tuicool.com/articles/YniEnyf
+			http://joelhy.github.io/2015/01/27/FastDFS-v5-06-deploy/		
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

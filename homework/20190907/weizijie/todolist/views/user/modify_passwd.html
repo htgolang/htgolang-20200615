@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>密码修改</title>
+    </head>
+    <body>
+        <form action="/passwd/modify/" method="POST">
+            <div>
+                <label>名字:</label>
+                <input type="text" name="name"/>
+            </div>
+            <div>
+                <label>密码:</label>
+                <input type="password" name="passwd" />
+            </div>
+            <div>
+                <label>确认密码:</label>
+                <input type="password" name="passwordVerify" />
+                <span>{{ . }}</span>
+            </div>
+            <div>
+                <input type="submit" name="Login" value="确认修改"/>
+            </div>
+        </form>
+    </body>
+</html>

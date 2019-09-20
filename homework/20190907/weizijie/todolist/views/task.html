@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>任务列表</title>
+    </head>
+    <body>
+        <a href="/user/manager/">返回主菜单</a>
+        <a href="/tasks/create/">添加任务</a>
+        <table border="1" cellpadding="10" >
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>名称</th>
+                    <th>进度</th>
+                    <th>负责人</th>
+                    <th>描述</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range . }}
+                <tr>
+                    <td>{{ .ID }}</td>
+                    <td>{{ .Name }}</td>
+                    <td>{{ .Progress }}%</td>
+                    <td>{{ .User }}</td>
+                    <td>{{ .Desc }}</td>
+                    <td>{{ if eq .Status 0 }} 新建 {{ else if eq .Status 1 }} 正在进行 {{ else if eq .Status 2 }} 暂停 {{ else if eq .Status 3 }} 完成 {{ end }}</td>
+                    <td>
+                        <a href="/tasks/modify/?id={{ .ID }}">修改</a>
+                        <a href="/tasks/delete/?id={{ .ID }}">删除</a>
+                    </td>
+                </tr>
+                {{ else }}
+                <tr>
+                    <td colspan="7"> 无数据 </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>日志统计</title>
+    </head>
+    <body>
+        <div>
+            <a href="/log/">返回上一级</a>
+        </div>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>method</th>
+                    <th>url</th>
+                    <th>status code</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range . }}
+                <tr>
+                    <td>{{ .IP }}</td>
+                    <td>{{ .Method }}</td>
+                    <td>{{ .Url }}</td>
+                    <td>{{ .Status_code }}</td>
+                    <td>{{ .Count }}</td>
+                </tr>
+                {{ else }}
+                <tr>
+                    <td colspan="5"> 无数据 </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </body>
+</html>
