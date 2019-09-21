@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ block "title" . }} Todolist {{ end }}</title>
+        <link rel="stylesheet" href="/static/bootstrap-4.3.1/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+            <a class="navbar-brand" href="#">TodoList</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class='nav-item {{ block "nav_users" . }}{{ end }}'>
+                        <a class="nav-link" href="/users/">用户管理</a>
+                    </li>
+                    <li class='nav-item  {{ block "nav_tasks" . }}{{ end }}'>
+                        <a class="nav-link" href="/">任务管理</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="btn btn-outline-success my-2 my-sm-0" href="/user/logout/">退出</a>
+                </form>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mt-3">
+                    {{ block "content" . }} {{.}} {{ end }}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

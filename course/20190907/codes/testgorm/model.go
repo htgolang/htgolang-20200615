@@ -57,7 +57,6 @@ func main() {
 	fmt.Println(user)
 	fmt.Println(db.NewRecord(user))
 	if db.NewRecord(user) {
-
 		db.Create(&user)
 	}
 	db.Close()

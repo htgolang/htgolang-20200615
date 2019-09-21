@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ block "title" . }} TodoList {{ end }}</title>
+        <body>
+            <nav>
+                <a href="/users/">用户管理</a>
+                <a href="/">任务管理</a>
+                <a href="/user/logout/">退出</a>
+            </nav>
+            <article>
+                {{ block "body" . }}{{ end }}
+            </article>
+        </body>
+    </head>
+</html>

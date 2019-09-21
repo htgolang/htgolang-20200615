@@ -1,0 +1,45 @@
+/*
+selector {
+    attrname: value;
+}
+标签选择器
+tagname {}
+
+id选择器
+#id {}
+class选择器
+.classname {}
+
+属性选择器
+[attrname]
+[attrname=value]
+
+子选择器/子孙选择器
+> [空格]
+
+复合选择器
+div.addr
+input[type="text"]
+*/
+div {
+    background-color: gray;
+    color:red;
+}
+#myname {
+    font-size: 50px;
+}
+.addr {
+    background-color:yellow;
+}
+
+[link] {
+    color: green;
+}
+
+[title=Baidu] {
+    font-size: 30px;
+}
+
+div .addr {
+    color:blue;
+}
