@@ -1,0 +1,52 @@
+{{ define "nav_users" }} active {{ end }}
+{{ define "content" }}
+
+    <div class="mt-3">
+        <form class="form-inline" action="/users/" method="GET">
+            <div class="from-group">
+                <input type="text" value="{{ .Query }}" name="q" />
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="查询"/>
+                <a class="btn btn-info" type="submit" href="/users/create/">添加</a>
+            </div>
+
+
+        </form>
+    </div>
+    <div class="mt-3">
+
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>生日</th>
+                <th>联系方式</th>
+                <th>联系地址</th>
+                <th>备注</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{ range .Users }}
+                <tr>
+                    <td>{{ .Name }}</td>
+                    <td>{{ .Birthday }}</td>
+                    <td>{{ .Tel }}</td>
+                    <td>{{ .Addr }}</td>
+                    <td>{{ .Desc }}</td>
+                    <td>
+                        <a class="btn btn-warning btn-sm" href="/users/modify/?id={{ .ID }}">编辑</a>
+                        <a class="btn btn-danger btn-sm" href="/users/delete/?id={{ .ID }}">删除</a>
+                    </td>
+                </tr>
+            {{ else }}
+                <tr>
+                    <td colspan="6">无数据</td>
+                </tr>
+            {{ end }}
+            </tbody>
+        </table>
+    </div>
+
+{{ end }}

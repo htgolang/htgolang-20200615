@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>用户登陆</title>
+        <link rel="stylesheet" href="/static/bootstrap-4.3.1/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <form class="form-inline" action="/user/login/" method="POST">
+            {{ .Error }}
+            <div class="form-group">
+                <lable>用户:</lable>
+                <input type="text" name="name" value="{{ .Name }}"/>
+            </div>
+            <div class="form-group">
+                <lable>密码:</lable>
+                <input type="password" name="password" value=""/>
+            </div>
+            <div>
+                <input class="btn btn-primary" type="submit" value="登陆" />
+            </div>
+        </form>
+    </body>
+</html>
