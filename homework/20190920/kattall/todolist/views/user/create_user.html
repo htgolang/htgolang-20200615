@@ -1,0 +1,73 @@
+{{ define "content" }}
+<div class="row">
+    <div class="col-4">
+        <form action="/users/create/" method="post">
+            <div class="form-group row">
+                <label for="name" class="col-3 col-form-label">用户名：</label>
+                <div class="col-9">
+                    <input id="name" class="form-control" name="name" type="text" value="{{ .Name }}" placeholder="请输入用户名">
+                </div>
+                <span>{{ .Errors.name }}</span>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-3 col-form-label">密码：</label>
+                <div class="col-9">
+                    <input id="password" class="form-control" name="password" type="password" placeholder="请输入密码">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password2" class="col-3 col-form-label">再次输入密码：</label>
+                <div class="col-9">
+                    <input id="password2" class="form-control" name="password2" type="password" placeholder="请再次输入密码">
+                </div>
+                <span>{{ .Errors.password }}</span>
+            </div>
+            <div class="form-group row">
+                <label class="form-check-label col-3" for="sex" >性别：</label>
+                <div class="col-9">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="sex" class="custom-control-input" value="0">
+                        <label class="custom-control-label" for="customRadio1">男</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="sex" class="custom-control-input" value="1">
+                        <label class="custom-control-label" for="customRadio2">女</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="birthday" class="col-3 col-form-label">出生日期：</label>
+                <div class="col-9">
+                    <input id="birthday" class="form-control" name="birthday" type="date" value="{{ .Birthday }}" placeholder="请输入生日">
+                </div>
+                <span>{{ .Errors.birthday }}</span>
+            </div>
+            <div class="form-group row">
+                <label for="tel" class="col-3 col-form-label">电话：</label>
+                <div class="col-9">
+                    <input id="tel" class="form-control" name="tel" type="text" value="{{ .Tel }}" placeholder="请输入联系方式">
+                </div>
+                <span>{{ .Errors.tel }}</span>
+            </div>
+            <div class="form-group row">
+                <label for="addr" class="col-3 col-form-label">地址：</label>
+                <div class="col-9">
+                    <input id="addr" class="form-control" name="addr" type="text" value="{{ .Addr }}" placeholder="请输入联系地址">
+                </div>
+                <span>{{ .Errors.addr }}</span>
+            </div>
+            <div class="form-group row">
+                <label for="desc" class="col-3 col-form-label">描述：</label>
+                <div class="col-9">
+                    <input id="desc" class="form-control" name="desc" type="text" value="{{ .Desc }}" placeholder="请输入备注信息">
+                </div>
+                <span>{{ .Errors.desc }}</span>
+            </div>
+            <div class="form-group row">
+                <input type="submit" class="btn btn-primary" name="确定">
+            </div>
+        </form>
+    </div>
+</div>
+
+{{ end }}
