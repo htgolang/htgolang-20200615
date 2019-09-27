@@ -1,0 +1,96 @@
+{{ define "title" }}用户添加{{ end }}
+{{ define "nav_users"}}active{{ end }}
+{{ define "content" }}
+
+<div class="row">
+    <div class="col-4 offset-4">
+        <form action="/user/create/" method="POST">
+            <div class="form-group row">
+                <label class="col-form-label col-3">用户名:</label>
+                <div class="col-9">
+                    <input type="text" class="form-control" name="name" value="{{ .Name }}" />
+                    {{ if ne .Errors.Name "" }}
+                    <div class="alert alert-danger">
+                        {{ .Errors.Name }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-3 ">密码:</label>
+                <div class="col-9">
+                    <input type="password" class="form-control" placeholder="请输入密码" name="password" />
+                    {{ if ne .Errors.Password "" }}
+                    <div class="alert alert-danger">
+                        {{ .Errors.Password }}
+                    </div>
+                    {{ end }}
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-3">确认密码:</label>
+                <div class="col-9">
+                    <input type="password" name="passwordVerify" class="form-control"/>
+                    {{ if ne .Errors.PasswordVerify "" }}
+                    <div class="alert alert-danger">
+                        {{ .Errors.PasswordVerify }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-form-label col-3">性别:</label>
+                <span class="col-9" class="form-control">
+                    <input id="true" name="sex" type="radio" value=true checked="checked"/><label for="true">男</label>
+                    <input id="false" name="sex" type="radio" value=false /><label  for="false"> 女 </label>     
+                </span>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-form-label col-3">生日:</label>
+                <div class="col-9" class="form-control">
+                    <input type="date" name="birthday" class="form-control" value="{{ .Birthday }}" />
+                </div>  
+            </div>
+
+
+            <div class="form-group row">
+                <label class="col-form-label col-3">电话:</label>
+                <div class="col-9">
+                    <input type="text" name="tel" class="form-control" value="{{ .Tel }}" />
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label class="col-form-label col-3">地址:</label>
+                <div class="col-9">
+                    <select name="addr" class="form-control">
+                        <option >{{ .Addr }}</option>
+                        <option value="河南">河南</option>
+                        <option value="上海">上海</option>
+                        <option value="北京">北京</option>
+                        <option value="湖北">湖北</option>
+                    </select>
+                </div> 
+            </div>
+        
+            <div class="form-group row">
+                <label class="col-form-label col-3">备注:</label>
+                <div class="col-9">
+                    <input type="text" class="form-control" name="desc"  value="{{ .Desc }}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <div class="float-right">
+                        <input type="submit" class="btn btn-primary" name="添加" />
+                    </div>
+                </div>  
+            </div>
+        </form>
+    </div>
+</div>
+{{ end }}
