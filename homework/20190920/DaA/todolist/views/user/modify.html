@@ -1,0 +1,53 @@
+{{ define "title"}}用户修改{{ end }}
+{{ define "nav-users" }}active{{end}}
+{{ define "content" }}
+<div class="m-3">
+    <div class="col-4 mt-3">
+        <form action="/users/modify/" method="POST">
+            <input type="hidden" name="id" value="{{ .User.ID }}">
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">用户名</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请使用纯英文字符，不包含任何特殊符号" name="name" value="{{ .User.Name }}" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.name }}</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">联系电话</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请优先使用手机号" name="tel" value="{{ .User.Tel }}" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.tel }}</span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">住址</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请填写详细家庭住址，到门牌号" name="addr" value="{{ .User.Addr }}" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.addr }}</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">备注</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="备注" name="desc" value="{{ .User.Desc }}" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.desc }}</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <input type="submit" class="btn btn-primary float-right" name="提交" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{{ end }}

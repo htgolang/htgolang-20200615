@@ -1,0 +1,78 @@
+{{ define "title"}}用户添加{{ end }}
+{{ define "nav-users" }}active{{end}}
+{{ define "content" }}
+<div class="m-3">
+    <div class="col-4 mt-3">
+        <form action="/users/create/" method="POST">
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">用户名</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请使用纯英文字符，不包含任何特殊符号" name="name" value="{{ .Name }}" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.name }}</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">输入密码</span>
+                    </div>
+                    <input type="password" placeholder="请输入复杂密码" class="form-control" name="password" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.password }}</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">再次输入密码</span>
+                    </div>
+                    <input type="password" placeholder="请重复输入一次密码" class="form-control" name="passwordVerify" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">出生日期</span>
+                    </div>
+                    <input type="date" class="form-control" name="birthday" value="{{ .Birthday }}" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.birthday }}</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">联系电话</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请优先使用手机号" name="tel" value="{{ .Tel }}" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.tel }}</span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">住址</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请填写详细家庭住址，到门牌号" name="addr" value="{{ .Addr }}" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.addr }}</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">备注</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="备注" name="desc" value="{{ .Desc }}" />
+                    <span style="color: red;" class="col-form-label">{{ .Errors.desc }}</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <input type="submit" class="btn btn-primary float-right" name="提交" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,52 @@
+{{ define "title"}}任务修改{{ end }}
+{{ define "nav-tasks"}}active{{ end }}
+{{ define "content"}}
+<div class="row m-3">
+    <div class="col-4">
+        <form action="/tasks/modify/" method="POST">
+            <input type="hidden" name="id" value="{{ .ID }}">
+            <div class="form-group row">
+                <label class="col-2 col-form-label">名称:</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="name" value="{{ .Name }}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">负责人:</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="user" value="{{ .User }}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">进度:</label>
+                <div class="col-10">
+                    <input type="range" class="form-control" name="progress" value="{{ .Progress }}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">状态:</label>
+                <div class="col-10">
+                <select name="status">
+                    <option value="0" {{ if eq .Status 0 }}selected="selected"{{ end }}>新建</option>
+                    <option value="1" {{ if eq .Status 1 }}selected="selected"{{ end }}>正在进行</option>
+                    <option value="2" {{ if eq .Status 2 }}selected="selected"{{ end }}>暂停</option>
+                    <option value="3" {{ if eq .Status 3 }}selected="selected"{{ end }}>完成</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">描述:</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" name="desc" value="{{ .User }}" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <input type="submit" class="btn btn-primary" name="添加" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{{ end}}
