@@ -1,0 +1,46 @@
+<div>
+    <form class="form-inline" action="{{ urlfor `TaskController.Index` }}" method="GET">
+        <label class="mr-2">查询:</label>
+        <input type="text" class="form-control mr-2" value="{{ .q }}" name="q" />
+        <input type="submit" class="btn btn-primary" value="查询"/>
+        <a class="btn btn-link" href="{{ urlfor `TaskController.Create` }}">添加</a>
+    </form>
+</div>
+<div class="mt-3">
+    <table class="table table-bordered table-striped table-hover table-sm">
+        <thead>
+            <tr class="row mx-0">
+                <th class="col-1">ID</th>
+                <th class="col-3">名称</th>
+                <th class="col-1">状态</th>
+                <th class="col-1">进度</th>
+                <th class="col-1">责任人</th>
+                <th class="col-1">创建人</th>
+                <th class="col-2">描述</th>
+                <th class="col-2">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {{ range .tasks }}
+            <tr class="row mx-0">
+                <td class="col-1">{{ .Id }}</td>
+                <td class="col-3">{{ .Name }}</td>
+                <td class="col-1">{{ .StatusText }}</td>
+                <td class="col-1">{{ .Progress }} %</td>
+                <td class="col-1">{{ .Worker }}</td>
+                <th class="col-1">{{ .CreateUserName }}</th>
+                <td class="col-2">{{ .Desc }}</td>
+                <td class="col-2">
+                    <a class="btn btn-warning btn-sm" href="{{ urlfor `TaskController.Modify` }}?id={{ .Id }}">修改</a>
+                    <a class="btn btn-danger btn-sm"href="{{ urlfor `TaskController.Delete` }}?id={{ .Id }}"> 删除</a>
+                </td>
+            </tr>
+            {{ else }}
+            <tr>
+                <td colspan="7">无数据</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+</div>

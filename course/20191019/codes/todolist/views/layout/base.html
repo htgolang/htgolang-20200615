@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ block "title" . }} Todolist {{ end }}</title>
+        <link rel="stylesheet" href="/static/plugins/bootstrap-4.3.1/css/bootstrap.min.css"/>
+    </head>
+    <body>
+        {{ template "layout/nav.html" . }}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mt-3">
+                    {{ if .flash.success }}
+                    <div class="alert alert-success" role="alert">
+                        {{ .flash.success }}
+                    </div>
+                    {{ end }}
+                    {{ if .flash.warning }}
+                    <div class="alert alert-warning" role="alert">
+                        {{ .flash.warning }}
+                    </div>
+                    {{ end }}
+                    {{ if .flash.error }}
+                    <div class="alert alert-error" role="alert">
+                        {{ .flash.error }}
+                    </div>
+                    {{ end }}
+                    {{ .LayoutContent }}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

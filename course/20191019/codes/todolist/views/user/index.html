@@ -1,0 +1,47 @@
+
+<div>
+    <form class="form-inline" action="{{ urlfor `UserController.Index` }}" method="GET">
+        <label class="mr-2">查询:</label>
+        <input type="text" class="form-control mr-2" value="{{ .q }}" name="q" />
+        <input type="submit" class="btn btn-primary" value="查询"/>
+        <a class="btn btn-link" href="{{ urlfor `UserController.Create` }}">添加</a>
+    </form>
+</div>
+<div class="mt-3">
+    <table class="table table-bordered table-striped table-hover table-sm">
+        <thead>
+            <tr class="row mx-0">
+                <th class="col-1">姓名</th>
+                <th class="col-1">生日</th>
+                <th class="col-3">电话</th>
+                <th class="col-3">住址</th>
+                <th class="col-2">备注</th>
+                <th class="col-2">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range .users }}
+            <tr class="row mx-0">
+                <td class="col-1">{{ .Name }}</td>
+                <td class="col-1">{{ if .Birthday }}{{ dateformat .Birthday "2006-01-02" }}{{ end }}</td>
+                <td class="col-3">{{ .Tel }}</td>
+                <td class="col-3">{{ .Addr }}</td>
+                <td class="col-2">{{ .Desc}}</td>
+                <td class="col-2">
+                    <a class="btn btn-warning btn-sm" href="{{ urlfor `UserController.Modify` }}?id={{ .Id }}">修改</a>
+                    {{ if ne .Id $.user.Id }}
+                    <a class="btn btn-danger btn-sm"href="{{ urlfor `UserController.Delete` }}?id={{ .Id }}"> 删除</a>
+                    {{ end }}
+                    {{ if and $.user.IsSuper (ne .Id $.user.Id) }}
+                    <a class="btn btn-secondary btn-sm"href="{{ urlfor `UserController.ResetPassword` }}?id={{ .Id }}"> 重置密码</a>
+                    {{ end }}
+                </td>
+            </tr>
+            {{ else }}
+            <tr>
+                <td colspan="7">无数据</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+</div>
