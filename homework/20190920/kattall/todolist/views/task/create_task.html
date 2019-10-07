@@ -1,0 +1,33 @@
+{{ define "title" }}任务添加{{ end }}
+{{ define "content" }}
+<div class="row">
+    <div class="col-4">
+        <form action="/tasks/create/" method="post">
+            <div class="form-group row">
+                <label for="name" class="col-2 col-form-label" >名称：</label>
+                <div class="col-10">
+                    <input id="name" class="form-control" name="name" type="text" value="{{ .Name }}" placeholder="请输入任务名称">
+                </div>
+                <span>{{ .Errors }}</span>
+            </div>
+            <div class="form-group row">
+                <label for="user" class="col-2 col-form-label">负责人：</label>
+                <div class="col-10">
+                    <input id="user" class="form-control" name="user" type="text" value="{{ .User }}" placeholder="请输入负责人名称">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="desc" class="col-2 col-form-label">描述：</label>
+                <div class="col-10">
+                    <input id="desc"  class="form-control"name="desc" type="text" value="{{ .Desc }}" placeholder="请输入描述信息">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <input type="submit" class="btn btn-primary" name="确定">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{{ end }}

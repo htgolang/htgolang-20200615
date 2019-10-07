@@ -1,0 +1,45 @@
+{{ define "content" }}
+<div class="row">
+    <div class="col-4">
+        <form action="/users/modify/" method="post">
+            <div>
+                <input type="hidden" name="id" value="{{ .User.ID }}">
+            </div>
+            <div class="form-group row">
+                <label for="name" class="col-3 col-form-label">用户名：</label>
+                <div class="col-9">
+                    <input class="form-control" id="name" name="name" type="text" value="{{ .User.Name }}">
+                </div>
+                <span>{{ .Errors.name }}</span>
+            </div>
+            <div class="form-group row">
+                <label for="birthday" class="col-3 col-form-label">出生日期：</label>
+                <div class="col-9">
+                    <input class="form-control" id="birthday" name="birthday" type="date" value="{{ .User.Birthday }}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="tel" class="col-3 col-form-label">电话：</label>
+                <div class="col-9">
+                    <input class="form-control" id="tel" name="tel" type="text" value="{{ .User.Tel }}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="addr" class="col-3 col-form-label">地址：</label>
+                <div class="col-9">
+                    <input class="form-control" id="addr" name="addr" type="text" value="{{ .User.Addr }}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="desc" class="col-3 col-form-label">描述：</label>
+                <div class="col-9">
+                    <input class="form-control" id="desc" name="desc" type="text" value="{{ .User.Desc }}">
+                </div>
+            </div>
+            <div>
+                <input type="submit" name="确定">
+            </div>
+        </form>
+    </div>
+</div>
+{{ end }}

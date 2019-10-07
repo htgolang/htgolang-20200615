@@ -1,0 +1,52 @@
+{{ define "title" }}任务修改{{ end }}
+{{ define "content" }}
+<div class="row">
+    <div class="col-4">
+        <form action="/tasks/modify/" method="post">
+            <input type="hidden" name="id" value={{ .ID }} >
+            <div class="form-group row">
+                <label for="name" class="col-2 col-form-label">名称：</label>
+                <div class="col-10">
+                    <input id="name" class="form-control" name="name" type="text" value="{{ .Name }}">
+                </div>
+                <span>{{ .Errors }}</span>
+            </div>
+            <div class="form-group row">
+                <label for="progress" class="col-2 col-form-label">进度：</label>
+                <div class="col-10">
+                    <input id="progress" class="form-control-range" name="progress" type="range" value="{{ .Progress }}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="user" class="col-2 col-form-label">负责人：</label>
+                <div class="col-10">
+                    <input id="user" class="form-control" name="user" type="text" value="{{ .User }}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="desc" class="col-2 col-form-label">描述：</label>
+                <div class="col-10">
+                    <input id="desc" class="form-control" name="desc" type="text" value="{{ .Desc }}">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="status" class="col-2 col-form-label">状态：</label>
+                <div class="col-10">
+                    <select name="status" class="col-4 custom-select">
+                        <option value="0" {{ if eq .Status 0 }} selected="selected" {{ end }}>新建</option>
+                        <option value="1" {{ if eq .Status 1 }} selected="selected" {{ end }}>正在进行</option>
+                        <option value="2" {{ if eq .Status 2 }} selected="selected" {{ end }}>停止</option>
+                        <option value="3" {{ if eq .Status 3 }} selected="selected" {{ end }}>完成</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <div class="col-12">
+                    <input type="submit" class="btn btn-primary" name="确定">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{{ end }}

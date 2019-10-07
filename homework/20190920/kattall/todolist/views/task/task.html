@@ -1,0 +1,44 @@
+{{ define  "nav_tasks" }}active{{ end }}
+{{ define "content" }}
+<div>
+    <a href="/tasks/create/" class="btn btn-info btn-sm"> 添加任务 </a>
+</div>
+<div class="mt-3">
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>任务名称</th>
+            <th>任务进度</th>
+            <th>负责人</th>
+            <th>描述</th>
+            <th>状态</th>
+            <th>创建时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{ range . }}
+            <tr>
+                <td>{{ .ID }}</td>
+                <td>{{ .Name }}</td>
+                <td>{{ .Progress }}</td>
+                <td>{{ .User }}</td>
+                <td>{{ .Desc }}</td>
+                <td>{{ statusType .Status }}</td>
+                <td>{{ .Create_time }}</td>
+                <td>
+                    <a href="/tasks/modify/?id={{ .ID }}" class="btn btn-info">编辑</a>
+                    <a href="/tasks/delete/?id={{ .ID }}" class="btn btn-danger">删除</a>
+                </td>
+            </tr>
+        {{ else }}
+            <tr>
+                <td colspan="8">无数据</td>
+            </tr>
+        {{ end }}
+        </tbody>
+    </table>
+</div>
+
+{{ end }}

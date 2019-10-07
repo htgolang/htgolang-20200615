@@ -1,0 +1,25 @@
+{{ define "nav_tasks" }} active{{ end }}
+{{ define "content" }}
+
+    <div >
+
+        <form class="form-inline" action="/tasks/create/" method="POST">
+            <div class="from-group">
+                <label>名称:</label>
+                <input type="text" name="name" />
+            </div>
+            <div class="from-group">
+                <label>负责人:</label>
+                <input type="text" name="user" />
+            </div>
+            <div class="from-group">
+                <label>描述:</label>
+                <input type="text" name="desc" />
+            </div>
+            <div class="from-group">
+                <input class="btn btn-info" type="submit" value="添加"/>
+            </div>
+        </form>
+    </div>
+
+{{ end }}
