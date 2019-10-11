@@ -1,0 +1,79 @@
+{{ define "title" }}创建用户{{end}}
+{{ define "context" }}
+    <div class="row m-3">
+        <div class="col-4">
+            <form action="/users/create/" method="POST">
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">用户名:</lable>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="name">
+                        <span>{{ .Errors.name }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">密码</lable>
+                    <div class="col-10">
+                        <input class="form-control" type="password" name="password">
+                        <span>{{ .Errors.password }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">性别</lable>
+
+                    <div class="row col-10">
+                        <div class="form-inline col-2">
+                            <input id="1" type="radio" class="custom-radio" name="sex" value="1">
+                            <label for="1" class="col-form-label">男</label>
+                        </div>
+
+                        <div class="form-inline col-2">
+                            <input id="0" type="radio" class="custom-radio" name="sex" value="0">
+                            <label for="0" class="col-form-label">女</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-form-label col-2">出生日期</label>
+                    <div class="col-10">
+                        <input type="date" class="form-control" name="bir">
+                        <span>{{ .Errors.bir }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">联系电话</lable>
+                    <div class="col-10">
+                        <input class="form-control" type="text" name="tel">
+                        <span>{{ .Errors.tel }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">联系地址</lable>
+                    <div class="col-10">
+                        <input class="form-control" type="text" name="addr">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">描述</lable>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="desc">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input class="btn btn-primary float-right" type="submit" value="添加">
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{{end}}

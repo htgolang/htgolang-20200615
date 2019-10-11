@@ -1,0 +1,35 @@
+{{ define "title" }}创建任务{{ end }}
+
+{{ define "context" }}
+    <div class="row mt-3">
+        <div class="col-4">
+            <form action="/tasks/create/" method="POST">
+                <div class="form-group row">
+                    <label class="col-form-label col-2">名称:</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="name">
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-2">负责人:</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="user">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-2">描述:</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="desc">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-10">
+                        <input class="btn btn-primary" type="submit" value="添加">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+{{ end }}

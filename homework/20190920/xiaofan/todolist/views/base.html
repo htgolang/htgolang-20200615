@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {{ block "title" . }} Todolist {{ end }}</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #412B69">
+    <a class="navbar-brand text-white" href="/tasks/">TodoList</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class='nav-link {{ block "vac_task" . }}text-white-50{{ end }}' href="/tasks/">任务列表</a>
+            </li>
+            <li class="nav-item">
+                <a class='nav-link {{ block "vac_user" . }}text-white-50{{ end }}' href="/users/">用户列表</a>
+            </li>
+            <li class="nav-item">
+                <a class='nav-link {{ block "vac_password" . }}text-white-50{{ end }}' href="/users/password/">修改个人密码</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <a class="btn btn-outline-warning my-2 my-sm-0" href="/logout/">退出</a>
+        </form>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col mt-3">
+            {{ block "context" . }} {{end}}
+        </div>
+    </div>
+</div>
+</body>
+</html>

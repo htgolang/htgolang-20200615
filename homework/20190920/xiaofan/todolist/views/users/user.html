@@ -1,0 +1,56 @@
+{{ define "vac_user" }} text-white {{ end }}
+
+{{ define "title" }}用户管理 {{end}}
+
+{{ define "context" }}
+    <div>
+        <form class="form-inline" action="/users/" method="POST">
+            <div class="form-group">
+                <label> 查询:</label>
+                <input class="form-control" type="text" name="query" value="{{ .Q }}">
+            </div>
+            <div class="form-group">
+                <input class="btn btn-info" type="submit" value="查询">
+                <a class="btn btn-success" href="/users/create/">添加</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="mt-3">
+        <table class="table table-bordered  table-hover">
+            <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>用户名</th>
+                <th>出生日期</th>
+                <th>联系电话</th>
+                <th>联系地址</th>
+                <th>描述</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{ range .Users }}
+                <tr>
+                    <td>{{ .ID }}</td>
+                    <td>{{ .Name }}</td>
+                    <td>{{ .Birthday }}</td>
+                    <td>{{ .Tel }}</td>
+                    <td>{{ .Addr }}</td>
+                    <td>{{ .Desc }}</td>
+
+                    <td>
+                        <a class="btn btn-primary" href="/users/modify/?id={{ .ID }}">修改</a>
+                        <a class="btn btn-danger" href="/users/delete/?id={{ .ID }}">删除</a>
+                    </td>
+                </tr>
+            {{ else}}
+                <tr>
+                    <td colspan="7">无用户</td>
+                </tr>
+            {{ end }}
+            </tbody>
+        </table>
+    </div>
+
+{{ end }}

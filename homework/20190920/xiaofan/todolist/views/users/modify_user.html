@@ -1,0 +1,56 @@
+{{ define "title" }}修改用户{{ end }}
+
+{{ define "context" }}
+    <div class="row mt-3">
+        <div class="col-4">
+            <form action="/users/modify/" method="POST">
+                <input type="hidden" name="id" value="{{ .User.ID }}">
+
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">用户名</lable>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="name" value="{{ .User.Name }}">
+                        <span>{{ .Errors.name }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-form-label col-2">出生日期</label>
+                    <div class="col-10">
+                        <input type="date" class="form-control" name="bir" value="{{ .User.Birthday }}">
+                        <span>{{ .Errors.bir }}</span>
+                    </div>
+
+                </div>
+
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">联系电话</lable>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="tel" value="{{ .User.Tel }}">
+                        <span>{{ .Errors.tel }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">联系地址</lable>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="addr" value="{{ .User.Addr }}">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <lable class="col-form-label col-2">描述</lable>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="desc" value="{{ .User.Desc }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input class="btn btn-primary float-right" type="submit" value="修改">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+{{ end }}

@@ -1,0 +1,55 @@
+{{ define "title" }}修改任务{{ end }}
+
+{{ define "context" }}
+    <div class="row mt-3">
+        <div class="col-4">
+            <form action="/tasks/modify/" method="POST">
+                <input type="hidden" name="id" value="{{ .ID }}">
+                <div class="form-group row">
+                    <label class="col-form-label col-2">名称:</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="name" value="{{ .Name }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-2">负责人:</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="user" value="{{ .User }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-2">进度:</label>
+                    <div class="col-10">
+                        <input type="range" class="form-control-range" name="progress" value="{{ .Progress }}">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-2">状态:</label>
+                    <div class="col-10">
+                        <select class="custom-select" name="status">
+                            <option value="0" {{ if eq .Status 0 }} selected="selected"{{ end }}>新建</option>
+                            <option value="1" {{ if eq .Status 1 }} selected="selected"{{ end }}>正在进行</option>
+                            <option value="2" {{ if eq .Status 2 }} selected="selected"{{ end }}>暂停</option>
+                            <option value="3" {{ if eq .Status 3 }} selected="selected"{{ end }}>完成</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-2">描述:</label>
+                    <div class="col-10">
+                        <input type="text" class="form-control" name="desc" value="{{ .Desc }}">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input class="btn btn-primary float-right" type="submit" value="修改">
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+{{end}}
