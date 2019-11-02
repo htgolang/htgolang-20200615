@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>DOM</title>
+        <style type="text/css">
+            .red {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mydiv">kk 你好</div>
+        <button id="mybutton">点击</button>
+        <button id="addclass">add class</button>
+        <button id="removeclass">remove class</button>
+        <button id="show">show</button>
+        <button id="hide">hide</button>
+
+        <input type="text" id="name" />
+
+        <button id="getvalue">get value</button>
+        <button id="setvalue">set value</button>
+
+
+        <button id="getattr">get attr</button>
+        <button id="setattr">set attr</button>
+        <button id="removeattr">remove attr</button>
+
+        <a href="javascript:void(0);" data-pk="1">1</a>
+        <a href="javascript:void(0);" data-pk="2">2</a>
+
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">
+        // 选择器
+        // tag div
+        // id #id
+        // class .class
+        // 属性 [attr] [attr=value]
+        // 子(孙)选择器 tag > child/tag child
+        // 复合选择器
+
+        console.log(jQuery("#mydiv").length);
+        console.log($("div").length);
+
+        // 获取和设置标签内容(html/text)
+        console.log(jQuery("#mydiv").text());
+        jQuery("#mydiv").text(new Date());
+
+        console.log(jQuery("#mydiv").text());
+
+        // 事件
+        jQuery("#mybutton").on("click", function() {
+            jQuery("#mydiv").text(new Date());
+        });
+        // class操作
+        jQuery("#addclass").on("click", function() {
+            jQuery("#mydiv").addClass("red");
+        });
+
+        jQuery("#removeclass").on("click", function() {
+            jQuery("#mydiv").removeClass("red");
+        });
+        // 动画
+        jQuery("#show").on("click", function() {
+            jQuery("#mydiv").show();
+        });
+
+        jQuery("#hide").on("click", function() {
+            jQuery("#mydiv").hide();
+        });
+
+        // 值的操作
+        jQuery("#setvalue").on("click", function() {
+            jQuery("#name").val(new Date());
+        });
+
+        jQuery("#getvalue").on("click", function() {
+            console.log(jQuery("#name").val());
+        });
+
+        // 属性
+        jQuery("#setattr").on("click", function() {
+            jQuery("#name").attr("placeholder", "请输入名称");
+        });
+
+        jQuery("#getattr").on("click", function() {
+            console.log(jQuery("#name").attr("placeholder"));
+        });
+
+        jQuery("#removeattr").on("click", function() {
+          jQuery("#name").removeAttr("placeholder");
+        });
+
+        // data
+        jQuery("a").on("click", function() {
+            console.log(jQuery(this).data("pk"));
+        });
+
+        // inArray
+        console.log(jQuery.inArray(1, [3, 2, 6, 1, 5]));
+        console.log(jQuery.inArray(1, [3, 2, 6, 5]));
+
+        var names = ["kk", "小凡"];
+        var user = {a:1, b:2};
+        jQuery.each(names, function(index, value) {
+            console.log(index, value);
+        });
+
+        jQuery.each(user, function(key, value) {
+            console.log(key, value);
+        });
+
+        // find jQuery element
+        // element.find("li").length
+        </script>
+    </body>
+</html>

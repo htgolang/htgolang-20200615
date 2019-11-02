@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>JS</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            console.log(1 + 1);
+            // 注释
+            /* 多行注释 */
+            var name = "kk";
+            let age = 31;
+            const gender = 'male';
+            var height = 1.68;
+            var isMale = true;
+            var nullVal = null; //nil
+
+            // 数值类型 int/float
+            // 字符串
+            // 布尔类型
+            // 数组 ==> go slice
+            // 字典(object) ==> go map
+
+            console.log(typeof(name), typeof(gender), typeof(age), typeof(height), typeof(isMale));
+
+            // 运算
+            // 四则运算 + - * / %
+            // 自增和自减
+            // 位运算 & | ^ ~ << >>
+            // 赋值运算 =, +=, -=, *=, /=, %=
+            // 布尔运算 && || !
+            // 关系运算 > < >= <= != == ===
+
+            // 数值类型
+            // 字符串
+            // 布尔类型 true => 1 false => 0
+                // && 都为true结果为true
+                // || 只要有一个为true结果为true
+                // ! 你真我假， 你假我真
+            // 类型转换
+                // 数值 => 字符串
+
+
+            var names = ["kk", "小凡", "xq", 1];
+            console.log(typeof(names), names);
+
+            var user = {"name" : "kk", "age" : 32};
+            console.log(user);
+            user = {name:"kk", age:32}
+            console.log(user);
+
+            // 流程控制
+            //if switch for while do-while
+
+            if(false) {
+                console.log(true);
+            } else if (1==2) {
+                console.log(false);
+            } else {
+                console.log("else");
+            }
+
+            var A = 1;
+            switch(A) {
+                case 0: console.log("0"); break;
+                case 1: console.log("1"); break;
+                case 2: console.log("2"); break;
+                default:console.log("default"); break;
+            }
+
+
+            var i = 10;
+            while(i < 10) {
+                console.log(i);
+                i++;
+            }
+
+            // for(var i = 0; i < 10; i++) {
+            //     console.log(i);
+            // }
+            console.log("------------");
+            do {
+                console.log(i);
+                i++;
+            } while(i<10);
+
+            // 针对object
+            var user = {a : 1, b :2};
+
+            for(var key in user) {
+                console.log(key, user[key]);
+            }
+            // 函数
+            function add(a, b) {
+                return a + b;
+            }
+            // continue break
+
+            var rt = add(1, 3);
+            console.log(rt);
+        </script>
+    </body>
+</html>

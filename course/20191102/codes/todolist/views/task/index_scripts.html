@@ -1,0 +1,68 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery("#taskTable").DataTable({
+        language: {
+            url: "/static/json/datatables.i18n.zh-CN.json"
+        }
+    });
+
+    jQuery(".btn-create").on("click", function() {
+        jQuery("#modal-create").modal("show");
+    });
+
+    jQuery(".btn-save").on("click", function() {
+        var datas = jQuery(".form-create").serializeArray();
+        jQuery.post("{{ urlfor `TaskController.Create` }}", datas, function(response) {
+            switch(response["code"]) {
+                case 200:
+                    alert(response["text"]);
+                    jQuery("#modal-create").modal("hide");
+                    window.location.reload();
+                    break;
+                case 400:
+                    var errors = [];
+                    jQuery.each(response["result"], function(index, error) {
+                        errors.push(error["Message"])
+                    });
+                    if (!errors) {
+                        errors.push(response["text"]);
+                    }
+                    alert(errors.join("\n"));
+                    break;
+                default:
+                    alert(response["text"]);
+                    break;
+            }
+        }, "json");
+    });
+
+    jQuery(".btn-edit").on("click", function() {
+        var pk = jQuery(this).data("pk");
+        jQuery.get(
+            "{{ urlfor `TaskController.Detail` }}",
+            {id: pk},
+            function(response) {
+                switch(response["code"]) {
+                    case 200:
+                        var form = jQuery("form.form-modify");
+                        jQuery.each(response["result"], function(k, v){
+                            form.find("[name='" + k + "']").val(v);
+                        });
+                        jQuery("#modal-modify").modal("show");
+                        break;
+                    default:
+                        alert(response["text"]);
+                        break;
+                }
+            },
+            "json");
+    });
+
+    jQuery(".btn-edit2").on("click", function() {
+        var pk = jQuery(this).data("pk");
+        jQuery("#modal-modify2").find("div.modal-body").load("{{ urlfor `TaskController.Modify` }}?id=" + pk, function() {
+            jQuery("#modal-modify2").modal("show");
+        });
+    });
+});
+</script>

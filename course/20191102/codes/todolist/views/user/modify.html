@@ -1,0 +1,87 @@
+<div class="row">
+        <div class="col-4 offset-4">
+            <form action="{{ urlfor `UserController.Modify` }}" method="POST">
+
+                <input type="hidden" name="id" value="{{ .form.Id }}" />
+                <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" />
+                <div class="form-group row">
+                    <label class="col-form-label col-3">用户名:</label>
+                    <div class="col-9">
+                        <input type="text" name="name" class="form-control {{ if .validation.ErrorsMap.name }}is-invalid{{ end }}" value="{{ .form.Name }}" />
+                        {{ if .validation.ErrorsMap.name }}
+                        <div class="invalid-feedback">
+                            {{ index .validation.ErrorsMap.name 0 }}
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">性别:</div>
+                    <div class="col-9">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="gentleman" name="sex" value="1" {{ if eq .form.Sex 1 }} checked="checked" {{ end }}>
+                            <label class="form-check-label" for="gentleman">男</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="lady" name="sex" value="0"  {{ if eq .form.Sex 0 }} checked="checked" {{ end }}>
+                            <label class="form-check-label" for="lady">女</label>
+                        </div>
+                        {{ if .validation.ErrorsMap.sex }}
+                        <div class="invalid-feedback">
+                            {{ index .validation.ErrorsMap.sex 0 }}
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-3">出生日期:</label>
+                    <div class="col-9">
+                        <input type="date" name="birthday" class="form-control {{ if .validation.ErrorsMap.birthday }}is-invalid{{ end }}" value="{{ .form.Birthday }}" />
+                        {{ if .validation.ErrorsMap.birthday }}
+                        <div class="invalid-feedback">
+                            {{ index .validation.ErrorsMap.birthday 0 }}
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-3">电话:</label>
+                    <div class="col-9">
+                        <input type="text" name="tel" class="form-control {{ if .validation.ErrorsMap.tel }}is-invalid{{ end }}" value="{{ .form.Tel }}" />
+                        {{ if .validation.ErrorsMap.tel }}
+                        <div class="invalid-feedback">
+                            {{ index .validation.ErrorsMap.tel 0 }}
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-3">住址:</label>
+                    <div class="col-9">
+                        <input type="text" name="addr" class="form-control {{ if .validation.ErrorsMap.addr }}is-invalid{{ end }}" value="{{ .form.Addr }}" />
+                        {{ if .validation.ErrorsMap.addr }}
+                        <div class="invalid-feedback">
+                            {{ index .validation.ErrorsMap.addr 0 }}
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-form-label col-3">备注:</label>
+                    <div class="col-9">
+                        <input type="text" name="desc" class="form-control {{ if .validation.ErrorsMap.desc }}is-invalid{{ end }}" value="{{ .form.Desc }}" />
+                        {{ if .validation.ErrorsMap.desc }}
+                        <div class="invalid-feedback">
+                            {{ index .validation.ErrorsMap.desc 0 }}
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <input type="submit" class="btn btn-primary float-right" name="修改" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
