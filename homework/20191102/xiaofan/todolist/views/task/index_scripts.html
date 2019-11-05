@@ -1,0 +1,145 @@
+<script type="text/javascript">
+    // 国际化
+    jQuery(document).ready(function () {
+        jQuery("#taskTable").DataTable({
+            language: {
+                url: "/static/json/datatables.i18n.zh-CN.json"
+            }
+        });
+    });
+
+    // 添加按钮点击事件
+    jQuery(".btn-create").on("click", function () {
+        jQuery("#modal-create").modal("show");
+    });
+
+    // 添加后保存按钮点击事件
+    jQuery(".btn-save").on("click", function () {
+        // 将表单数据转化为slice传给后端
+        var datas = jQuery(".form-create").serializeArray();
+        console.log(datas);
+        jQuery.post("{{ urlfor `TaskController.Create`}}", datas, function (response) {
+            console.log(response);
+            switch (response["code"]) {
+                case 200:
+                    alert(response["text"]);
+                    jQuery("#modal-create").modal("hide");
+                    window.location.reload();
+                    break;
+                case 400:
+                    var errors = [];
+
+                    jQuery.each(response["result"], function (index, error) {
+                        errors.push(error["Message"]);
+                    });
+
+                    if (!errors) {
+                        errors.push(response["Message"]);
+                    }
+                    alert(errors.join("\n"));
+                    break;
+                default:
+                    alert(response["text"]);
+                    break;
+            }
+        }, "json")
+    });
+
+    // 修改按钮点击事件
+    jQuery(".btn-edit").on("click", function () {
+        var pk = jQuery(this).data("pk");
+        jQuery.get("{{ urlfor `TaskController.Detail`}}", {id: pk}, function (response) {
+            switch (response["code"]) {
+                case 200:
+                    var form = jQuery("form.form-modify");
+                    jQuery.each(response["result"], function (k, v) {
+                        form.find("[name='" + k + "'").val(v);
+                    });
+                    form.find("[name='id'").val(pk);
+                    jQuery("#modal-edit").modal("show");
+                    break;
+                default:
+                    alert(response["text"])
+                    break;
+            }
+        }, "json");
+    });
+
+    // 修改后保存按钮点击事件
+    jQuery(".btn-edit-save").on("click", function () {
+        // 将表单数据转化为slice传给后端
+        var datas = jQuery(".form-modify").serializeArray();
+        jQuery.post("{{ urlfor `TaskController.Modify`}}", datas, function (response) {
+            console.log(response);
+            switch (response["code"]) {
+                case 200:
+                    alert(response["text"]);
+                    jQuery("#modal-edit").modal("hide");
+                    window.location.reload();
+                    break;
+                case 400:
+                    var errors = [];
+
+                    jQuery.each(response["result"], function (index, error) {
+                        errors.push(error["Message"]);
+                    });
+
+                    if (!errors) {
+                        errors.push(response["Message"]);
+                    }
+                    alert(errors.join("\n"));
+                    break;
+                default:
+                    alert(response["text"]);
+                    break;
+            }
+        }, "json")
+    });
+
+    jQuery(".btn-delete").on("click", function () {
+        var pk = jQuery(this).data("pk");
+        if (confirm("是否确认删除")) {
+            jQuery.post("{{ urlfor `TaskController.Delete`}}", {id: pk}, function (response) {
+                alert(response["text"]);
+                window.location.reload();
+            }, "json")
+        }
+    });
+
+    jQuery(".password").on("click", function () {
+        var pk = jQuery(this).data("pk");
+        jQuery("#modal-password").modal("show");
+    });
+
+
+    // 个人密码修改后保存按钮点击事件
+    jQuery(".password-modify").on("click", function () {
+        // 将表单数据转化为slice传给后端
+        var datas = jQuery(".form-password").serializeArray();
+        jQuery.post("{{ urlfor `UserController.Password`}}", datas, function (response) {
+            console.log(response);
+            switch (response["code"]) {
+                case 200:
+                    alert(response["text"]);
+                    jQuery("#modal-password").modal("hide");
+                    window.location.reload();
+                    break;
+                case 400:
+                    var errors = [];
+
+                    jQuery.each(response["result"], function (index, error) {
+                        errors.push(error["Message"]);
+                    });
+
+                    if (!errors) {
+                        errors.push(response["Message"]);
+                    }
+                    alert(errors.join("\n"));
+                    break;
+                default:
+                    alert(response["text"]);
+                    break;
+            }
+        }, "json")
+    });
+</script>
