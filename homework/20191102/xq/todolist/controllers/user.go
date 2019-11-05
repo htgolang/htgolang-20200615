@@ -20,6 +20,7 @@ type UserController struct {
 }
 
 func (c *UserController) Prepare() {
+
 	c.LoginRequiredController.Prepare()
 	_, action := c.GetControllerAndAction()
 	// 除user/password 外其他url只有超级管理员可操作
@@ -52,22 +53,54 @@ func (c *UserController) Index() {
 
 	orm.NewOrm().QueryTable(&models.User{}).SetCond(condition).All(&users)
 
+	c.Layout = "layout/base.html" // 设置layout
+	c.Data["nav"] = "user" // 设置菜单
+
+	c.LayoutSections = map[string]string{}
+	c.LayoutSections["LayoutScripts"] = "user/index_scripts.html"
+	c.TplName = "user/index.html"
+	c.Data["xsrf_token"] = c.XSRFToken() // csrftoken
 	c.Data["q"] = q
 	c.Data["users"] = users
-	c.TplName = "user/index.html"
+
 }
 
 // 用户创建
 func (c *UserController) Create() {
-	form := &forms.UserCreateForm{} // 用户创建表单
-	valid := &validation.Validation{} //验证器
+
+	json := map[string]interface{}{
+		"code": 405,
+		"text": "请求方式错误",
+		"result": nil,
+	}
+
 
 	if c.Ctx.Input.IsPost() {
+		json = map[string]interface{}{
+			"code": 400,
+			"text": "提交数据错误",
+			"result": nil,
+		}
+
+		form := &forms.UserCreateForm{} // 用户创建表单
+		valid := &validation.Validation{} //验证器
+
+	//if c.Ctx.Input.IsPost() {
 		// 解析请求参数到form中(根据form标签)
-		if c.ParseForm(form) == nil {
+		if err := c.ParseForm(form); err != nil {
+			json["text"] = err.Error()
+
+		}else {
 
 			// 表单验证
-			if corret, err := valid.Valid(form); err == nil && corret {
+			if corret, err := valid.Valid(form); err != nil {
+
+				json["text"] = err.Error()
+			}else if !corret {
+				json["result"] = valid.Errors
+
+			}else {
+
 				// 转换时间
 				birthday, _ := time.Parse("2006-01-02", form.Birthday)
 
@@ -85,23 +118,32 @@ func (c *UserController) Create() {
 				user.SetPassword(form.Password)
 
 				// 插入用户
-				ormer := orm.NewOrm()
-				ormer.Insert(user)
+				//ormer := orm.NewOrm()
+				//ormer.Insert(user)
 
-				// 通过flash提示用户操作结果
-				flash := beego.NewFlash()
-				flash.Success("添加用户成功")
-				flash.Store(&c.Controller)
-				c.Redirect(beego.URLFor("UserController.Index"), http.StatusFound)
+				ormer := orm.NewOrm()
+
+				if _, err := ormer.Insert(user); err == nil {
+
+					json = map[string]interface{}{
+						"code": 200,
+						"text": "创建成功",
+						"result": user,
+					}
+				}else {
+					json = map[string]interface{}{
+						"code": 500,
+						"text": "服务端错误",
+						"result": nil,
+					}
+				}
+
 			}
 		}
 	}
 
-	c.TplName = "user/create.html"
-	c.Data["xsrf_token"] = c.XSRFToken() //生成csrftoken值
-	c.Data["form"] = form
-	c.Data["validation"] = valid
-
+	c.Data["json"] = json
+	c.ServeJSON()
 }
 
 // 用户修改

@@ -1,33 +1,31 @@
 
 <div>
     <form class="form-inline" action="{{ urlfor `UserController.Index` }}" method="GET">
-        <label class="mr-2">查询:</label>
-        <input type="text" class="form-control mr-2" value="{{ .q }}" name="q" />
-        <input type="submit" class="btn btn-primary" value="查询"/>
-        <a class="btn btn-link" href="{{ urlfor `UserController.Create` }}">添加</a>
+        <a class="btn btn-link" href="javascript:void(0);" id="add_user_btn">添加</a>
+        <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" id="xsrf_del"/>
     </form>
 </div>
 <div class="mt-3">
-    <table class="table table-bordered table-striped table-hover table-sm">
+    <table class="table table-bordered table-striped table-hover table-sm" id="user_table">
         <thead>
-            <tr class="row mx-0">
-                <th class="col-1">姓名</th>
-                <th class="col-1">生日</th>
-                <th class="col-3">电话</th>
-                <th class="col-3">住址</th>
-                <th class="col-2">备注</th>
-                <th class="col-2">操作</th>
+            <tr>
+                <th>姓名</th>
+                <th>生日</th>
+                <th>电话</th>
+                <th>住址</th>
+                <th>备注</th>
+                <th>操作</th>
             </tr>
         </thead>
         <tbody>
             {{ range .users }}
-            <tr class="row mx-0">
-                <td class="col-1">{{ .Name }}</td>
-                <td class="col-1">{{ if .Birthday }}{{ dateformat .Birthday "2006-01-02" }}{{ end }}</td>
-                <td class="col-3">{{ .Tel }}</td>
-                <td class="col-3">{{ .Addr }}</td>
-                <td class="col-2">{{ .Desc}}</td>
-                <td class="col-2">
+            <tr>
+                <td>{{ .Name }}</td>
+                <td>{{ if .Birthday }}{{ dateformat .Birthday "2006-01-02" }}{{ end }}</td>
+                <td>{{ .Tel }}</td>
+                <td>{{ .Addr }}</td>
+                <td>{{ .Desc}}</td>
+                <td>
                     <a class="btn btn-warning btn-sm" href="{{ urlfor `UserController.Modify` }}?id={{ .Id }}">修改</a>
                     {{ if ne .Id $.user.Id }}
                     <a class="btn btn-danger btn-sm"href="{{ urlfor `UserController.Delete` }}?id={{ .Id }}"> 删除</a>
@@ -37,11 +35,90 @@
                     {{ end }}
                 </td>
             </tr>
-            {{ else }}
-            <tr>
-                <td colspan="7">无数据</td>
-            </tr>
+
             {{ end }}
         </tbody>
     </table>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modal-create-user">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">新建用户</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" id="add_user_form">
+                    <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" />
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">用户名:</label>
+                        <div class="col-9">
+                            <input type="text" name="name" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">密码:</label>
+                        <div class="col-9">
+                            <input type="password" class="form-control" name="password" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">再次输入密码:</label>
+                        <div class="col-9">
+                            <input type="password" class="form-control" name="passwordVerify" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">性别:</div>
+                        <div class="col-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="gentleman" name="sex" value="1" checked="checked" >
+                                <label class="form-check-label" for="gentleman">男</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="lady" name="sex" value="0">
+                                <label class="form-check-label" for="lady">女</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">出生日期:</label>
+                        <div class="col-9">
+                            <input type="date" name="birthday" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">电话:</label>
+                        <div class="col-9">
+                            <input type="text" name="tel" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">住址:</label>
+                        <div class="col-9">
+                            <input type="text" name="addr" class="form-control" value="" />
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">备注:</label>
+                        <div class="col-9">
+                            <input type="text" name="desc" class="form-control" value="" />
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary btn-create-user">保存</button>
+            </div>
+        </div>
+    </div>
 </div>
