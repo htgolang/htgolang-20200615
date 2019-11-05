@@ -45,14 +45,14 @@
 
     });
 
-    $(".modify-task-btn").on("click", function () {
+    $(".modify-user-btn").on("click", function () {
         var pk = $(this).data("pk");
         // console.log(pk);
-        $.get("{{ urlfor `TaskController.Modify`}}", {id:pk}, function (response) {
+        $.get("{{ urlfor `UserController.Modify`}}", {id:pk}, function (response) {
 
             switch (response["code"]) {
                 case 200:
-                    var input_form = $("#modify_task_form");
+                    var input_form = $("#modify_user_form");
                     $.each(response["result"], function (k,v) {
                         input_form.find("[name='"+k+"']").val(v);
                         // console.log(k,v)
@@ -66,9 +66,9 @@
 
         });
         $(".save-btn-modify").on("click", function () {
-            var form = $("#modify_task_form").serializeArray();
+            var form = $("#modify_user_form").serializeArray();
             console.log(form);
-            $.post("{{urlfor `TaskController.Modify`}}", form, function (response) {
+            $.post("{{urlfor `UserController.Modify`}}", form, function (response) {
                 // console.log(response)
                 switch (response["code"]) {
                     case 200:
@@ -99,14 +99,14 @@
 
     // 删除
 
-    $(".del-task-btn").on("click", function () {
+    $(".del-user-btn").on("click", function () {
 
         var pk = $(this).data("pk");
         var xsrf_del = $("#xsrf_del").val();
         $("#modal-del").modal("show");
 
         if (confirm("确认删除？")==true){
-        $.post("{{ urlfor `TaskController.Delete` }}", {id:pk, _xsrf:xsrf_del}, function (response) {
+        $.post("{{ urlfor `UserController.Delete` }}", {id:pk, _xsrf:xsrf_del}, function (response) {
             switch (response["code"]) {
                 case 200:
                     // alert(response["text"]);
