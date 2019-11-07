@@ -15,7 +15,8 @@
             {{ end }}
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <div>当前用户:<a class="navbar-text ml-1 mr-3" href="{{ urlfor `UserController.Password` }}" >{{ .user.Name }}</a></div>
+            <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" id="xsrf_modify_passwd"/>
+            <div>当前用户:<a class="navbar-text ml-1 mr-3" href="javascript:void(0);" id="modify-passwd-btn">{{ .user.Name }}</a></div>
             <a class="btn btn-outline-success my-2 my-sm-0" href="{{ urlfor `AuthController.Logout` }}">退出</a>
         </form>
     </div>

@@ -47,17 +47,24 @@
 
     $(".modify-user-btn").on("click", function () {
         var pk = $(this).data("pk");
-        // console.log(pk);
-        $.get("{{ urlfor `UserController.Modify`}}", {id:pk}, function (response) {
+
+        $.get("{{ urlfor `UserController.Modify`}}", {id: pk}, function (response) {
 
             switch (response["code"]) {
                 case 200:
                     var input_form = $("#modify_user_form");
                     $.each(response["result"], function (k,v) {
+                        if (k == "sex"){
+                            if (v){
+                                $("#gentleman2").prop("checked", true)
+                            }else {
+                                $("#lady2").prop("checked", true)
+                            }
+                        }
                         input_form.find("[name='"+k+"']").val(v);
-                        // console.log(k,v)
+                        console.log(k,v)
                     });
-                    $("#modal-modify").modal("show");
+                    $("#modal-modify-user").modal("show");
                     break;
                 default:
                     alert(response["text"]);
@@ -65,7 +72,8 @@
             }
 
         });
-        $(".save-btn-modify").on("click", function () {
+
+        $(".save-modify-user").on("click", function () {
             var form = $("#modify_user_form").serializeArray();
             console.log(form);
             $.post("{{urlfor `UserController.Modify`}}", form, function (response) {
@@ -73,7 +81,7 @@
                 switch (response["code"]) {
                     case 200:
                         alert(response["text"]);
-                        $("#modal-modify").modal("hide");
+                        $("#modal-modify-user").modal("hide");
                         window.location.reload();
                         break;
                     case 400:
@@ -98,18 +106,17 @@
     });
 
     // 删除
-
     $(".del-user-btn").on("click", function () {
 
         var pk = $(this).data("pk");
-        var xsrf_del = $("#xsrf_del").val();
-        $("#modal-del").modal("show");
+        var xsrf_passwd = $("#xsrf_passwd").val();
+        // $("#modal-del").modal("show");
 
         if (confirm("确认删除？")==true){
-        $.post("{{ urlfor `UserController.Delete` }}", {id:pk, _xsrf:xsrf_del}, function (response) {
+        $.post("{{ urlfor `UserController.Delete` }}", {id:pk, _xsrf:xsrf_passwd}, function (response) {
             switch (response["code"]) {
                 case 200:
-                    // alert(response["text"]);
+                    alert(response["text"]);
                     window.location.reload();
                     break;
                 default:
@@ -123,7 +130,59 @@
         }
 
 
+    });
+
+    // 重置密码
+    $(".reset-passwd-btn").on("click", function () {
+
+        var pk = $(this).data("pk");
+        var xsrf_del = $("#xsrf_del").val();
+
+        if (confirm("确认重置？")==true){
+            $.post("{{ urlfor `UserController.ResetPassword` }}", {id:pk, _xsrf:xsrf_del}, function (response) {
+                switch (response["code"]) {
+                    case 200:
+                        alert("重置密码成功！\n新密码: " + response["result"]+"\n");
+                        window.location.reload();
+                        break;
+                    default:
+                        alert(response["text"]);
+                        break;
+                }
+
+            })
+        }else {
+            alert("放弃重置")
+        }
+
+    });
+
+    // 修改密码
+    $("#modify-passwd-btn").on("click", function () {
+        var id = $(this).data("pk");
+        var xsrf_modify_passwd = $("#xsrf_modify_passwd").val();
+        var form = $("#modify-passwd-form").serializeArray();
+
+        $("#modal-modify-passwd").modal("show");
+
+        $.post("{{ urlfor `UserController.Password` }}", {id:id}, {_xsrf:xsrf_modify_passwd}, function (response) {
+
+            switch (response["code"]) {
+                case 200:
+                    alert(response["text"]);
+                    $("#modal-modify-passwd").modal("hide");
+
+                    window.location.reload();
+                    break;
+                default:
+                    alert(response["text"]);
+                    break;
+            }
+
+
+
+    });
+
+
     })
-
-
 </script>

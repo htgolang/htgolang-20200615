@@ -16,3 +16,7 @@
 3. 修改app.conf(主要为数据库)
 4. todolist.exe -init 初始化
 5. todolist.exe 启动web服务
+
+
+问题1：修改用户回显不正常
+问题2：修改密码时，显示不正常

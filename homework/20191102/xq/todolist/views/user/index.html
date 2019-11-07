@@ -11,6 +11,7 @@
             <tr>
                 <th>姓名</th>
                 <th>生日</th>
+                <th>性别</th>
                 <th>电话</th>
                 <th>住址</th>
                 <th>备注</th>
@@ -22,16 +23,17 @@
             <tr>
                 <td>{{ .Name }}</td>
                 <td>{{ if .Birthday }}{{ dateformat .Birthday "2006-01-02" }}{{ end }}</td>
+                <td>{{ if .Sex }}男{{ else }}女{{ end }}</td>
                 <td>{{ .Tel }}</td>
                 <td>{{ .Addr }}</td>
                 <td>{{ .Desc}}</td>
                 <td>
-                    <a class="btn btn-warning btn-sm" href="{{ urlfor `UserController.Modify` }}?id={{ .Id }}">修改</a>
+                    <a class="btn btn-warning btn-sm modify-user-btn" href="javascript:void(0);" data-pk="{{ .Id }}">修改</a>
                     {{ if ne .Id $.user.Id }}
-                    <a class="btn btn-danger btn-sm"href="{{ urlfor `UserController.Delete` }}?id={{ .Id }}"> 删除</a>
+                    <a class="btn btn-danger btn-sm del-user-btn" href="javascript:void(0);" data-pk="{{ .Id }}"> 删除</a>
                     {{ end }}
                     {{ if and $.user.IsSuper (ne .Id $.user.Id) }}
-                    <a class="btn btn-secondary btn-sm"href="{{ urlfor `UserController.ResetPassword` }}?id={{ .Id }}"> 重置密码</a>
+                    <a class="btn btn-secondary btn-sm reset-passwd-btn" href="javascript:void(0);" data-pk="{{ .Id }}"> 重置密码</a>
                     {{ end }}
                 </td>
             </tr>
@@ -121,4 +123,105 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modal-modify-user">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">修改用户</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="modify_user_form">
+
+                    <input type="hidden" name="id" value="" />
+                    <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" />
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">用户名:</label>
+                        <div class="col-9">
+                            <input type="text" name="name" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">性别:</div>
+                        <div class="col-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="gentleman2" name="sex" value="1">
+                                <label class="form-check-label" for="gentleman2">男</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="lady2" name="sex" value="0">
+                                <label class="form-check-label" for="lady2">女</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">出生日期:</label>
+                        <div class="col-9">
+                            <input type="date" name="birthday" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">电话:</label>
+                        <div class="col-9">
+                            <input type="text" name="tel" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">住址:</label>
+                        <div class="col-9">
+                            <input type="text" name="addr" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">备注:</label>
+                        <div class="col-9">
+                            <input type="text" name="desc" class="form-control" value="" />
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary save-modify-user">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modal-modify-passwd">
+    <form id="modify-passwd-form">
+
+        <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" id="xsrf_passwd"/>
+        <div class="form-group row">
+            <label class="col-form-label col-3">旧密码:</label>
+            <div class="col-9">
+                <input type="password" class="form-control" name="oldPassword" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-3">新密码:</label>
+            <div class="col-9">
+                <input type="password" class="form-control" name="newPassword" />
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-3">再次输入密码:</label>
+            <div class="col-9">
+                <input type="password" class="form-control" name="passwordVerify" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12">
+                <input type="submit" class="btn btn-primary float-right" name="修改" />
+            </div>
+        </div>
+    </form>
+
 </div>
