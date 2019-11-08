@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>{{ block "title" . }} Todolist {{ end }}</title>
+    {{ assets_css "/static/plugins/bootstrap-4.3.1/css/bootstrap.min.css"}}
+    {{ assets_css "/static/plugins/DataTables-1.10.15/media/css/jquery.dataTables.min.css"}}
+    {{ assets_css "/static/plugins/DataTables-1.10.15/media/css/dataTables.bootstrap4.min.css"}}
+    {{ .LayoutStyles }}
+</head>
+<body>
+{{ template "layout/nav.html" . }}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-3">
+            {{ if .flash.success }}
+                <div class="alert alert-success" role="alert">
+                    {{ .flash.success }}
+                </div>
+            {{ end }}
+            {{ if .flash.warning }}
+                <div class="alert alert-warning" role="alert">
+                    {{ .flash.warning }}
+                </div>
+            {{ end }}
+            {{ if .flash.error }}
+                <div class="alert alert-error" role="alert">
+                    {{ .flash.error }}
+                </div>
+            {{ end }}
+            {{ .LayoutContent }}
+        </div>
+    </div>
+</div>
+{{ assets_js "/static/plugins/jquery-3.4.1.min.js" }}
+{{ assets_js "/static/plugins/popper.js-1.16.0/dist/umd/popper.min.js" }}
+{{ assets_js "/static/plugins/bootstrap-4.3.1/js/bootstrap.min.js" }}
+{{ assets_js "/static/plugins/DataTables-1.10.15/media/js/jquery.dataTables.min.js" }}
+{{ assets_js "/static/plugins/DataTables-1.10.15/media/js/dataTables.bootstrap4.js" }}
+{{ .LayoutScripts }}
+</body>
+</html>
+
+
+

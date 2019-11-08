@@ -1,0 +1,115 @@
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+    jQuery("#taskTable").DataTable({
+        language: {
+            url: "/static/json/datatables.i18n.zh-CN.json"
+        }
+    });
+
+    jQuery(".btn-cteate").on("click", function() {
+        jQuery("#modal-create").modal("show");
+    });
+
+    jQuery(".btn-save").on("click", function () {
+        var datas = jQuery(".form-create").serializeArray();
+        jQuery.post("{{ urlfor `TaskController.Create` }}", datas, function(response) {
+                console.log(response);
+                switch (response["code"]) {
+                    case 200:
+                        alert(response["text"]);
+                        jQuery("#modal-create").modal("hide");
+                        window.location.reload();
+                        break;
+                    case 400:
+                        var errors = [];
+                        jQuery.each(response["result"], function (index, error) {
+                            errors.push(error["Message"])
+                        });
+                        if (!errors) {
+                            errors.push(response["text"]);
+                        }
+                        alert(errors.join("\n"));
+                        break;
+                    default:
+                        alert(response["text"]);
+                        break;
+                }
+            }, "json")
+    });
+
+    jQuery(".modify-task-btn").on("click", function () {
+        var pk = jQuery(this).data("pk");
+        jQuery.get("{{ urlfor `TaskController.Modify`}}", {id:pk}, function (response) {
+            switch (response["code"]) {
+                case 200:
+                    var form = jQuery("#modify_task_form")
+                    jQuery.each(response["result"], function (k, v) {
+                        form.find("[name='" + k + "']").val(v);
+                    });
+                    jQuery("#modal-modify").modal("show");
+                    break;
+                default:
+                    alert(response["text"]);
+                    break;
+            }
+
+        },"json");
+
+        jQuery(".save-btn-modify").on("click", function() {
+            var form = $("#modify_task_form").serializeArray();
+            console.log(form);
+            jQuery.post("{{urlfor `TaskController.Modify`}}", form, function (response) {
+                // console.log(response)
+                switch (response["code"]) {
+                    case 200:
+                        alert(response["text"]);
+                        $("#modal-modify").modal("hide");
+                        window.location.reload();
+                        break;
+                    case 400:
+                        var errors = [];
+                        $.each(response["result"], function (index, error) {
+                            errors.push(error["Message"]);
+
+                        });
+                        if (!errors) {
+                            errors.push(respone["text"]);
+                        }
+                        alert(errors.join("\n"));
+                        break;
+                    default: alert(response["text"]);break;
+                }
+            }, "json");
+        });
+    });
+
+    jQuery(".del-task-btn").on("click", function() {
+        var pk = $(this).data("pk");
+        var xsrf_del = $("#xsrf_del").val();
+        jQuery("#modal-del").modal("show");
+
+        if (confirm("确认删除？")==true){
+            jQuery.post("{{ urlfor `TaskController.Delete` }}", {id:pk, _xsrf:xsrf_del}, function (response) {
+            switch (response["code"]) {
+                case 200:
+                    // alert(response["text"]);
+                    window.location.reload();
+                    break;
+                default:
+                    alert(response["text"]);
+                    break;
+            }
+        })
+        }else {
+            alert("放弃删除")
+        }
+    })
+
+    jQuery(".btn-edit2").on("click", function () {
+        var pk = jQuery(this).data("pk");
+        jQuery("#modal-modify2").find("div.modal-body").load("{{ urlfor `TaskController.Modify` }}?id=" + pk, function () {
+            jQuery("#modal-modify2").modal("show");
+        });
+    });
+    });
+</script>

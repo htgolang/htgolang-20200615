@@ -1,0 +1,155 @@
+<div>
+    <a class="btn btn-link btn-cteate" href="javascript:void(0);">添加</a>
+</div>
+<div class="mt-3">
+    <table class="table table-bordered table-striped table-hover table-sm" id="taskTable">
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>状态</th>
+            <th>进度</th>
+            <th>责任人</th>
+            <th>创建人</th>
+            <th>描述</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {{ range .tasks }}
+            <tr>
+                <td>{{ .Name }}</td>
+                <td>{{ .StatusText }}</td>
+                <td>{{ .Progress }} </td>
+                <td>{{ .Worker }}</td>
+                <th>{{ .CreateUserName }}</th>
+                <td>{{ .Desc }}</td>
+                <td>
+                    <a class="btn btn-warning btn-sm modify-task-btn" data-pk="{{ .Id }}" href="javascript:void(0);">修改</a>
+                    <a class="btn btn-warning btn-sm btn-edit2" data-pk="{{ .Id }}" href="javascript:void(0);">修改2</a>
+                    <a class="btn btn-danger btn-sm del-task-btn" data-pk="{{ .Id }}" href="javascript:void(0);"> 删除</a>
+                </td>
+            </tr>
+        {{ end }}
+        </tbody>
+    </table>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modal-create">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">新建任务</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-create">
+                    <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" />
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">任务名:</label>
+                        <div class="col-9">
+                            <input type="text" name="name" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">执行者:</label>
+                        <div class="col-9">
+                            <input type="text" name="worker" class="form-control"  value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">描述:</label>
+                        <div class="col-9">
+                            <input type="text" name="desc" class="form-control"  value="" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary btn-save">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modal-modify">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">修改任务</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-modify" method="POST" id="modify_task_form">
+                    <input type="hidden" name="id" value="{{ .form.Id }}" />
+                    <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" />
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">任务名:</label>
+                        <div class="col-9">
+                            <input type="text" name="name" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">状态:</label>
+                        <div class="col-9">
+                            <select name="status" class="form-control">
+                                {{ range $k, $v := .statusTexts }}
+                                    <option value="{{ $k }}">{{ $v }}</option>
+                                {{ end }}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">进度:</label>
+                        <div class="col-9">
+                            <input type="range" class="form-control-range" min="0" max="100" name="progress"
+                                   value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">执行者:</label>
+                        <div class="col-9">
+                            <input type="text" name="worker" class="form-control" value="" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">描述:</label>
+                        <div class="col-9">
+                            <input type="text" name="desc" class="form-control" value="" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary save-btn-modify">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal-modify2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">修改任务</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary btn-modify">修改</button>
+            </div>
+        </div>
+    </div>
+</div>
