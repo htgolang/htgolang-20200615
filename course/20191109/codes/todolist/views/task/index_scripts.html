@@ -1,0 +1,212 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#taskTable").DataTable({
+        dom: '<"row" <"col-5" l><"col-6" f><"#buttons.col-1">>tip',
+        serverSide: true,
+        language: {
+            url: "/static/json/datatables.i18n.zh-CN.json"
+        },
+        ajax: {
+            url: '{{ urlfor `TaskController.List` }}',
+            dataSrc: 'result',
+            data: function(data) {
+                return {
+                    draw : data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q : data.search.value,
+                    orderBy : data.columns[data.order[0].column].name,
+                    orderDir : data.order[0].dir,
+                };
+            }
+        },
+        columns: [
+            {
+                name: "id",
+                data:function(row, type, set, meta) {
+                    return htmlEncode(row['id']);
+                }
+            },
+            {
+                name: "name",
+                data:function(row, type, set, meta) {
+                    return htmlEncode(row['name']);
+                }
+            },
+            {
+                name: "status",
+                data:function(row, type, set, meta) {
+                    return htmlEncode(row['status_text']);
+                }
+            },
+            {
+                name: "progress",
+                data:function(row, type, set, meta) {
+                    return htmlEncode(row['progress']) + "%";
+                }
+            },
+            {
+                name: "worker",
+                data:function(row, type, set, meta) {
+                    return htmlEncode(row['worker']);
+                }
+            },
+            {
+                name : "create_user",
+                data:function(row, type, set, meta) {
+                    if(row['create_user_object']) {
+                        return htmlEncode(row['create_user_object']["name"]);
+                    }
+                    return "用户已删除[" + row['create_user']  + "]";
+                },
+                orderable: false
+            },
+            {
+                name : "desc",
+                data:function(row, type, set, meta) {
+                    return htmlEncode(row['desc']);
+                },
+                orderable: false
+            },
+            {
+                data: function(row, type, set, meta) {
+                    var buttons = ' <a data-toggle="tooltip" data-placement="top" title="编辑" class="btn btn-warning btn-sm btn-edit" data-pk="' + row['id'] + '" href="javascript:void(0);">修改</a>' +
+                                    ' <a data-toggle="tooltip" data-placement="top" title="编辑" class="btn btn-warning btn-sm btn-edit2" data-pk="' + row['id'] + '" href="javascript:void(0);">修改2</a>' +
+                                    ' <a data-toggle="tooltip" data-placement="top" title="删除" class="btn btn-danger btn-sm btn-delete" data-pk="' + row['id'] + '" href="javascript:void(0);"> 删除</a>';
+                    return buttons;
+                },
+                orderable: false
+            }
+        ]
+    });
+
+    table.on("draw", function() {
+        if(!jQuery("#buttons").attr("inited")) {
+            jQuery("#buttons").attr("inited", "inited").html('<a data-toggle="tooltip" data-placement="top" title="新增" class="btn btn-primary btn-sm btn-block btn-create" href="javascript:void(0);">添加</a>');
+        }
+        jQuery('a[data-toggle="tooltip"]').tooltip();
+    });
+
+    jQuery(document).on("click", ".btn-create", function() {
+        // jQuery("#modal-create").modal("show");
+        jQuery("#modal-create").modal({
+            backdrop: 'static',
+            keyboard: false,
+            show: true
+        });
+    });
+
+    jQuery(".btn-save").on("click", function() {
+        var datas = jQuery(".form-create").serializeArray();
+        jQuery.post("{{ urlfor `TaskController.Create` }}", datas, function(response) {
+            switch(response["code"]) {
+                case 200:
+                    jQuery.notify({
+                        message: response["text"]
+                    },{
+                        type: 'success'
+                    });
+
+                    jQuery("#modal-create").modal("hide");
+                    // window.location.reload();
+                    table.ajax.reload(null, false);
+                    break;
+                case 400:
+                    var errors = [];
+                    jQuery.each(response["result"], function(index, error) {
+                        errors.push(error["Message"])
+                    });
+                    if (!errors) {
+                        errors.push(response["text"]);
+                    }
+                    swal({
+                        title: "",
+                        text: errors.join("\n"),
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "确认",
+                        cancelButtonText: "取消",
+                        closeOnConfirm: true,
+                        closeOnCancel: false
+                    });
+
+                    break;
+                default:
+                    swal({
+                        title: "",
+                        text: response['text'],
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "确认",
+                        cancelButtonText: "取消",
+                        closeOnConfirm: true,
+                        closeOnCancel: false
+                    });
+                    break;
+            }
+        }, "json");
+    });
+
+    jQuery("table").on("click", ".btn-edit", function() {
+        var pk = jQuery(this).data("pk");
+        jQuery.get(
+            "{{ urlfor `TaskController.Detail` }}",
+            {id: pk},
+            function(response) {
+                switch(response["code"]) {
+                    case 200:
+                        var form = jQuery("form.form-modify");
+                        jQuery.each(response["result"], function(k, v){
+                            form.find("[name='" + k + "']").val(v);
+                        });
+                        jQuery("#modal-modify").modal("show");
+                        break;
+                    default:
+                        alert(response["text"]);
+                        break;
+                }
+            },
+            "json");
+    });
+
+    jQuery("table").on("click", ".btn-edit2", function() {
+        var pk = jQuery(this).data("pk");
+        jQuery("#modal-modify2").find("div.modal-body").load("{{ urlfor `TaskController.Modify` }}?id=" + pk, function() {
+            jQuery("#modal-modify2").modal("show");
+        });
+    });
+
+    jQuery("table").on("click", ".btn-delete", function() {
+        var pk = jQuery(this).data("pk");
+        swal({
+            title: "确认删除?",
+            text: "",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "确认",
+            cancelButtonText: "取消",
+            closeOnConfirm: false,
+            closeOnCancel: true
+        },
+        function(){
+            ajax("post", "{{ urlfor `TaskController.Delete` }}", {
+                id: pk,
+                _xsrf: jQuery.base64.atob(jQuery.cookie("_xsrf").split("|")[0]),
+            }, function() {
+                jQuery.notify({
+                    message: '删除成功'
+                },{
+                    type: 'success'
+                });
+                swal.close();
+                // window.location.reload();
+                table.ajax.reload(null, false);
+            });
+        });
+    });
+
+});
+</script>

@@ -1,0 +1,39 @@
+<form action="{{ urlfor `TaskController.Modify` }}" method="POST">
+    <input type="hidden" name="id" value="{{ .form.Id }}" />
+    <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" />
+    <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" />
+    <div class="form-group row">
+        <label class="col-form-label col-3">任务名:</label>
+        <div class="col-9">
+            <input type="text" name="name" class="form-control" value="{{ .form.Name }}" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-form-label col-3">状态:</label>
+        <div class="col-9">
+            <select name="status" class="form-control">
+                {{ range $k, $v := .statusTexts }}
+                    <option value="{{ $k }}" {{ if eq $.form.Status $k }}selected="selected"{{ end }}>{{ $v }}</option>
+                {{ end }}
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+            <label class="col-form-label col-3">进度:</label>
+            <div class="col-9">
+                <input type="range" class="form-control-range" min="0" max="100" name="progress" value="{{ .form.Progress }}" />
+            </div>
+        </div>
+    <div class="form-group row">
+        <label class="col-form-label col-3">执行者:</label>
+        <div class="col-9">
+            <input type="text" name="worker" class="form-control" value="{{ .form.Worker }}" />
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-form-label col-3">描述:</label>
+        <div class="col-9">
+            <input type="text" name="desc" class="form-control" value="{{ .form.Desc }}" />
+        </div>
+    </div>
+</form>

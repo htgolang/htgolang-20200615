@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <a class="navbar-brand" href="javascript:void(0);">TodoList</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class='nav-item  {{ if eq .nav "task" }}active{{ end }}'>
+                <a class="nav-link" href="{{ urlfor `TaskController.Index` }}">任务管理</a>
+            </li>
+            {{ if .user.IsSuper }}
+            <li class='nav-item {{ if eq .nav "user" }}active{{ end }}'>
+                <a class="nav-link" href="{{ urlfor `UserController.Index` }}">用户管理</a>
+            </li>
+            {{ end }}
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <div>当前用户:<a class="navbar-text ml-1 mr-3" href="{{ urlfor `UserController.Password` }}" >{{ .user.Name }}</a></div>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="{{ urlfor `AuthController.Logout` }}">退出</a>
+        </form>
+    </div>
+</nav>
