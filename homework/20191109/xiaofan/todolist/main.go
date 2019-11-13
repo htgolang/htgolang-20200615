@@ -83,7 +83,6 @@ func main() {
 		}
 	default:
 		beego.Run()
-
 	}
 
 }
