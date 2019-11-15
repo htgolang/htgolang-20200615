@@ -83,8 +83,8 @@
                     data: function (row, type, set, meta) {
                         var buttons = '' +
                             '<a data-toggle="tooltip" data-placement="top" class="btn btn-warning btn-sm modify-user-btn" href="javascript:void(0);" data-pk="' + row['id'] + '">修改</a>' +
-                            '<a data-toggle="tooltip" data-placement="top" class="btn btn-danger btn-sm del-user-btn" href="javascript:void(0);" data-pk="' + row['id'] + '"> 删除</a>';
-
+                            '<a data-toggle="tooltip" data-placement="top" class="btn btn-danger btn-sm del-user-btn" href="javascript:void(0);" data-pk="' + row['id'] + '"> 删除</a>' +
+                            '<a data-toggle="tooltip" data-placement="top" class="btn btn-secondary btn-sm reset-passwd-btn" data-pk="' + row['id'] + '" href="javascript:void(0)">重置密码</a>';
                         return buttons
 
                     },
@@ -272,7 +272,7 @@
 
 
                 var pk = $(this).data("pk");
-                var xsrf_passwd = $("#xsrf_passwd").val();
+                // var xsrf_passwd = $("#xsrf_passwd").val();
 
                 // if (confirm("确认删除？")){
 
@@ -308,63 +308,92 @@
 
             });
 
-        {{/*// 重置密码*/}}
-        {{/*$(".reset-passwd-btn").on("click", function () {*/}}
+        // 重置密码
+        $("table").on("click",".reset-passwd-btn", function () {
 
-        {{/*    var pk = $(this).data("pk");*/}}
-        {{/*    var xsrf_del = $("#xsrf_del").val();*/}}
+            var pk = $(this).data("pk");
+            console.log(pk);
+            // var xsrf_del = $("#xsrf_del").val();
 
-        {{/*    if (confirm("确认重置？")) {*/}}
-        {{/*        $.post("{{ urlfor `UserController.ResetPassword` }}", {*/}}
-        {{/*            id: pk,*/}}
-        {{/*            _xsrf: xsrf_del*/}}
-        {{/*        }, function (response) {*/}}
-        {{/*            switch (response["code"]) {*/}}
-        {{/*                case 200:*/}}
-        {{/*                    alert("重置密码成功！\n新密码: " + response["result"] + "\n");*/}}
-        {{/*                    window.location.reload();*/}}
-        {{/*                    break;*/}}
-        {{/*                default:*/}}
-        {{/*                    alert(response["text"]);*/}}
-        {{/*                    break;*/}}
-        {{/*            }*/}}
-
-        {{/*        }, "json")*/}}
-        {{/*    } else {*/}}
-        {{/*        return*/}}
-        {{/*    }*/}}
-
-        {{/*});*/}}
-
-        {{/*// 修改密码*/}}
-        {{/*$("#modify-passwd-btn").on("click", function () {*/}}
-        {{/*    var id = $(this).data("pk");*/}}
-        {{/*    var xsrf_modify_passwd = $("#xsrf_modify_passwd").val();*/}}
-        {{/*    var form = $("#modify-passwd-form").serializeArray();*/}}
-
-
-        {{/*    $.post("{{ urlfor `UserController.Password` }}", {*/}}
-        {{/*        id: id,*/}}
-        {{/*        _xsrf: xsrf_modify_passwd*/}}
-        {{/*    }, function (response) {*/}}
-
-        {{/*        switch (response["code"]) {*/}}
-        {{/*            case 200:*/}}
-        {{/*                alert(response["text"]);*/}}
-        {{/*                $("#modal-modify-passwd").modal("hide");*/}}
-
-        {{/*                window.location.reload();*/}}
-        {{/*                break;*/}}
-        {{/*            default:*/}}
-        {{/*                alert(response["text"]);*/}}
-        {{/*                break;*/}}
-        {{/*        }*/}}
+            // if (confirm("确认重置？")) {
+            swal({
+                    title: "确认重置密码吗?",
+                    text: "",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确认",
+                    cancelButtonText: "取消",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function () {
+                $.post("{{ urlfor `UserController.ResetPassword` }}", {
+                    id: pk,
+                    _xsrf: jQuery.base64.atob(jQuery.cookie("_xsrf").split("|")[0])
+                }, function (response) {
+                    switch (response["code"]) {
+                        case 200:
+                            // alert("重置密码成功！\n新密码: " + response["result"] + "\n");
+                            jQuery.notify({
+                                message: response["text"]
+                            }, {
+                                type: 'success'
+                            });
+                            // window.location.reload();
+                            swal.close();
+                            table.ajax.reload(null, false);
 
 
-        {{/*    }, "json");*/}}
+                            break;
+                        default:
+                            alert(response["text"]);
+                            break;
+                    }
+
+                })
+            })
+
+        });
+
+        // 修改密码
+        $("#modify-passwd-btn").on("click", function () {
+            var id = $(this).data("pk");
+            // var xsrf_modify_passwd = $("#xsrf_modify_passwd").val();
+            var form = $("#modify-passwd-form").serializeArray();
 
 
-        {{/*});*/}}
+            $.post("{{ urlfor `UserController.Password` }}", {
+                id: id,
+                _xsrf: jQuery.base64.atob(jQuery.cookie("_xsrf").split("|")[0])
+                // _xsrf: xsrf_modify_passwd
+            }, function (response) {
+
+                switch (response["code"]) {
+                    case 200:
+                        // alert(response["text"]);
+
+                        jQuery.notify({
+                            message: response["text"]
+                        }, {
+                            type: 'success'
+                        });
+
+                        $("#modal-modify-passwd").modal("hide");
+                        table.ajax.reload(null, false);
+
+                        // window.location.reload();
+                        break;
+                    default:
+                        alert(response["text"]);
+                        break;
+                }
+
+
+            }, "json");
+
+
+        });
     });
 
 
