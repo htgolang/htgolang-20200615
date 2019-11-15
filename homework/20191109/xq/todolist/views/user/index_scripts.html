@@ -1,0 +1,371 @@
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var table = $("#user_table").DataTable({
+            dom: '<"row" <"col-5" l><"col-6" f><"#addbuttons.col-1">>tip',
+            serverSide: true,
+
+            language: {
+                url: '/static/json/datatables.i18n.zh-CN.json'
+            },
+            ajax: {
+                url: '{{ urlfor `UserController.List` }}',
+                dataSrc: 'result',
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                        orderBy: data.columns[data.order[0].column].name,
+                        orderDir: data.order[0].dir,
+                    };
+                }
+            },
+            columns: [
+
+                {
+                    name: "id",
+                    data: function (row, type, set, meta) {
+                        return htmlEncode(row['id'])
+                    }
+                },
+                {
+                    name: "name",
+                    data: function (row, type, set, meta) {
+                        return htmlEncode(row['name'])
+                    }
+                },
+                //
+                {
+                    name: "birthday",
+                    data: function (row, type, set, meta) {
+                        return htmlEncode(row['birthday'])
+                    },
+                    orderable: false
+
+                },
+                {
+                    name: "sex",
+                    data: function (row, type, set, meta) {
+                        return htmlEncode(row['sex'])
+                    },
+                    orderable: false
+
+                },
+                {
+                    name: "tel",
+                    data: function (row, type, set, meta) {
+                        return htmlEncode(row['tel'])
+                    },
+                    orderable: false
+
+                },
+
+                {
+                    name: "addr",
+                    data: function (row, type, set, meta) {
+                        return htmlEncode(row['addr'])
+                    },
+                    orderable: false
+
+                },
+
+                {
+                    name: "desc",
+                    data: function (row, type, set, meta) {
+                        return htmlEncode(row['desc'])
+                    },
+                    orderable: false,
+                },
+                {
+                    data: function (row, type, set, meta) {
+                        var buttons = '' +
+                            '<a data-toggle="tooltip" data-placement="top" class="btn btn-warning btn-sm modify-user-btn" href="javascript:void(0);" data-pk="' + row['id'] + '">修改</a>' +
+                            '<a data-toggle="tooltip" data-placement="top" class="btn btn-danger btn-sm del-user-btn" href="javascript:void(0);" data-pk="' + row['id'] + '"> 删除</a>';
+
+                        return buttons
+
+                    },
+                    orderable: false
+                },
+
+
+            ],
+
+
+        });
+
+        table.on("draw", function () {
+            if (!$("#addbuttons").attr("inited")) {
+                $("#addbuttons").attr("inited", "inited").html('<a data-toggle="tooltip" data-placement="top" class="btn btn-primary btn-sm btn-block" href="javascript:void(0);" id="add_user_btn">添加</a>');
+
+            }
+            $('a[data-toggle="tooltip"]').tooltip();
+        });
+
+        $(document).on("click", "#add_user_btn", function () {
+            $("#modal-create-user").modal({
+                backdrop: 'static',
+                keyboard: false,
+                show: true
+            });
+
+        });
+
+
+        $(".btn-create-user").on("click", function () {
+            var form = $("#add_user_form").serializeArray();
+
+
+            $.post("{{urlfor `UserController.Create`}}", form, function (response) {
+                // console.log(response)
+                switch (response["code"]) {
+                    case 200:
+                        // alert(response["text"]);
+
+                        jQuery.notify({
+                            message: response["text"]
+                        }, {
+                            type: 'success'
+                        });
+
+                        $("#modal-create-user").modal("hide");
+                        // window.location.reload();
+                        table.ajax.reload(null, false);
+
+                        break;
+                    case 400:
+                        var errors = [];
+                        $.each(response["result"], function (index, error) {
+                            errors.push(error["Message"]);
+
+                        });
+                        if (!errors) {
+                            errors.push(respone["text"]);
+                        }
+                        // alert(errors.join("\n"));
+
+                        swal({
+                            title: "",
+                            text: errors.join("\n"),
+                            type: "error",
+                            showCancelButton: false,
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "确认",
+                            cancelButtonText: "取消",
+                            closeOnConfirm: true,
+                            closeOnCancel: false
+                        });
+
+
+                        break;
+                    default:
+                        // alert(response["text"]);
+                        swal({
+                            title: "",
+                            text: errors.join("\n"),
+                            type: "error",
+                            showCancelButton: false,
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "确认",
+                            cancelButtonText: "取消",
+                            closeOnConfirm: true,
+                            closeOnCancel: false
+                        });
+                        break;
+                }
+
+            }, "json");
+
+        });
+
+
+        $("table").on("click", ".modify-user-btn", function () {
+
+
+            var pk = $(this).data("pk");
+
+            $.get("{{ urlfor `UserController.Modify`}}", {id: pk}, function (response) {
+
+                switch (response["code"]) {
+                    case 200:
+                        var input_form = $("#modify_user_form");
+                        $.each(response["result"], function (k, v) {
+                            if (k == "sex") {
+                                if (v) {
+                                    $("#gentleman2").prop("checked", true)
+                                } else {
+                                    $("#lady2").prop("checked", true)
+                                }
+                            }
+                            input_form.find("[name='" + k + "']").val(v);
+                            console.log(k, v)
+                        });
+                        $("#modal-modify-user").modal("show");
+                        break;
+                    default:
+                        alert(response["text"]);
+                        break;
+                }
+
+            });
+
+            $(".save-modify-user").on("click", function () {
+                var form = $("#modify_user_form").serializeArray();
+                console.log(form);
+                $.post("{{urlfor `UserController.Modify`}}", form, function (response) {
+                    // console.log(response)
+                    switch (response["code"]) {
+                        case 200:
+
+                            jQuery.notify(response["text"]);
+
+                            $("#modal-modify-user").modal("hide");
+
+                            table.ajax.reload(null, false);
+
+                            // window.location.reload();
+                            break;
+                        case 400:
+                            var errors = [];
+                            $.each(response["result"], function (index, error) {
+                                errors.push(error["Message"]);
+
+                            });
+                            if (!errors) {
+                                errors.push(respone["text"]);
+                            }
+
+
+                            swal({
+                                title: "",
+                                text: errors.join("<br/>"),
+                                type: "error",
+                                showCancelButton: false,
+                                confirmButtonColor: "#DD6B55",
+                                confirmButtonText: "确认",
+                                cancelButtonText: "取消",
+                                closeOnConfirm: true,
+                                closeOnCancel: false
+                            });
+                            break;
+
+
+                            break;
+                        default:
+                            alert(response["text"]);
+                            break;
+                    }
+
+                }, "json");
+
+
+            })
+
+        });
+
+        // 删除
+        // $(".del-user-btn").on("click", function () {
+            $("table").on("click", ".del-user-btn", function () {
+
+
+                var pk = $(this).data("pk");
+                var xsrf_passwd = $("#xsrf_passwd").val();
+
+                // if (confirm("确认删除？")){
+
+                swal({
+                        title: "确认删除吗?",
+                        text: "",
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "确认",
+                        cancelButtonText: "取消",
+                        closeOnConfirm: false,
+                        closeOnCancel: true
+                    },
+                    function () {
+                        $.post("{{ urlfor `UserController.Delete` }}", {
+                                id: pk,
+                                _xsrf: jQuery.base64.atob(jQuery.cookie("_xsrf").split("|")[0])
+                            },
+                            function () {
+                                jQuery.notify({
+                                    message: "删除成功"
+                                }, {
+                                    type: 'success'
+                                });
+
+                                swal.close();
+                                table.ajax.reload(null, false);
+
+                            })
+
+                    });
+
+            });
+
+        {{/*// 重置密码*/}}
+        {{/*$(".reset-passwd-btn").on("click", function () {*/}}
+
+        {{/*    var pk = $(this).data("pk");*/}}
+        {{/*    var xsrf_del = $("#xsrf_del").val();*/}}
+
+        {{/*    if (confirm("确认重置？")) {*/}}
+        {{/*        $.post("{{ urlfor `UserController.ResetPassword` }}", {*/}}
+        {{/*            id: pk,*/}}
+        {{/*            _xsrf: xsrf_del*/}}
+        {{/*        }, function (response) {*/}}
+        {{/*            switch (response["code"]) {*/}}
+        {{/*                case 200:*/}}
+        {{/*                    alert("重置密码成功！\n新密码: " + response["result"] + "\n");*/}}
+        {{/*                    window.location.reload();*/}}
+        {{/*                    break;*/}}
+        {{/*                default:*/}}
+        {{/*                    alert(response["text"]);*/}}
+        {{/*                    break;*/}}
+        {{/*            }*/}}
+
+        {{/*        }, "json")*/}}
+        {{/*    } else {*/}}
+        {{/*        return*/}}
+        {{/*    }*/}}
+
+        {{/*});*/}}
+
+        {{/*// 修改密码*/}}
+        {{/*$("#modify-passwd-btn").on("click", function () {*/}}
+        {{/*    var id = $(this).data("pk");*/}}
+        {{/*    var xsrf_modify_passwd = $("#xsrf_modify_passwd").val();*/}}
+        {{/*    var form = $("#modify-passwd-form").serializeArray();*/}}
+
+
+        {{/*    $.post("{{ urlfor `UserController.Password` }}", {*/}}
+        {{/*        id: id,*/}}
+        {{/*        _xsrf: xsrf_modify_passwd*/}}
+        {{/*    }, function (response) {*/}}
+
+        {{/*        switch (response["code"]) {*/}}
+        {{/*            case 200:*/}}
+        {{/*                alert(response["text"]);*/}}
+        {{/*                $("#modal-modify-passwd").modal("hide");*/}}
+
+        {{/*                window.location.reload();*/}}
+        {{/*                break;*/}}
+        {{/*            default:*/}}
+        {{/*                alert(response["text"]);*/}}
+        {{/*                break;*/}}
+        {{/*        }*/}}
+
+
+        {{/*    }, "json");*/}}
+
+
+        {{/*});*/}}
+    });
+
+
+</script>
