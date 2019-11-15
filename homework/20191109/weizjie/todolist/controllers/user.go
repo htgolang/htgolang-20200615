@@ -255,9 +255,7 @@ func (c *UserController) Delete() {
 	} else {
 		json["text"] = err.Error()
 	}
-
 	c.ServeJSON()
-
 }
 
 func (c *UserController) Password() {

@@ -30,7 +30,6 @@ func (c *AuthController) Prepare() {
 				}
 			}
 		}
-
 	}
 }
 
