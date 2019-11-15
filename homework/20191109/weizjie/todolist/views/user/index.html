@@ -1,0 +1,169 @@
+<input type="hidden" id="_xsrf" value="{{ .xsrf_token }}" />
+<div class="mt-3">
+    <table class="table table-bordered table-striped table-hover table-sm" id="userTable">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>名称</th>
+            <th>生日</th>
+            <th>电话</th>
+            <th>住址</th>
+            <th>备注</th>
+            <th>超级用户</th>
+            <th>创建时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modal-create">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">新建用户</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-create">
+                    <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" />
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">用户名:</label>
+                        <div class="col-9">
+                            <input type="text" name="name" class="form-control" value=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">密码:</label>
+                        <div class="col-9">
+                            <input type="password" class="form-control" name="password"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">再次输入密码:</label>
+                        <div class="col-9">
+                            <input type="password" class="form-control" name="passwordVerify"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-3">性别:</div>
+                        <div class="col-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="gentleman" name="sex"
+                                       value="1" checked="checked">
+                                <label class="form-check-label" for="gentleman">男</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="lady" name="sex"
+                                       value="0">
+                                <label class="form-check-label" for="lady">女</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">出生日期:</label>
+                        <div class="col-9">
+                            <input type="date" name="birthday" class="form-control " value=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">电话:</label>
+                        <div class="col-9">
+                            <input type="text" name="tel" class="form-control" value=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">住址:</label>
+                        <div class="col-9">
+                            <input type="text" name="addr" class="form-control" value=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">备注:</label>
+                        <div class="col-9">
+                            <input type="text" name="desc" class="form-control" value=""/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary btn-save">创建</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="modal-modify">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">修改用户</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form-modify">
+                    <input type="hidden" name="_xsrf" value="{{ .xsrf_token }}" />
+                    <input type="hidden" name="id" value="">
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">用户名:</label>
+                        <div class="col-9">
+                            <input type="text" name="name" class="form-control" value=""/>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-3">性别:</div>
+                        <div class="col-9">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="edit-gentleman" name="sex"
+                                       value="1">
+                                <label class="form-check-label" for="gentleman">男</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="edit-lady" name="sex"
+                                       value="0">
+                                <label class="form-check-label" for="lady">女</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">出生日期:</label>
+                        <div class="col-9">
+                            <input type="date" name="birthday" class="form-control" value=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">电话:</label>
+                        <div class="col-9">
+                            <input type="text" name="tel" class="form-control" value=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">住址:</label>
+                        <div class="col-9">
+                            <input type="text" name="addr" class="form-control" value=""/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-3">备注:</label>
+                        <div class="col-9">
+                            <input type="text" name="desc" class="form-control" value=""/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-warning btn-saveuser-modify">修改</button>
+            </div>
+        </div>
+    </div>
+</div>
