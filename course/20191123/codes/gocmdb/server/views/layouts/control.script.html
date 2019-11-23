@@ -1,0 +1,19 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+    jQuery(document).on("click", ".btn-control", function() {
+        var url = jQuery(this).data("url"),
+            title = jQuery(this).data("title"),
+            pk = jQuery(this).data("pk"),
+            callback = jQuery(this).data("callback");
+
+        if(confirm(title)) {
+            ajaxRequest("POST", url, {pk: pk}, function(response) {
+                if(callback && callback in window && typeof(window[callback]) == "function") {
+                    window[callback](response);
+                }
+            });
+        }
+    });
+});
+</script>
