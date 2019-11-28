@@ -1,0 +1,22 @@
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(document).on("click",".btn-control", function () {
+            var url = $(this).data("url");
+            var title = $(this).data("title");
+            var pk = $(this).data("pk");
+            var callback = $(this).data("callback");
+
+            if(confirm(title)){
+                ajaxRequest("POST", url, {pk:pk}, function (response) {
+                    if(callback && callback in window && typeof(window[callback]) == "function"){
+                        window[callback](response);
+                    }
+                })
+
+            }
+
+        })
+    })
+
+</script>

@@ -1,0 +1,58 @@
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $(document).on("click", ".btn-open-dialog", function () {
+            var title = $(this).data("title");
+            var url = $(this).data("url");
+            var look = $(this).data("look") == "look";
+            console.log(url);
+
+            $(".dialog-content").load(url, function (response) {
+                var dialog = $(".dialog");
+                dialog.find(".dialog-title").text(title);
+
+                if(look){
+                    dialog.find(".btn-dialog-commit").hide();
+                }else {
+                    dialog.find(".btn-dialog-commit").show();
+                }
+
+                dialog.modal({
+                    show: true,
+                    backdrop: "static",
+                    keyboard: false,
+                })
+            })
+
+        });
+
+        $(".btn-dialog-commit").on("click", function () {
+            var dialog = $(".dialog");
+            var form = dialog.find("form");
+            var url = form.data("url");
+            var form_data = form.serializeArray();
+            var callback = form.data("callback");
+
+            console.log(form_data);
+
+            console.log("1 dialog modal commit");
+
+            ajaxRequest("POST", url, form_data, function (response) {
+
+                console.log("4 callback");
+
+                dialog.modal("hide");
+                if (callback && callback in window && typeof(window[callback])=="function"){
+                    window[callback](response);
+
+                }
+
+            })
+
+        });
+
+
+
+    })
+
+</script>

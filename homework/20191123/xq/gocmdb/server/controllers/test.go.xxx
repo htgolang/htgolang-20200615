@@ -1,0 +1,32 @@
+package controllers
+
+import (
+
+	"time"
+	"github.com/xlotz/gocmdb/server/controllers/auth"
+
+)
+type TestController struct {
+	//LoginRequiredController
+	auth.LoginRequiredController
+}
+
+
+func (c *TestController) Test(){
+	c.Data["json"] = map[string]interface{}{"now":time.Now()}
+	c.ServeJSON()
+}
+
+type TestPageController struct{
+
+	LayoutController
+}
+
+func (c *TestPageController) Index(){
+	c.Data["expand"] = "system_management"
+	//c.Data["menu"] = "user_management"
+	c.Data["menu"] = "task_management"
+
+	c.TplName = "test_page/index.html"
+
+}
