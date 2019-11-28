@@ -1,0 +1,147 @@
+<script type="text/javascript">
+
+$(document).ready(function () {
+    var table = $("#usertable").DataTable({
+        dom: '<"row" <"col-6" l><"col-4" f><"#addbuttons.col-1">>t<"row" <"col-6" i><"col-6" p>>',
+        serverSide: true,
+
+
+        ajax:{
+            url: "{{ urlfor `UserController.List`}}",
+            data: function (data) {
+                return {
+
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q: data.search.value,
+                    // orderBy: data.columns[data.order[0].column].name,
+                    // orderDir:data.order[0].dir,
+
+                };
+            },
+            dataSrc: "result"
+        },
+        columns: [
+
+
+            {
+                name:"id",
+                data: function (row, type, set, meta) {
+                    return htmlEncode(row['id']);
+                }
+            },
+
+            {
+                name:"name",
+                data: function (row, type, set, meta) {
+                    return htmlEncode(row['name'])
+                }},
+            {
+                name:"birthday",
+                data: function (row, type, set, meta) {
+                    return htmlEncode(row['birthday'])
+                }},
+
+
+            {
+                name:"gender",
+                data: function (row, type, set, meta) {
+                    if (row['gender'] == 0) {
+                        return htmlEncode("男")
+                    }else {
+                        return htmlEncode("女")
+                    }
+
+                }},
+
+            {
+                name:"tel",
+                data: function (row, type, set, meta) {
+                    return htmlEncode(row['tel'])
+                }},
+
+            {
+                name:"email",
+                data: function (row, type, set, meta) {
+                    return htmlEncode(row['email'])
+                }},
+
+            {
+                name:"addr",
+                data: function (row, type, set, meta) {
+                    return htmlEncode(row['addr'])
+                }},
+
+            {
+                name:"desc",
+                data: function (row, type, set, meta) {
+                    return htmlEncode(row['desc'])
+                }},
+
+            {
+                name:"status",
+                data: function (row, type, set, meta) {
+                    if (row["status"] == 0){
+                        return htmlEncode("正常")
+                    }
+                    return htmlEncode("锁定")
+
+                }},
+
+            {
+
+                data: function (row, type, set, meta) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+
+                    if (row["status"] == 0){
+                        buttons.push('<button class="btn btn-sm btn-secondary btn-control" data-title="确定锁定" data-url="{{ urlfor `UserController.Locl`}}" data-pk=":pk:" data-callback="reload_table">锁定</div>');
+                        buttons.push('<button class="btn btn-sm btn-warning btn-open-dialog" data-title="编辑用户" data-url="{{ urlfor `UserController.Modify`}}?pk=:pk:">修改</div>');
+                        buttons.push('<button class="btn btn-sm btn-info btn-open-dialog" data-title="查看Token" data-url="{{ urlfor `TokenController.Generate`}}?pk=:pk:" data-look="look">Token</div>');
+                    }else {
+                        buttons.push('<button class="btn btn-sm btn-success btn-control" data-title="确定开启" data-url="{{ urlfor `UserController.UnLock`}}" data-pk=":pk:" data-collback="reload_table">开启</div>');
+                    }
+
+
+                    buttons.push('<button class="btn btn-sm btn-danger btn-control" data-title="确定删除" data-url="{{ urlfor `UserController.Delete`}}" data-pk=":pk:" data-callback="reload_table">删除</div>');
+
+
+                    buttons.push("</div>");
+                    return buttons.join("").replace(/:pk:/g, row["id"]);
+
+
+                }},
+            ]
+
+
+    });
+
+    table.on("draw", function () {
+        //只初始化一次
+        if (!$("#addbuttons").attr("initd")) {
+            $("#addbuttons").attr("initd", "initd").html('<button class="btn btn-primary btn-sm btn-block btn-open-dialog" data-url="{{ urlfor `UserController.Create`}}" data-title="新建用户">添加</button>');
+        }
+        // $('a[data-toggle="tooltip"]').tooltip();
+    });
+
+
+    window["reload_table"] = function (response) {
+
+        console.log("6 reload table");
+
+        table.ajax.reload(null, false)
+    };
+
+    $(document).on("click", ".btn-token", function () {
+
+        var pk = $(this).data("pk");
+
+        ajaxRequest("POST", '{{ urlfor `TokenController.Generate`}}', {pk:pk}, function () {
+            $(".dialog-content").load('{{ urlfor `TokenController.Generate`}}?pk=' +pk);
+        })
+    })
+
+});
+
+
+</script>
