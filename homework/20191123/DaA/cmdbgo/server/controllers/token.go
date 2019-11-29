@@ -12,18 +12,31 @@ type TokenController struct {
 
 func (c *TokenController) Generate(){
 	id,_ := c.GetInt("id")
+
+	json := map[string]interface{}{
+		"code": 405,
+		"text": "请求方法错误",
+		"result": nil,
+	}
+
 	if c.Ctx.Input.IsPost(){
 		fmt.Println(id)
 		token := models.DefaultTokenManager.GenerateByUser(models.DefaultUserManager.GetById(id))
-		json := map[string]interface{}{
+		json = map[string]interface{}{
 			"code": 200,
 			"text": "生成token成功",
 			"result": token,
 		}
 		c.Data["json"] = json
 		c.ServeJSON()
-	} else {
-		c.Data["object"] = models.DefaultUserManager.GetById(id)
-		c.TplName = "token/index.html"
 	}
+
+	if c.User.Id == id {
+		c.Data["object"] = models.DefaultUserManager.GetById(id)
+	} else {
+		token := models.Token{AccessKey:"不允许查看",SecrectKey:"",Id:id}
+		c.Data["object"] = token
+	}
+
+	c.TplName = "token/index.html"
 }

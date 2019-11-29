@@ -101,15 +101,6 @@ func (m *UserManager) SetStatusById(id int, status int) error {
 	return err
 }
 
-type Token struct {
-	Id			int			`orm:"type(int);"`
-	AccessKey	string		`orm:"type(varchar);size(1024);default();"`
-	SecrectKey	string		`orm:"type(varchar);size(1024);default();"`
-	User		*User 		`orm:"rel(one)"`
-	CreatedTime *time.Time	`orm:"type(datetime);auto_now_add;"`
-	UpdatedTime *time.Time	`orm:"type(datetime);auto_now;"`
-	DeletedTime *time.Time	`orm:"type(datetime);null;default(null);"`
-}
 
 var DefaultUserManager = NewUserManager()
 

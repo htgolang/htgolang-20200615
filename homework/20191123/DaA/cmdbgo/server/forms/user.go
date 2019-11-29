@@ -125,11 +125,11 @@ func (f *UserModifyForm) Valid(v *validation.Validation) {
 }
 
 type UserSetPasswordForm struct {
-	OldPassword    string `form:"oldPassword,password,旧密码"`
-	NewPassword    string `form:"newPassword,password,新密码"`
-	PasswordVerify string `form:"passwordVerify,password,密码确认"`
+	OldPassword		string `form:"oldPassword,password,旧密码"`
+	NewPassword		string `form:"newPassword,password,新密码"`
+	PasswordVerify	string `form:"passwordVerify,password,密码确认"`
 
-	User *models.User
+	User			*models.User
 }
 
 func (f *UserSetPasswordForm) Valid(v *validation.Validation) {
@@ -138,15 +138,15 @@ func (f *UserSetPasswordForm) Valid(v *validation.Validation) {
 	f.NewPassword = strings.TrimSpace(f.NewPassword)
 	f.PasswordVerify = strings.TrimSpace(f.PasswordVerify)
 
-	fmt.Println(f.OldPassword)
+
 	if !f.User.ValidatePassword(f.OldPassword) {
-		v.SetError("oldPassword","旧密码错误")
+		v.SetError("oldPassword","密码错误")
 	}
+
 
 	v.MinSize(f.NewPassword,6,"newPassword,newPassword").Message("密码最小长度为%d位",6)
 
 	if f.NewPassword != f.PasswordVerify {
 		v.SetError("passwordVerify","两次输入的密码不一致")
 	}
-
 }

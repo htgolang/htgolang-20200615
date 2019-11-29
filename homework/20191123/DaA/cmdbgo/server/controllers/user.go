@@ -150,15 +150,22 @@ func (c *UserController) Modify(){
 func (c *UserController) Delete(){
 	json := map[string]interface{}{
 		"code":   405,
-		"text":   "请求方式错误",
+		"text":   "请求方法错误",
 		"result": nil,
 	}
 
-	if c.Ctx.Input.IsPost() {
-		id,_ := c.GetInt("id")
-		models.DefaultUserManager.DeleteById(id)
-		json["code"], json["text"], json["result"] = 200, "删除成功", nil
+	fmt.Println(c.User)
+	id,_ := c.GetInt("id")
+
+	if c.User.Id != id {
+		if c.Ctx.Input.IsPost() {
+			models.DefaultUserManager.DeleteById(id)
+			json["code"], json["text"], json["result"] = 200, "删除成功", nil
+		}
+	} else {
+		json["code"], json["text"], json["result"] = 403, "不能删除自己", nil
 	}
+
 	c.Data["json"] = json
 	c.ServeJSON()
 }
@@ -166,14 +173,19 @@ func (c *UserController) Delete(){
 func (c *UserController) Lock(){
 	json := map[string]interface{}{
 		"code":   405,
-		"text":   "请求方式错误",
+		"text":   "请求方法错误",
 		"result": nil,
 	}
 
-	if c.Ctx.Input.IsPost() {
-		id,_ := c.GetInt("id")
-		models.DefaultUserManager.SetStatusById(id,1)
-		json["code"], json["text"], json["result"] = 200, "锁定成功", nil
+	id, _ := c.GetInt("id")
+	if c.User.Id != id {
+		if c.Ctx.Input.IsPost() {
+
+			models.DefaultUserManager.SetStatusById(id, 1)
+			json["code"], json["text"], json["result"] = 200, "锁定成功", nil
+		}
+	} else {
+		json["code"], json["text"], json["result"] = 403, "不能锁定自己", nil
 	}
 
 	c.Data["json"] = json
@@ -183,14 +195,18 @@ func (c *UserController) Lock(){
 func (c *UserController) UnLock(){
 	json := map[string]interface{}{
 		"code":   405,
-		"text":   "请求方式错误",
+		"text":   "请求方法错误",
 		"result": nil,
 	}
 
-	if c.Ctx.Input.IsPost() {
-		id,_ := c.GetInt("id")
-		models.DefaultUserManager.SetStatusById(id,0)
-		json["code"], json["text"], json["result"] = 200, "解锁成功", nil
+	id, _ := c.GetInt("id")
+	if c.User.Id != id {
+		if c.Ctx.Input.IsPost() {
+			models.DefaultUserManager.SetStatusById(id, 0)
+			json["code"], json["text"], json["result"] = 200, "解锁成功", nil
+		}
+	} else {
+		json["code"], json["text"], json["result"] = 403, "不能对自己操作", nil
 	}
 
 	c.Data["json"] = json
@@ -200,16 +216,17 @@ func (c *UserController) UnLock(){
 func (c *UserController) SetPassword(){
 	json := map[string]interface{}{
 		"code":   405,
-		"text":   "请求方式错误",
+		"text":   "请求方法错误",
 		"result": nil,
 	}
 
 	if c.Ctx.Input.IsPost() {
 		json["code"], json["text"] = 400, "请求数据错误"
 
-		form := &forms.UserSetPasswordForm{}
+		form := &forms.UserSetPasswordForm{User:c.User}
 		valid := &validation.Validation{}
 
+		//判断用户的密码是否正确
 		if err := c.ParseForm(form); err != nil {
 			json["text"] = err.Error()
 		} else {
@@ -232,9 +249,6 @@ func (c *UserController) SetPassword(){
 
 		c.Data["json"] = json
 		c.ServeJSON()
-
-		fmt.Println(c.Data["json"])
-		fmt.Println(c.Data["user"])
 	}
 	c.TplName = "user/setpassword.html"
 }
