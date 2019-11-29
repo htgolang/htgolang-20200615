@@ -95,11 +95,11 @@ $(document).ready(function () {
                     var buttons = ['<div class="btn-group" role="group">'];
 
                     if (row["status"] == 0){
-                        buttons.push('<button class="btn btn-sm btn-secondary btn-control" data-title="确定锁定" data-url="{{ urlfor `UserController.Locl`}}" data-pk=":pk:" data-callback="reload_table">锁定</div>');
+                        buttons.push('<button class="btn btn-sm btn-secondary btn-control" data-title="确定锁定" data-url="{{ urlfor `UserController.Lock`}}" data-pk=":pk:" data-callback="reload_table">锁定</div>');
                         buttons.push('<button class="btn btn-sm btn-warning btn-open-dialog" data-title="编辑用户" data-url="{{ urlfor `UserController.Modify`}}?pk=:pk:">修改</div>');
                         buttons.push('<button class="btn btn-sm btn-info btn-open-dialog" data-title="查看Token" data-url="{{ urlfor `TokenController.Generate`}}?pk=:pk:" data-look="look">Token</div>');
                     }else {
-                        buttons.push('<button class="btn btn-sm btn-success btn-control" data-title="确定开启" data-url="{{ urlfor `UserController.UnLock`}}" data-pk=":pk:" data-collback="reload_table">开启</div>');
+                        buttons.push('<button class="btn btn-sm btn-success btn-control" data-title="确定开启" data-url="{{ urlfor `UserController.UnLock`}}" data-pk=":pk:" data-callback="reload_table">开启</div>');
                     }
 
 
@@ -139,7 +139,8 @@ $(document).ready(function () {
         ajaxRequest("POST", '{{ urlfor `TokenController.Generate`}}', {pk:pk}, function () {
             $(".dialog-content").load('{{ urlfor `TokenController.Generate`}}?pk=' +pk);
         })
-    })
+    });
+
 
 });
 

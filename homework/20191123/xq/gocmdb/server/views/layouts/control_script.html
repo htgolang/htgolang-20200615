@@ -8,6 +8,7 @@
             var callback = $(this).data("callback");
 
             if(confirm(title)){
+                console.log(url);
                 ajaxRequest("POST", url, {pk:pk}, function (response) {
                     if(callback && callback in window && typeof(window[callback]) == "function"){
                         window[callback](response);

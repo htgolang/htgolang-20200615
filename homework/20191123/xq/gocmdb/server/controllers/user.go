@@ -244,7 +244,8 @@ func (c *UserController) Delete(){
 
 func (c *UserController) Lock(){
 
-	pk, _ := c.GetInt("pk")
+	pk, err := c.GetInt("pk")
+	fmt.Println(pk, err)
 
 	if err := models.DefaultUserManager.SetStatusById(pk,1); err == nil{
 
@@ -265,11 +266,7 @@ func (c *UserController) Lock(){
 
 	}
 
-
-
 	c.ServeJSON()
-
-
 
 }
 
@@ -286,6 +283,75 @@ func (c *UserController) UnLock(){
 	}
 
 	c.ServeJSON()
+
+
+}
+
+
+func (c *UserController) ModifyPass() {
+
+	json := map[string]interface{}{
+		"code":   405,
+		"text":   "请求方式错误",
+		"result": nil,
+	}
+
+	form := &forms.ModifyPasswordForm{User: c.User} //修改密码表单
+	valid := &validation.Validation{} // 验证器
+
+	if c.Ctx.Input.IsPost() {
+
+		// 解析请求参数到form中(根据form标签)
+		if err := c.ParseForm(form) ; err != nil {
+
+			json["code"] = 400
+			json["text"] = "解析数据错误"
+			json["result"] = err.Error()
+
+		}else {
+
+			// 表单验证
+			if corret, err := valid.Valid(form); err != nil {
+				json["code"] = 400
+				json["text"] = "表单验证失败"
+				json["result"] = err.Error()
+
+
+			}else if !corret {
+
+				json["code"] = 400
+				json["result"] = nil
+
+			}else{
+
+				// 设置密码
+				c.User.SetPassword(form.NewPassword)
+
+				ormer := orm.NewOrm()
+
+				// 只更新密码列
+				ormer.Update(c.User, "Password")
+
+				json["code"] = 200
+				json["text"] = "修改密码成功"
+				json["result"] = nil
+
+
+			}
+		}
+
+		c.Data["json"] = json
+		c.ServeJSON()
+
+	} else {
+
+		pk, _ := c.GetInt("pk")
+
+		c.TplName = "user/modifypass.html"
+
+		c.Data["object"] = models.DefaultUserManager.GetById(pk)
+
+	}
 
 
 }

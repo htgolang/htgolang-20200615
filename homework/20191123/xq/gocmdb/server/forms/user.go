@@ -117,8 +117,8 @@ func (f *UserModifyForm) Valid(v *validation.Validation) {
 
 
 	// 使用beego validation提供的验证器验证最小和最大长度
-	v.MinSize(f.Name, 2, "name.name").Message("用户名长度必须在%d到%d之间", 2, 16)
-	v.MaxSize(f.Name, 16, "name.name").Message("用户名长度必须在%d到%d之间", 2, 16)
+	v.MinSize(f.Name, 5, "name.name").Message("用户名长度必须在%d到%d之间", 5, 32)
+	v.MaxSize(f.Name, 32, "name.name").Message("用户名长度必须在%d到%d之间", 5, 32)
 
 	// 验证用户名是否存在（排除掉自己）
 	if _, ok := v.ErrorsMap["name"]; !ok {
@@ -143,4 +143,35 @@ func (f *UserModifyForm) Valid(v *validation.Validation) {
 	// 使用beego validation提供的验证器验证最小和最大长度
 	v.MaxSize(f.Addr, 128, "addr.addr").Message("住址长度必须在%d之内", 128)
 	v.MaxSize(f.Desc, 128, "desc.desc").Message("备注长度必须在%d之内", 128)
+}
+
+
+// 密码修改表单
+type ModifyPasswordForm struct {
+	OldPassword    string `form:"oldPassword,password,旧密码"`
+	NewPassword    string `form:"newPassword,password,新密码"`
+	PasswordVerify string `form:"passwordVerify,password,再次输入密码"`
+
+	User *models.User
+}
+
+// 密码修改表单 验证接口（由validation.Valid调用）
+func (f *ModifyPasswordForm) Valid(v *validation.Validation) {
+	//  去除用户输入前后空白字符
+	f.OldPassword = strings.TrimSpace(f.OldPassword)
+	f.NewPassword = strings.TrimSpace(f.NewPassword)
+	f.PasswordVerify = strings.TrimSpace(f.PasswordVerify)
+
+	// 验证旧密码是否正确
+	if !f.User.ValidatePassword(f.OldPassword) {
+		v.SetError("oldPassword", "密码错误")
+	}
+
+	// 使用beego validation提供的验证器验证最小和最大长度
+	v.MinSize(f.NewPassword, 6, "newPassword.newPassword").Message("密码最小长度位%d位", 6)
+
+	// 验证两次密码是否一致
+	if f.NewPassword != f.PasswordVerify {
+		v.SetError("passwordVerify", "两次输入密码不一致")
+	}
 }
