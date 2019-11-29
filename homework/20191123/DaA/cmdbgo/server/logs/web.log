@@ -459,3 +459,110 @@
 2019/11/29 18:24:30.635 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.382746ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
 2019/11/29 18:24:33.739 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.389814ms|   match|[97;46m POST    [0m /user/delete   r:/user/delete/*
 2019/11/29 18:24:56.227 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/29 18:27:59.549 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/29 18:28:02.393 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  26.898178ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/29 18:28:02.475 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  15.874211ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/29 18:28:02.476 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.310623ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/29 18:28:02.491 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.756666ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/29 18:28:02.492 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.317932ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/29 18:28:02.494 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.237518ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/29 18:28:02.494 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.928279ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/29 18:28:02.494 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.158566ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/29 18:28:02.519 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.074603ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/29 18:28:02.521 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    400.432µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/29 18:28:02.521 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    768.453µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/29 18:28:02.522 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.234785ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/29 18:28:02.527 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    615.414µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/29 18:28:02.535 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    699.376µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/29 18:28:02.549 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.692552ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/29 18:28:02.551 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    413.935µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/29 18:28:02.557 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    725.532µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/29 18:28:02.774 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.062839ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/29 18:28:02.922 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     513.84µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/29 18:28:02.981 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.141949ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/29 18:28:03.042 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    512.277µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/29 18:28:03.050 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    504.636µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/29 18:28:05.449 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.897165ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:28:53.642 [D] [controller.go:306]  template Execute err: template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:28:53.642 [E] [server.go:2774]  template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:28:53.642 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    6.65751ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:29:26.260 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/29 18:29:26.929 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.518997ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:29:40.004 [D] [controller.go:306]  template Execute err: template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:29:40.005 [E] [server.go:2774]  template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:29:40.005 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.754104ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:30:34.622 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/29 18:30:36.478 [D] [controller.go:306]  template Execute err: template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:30:36.478 [E] [server.go:2774]  template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:30:36.478 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   11.54396ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:30:49.569 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    7.95024ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:33:34.234 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  25.344894ms|   match|[97;46m POST    [0m /token/generate   r:/token/generate/*
+2019/11/29 18:33:34.278 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.143183ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:33:41.098 [D] [controller.go:306]  template Execute err: template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:33:41.098 [E] [server.go:2774]  template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:33:41.098 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.419437ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:33:46.504 [D] [controller.go:306]  template Execute err: template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:33:46.504 [E] [server.go:2774]  template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:33:46.504 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.369719ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:33:56.699 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|   3.648988ms|   match|[97;44m GET     [0m /auth/logout   r:/auth/logout/*
+2019/11/29 18:33:56.719 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    5.44245ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/29 18:33:56.818 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   14.34764ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/29 18:33:56.825 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   19.25387ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/29 18:33:56.889 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.090107ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/29 18:34:05.088 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|   5.843696ms|   match|[97;46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/29 18:34:05.115 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.344555ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/29 18:34:05.189 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    507.175µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/29 18:34:05.205 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    330.642µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/29 18:34:05.212 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.292408ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/29 18:34:05.214 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.406974ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/29 18:34:05.217 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.793913ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/29 18:34:05.218 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.163461ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/29 18:34:05.238 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     486.25µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/29 18:34:05.242 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.183254ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/29 18:34:05.244 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    389.798µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/29 18:34:05.245 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    677.664µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/29 18:34:05.246 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    439.211µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/29 18:34:05.250 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    567.698µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/29 18:34:05.256 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.136135ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/29 18:34:05.261 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.598493ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/29 18:34:05.283 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    514.786µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/29 18:34:05.309 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    670.707µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/29 18:34:05.486 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     332.02µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/29 18:34:05.580 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    544.758µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/29 18:34:05.627 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    686.044µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/29 18:34:05.628 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    884.003µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/29 18:34:05.692 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.149493ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/29 18:34:09.079 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.706541ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:34:11.564 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  15.760911ms|   match|[97;46m POST    [0m /token/generate   r:/token/generate/*
+2019/11/29 18:34:11.610 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.192316ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:34:17.337 [D] [controller.go:306]  template Execute err: template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:34:17.338 [E] [server.go:2774]  template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:34:17.338 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  10.321164ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:34:19.751 [D] [controller.go:306]  template Execute err: template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:34:19.756 [E] [server.go:2774]  template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/29 18:34:19.756 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.802805ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/29 18:34:23.509 [D] [controller.go:306]  template Execute err: template: user/modify.html:29:160: executing "user/modify.html" at <.object.Birthday>: dereference of nil pointer of type time.Time
+2019/11/29 18:34:23.509 [E] [server.go:2774]  template: user/modify.html:29:160: executing "user/modify.html" at <.object.Birthday>: dereference of nil pointer of type time.Time
+2019/11/29 18:34:23.509 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.140157ms|   match|[97;44m GET     [0m /user/modify   r:/user/modify/*
+2019/11/29 18:34:47.661 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  21.183475ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/29 18:34:47.787 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.177281ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/29 18:34:47.789 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.546999ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/29 18:34:47.791 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.964868ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/29 18:34:47.792 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.940304ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/29 18:34:47.797 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.447856ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/29 18:34:47.801 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.596518ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/29 18:34:47.805 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    161.116µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/29 18:34:47.812 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    785.219µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/29 18:34:47.817 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    108.923µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/29 18:34:47.823 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.580221ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/29 18:34:47.829 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.537207ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/29 18:34:47.835 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    656.513µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/29 18:34:47.836 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.165941ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/29 18:34:47.838 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.320398ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/29 18:34:47.842 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.949796ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/29 18:34:47.848 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    183.379µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/29 18:34:48.054 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    203.711µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/29 18:34:48.168 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     78.104µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/29 18:34:48.237 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.030423ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/29 18:34:48.265 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    537.999µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/29 18:34:48.266 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    445.532µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map

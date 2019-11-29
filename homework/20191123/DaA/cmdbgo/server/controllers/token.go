@@ -34,9 +34,9 @@ func (c *TokenController) Generate(){
 	if c.User.Id == id {
 		c.Data["object"] = models.DefaultUserManager.GetById(id)
 	} else {
-		token := models.Token{AccessKey:"不允许查看",SecrectKey:"",Id:id}
-		c.Data["object"] = token
+		c.Data["object"] = models.Token{}
 	}
 
+	fmt.Println(c.Data["object"])
 	c.TplName = "token/index.html"
 }
