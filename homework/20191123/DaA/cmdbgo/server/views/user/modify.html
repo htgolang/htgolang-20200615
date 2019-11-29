@@ -26,7 +26,7 @@
     <div class="form-group row">
         <label class="col-2 col-form-label" for="birthday">出生日期</label>
         <div class="col-10">
-            <input class="form-control" type="text" id="birthday" name="birthday" datepicker="datpicker" placeholder="出生日期" value="{{ .object.Birthday }}"/>
+            <input class="form-control" type="text" id="birthday" name="birthday" datepicker="datpicker" placeholder="出生日期" value="{{ dateformat .object.Birthday "01/02/2006" }}"/>
         </div>
     </div>
 

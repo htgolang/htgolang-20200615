@@ -97,8 +97,8 @@ func (m *UserManager) DeleteById(id int) error {
 }
 
 func (m *UserManager) SetStatusById(id int, status int) error {
-	orm.NewOrm().QueryTable(&User{}).Filter("id__exact",id).Update(orm.Params{"status":status})
-	return nil
+	_,err := orm.NewOrm().QueryTable(&User{}).Filter("id__exact", id).Update(orm.Params{"status": status})
+	return err
 }
 
 type Token struct {

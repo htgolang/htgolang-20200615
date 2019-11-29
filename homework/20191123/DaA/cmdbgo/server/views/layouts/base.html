@@ -33,8 +33,18 @@
         <!-- User Menu-->
         <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
             <ul class="dropdown-menu settings-menu dropdown-menu-right">
-                <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i>修改密码</a></li>
-                <li><a class="dropdown-item" href="{{ urlfor `AuthController.Logout` }}"><i class="fa fa-sign-out fa-lg"></i>退出登录</a></li>
+                <li>
+                    <a class="dropdown-item btn-open-dialog" href="javascript:void(0)" data-title="修改密码" data-url="{{ urlfor `UserController.SetPassword`}}?id={{ .user.Id }}">
+                        <i class="fa fa-user fa-lg"></i>
+                        修改密码
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="{{ urlfor `AuthController.Logout` }}">
+                        <i class="fa fa-sign-out fa-lg"></i>
+                        退出登录
+                    </a>
+                </li>
             </ul>
         </li>
     </ul>
@@ -83,8 +93,12 @@
     {{ assets_js "/static/js/plugins/dataTables.bootstrap.min.js" }}
     {{ assets_js "/static/js/jquery.base64.js" }}
     {{ assets_js "/static/js/jquery.cookie-1.4.1.min.js" }}
-    {{ assets_js "/static/js/plugins/bootstrap-datepicker.min.js" }}
     {{ assets_js "/static/js/utils.js" }}
+
+    {{ assets_js "/static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js"}}
+    {{ assets_js "/static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"}}
+    {{ assets_js "/static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js"}}
+    {{ assets_js "/static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js"}}
 <script type="text/javascript">
     jQuery(document).ready(function () {
         jQuery.extend(jQuery.fn.dataTable.defaults,{

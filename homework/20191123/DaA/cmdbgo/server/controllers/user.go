@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"github.com/astaxie/beego/validation"
@@ -32,21 +33,24 @@ func (c *UserController) List(){
 	draw,_ := c.GetInt("draw")
 	start,_ := c.GetInt64("start")
 	length,_ := c.GetInt("length")
+
+	//给API使用的最大返回数，用配置文件做调整。默认2000.
 	Max_Query_Length,_ := beego.AppConfig.Int("Max_Query_Length")
 	if Max_Query_Length > 10 && length > Max_Query_Length {
 		length = Max_Query_Length
 	}
+
 	q := strings.TrimSpace(c.GetString("q"))
 
 	//[]*User,total,querytotal
-	users,total,querytotal := models.DefaultUserManager.Query(q,start,length)
+	users, total, querytotal := models.DefaultUserManager.Query(q, start, length)
 	c.Data["json"] = map[string]interface{}{
-		"code": 200,
-		"text": "成功",
-		"result": users,
-		"draw": draw,
-		"recordsTotal": total,
-		"recordsFiltered": querytotal,
+		"code": 			200,
+		"text": 			"成功",
+		"result": 			users,
+		"draw": 			draw,
+		"recordsTotal": 	total,
+		"recordsFiltered": 	querytotal,
 	}
 	c.ServeJSON()
 }
@@ -70,8 +74,7 @@ func (c *UserController) Create(){
 			} else if !corret {
 				json["result"] = valid.Errors
 			} else {
-				birthday, _ := time.ParseInLocation("01/02/2006", form.Birthday,time.Local)
-
+				birthday, _ := time.Parse("01/02/2006", form.Birthday)
 				user := &models.User{
 					Name:       form.Name,
 					Birthday:   &birthday,
@@ -83,20 +86,11 @@ func (c *UserController) Create(){
 
 				}
 				user.SetPassword(form.Password)
-
 				ormer := orm.NewOrm()
-				if _,err := ormer.Insert(user); err == nil {
-					json = map[string]interface{}{
-						"code":   200,
-						"text":   "创建用户成功",
-						"result": user,
-					}
+				if result, err := ormer.Insert(user); err == nil {
+					json["code"], json["text"], json["result"] = 200, "编辑用户成功", result
 				} else {
-					json = map[string]interface{}{
-						"code": 500,
-						"text": "服务端错误",
-						"result": nil,
-					}
+					json["code"], json["text"], json["result"] = 500, "服务器错误", err.Error()
 				}
 			}
 		}
@@ -126,32 +120,21 @@ func (c *UserController) Modify(){
 			} else if !corret {
 				json["result"] = valid.Errors
 			} else {
+				birthday, _ := time.Parse("01/02/2006", form.Birthday)
 
-				birthday, _ := time.ParseInLocation("2006-01-02", form.Birthday,time.Local)
-
-				user := &models.User{
-					Name:       form.Name,
-					Birthday:   &birthday,
-					Gender:     form.Gender,
-					Tel:        form.Tel,
-					Email:		form.Email,
-					Addr:       form.Addr,
-					Remark:     form.Remark,
-				}
+				form.User.Name = form.Name
+				form.User.Birthday = &birthday
+				form.User.Gender = form.Gender
+				form.User.Tel = form.Tel
+				form.User.Email = form.Email
+				form.User.Addr = form.Addr
+				form.User.Remark = form.Remark
 
 				ormer := orm.NewOrm()
-				if _,err := ormer.Update(user);err == nil {
-					json = map[string]interface{}{
-						"code": 200,
-						"text": "编辑用户成功",
-						"result": user,
-					}
+				if result,err := ormer.Update(form.User);err == nil {
+					json["code"], json["text"], json["result"] = 200, "编辑用户成功", result
 				} else {
-					json = map[string]interface{}{
-						"code": 500,
-						"text": "服务端错误",
-						"result": nil,
-					}
+					json["code"], json["text"], json["result"] = 500, "服务器错误", err.Error()
 				}
 			}
 		}
@@ -159,47 +142,99 @@ func (c *UserController) Modify(){
 		c.ServeJSON()
 	} else {
 		id,_ := c.GetInt("id")
+		c.Data["object"] = models.DefaultUserManager.GetById(id)
 		c.TplName = "user/modify.html"
-		user := models.DefaultUserManager.GetById(id)
-		c.Data["object"] = user
 	}
 }
 
 func (c *UserController) Delete(){
-	id,_ := c.GetInt("id")
-	models.DefaultUserManager.DeleteById(id)
-
 	json := map[string]interface{}{
-		"code":   200,
-		"text":   "编辑成功",
+		"code":   405,
+		"text":   "请求方式错误",
 		"result": nil,
+	}
+
+	if c.Ctx.Input.IsPost() {
+		id,_ := c.GetInt("id")
+		models.DefaultUserManager.DeleteById(id)
+		json["code"], json["text"], json["result"] = 200, "删除成功", nil
 	}
 	c.Data["json"] = json
 	c.ServeJSON()
 }
 
 func (c *UserController) Lock(){
-	id,_ := c.GetInt("id")
-	models.DefaultUserManager.SetStatusById(id,1)
-
 	json := map[string]interface{}{
-		"code":   200,
-		"text":   "编辑成功",
+		"code":   405,
+		"text":   "请求方式错误",
 		"result": nil,
 	}
+
+	if c.Ctx.Input.IsPost() {
+		id,_ := c.GetInt("id")
+		models.DefaultUserManager.SetStatusById(id,1)
+		json["code"], json["text"], json["result"] = 200, "锁定成功", nil
+	}
+
 	c.Data["json"] = json
 	c.ServeJSON()
 }
 
 func (c *UserController) UnLock(){
-	id,_ := c.GetInt("id")
-	models.DefaultUserManager.SetStatusById(id,0)
-
 	json := map[string]interface{}{
-		"code":   200,
-		"text":   "编辑成功",
+		"code":   405,
+		"text":   "请求方式错误",
 		"result": nil,
 	}
+
+	if c.Ctx.Input.IsPost() {
+		id,_ := c.GetInt("id")
+		models.DefaultUserManager.SetStatusById(id,0)
+		json["code"], json["text"], json["result"] = 200, "解锁成功", nil
+	}
+
 	c.Data["json"] = json
 	c.ServeJSON()
+}
+
+func (c *UserController) SetPassword(){
+	json := map[string]interface{}{
+		"code":   405,
+		"text":   "请求方式错误",
+		"result": nil,
+	}
+
+	if c.Ctx.Input.IsPost() {
+		json["code"], json["text"] = 400, "请求数据错误"
+
+		form := &forms.UserSetPasswordForm{}
+		valid := &validation.Validation{}
+
+		if err := c.ParseForm(form); err != nil {
+			json["text"] = err.Error()
+		} else {
+			if corret, err := valid.Valid(form); err != nil {
+				json["text"] = err.Error()
+			} else if !corret {
+				json["result"] = valid.Errors
+				fmt.Println(valid.Errors)
+			} else {
+				c.User.SetPassword(form.NewPassword)
+
+				ormer := orm.NewOrm()
+				if result,err := ormer.Update(c.User,"Password"); err == nil {
+					json["code"], json["text"], json["result"] = 200, "密码修改成功", result
+				} else {
+					json["code"], json["text"], json["result"] = 500, "服务器错误", err.Error()
+				}
+			}
+		}
+
+		c.Data["json"] = json
+		c.ServeJSON()
+
+		fmt.Println(c.Data["json"])
+		fmt.Println(c.Data["user"])
+	}
+	c.TplName = "user/setpassword.html"
 }

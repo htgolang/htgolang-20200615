@@ -30,7 +30,8 @@ function ajaxRequest(method, url, params, callback) {
             switch(response["code"]) {
                 case 200:
                     callback(response);
-                    alert("成功");
+                    var notify = jQuery.notify(response["text"],{type:'info'});
+                    setTimeout(function(){notify.update({'type': 'success', 'progress': 25});}, 3500);
                     break;
                 case 400:
                     var errors = [];
@@ -40,17 +41,49 @@ function ajaxRequest(method, url, params, callback) {
                     if(!errors) {
                         errors.push(response['text']);
                     }
-                    alert(errors.join("\n"))
+                    swal({
+                        title: "",
+                        text: errors.join("\n"),
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "确定",
+                        closeOnConfirm: false
+                    });
                     break;
                 case 401:
-                    alert(response['text'])
+                    swal({
+                        title: "",
+                        text: response["text"],
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "确定",
+                        closeOnConfirm: false
+                    });
                     window.location.replace("/")
                     break;
                 case 500:
-                    alert(response['text']);
+                    swal({
+                        title: "",
+                        text: response["text"],
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "确定",
+                        closeOnConfirm: false
+                    });
                     break;
                 default:
-                    alert(response['text']);
+                    swal({
+                        title: "",
+                        text: response["text"],
+                        type: "error",
+                        showCancelButton: false,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "确定",
+                        closeOnConfirm: false
+                    });
                     break;
             }
         },

@@ -21,7 +21,13 @@
                     },
                     name:"name"},
                 {data:function (row) {
-                        return htmlEncode(row['gender']);
+                        if(row['gender'] === 0){
+                            return "男";
+                        } else if(row['gender'] === 1){
+                            return "女";
+                        } else {
+                            return htmlEncode(row['gender']);
+                        }
                     },
                     name:"gender"},
                 {data:function (row) {
@@ -45,7 +51,13 @@
                     },
                     name:"remark"},
                 {data:function (row) {
-                        return htmlEncode(row['status']);
+                        if(row['status'] === 0){
+                            return "正常";
+                        } else if(row['status'] === 1){
+                            return "锁定";
+                        } else {
+                            return htmlEncode(row['status']);
+                        }
                     },
                     name:"status"},
                 {data:function(row){
@@ -71,18 +83,31 @@
 
         window["reload_table"] = function(response){
             console.log("5. reload_table");
+            swal.close();
             table.ajax.reload(null,false);
         };
 
         jQuery(document).on("click",".btn-token",function(){
             var id = jQuery(this).data("pk"),
                 title = jQuery(this).data("title");
-            console.log(title);
-            if(confirm(title)){
-                ajaxRequest("POST","{{ urlfor `TokenController.Generate`}}",{id:id},function(){
-                    jQuery(".dialog-content").load("{{ urlfor `TokenController.Generate`}}?id=" + id)
+
+            swal({
+                    title: "",
+                    text: title,
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定",
+                    cancelButtonText: "取消",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function(){
+                    ajaxRequest("POST","{{ urlfor `TokenController.Generate`}}",{id:id},function(){
+                        swal.close()
+                        jQuery(".dialog-content").load("{{ urlfor `TokenController.Generate`}}?id=" + id)
+                    });
                 });
-            }
         });
     })
 

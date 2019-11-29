@@ -51,7 +51,7 @@ func (f *UserCreateForm) Valid(v *validation.Validation) {
 	v.Range(f.Gender,0,1,"sex.sex").Message("性别选择错误")
 
 	fmt.Println(f.Birthday,f.Name)
-	if _, err := time.ParseInLocation("01/02/2006",f.Birthday,time.Local); err != nil {
+	if _, err := time.Parse("01/02/2006",f.Birthday); err != nil {
 		v.SetError("birthday","出生日期不正确")
 	}
 
@@ -109,7 +109,7 @@ func (f *UserModifyForm) Valid(v *validation.Validation) {
 
 	// 验证时间格式
 	fmt.Println(f.Birthday)
-	if aaa, err := time.ParseInLocation("2006-01-02",f.Birthday,time.Local); err != nil {
+	if aaa, err := time.Parse("01/02/2006",f.Birthday); err != nil {
 		v.SetError("birthday", "出生日期不正确")
 		fmt.Println(aaa,err)
 	}
@@ -122,4 +122,31 @@ func (f *UserModifyForm) Valid(v *validation.Validation) {
 	// 使用beego validation提供的验证器验证最小和最大长度
 	v.MaxSize(f.Addr,128,"addr.addr").Message("住址长度必须在%d之间",128)
 	v.MaxSize(f.Remark,128,"desc.desc").Message("备注长度必须在%d之间",128)
+}
+
+type UserSetPasswordForm struct {
+	OldPassword    string `form:"oldPassword,password,旧密码"`
+	NewPassword    string `form:"newPassword,password,新密码"`
+	PasswordVerify string `form:"passwordVerify,password,密码确认"`
+
+	User *models.User
+}
+
+func (f *UserSetPasswordForm) Valid(v *validation.Validation) {
+	//  去除用户输入前后空白字符
+	f.OldPassword = strings.TrimSpace(f.OldPassword)
+	f.NewPassword = strings.TrimSpace(f.NewPassword)
+	f.PasswordVerify = strings.TrimSpace(f.PasswordVerify)
+
+	fmt.Println(f.OldPassword)
+	if !f.User.ValidatePassword(f.OldPassword) {
+		v.SetError("oldPassword","旧密码错误")
+	}
+
+	v.MinSize(f.NewPassword,6,"newPassword,newPassword").Message("密码最小长度为%d位",6)
+
+	if f.NewPassword != f.PasswordVerify {
+		v.SetError("passwordVerify","两次输入的密码不一致")
+	}
+
 }
