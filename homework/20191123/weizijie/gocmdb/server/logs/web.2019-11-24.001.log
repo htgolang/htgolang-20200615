@@ -1,0 +1,528 @@
+2019/11/16 11:38:15.512 [I] [asm_amd64.s:1337]  http server Running on http://:80
+2019/11/16 11:39:28.220 [E] [web.go:45]  数据库连接错误
+2019/11/16 11:40:37.888 [E] [web.go:46]  数据库连接错误
+2019/11/16 11:44:51.602 [I] [asm_amd64.s:1337]  http server Running on http://:80
+2019/11/16 11:45:29.219 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 14:03:17.257 [I] [web.go:66]  初始化admin成功, 默认密码: %s hdf3-I 
+2019/11/16 14:03:41.570 [I] [web.go:71]  admin用户已存在, 跳过 
+2019/11/16 14:03:51.393 [I] [web.go:66]  初始化admin成功, 默认密码: FtQll9 
+2019/11/16 15:33:50.882 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 15:34:04.111 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.0043ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 15:34:04.237 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     4.0014ms| nomatch|[44m GET     [0m /favicon.ico
+2019/11/16 15:36:00.368 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 15:36:23.694 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 15:36:41.408 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.0124ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:51:36.875 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    40.9996ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:51:36.908 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     5.0541ms| nomatch|[44m GET     [0m /static/css/plugins/Font-Awesome-4.7.0/css/font-awesome/min.css
+2019/11/16 16:51:36.921 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     16.001ms| nomatch|[44m GET     [0m /auth/js/jquery-3.3.1.min.js
+2019/11/16 16:51:36.927 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    25.0055ms|   match|[44m GET     [0m /static/css/main.css
+2019/11/16 16:51:36.931 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     7.9928ms| nomatch|[44m GET     [0m /auth/js/plugins/pace.min.js
+2019/11/16 16:51:36.965 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    60.0023ms| nomatch|[44m GET     [0m /auth/js/bootstrap.min.js
+2019/11/16 16:51:36.965 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    60.0023ms| nomatch|[44m GET     [0m /auth/js/main.js
+2019/11/16 16:51:36.966 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    60.9979ms| nomatch|[44m GET     [0m /auth/js/popper.min.js
+2019/11/16 16:51:37.453 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9877ms| nomatch|[44m GET     [0m /auth/js/popper.min.js
+2019/11/16 16:51:37.605 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      999.6µs| nomatch|[44m GET     [0m /auth/js/bootstrap.min.js
+2019/11/16 16:51:37.626 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      999.7µs| nomatch|[44m GET     [0m /auth/js/main.js
+2019/11/16 16:51:37.658 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      994.5µs| nomatch|[44m GET     [0m /auth/js/plugins/pace.min.js
+2019/11/16 16:52:51.052 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     8.9984ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:52:51.101 [D] [server.go:2774]  |            ::1|[43m 404 [0m|        997µs| nomatch|[44m GET     [0m /static/css/plugins/Font-Awesome-4.7.0/css/font-awesome/min.css
+2019/11/16 16:52:54.622 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9989ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:52:54.658 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9991ms| nomatch|[44m GET     [0m /static/css/plugins/Font-Awesome-4.7.0/css/font-awesome/min.css
+2019/11/16 16:52:54.660 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0034ms|   match|[44m GET     [0m /static/css/main.css
+2019/11/16 16:52:55.174 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.0011ms| nomatch|[44m GET     [0m /favicon.ico
+2019/11/16 16:53:09.185 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    11.9967ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:53:09.217 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.0048ms| nomatch|[44m GET     [0m /static/css/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/16 16:53:39.594 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.9996ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:53:39.674 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    21.0011ms|   match|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/16 16:53:39.798 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    13.9934ms|   match|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/16 16:53:51.815 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9945ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:53:53.033 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9995ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:53:54.143 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0026ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:53:55.049 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9984ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:54:07.053 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      994.8µs|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:54:07.775 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9996ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:54:08.356 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     6.0045ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:54:09.554 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9958ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:54:10.037 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      997.9µs|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:54:11.580 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.0001ms| nomatch|[44m GET     [0m /  
+2019/11/16 16:54:14.806 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.7µs|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 16:54:16.658 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.0086ms| nomatch|[44m GET     [0m /auth/index.html
+2019/11/16 17:00:00.901 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    10.9962ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 17:00:02.275 [C] [panic.go:522]  the request url is  /auth/login
+2019/11/16 17:00:02.275 [C] [panic.go:522]  Handler crashed with error '_xsrf' argument missing from POST
+2019/11/16 17:00:02.275 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/panic.go:522
+2019/11/16 17:00:02.275 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/context/context.go:88
+2019/11/16 17:00:02.275 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/context/context.go:172
+2019/11/16 17:00:02.275 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:694
+2019/11/16 17:00:02.275 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:823
+2019/11/16 17:00:02.275 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:2774
+2019/11/16 17:00:02.275 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:1878
+2019/11/16 17:00:02.275 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/asm_amd64.s:1337
+2019/11/16 17:00:02.275 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/16 17:02:31.005 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.9978ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 17:02:31.877 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0004ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 17:02:33.003 [C] [panic.go:522]  the request url is  /auth/login
+2019/11/16 17:02:33.003 [C] [panic.go:522]  Handler crashed with error '_xsrf' argument missing from POST
+2019/11/16 17:02:33.003 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/panic.go:522
+2019/11/16 17:02:33.003 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/context/context.go:88
+2019/11/16 17:02:33.003 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/context/context.go:172
+2019/11/16 17:02:33.003 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:694
+2019/11/16 17:02:33.003 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:823
+2019/11/16 17:02:33.003 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:2774
+2019/11/16 17:02:33.003 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:1878
+2019/11/16 17:02:33.003 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/asm_amd64.s:1337
+2019/11/16 17:02:33.003 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/16 17:02:35.477 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0008ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 17:02:51.885 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 17:02:56.617 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      998.8µs|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 17:02:58.227 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.0009ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:02:59.104 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0035ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:02:59.279 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0022ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:02:59.432 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.0028ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:02:59.606 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0002ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:02:59.769 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9999ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:03:04.892 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     6.0018ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:03:32.877 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.9891ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:03:35.877 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      3.002ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:34:43.755 [E] [template.go:176]  parse template err: auth/login.html template: auth/login.html:32: function "valid" not defined
+2019/11/16 17:34:43.755 [W] [beego.go:103]  template: auth/login.html:32: function "valid" not defined
+2019/11/16 17:34:57.769 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 17:35:00.609 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    29.9895ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:35:02.623 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      999.8µs|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 17:35:05.227 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9969ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:35:07.403 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.9999ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:35:10.748 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9987ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:35:12.796 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.0036ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:35:13.762 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.9984ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:35:26.089 [I] [web.go:68]  初始化admin成功, 默认密码: jkeunJ 
+2019/11/16 17:35:53.152 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 17:35:55.479 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     8.0013ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:35:57.867 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.9968ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:35:59.910 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9995ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:36:01.186 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.9954ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:36:05.365 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.0007ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:37:19.903 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 17:37:23.927 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.0005ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:37:57.216 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 17:38:02.475 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    10.9989ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:39:11.942 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 17:39:16.573 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    17.9934ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:43:28.333 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 17:43:32.985 [D] [server.go:2774]  |            ::1|[47m 302 [0m|     6.0018ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:43:33.044 [C] [panic.go:522]  the request url is  /test/test
+2019/11/16 17:43:33.044 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/testcontroller/test.tpl
+2019/11/16 17:43:33.044 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/panic.go:522
+2019/11/16 17:43:33.045 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:75
+2019/11/16 17:43:33.046 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:306
+2019/11/16 17:43:33.046 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:257
+2019/11/16 17:43:33.047 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:237
+2019/11/16 17:43:33.047 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:865
+2019/11/16 17:43:33.048 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:2774
+2019/11/16 17:43:33.060 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:1878
+2019/11/16 17:43:33.062 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/asm_amd64.s:1337
+2019/11/16 17:43:33.063 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/16 17:44:14.613 [D] [server.go:2774]  |            ::1|[47m 302 [0m|     1.9977ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:44:14.631 [C] [panic.go:522]  the request url is  /test/test
+2019/11/16 17:44:14.639 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/testcontroller/test.tpl
+2019/11/16 17:44:14.641 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/panic.go:522
+2019/11/16 17:44:14.641 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:75
+2019/11/16 17:44:14.642 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:306
+2019/11/16 17:44:14.643 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:257
+2019/11/16 17:44:14.643 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:237
+2019/11/16 17:44:14.644 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:865
+2019/11/16 17:44:14.644 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:2774
+2019/11/16 17:44:14.645 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:1878
+2019/11/16 17:44:14.646 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/asm_amd64.s:1337
+2019/11/16 17:44:14.647 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/16 17:45:38.861 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 17:45:41.274 [C] [panic.go:522]  the request url is  /test/test
+2019/11/16 17:45:41.283 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/testcontroller/test.tpl
+2019/11/16 17:45:41.291 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/panic.go:522
+2019/11/16 17:45:41.292 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:75
+2019/11/16 17:45:41.295 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:306
+2019/11/16 17:45:41.295 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:257
+2019/11/16 17:45:41.296 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:237
+2019/11/16 17:45:41.297 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:865
+2019/11/16 17:45:41.299 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:2774
+2019/11/16 17:45:41.310 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:1878
+2019/11/16 17:45:41.312 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/asm_amd64.s:1337
+2019/11/16 17:45:41.313 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/16 17:45:43.278 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    17.9983ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 17:45:46.959 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9998ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:45:50.614 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.9998ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:46:11.874 [D] [server.go:2774]  |            ::1|[47m 302 [0m|    11.9939ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 17:46:11.911 [C] [panic.go:522]  the request url is  /test/test
+2019/11/16 17:46:11.912 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/testcontroller/test.tpl
+2019/11/16 17:46:11.913 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/panic.go:522
+2019/11/16 17:46:11.913 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:75
+2019/11/16 17:46:11.916 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:306
+2019/11/16 17:46:11.921 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:257
+2019/11/16 17:46:11.924 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:237
+2019/11/16 17:46:11.925 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:865
+2019/11/16 17:46:11.926 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:2774
+2019/11/16 17:46:11.927 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:1878
+2019/11/16 17:46:11.930 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/asm_amd64.s:1337
+2019/11/16 17:46:11.943 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/16 17:46:21.653 [D] [server.go:2774]  |            ::1|[47m 302 [0m|     5.9976ms|   match|[44m GET     [0m /auth/logout   r:/auth/logout/*
+2019/11/16 17:46:21.681 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    16.0018ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 17:46:24.494 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    11.9999ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 18:18:03.350 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.0024ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/16 18:18:16.530 [D] [server.go:2774]  |            ::1|[47m 302 [0m|    13.0038ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/16 18:18:16.575 [C] [panic.go:522]  the request url is  /test/test
+2019/11/16 18:18:16.575 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/testcontroller/test.tpl
+2019/11/16 18:18:16.576 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/panic.go:522
+2019/11/16 18:18:16.576 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:75
+2019/11/16 18:18:16.577 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:306
+2019/11/16 18:18:16.577 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:257
+2019/11/16 18:18:16.577 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:237
+2019/11/16 18:18:16.578 [C] [panic.go:522]  C:/Users/Administrator/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:865
+2019/11/16 18:18:16.578 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:2774
+2019/11/16 18:18:16.579 [C] [panic.go:522]  C:/Program Files/Go/src/net/http/server.go:1878
+2019/11/16 18:18:16.580 [C] [panic.go:522]  C:/Program Files/Go/src/runtime/asm_amd64.s:1337
+2019/11/16 18:18:16.580 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/16 18:18:28.304 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:18:29.657 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    12.9978ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:18:31.945 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.0011ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:18:32.524 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     8.0024ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:18:32.778 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          4ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:18:32.977 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      4.996ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:18:33.163 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     8.0007ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:19:00.393 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:19:00.624 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    53.0005ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:19:01.600 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0005ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:19:02.325 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9997ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:19:02.786 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.0012ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:19:03.051 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9969ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:19:03.278 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9929ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:45:26.981 [I] [web.go:70]  初始化admin成功, 默认密码: b2-uGR 
+2019/11/16 18:46:33.296 [I] [web.go:70]  初始化admin成功, 默认密码: 6BTP7J 
+2019/11/16 18:47:12.852 [I] [web.go:70]  初始化admin成功, 默认密码: CFWGUY 
+2019/11/16 18:47:45.755 [I] [web.go:79]  同步数据库 
+2019/11/16 18:48:16.259 [I] [web.go:79]  同步数据库 
+2019/11/16 18:49:00.631 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:51:42.848 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:54:21.107 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:54:32.248 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:54:57.821 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:55:24.577 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:55:48.223 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:56:53.619 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:58:49.816 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 18:58:53.484 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|    12.9927ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:59:00.280 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     6.0022ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 18:59:36.667 [I] [asm_amd64.s:1337]  http server Running on http://:8888
+2019/11/16 19:02:44.940 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     4.0061ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:11:52.516 [D] [server.go:2774]  |      127.0.0.1|[42m 200 [0m|     7.0012ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:14:09.740 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    17.9991ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:14:10.466 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     6.9949ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:14:10.921 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0057ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:14:11.130 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.0251ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:14:11.389 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     13.993ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:14:11.607 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9984ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:14:11.818 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9959ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:14:12.006 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9861ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/16 19:14:12.225 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9991ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/23 09:46:19.416 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 09:47:05.759 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    64.6217ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/23 09:47:06.305 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    30.0212ms|   match|[44m GET     [0m /static/css/main.css
+2019/11/23 09:47:06.321 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      996.5µs|   match|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/23 09:47:12.316 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9954ms|   match|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/23 09:47:13.352 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     8.9857ms| nomatch|[44m GET     [0m /favicon.ico
+2019/11/23 09:47:51.715 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     87.318ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/23 09:48:16.553 [I] [web.go:70]  初始化admin成功, 默认密码: hM8eXK 
+2019/11/23 09:49:17.236 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 09:49:18.959 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    82.8553ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/23 09:50:02.352 [D] [server.go:2774]  |            ::1|[47m 302 [0m|    32.9145ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/23 09:50:02.426 [D] [server.go:2774]  |            ::1|[42m 200 [0m|       7.99ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/23 10:19:56.086 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 10:20:48.432 [C] [panic.go:522]  the request url is  /TestPage/Index
+2019/11/23 10:20:48.432 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/testpagecontroller/index.tpl
+2019/11/23 10:20:48.432 [C] [panic.go:522]  D:/Tools/Go/src/runtime/panic.go:522
+2019/11/23 10:20:48.432 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:75
+2019/11/23 10:20:48.432 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:306
+2019/11/23 10:20:48.432 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:257
+2019/11/23 10:20:48.432 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:237
+2019/11/23 10:20:48.432 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:865
+2019/11/23 10:20:48.432 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:2774
+2019/11/23 10:20:48.432 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:1878
+2019/11/23 10:20:48.432 [C] [panic.go:522]  D:/Tools/Go/src/runtime/asm_amd64.s:1337
+2019/11/23 10:20:48.434 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/23 10:20:48.833 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    43.0455ms| nomatch|[44m GET     [0m /favicon.ico
+2019/11/23 10:29:23.896 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 10:36:06.132 [E] [controller.go:304]  parse template err: layouts/base.html template: layouts/base.html:6: function "cnonfig" not defined
+2019/11/23 10:36:06.135 [C] [panic.go:522]  the request url is  /TestPage/Index
+2019/11/23 10:36:06.136 [C] [panic.go:522]  Handler crashed with error can't find templatefile in the path:views/testpagecontroller/index.tpl
+2019/11/23 10:36:06.136 [C] [panic.go:522]  D:/Tools/Go/src/runtime/panic.go:522
+2019/11/23 10:36:06.136 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:75
+2019/11/23 10:36:06.136 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:306
+2019/11/23 10:36:06.136 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:257
+2019/11/23 10:36:06.136 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:237
+2019/11/23 10:36:06.136 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:865
+2019/11/23 10:36:06.136 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:2774
+2019/11/23 10:36:06.136 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:1878
+2019/11/23 10:36:06.136 [C] [panic.go:522]  D:/Tools/Go/src/runtime/asm_amd64.s:1337
+2019/11/23 10:36:06.136 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/23 10:36:15.027 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    15.9573ms| nomatch|[44m GET     [0m /  
+2019/11/23 10:39:51.919 [E] [template.go:176]  parse template err: layouts/base.html template: layouts/base.html:6: function "cnonfig" not defined
+2019/11/23 10:39:51.919 [W] [beego.go:103]  template: layouts/base.html:6: function "cnonfig" not defined
+2019/11/23 10:40:39.926 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 10:47:58.897 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    52.3976ms| nomatch|[44m GET     [0m /test/PageTest
+2019/11/23 10:48:17.958 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9922ms| nomatch|[44m GET     [0m /testpage/insex
+2019/11/23 10:50:49.246 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9953ms| nomatch|[44m GET     [0m /testpage/insex
+2019/11/23 10:51:44.550 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 10:51:44.710 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    12.9789ms| nomatch|[44m GET     [0m /testpage/insex
+2019/11/23 10:51:46.412 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    22.0113ms| nomatch|[44m GET     [0m /testpage/insex
+2019/11/23 10:51:53.685 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.9787ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/23 10:52:24.802 [D] [server.go:2774]  |            ::1|[47m 302 [0m|    44.8907ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/23 10:52:24.916 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    67.9018ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/23 10:52:37.553 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   166.7907ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 10:52:37.721 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9985ms|   match|[44m GET     [0m /static/js/popper.min.js
+2019/11/23 10:52:37.728 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     9.9741ms|   match|[44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/23 10:52:37.732 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.0067ms|   match|[44m GET     [0m /static/js/bootstrap.min.js
+2019/11/23 10:52:37.813 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      2.987ms|   match|[44m GET     [0m /static/js/main.js
+2019/11/23 10:52:37.853 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9947ms|   match|[44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/23 10:52:37.884 [D] [server.go:2774]  |            ::1|[43m 404 [0m|   147.5426ms| nomatch|[44m GET     [0m /TestPage/css/main.css
+2019/11/23 10:52:37.937 [D] [server.go:2774]  |            ::1|[43m 404 [0m|   220.3403ms| nomatch|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/Font-Awesome-min.css
+2019/11/23 10:52:38.618 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      2.993ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 10:52:38.674 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     3.9899ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 10:54:48.644 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   142.7177ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 10:54:48.916 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     3.9897ms| nomatch|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome-min.css
+2019/11/23 10:54:49.025 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     45.822ms| nomatch|[44m GET     [0m /TestPage/css/main.css
+2019/11/23 10:54:49.633 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     7.9809ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 10:54:49.642 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     16.959ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 10:56:17.103 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    34.8956ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 10:56:17.178 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9915ms| nomatch|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome-min.css
+2019/11/23 10:56:17.771 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     6.9805ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 10:56:17.775 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9942ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 11:04:08.118 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    71.4303ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:04:08.316 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     9.9738ms| nomatch|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome-min.css
+2019/11/23 11:04:09.174 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9917ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 11:04:09.180 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     4.9887ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 11:05:36.192 [C] [panic.go:522]  the request url is  /TestPage/Index
+2019/11/23 11:05:36.192 [C] [panic.go:522]  Handler crashed with error can't find template file:layout/motification.html
+2019/11/23 11:05:36.192 [C] [panic.go:522]  D:/Tools/Go/src/runtime/panic.go:522
+2019/11/23 11:05:36.192 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:252
+2019/11/23 11:05:36.192 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:274
+2019/11/23 11:05:36.192 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:286
+2019/11/23 11:05:36.192 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/template.go:224
+2019/11/23 11:05:36.193 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:304
+2019/11/23 11:05:36.193 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:257
+2019/11/23 11:05:36.193 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/controller.go:237
+2019/11/23 11:05:36.193 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:865
+2019/11/23 11:05:36.193 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:2774
+2019/11/23 11:05:36.193 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:1878
+2019/11/23 11:05:36.193 [C] [panic.go:522]  D:/Tools/Go/src/runtime/asm_amd64.s:1337
+2019/11/23 11:05:36.194 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/23 11:09:32.371 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    19.9353ms| nomatch|[44m GET     [0m /  
+2019/11/23 11:11:40.113 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 11:11:59.390 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    140.506ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:11:59.976 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    22.9442ms| nomatch|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome-min.css
+2019/11/23 11:12:01.931 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     3.9891ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 11:12:02.193 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    49.1001ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 11:15:12.011 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   109.2257ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:15:12.094 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     5.9635ms| nomatch|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome-min.css
+2019/11/23 11:15:12.698 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    17.9657ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 11:15:12.701 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     3.9941ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 11:15:18.746 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    14.9594ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:15:18.850 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9849ms| nomatch|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome-min.css
+2019/11/23 11:15:19.566 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     3.9891ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 11:15:19.586 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9921ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 11:16:08.076 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    22.9372ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:16:08.166 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    17.9526ms| nomatch|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome-min.css
+2019/11/23 11:16:08.700 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    19.9851ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 11:16:08.788 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    67.7056ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 11:16:30.569 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 11:17:59.306 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    28.4689ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:17:59.417 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    23.9361ms| nomatch|[44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome-min.css
+2019/11/23 11:17:59.868 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    20.9444ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 11:17:59.880 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    12.9662ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 11:19:18.614 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    19.4565ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:19:19.266 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     45.878ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 11:19:19.277 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    46.8649ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 11:19:26.051 [D] [server.go:2774]  |            ::1|[47m 302 [0m|    11.9676ms|   match|[44m GET     [0m /auth/logout   r:/auth/logout/*
+2019/11/23 11:19:26.151 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    77.1222ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/23 11:20:01.530 [D] [server.go:2774]  |            ::1|[47m 302 [0m|   108.7938ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/23 11:20:01.571 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     6.9834ms|   match|[44m GET     [0m /test/test   r:/test/test/*
+2019/11/23 11:20:12.366 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    12.9655ms| nomatch|[44m GET     [0m /pagetest/index
+2019/11/23 11:20:37.071 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    41.8931ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:20:42.166 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    61.3765ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:21:34.784 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    24.9309ms| nomatch|[44m GET     [0m /TestPage/bootstrap-components.html
+2019/11/23 11:24:22.683 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   103.6909ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:25:54.449 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    17.9467ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:26:51.703 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    53.9302ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:27:42.602 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    51.3649ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:38:51.074 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    26.9109ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:49:30.031 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    51.9834ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:51:03.559 [D] [server.go:2774]  |            ::1|[42m 200 [0m|   122.2618ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:53:26.433 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    68.0414ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 11:53:52.896 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    18.9588ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 12:33:30.912 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 12:33:57.809 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    13.9623ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 12:39:10.157 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    17.9523ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 12:39:14.261 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      999.9µs| nomatch|[44m GET     [0m /TestPage/bootstrap-components.html
+2019/11/23 12:47:00.360 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 12:47:03.432 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    11.9675ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 12:47:22.323 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     3.9887ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 12:47:22.329 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     7.9769ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 12:47:25.752 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      997.7µs| nomatch|[44m GET     [0m /TestPage/widgets.html
+2019/11/23 12:47:27.478 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9836ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 12:47:27.483 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      5.984ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 12:49:45.491 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    14.9607ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 12:49:45.956 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    12.9649ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 12:49:45.958 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      1.995ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 12:50:50.906 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    28.9233ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 12:50:51.484 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     7.9766ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 12:50:51.487 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    10.9693ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 12:51:31.557 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    29.9211ms|   match|[44m GET     [0m /TestPage/Index   r:/testpage/index/*
+2019/11/23 12:51:31.929 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     3.9867ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 12:51:31.936 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     5.9828ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 22:08:53.383 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     7.9772ms| nomatch|[44m GET     [0m /pagetest
+2019/11/23 22:08:53.507 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     13.964ms| nomatch|[44m GET     [0m /favicon.ico
+2019/11/23 22:08:57.381 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9917ms| nomatch|[44m GET     [0m /pagetest/index
+2019/11/23 22:09:10.085 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      997.1µs| nomatch|[44m GET     [0m /pagetest/index
+2019/11/23 22:16:00.633 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 22:16:14.747 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9946ms| nomatch|[44m GET     [0m /  
+2019/11/23 22:16:21.607 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    17.9447ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/23 22:17:04.487 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 22:17:09.743 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.0145ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/23 22:17:13.619 [D] [server.go:2774]  |            ::1|[47m 302 [0m|     5.0159ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/23 22:17:13.627 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9924ms| nomatch|[44m GET     [0m /auth/
+2019/11/23 22:18:01.074 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 22:18:05.000 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9973ms| nomatch|[44m GET     [0m /  
+2019/11/23 22:18:13.735 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.9842ms|   match|[44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/23 22:18:18.024 [D] [server.go:2774]  |            ::1|[47m 302 [0m|    11.9692ms|   match|[46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/23 22:18:18.028 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      999.1µs| nomatch|[44m GET     [0m /auth/
+2019/11/23 22:18:37.499 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     6.4923ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:24:26.903 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    10.9716ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:25:17.232 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9892ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:27:19.960 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9891ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:28:02.184 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9907ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:30:00.679 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     6.9807ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:30:02.205 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.9885ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:30:03.804 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9884ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:30:07.499 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9911ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:30:08.910 [D] [server.go:2774]  |            ::1|[43m 404 [0m|           0s| nomatch|[44m GET     [0m /userpage/widgets.html
+2019/11/23 22:32:55.808 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9887ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:41:02.442 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 22:41:08.608 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    12.9599ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:43:04.808 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    17.9547ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:43:04.843 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     6.9805ms|   match|[44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/23 22:43:10.786 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     4.9867ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 22:43:10.790 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     4.9866ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 22:43:17.008 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    15.9689ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:43:17.348 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      8.982ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 22:43:17.349 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9853ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 22:45:41.969 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.9856ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:45:42.181 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9953ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 22:45:42.184 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9917ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 22:49:06.545 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      6.017ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:49:06.671 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    22.9406ms|   match|[44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/23 22:49:06.829 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     5.2666ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 22:49:06.838 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    14.2508ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 22:57:29.132 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    12.9647ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 22:57:29.538 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     8.9757ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 22:57:29.562 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    30.4561ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:00:48.140 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    14.9597ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:00:48.530 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9918ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:00:48.531 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9905ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:02:17.653 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.9711ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:02:17.993 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     3.9865ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:02:18.010 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    16.9625ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:05:08.796 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     9.9729ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:05:09.049 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9932ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:05:09.051 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9943ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:05:09.099 [D] [server.go:2774]  |            ::1|[42m 200 [0m|           0s|   match|[44m GET     [0m /static/json/datatable.i18n.zh_CN.json
+2019/11/23 23:14:01.867 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     8.9765ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:14:02.107 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9948ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:14:02.113 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     7.0959ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:14:02.138 [D] [server.go:2774]  |            ::1|[47m 304 [0m|      997.1µs|   match|[44m GET     [0m /static/json/datatable.i18n.zh_CN.json
+2019/11/23 23:21:18.860 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    28.9228ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:21:19.250 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      1.995ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:21:19.252 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9939ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:21:19.315 [D] [server.go:2774]  |            ::1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/json/datatable.i18n.zh_CN.json
+2019/11/23 23:21:19.449 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     34.906ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:46:22.295 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 23:46:26.675 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    30.9129ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:46:27.103 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9941ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:46:27.106 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     3.9899ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:46:27.181 [D] [server.go:2774]  |            ::1|[47m 304 [0m|     2.0015ms|   match|[44m GET     [0m /static/json/datatable.i18n.zh_CN.json
+2019/11/23 23:46:27.280 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    43.8779ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:47:11.490 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 23:47:18.725 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     15.957ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:47:19.060 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     2.9926ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:47:19.067 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     7.9802ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:47:19.275 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    21.4519ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:47:46.148 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 23:47:57.346 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    16.9572ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:47:57.611 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      4.986ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:47:57.613 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     6.9808ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:47:57.844 [C] [panic.go:522]  the request url is  /user/list
+2019/11/23 23:47:57.848 [C] [panic.go:522]  Handler crashed with error wrong object type `[]*models.User` for rows scan, need *github.com/imsilence/gocmdb/server/models.User
+2019/11/23 23:47:57.869 [C] [panic.go:522]  D:/Tools/Go/src/runtime/panic.go:522
+2019/11/23 23:47:57.873 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/orm/db.go:941
+2019/11/23 23:47:57.877 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/orm/orm_queryset.go:213
+2019/11/23 23:47:57.881 [C] [panic.go:522]  d:/Code/goang/code/20191116/gocmdb/server/models/user.go:91
+2019/11/23 23:47:57.892 [C] [panic.go:522]  d:/Code/goang/code/20191116/gocmdb/server/controllers/user.go:33
+2019/11/23 23:47:57.896 [C] [panic.go:522]  D:/Tools/Go/src/reflect/value.go:447
+2019/11/23 23:47:57.898 [C] [panic.go:522]  D:/Tools/Go/src/reflect/value.go:308
+2019/11/23 23:47:57.905 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:853
+2019/11/23 23:47:57.907 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:2774
+2019/11/23 23:47:57.907 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:1878
+2019/11/23 23:47:57.908 [C] [panic.go:522]  D:/Tools/Go/src/runtime/asm_amd64.s:1337
+2019/11/23 23:47:57.908 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/23 23:49:17.021 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 23:49:18.920 [D] [server.go:2774]  |            ::1|[42m 200 [0m|      9.973ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:49:19.211 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    17.9554ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:49:19.213 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    18.9587ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:49:19.380 [C] [panic.go:522]  the request url is  /user/list
+2019/11/23 23:49:19.380 [C] [panic.go:522]  Handler crashed with error wrong object type `[]*models.User` for rows scan, need *github.com/imsilence/gocmdb/server/models.User
+2019/11/23 23:49:19.381 [C] [panic.go:522]  D:/Tools/Go/src/runtime/panic.go:522
+2019/11/23 23:49:19.382 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/orm/db.go:941
+2019/11/23 23:49:19.383 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/orm/orm_queryset.go:213
+2019/11/23 23:49:19.384 [C] [panic.go:522]  d:/Code/goang/code/20191116/gocmdb/server/models/user.go:91
+2019/11/23 23:49:19.386 [C] [panic.go:522]  d:/Code/goang/code/20191116/gocmdb/server/controllers/user.go:33
+2019/11/23 23:49:19.387 [C] [panic.go:522]  D:/Tools/Go/src/reflect/value.go:447
+2019/11/23 23:49:19.400 [C] [panic.go:522]  D:/Tools/Go/src/reflect/value.go:308
+2019/11/23 23:49:19.401 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:853
+2019/11/23 23:49:19.402 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:2774
+2019/11/23 23:49:19.402 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:1878
+2019/11/23 23:49:19.402 [C] [panic.go:522]  D:/Tools/Go/src/runtime/asm_amd64.s:1337
+2019/11/23 23:49:19.403 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/23 23:49:30.027 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    10.9718ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:49:30.310 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      997.4µs| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:49:30.317 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     5.9834ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:49:30.438 [C] [panic.go:522]  the request url is  /user/list
+2019/11/23 23:49:30.441 [C] [panic.go:522]  Handler crashed with error wrong object type `[]*models.User` for rows scan, need *github.com/imsilence/gocmdb/server/models.User
+2019/11/23 23:49:30.442 [C] [panic.go:522]  D:/Tools/Go/src/runtime/panic.go:522
+2019/11/23 23:49:30.444 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/orm/db.go:941
+2019/11/23 23:49:30.444 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/orm/orm_queryset.go:213
+2019/11/23 23:49:30.445 [C] [panic.go:522]  d:/Code/goang/code/20191116/gocmdb/server/models/user.go:91
+2019/11/23 23:49:30.446 [C] [panic.go:522]  d:/Code/goang/code/20191116/gocmdb/server/controllers/user.go:33
+2019/11/23 23:49:30.449 [C] [panic.go:522]  D:/Tools/Go/src/reflect/value.go:447
+2019/11/23 23:49:30.453 [C] [panic.go:522]  D:/Tools/Go/src/reflect/value.go:308
+2019/11/23 23:49:30.454 [C] [panic.go:522]  C:/Users/jevon/go/pkg/mod/github.com/astaxie/beego@v1.12.0/router.go:853
+2019/11/23 23:49:30.455 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:2774
+2019/11/23 23:49:30.455 [C] [panic.go:522]  D:/Tools/Go/src/net/http/server.go:1878
+2019/11/23 23:49:30.455 [C] [panic.go:522]  D:/Tools/Go/src/runtime/asm_amd64.s:1337
+2019/11/23 23:49:30.457 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/23 23:51:01.980 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 23:51:04.512 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    49.8817ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:51:04.757 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      2.987ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:51:04.763 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     6.9811ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:51:04.813 [D] [server.go:2774]  |            ::1|[47m 304 [0m|     3.9922ms|   match|[44m GET     [0m /static/json/datatable.i18n.zh_CN.json
+2019/11/23 23:51:04.883 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     24.932ms|   match|[44m GET     [0m /user/list   r:/user/list/*
+2019/11/23 23:54:51.429 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 23:54:53.628 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    21.5125ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:54:53.964 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9946ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:54:53.972 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     7.9794ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:54:54.129 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     23.936ms|   match|[44m GET     [0m /user/list   r:/user/list/*
+2019/11/23 23:55:39.276 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/23 23:55:40.764 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    22.9364ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:55:41.127 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    14.9603ms| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:55:41.134 [D] [server.go:2774]  |            ::1|[43m 404 [0m|    20.9452ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:55:41.326 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    14.9605ms|   match|[44m GET     [0m /user/list   r:/user/list/*
+2019/11/23 23:59:13.444 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     7.9768ms|   match|[44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/23 23:59:13.760 [D] [server.go:2774]  |            ::1|[43m 404 [0m|     1.9953ms| nomatch|[44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/23 23:59:13.762 [D] [server.go:2774]  |            ::1|[43m 404 [0m|      997.1µs| nomatch|[44m GET     [0m /static/js/popper.min.js.map
+2019/11/23 23:59:13.800 [D] [server.go:2774]  |            ::1|[47m 304 [0m|           0s|   match|[44m GET     [0m /static/json/datatable.i18n.zh_CN.json
+2019/11/23 23:59:13.868 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.9843ms|   match|[44m GET     [0m /user/list   r:/user/list/*
