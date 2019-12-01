@@ -3,8 +3,10 @@ package controllers
 import (
 	"strings"
 
+	"github.com/astaxie/beego/validation"
 	"github.com/imsilence/gocmdb/server/controllers/auth"
 	"github.com/imsilence/gocmdb/server/models"
+	"github.com/imsilence/gocmdb/server/forms"
 )
 
 type UserPageController struct {
@@ -45,11 +47,39 @@ func (c *UserController) List() {
 
 func (c *UserController) Create() {
 	if c.Ctx.Input.IsPost() {
-		c.Data["json"] = map[string]interface{}{
-			"code":   200,
-			"text":   "创建成功",
-			"result": nil, //可以返回创建的用户
+		json := map[string]interface{}{
+			"code": 400,
+			"text": "提交数据错误",
 		}
+
+		form := &forms.UserCreateForm{}
+		valid := &validation.Validation{}
+		if err := c.ParseForm(form); err == nil {
+			if ok, err := valid.Valid(form); err != nil {
+				valid.SetError("error", err.Error())
+				json["result"] = valid.Errors
+			} else if ok {
+				user, err := models.DefaultUserManager.Create(form.Name, form.Password, form.Gender, form.BirthdayTime, form.Tel, form.Email, form.Addr, form.Remark)
+				if err == nil {
+					json = map[string]interface{}{
+						"code":   200,
+						"text":   "创建成功",
+						"result": user,
+					}
+				} else {
+					json = map[string]interface{}{
+						"code": 500,
+						"text": "服务器错误",
+					}
+				}
+			} else {
+				json["result"] = valid.Errors
+			}
+		} else {
+			valid.SetError("error", err.Error())
+			json["result"] = valid.Errors
+		}
+		c.Data["json"] = json
 		c.ServeJSON()
 	} else {
 		//get
@@ -59,12 +89,42 @@ func (c *UserController) Create() {
 
 func (c *UserController) Modify() {
 	if c.Ctx.Input.IsPost() {
-		c.Data["json"] = map[string]interface{}{
-			"code":   200,
-			"text":   "编辑成功",
-			"result": nil, //可以返回编辑后的用户
+		json := map[string]interface{}{
+			"code": 400,
+			"text": "提交数据错误",
 		}
+		form := &forms.UserModifyForm{}
+		valid := &validation.Validation{}
+		if err := c.ParseForm(form); err == nil {
+			if ok, err := valid.Valid(form); err != nil {
+				valid.SetError("error", err.Error())
+				json["result"] = valid.Errors
+			} else if ok {
+				user, err := models.DefaultUserManager.Modify(form.Id, form.Name, form.Gender, form.BirthdayTime, form.Tel, form.Email, form.Addr, form.Remark)
+
+
+				if err == nil {
+					json = map[string]interface{}{
+						"code":   200,
+						"text":   "更新成功",
+						"result": user,
+					}
+				} else {
+					json = map[string]interface{}{
+						"code": 500,
+						"text": "服务器错误",
+					}
+				}
+			} else {
+				json["result"] = valid.Errors
+			}
+		} else {
+			valid.SetError("error", err.Error())
+			json["result"] = valid.Errors
+		}
+		c.Data["json"] = json
 		c.ServeJSON()
+
 	} else {
 		//get
 		pk, _ := c.GetInt("pk")
@@ -105,6 +165,49 @@ func (c *UserController) UnLock() {
 	}
 	c.ServeJSON()
 }
+
+
+func (c *UserController) Password() {
+	if c.Ctx.Input.IsPost() {
+		json := map[string]interface{}{
+			"code": 400,
+			"text": "提交数据错误",
+		}
+
+		form := &forms.UserPasswordForm{User: c.User}
+		valid := &validation.Validation{}
+		if err := c.ParseForm(form); err == nil {
+			if ok, err := valid.Valid(form); err != nil {
+				valid.SetError("error", err.Error())
+				json["result"] = valid.Errors
+			} else if ok {
+				err := models.DefaultUserManager.UpdatePassword(c.User.Id, form.Password)
+				if err == nil {
+					json = map[string]interface{}{
+						"code": 200,
+						"text": "修改密码成功",
+					}
+				} else {
+					json = map[string]interface{}{
+						"code": 500,
+						"text": "服务器错误",
+					}
+				}
+			} else {
+				json["result"] = valid.Errors
+			}
+		} else {
+			valid.SetError("error", err.Error())
+			json["result"] = valid.Errors
+		}
+
+		c.Data["json"] = json
+		c.ServeJSON()
+	} else {
+		c.TplName = "user/password.html"
+	}
+}
+
 
 type TokenController struct {
 	auth.LoginRequiredController

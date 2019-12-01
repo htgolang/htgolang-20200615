@@ -2,6 +2,7 @@ package models
 
 import (
 	"time"
+	"fmt"
 
 	"github.com/astaxie/beego/orm"
 
@@ -101,6 +102,57 @@ func (m *UserManager) DeleteById(pk int) error {
 func (m *UserManager) SetStatusById(pk int, status int) error {
 	orm.NewOrm().QueryTable(&User{}).Filter("id__exact", pk).Update(orm.Params{"status": status})
 	return nil
+}
+
+func (m *UserManager) Create(name, password string, gender int, birthday *time.Time, tel, email, addr, remark string) (*User, error) {
+	ormer := orm.NewOrm()
+	user := &User{
+		Name:       name,
+		Gender:     gender,
+		Birthday:   birthday,
+		Tel:        tel,
+		Email:     email,
+		Addr:       addr,
+		Remark:     remark,
+	}
+	user.SetPassword(password)
+	if _, err := ormer.Insert(user); err != nil {
+		return nil, err
+	}
+	return user, nil
+}
+
+func (m *UserManager) Modify(id int, name string, gender int, birthday *time.Time, tel, email, addr, remark string) (*User, error) {
+	ormer := orm.NewOrm()
+	if user := m.GetById(id); user != nil {
+		user.Name = name
+		user.Gender = gender
+		user.Birthday = birthday
+		user.Tel = tel
+		user.Email = email
+		user.Addr = addr
+		user.Remark = remark
+		if _, err := ormer.Update(user); err != nil {
+			return nil, err
+		}
+		return user, nil
+	}
+
+	return nil, fmt.Errorf("操作对象不存在")
+}
+
+
+func (m *UserManager) UpdatePassword(id int, password string) error {
+	ormer := orm.NewOrm()
+	if user := m.GetById(id); user != nil {
+		user.SetPassword(password)
+		if _, err := ormer.Update(user, "Password"); err != nil {
+			return err
+		}
+		return nil
+	}
+
+	return fmt.Errorf("操作对象不存在")
 }
 
 type Token struct {
