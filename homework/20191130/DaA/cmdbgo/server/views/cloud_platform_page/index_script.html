@@ -1,0 +1,103 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var table = jQuery("#cloud_platformpage_table").DataTable({
+            dom:'<"row" <"#buttons.col-1"><"col-2" f><"col-7"><"col-2" l>>t<"row" <"col-6" i><"col-6" p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `CloudPlatformController.List`}}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns:[
+                {data:function (row) {
+                        return htmlEncode(row['name']);
+                    },
+                    name:"name"},
+                {data:function (row) {
+                            return htmlEncode(row['type']);
+                    },
+                    name:"type"},
+                {data:function (row) {
+                        return htmlEncode(row['region']);
+                    },
+                    name:"region"},
+                {data:function (row) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['created_time'])));
+                    },
+                    name:"created_time"},
+                {data:function (row) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['sync_time'])));
+                    },
+                    name:"sync_time"},
+                {data:function (row) {
+                        if(row['status'] === 0){
+                            return "正常";
+                        } else if(row['status'] === 1){
+                            return "禁用";
+                        } else {
+                            return htmlEncode(row['status']);
+                        }
+                    },
+                    name:"status"},
+                {data:function (row) {
+                        return htmlEncode(row['remark']);
+                    },
+                    name:"remark"},
+                {data:function(row){
+                        var buttons = ['<div class="btn-group" role="group" aria-label="First group">'];
+                        buttons.push('<button type="button" class="btn btn-sm btn-warning btn-open-dialog" data-title="编辑云平台信息" data-url="{{ urlfor `CloudPlatformController.Modify`}}?id=:pk:" data-callback="reload_table">编辑</button>');
+                        buttons.push('<button type="button" class="btn btn-sm btn-secondary btn-control" data-title="确认禁用吗?" data-url="{{ urlfor `CloudPlatformController.Lock`}}" data-pk=":pk:" data-callback="reload_table">禁用</button>');
+                        buttons.push('<button type="button" class="btn btn-sm btn-success btn-control" data-title="确认启用吗?" data-url="{{ urlfor `CloudPlatformController.UnLock`}}" data-pk=":pk:" data-callback="reload_table">启用</button>');
+                        buttons.push('<button type="button" class="btn btn-sm btn-danger btn-control" data-title="确认删除吗?" data-url="{{ urlfor `CloudPlatformController.Delete`}}" data-pk=":pk:" data-callback="reload_table">删除</button>');
+                        buttons.push('</div>');
+                        return buttons.join("").replace(/:pk:/g,row['id']);
+                    },
+                    orderable: false,
+                    name:"active"}
+            ]
+        });
+
+        table.on("draw",function () {
+            if(!jQuery("#buttons").attr("initd")){
+                jQuery("#buttons").attr("inited","inited").html('<a data-toggle="tooltip" data-placement="top" title="新建云平台" class="btn btn-primary btn-sm btn-block btn-open-dialog" data-url="{{ urlfor `CloudPlatformController.Create`}}" data-title="新建云平台" href="javascript:void(0);">新建云平台</a>');
+            }
+        });
+
+        window["reload_table"] = function(response){
+            console.log("5. reload_table");
+            swal.close();
+            table.ajax.reload(null,false);
+        };
+
+        jQuery(document).on("click",".btn-token",function(){
+            var id = jQuery(this).data("pk"),
+                title = jQuery(this).data("title");
+
+            swal({
+                    title: "",
+                    text: title,
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定",
+                    cancelButtonText: "取消",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function(){
+                    ajaxRequest("POST","{{ urlfor `TokenController.Generate`}}",{id:id},function(){
+                        swal.close()
+                        jQuery(".dialog-content").load("{{ urlfor `TokenController.Generate`}}?id=" + id)
+                    });
+                });
+        });
+    })
+
+</script>

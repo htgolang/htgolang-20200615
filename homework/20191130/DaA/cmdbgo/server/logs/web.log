@@ -1,0 +1,891 @@
+2019/12/04 08:09:29.474 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  18.199793ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/12/04 08:09:29.977 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.659669ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 08:09:37.532 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m| 105.166115ms|   match|[97;46m POST    [0m /auth/login   r:/auth/login/*
+2019/12/04 08:09:37.560 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  24.828208ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/12/04 08:09:37.687 [D] [server.go:2774]  |            ::1|[90;47m 304 [0m|  14.175273ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 08:09:37.695 [D] [server.go:2774]  |            ::1|[90;47m 304 [0m|  14.823406ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 08:09:37.702 [D] [server.go:2774]  |            ::1|[90;47m 304 [0m|  27.200753ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 08:09:37.707 [D] [server.go:2774]  |            ::1|[90;47m 304 [0m|  25.344367ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 08:09:37.712 [D] [server.go:2774]  |            ::1|[90;47m 304 [0m|  29.220983ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 08:09:37.900 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.967707ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/12/04 08:28:09.277 [I] [web.go:81]  同步数据库 
+2019/12/04 08:32:04.079 [I] [web.go:81]  同步数据库 
+2019/12/04 08:34:06.931 [I] [web.go:81]  同步数据库 
+2019/12/04 08:34:43.614 [I] [web.go:81]  同步数据库 
+2019/12/04 08:35:53.061 [I] [web.go:81]  同步数据库 
+2019/12/04 08:36:02.504 [I] [web.go:81]  同步数据库 
+2019/12/04 08:37:19.403 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 08:37:19.922 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    20.2264ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/12/04 08:37:20.173 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.804933ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/12/04 08:37:26.583 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.490459ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 08:37:26.817 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.952015ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:37:28.705 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.314164ms|   match|[97;44m GET     [0m /cloudplatform/create   r:/cloudplatform/create/*
+2019/12/04 08:38:07.871 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   188.0956ms|   match|[97;46m POST    [0m /cloudplatform/create   r:/cloudplatform/create/*
+2019/12/04 08:38:07.950 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.659607ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:38:15.592 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  18.451978ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 08:38:15.779 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.575022ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:42:25.287 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  28.995977ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 08:42:25.508 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.078442ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:47:57.013 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 08:47:57.533 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  31.069224ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 08:47:57.743 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.074868ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:47:59.540 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.446191ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 08:48:11.908 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.378562ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 08:48:51.255 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  19.295865ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 08:48:51.537 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.808394ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:48:52.795 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.939612ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 08:50:12.668 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  19.266774ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 08:50:12.847 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.047064ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:50:16.624 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.484858ms|   match|[97;46m POST    [0m /cloudplatform/unlock   r:/cloudplatform/unlock/*
+2019/12/04 08:50:16.638 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.562342ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:50:19.157 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.562643ms|   match|[97;46m POST    [0m /cloudplatform/lock   r:/cloudplatform/lock/*
+2019/12/04 08:50:19.168 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.510573ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:50:21.577 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.865493ms|   match|[97;46m POST    [0m /cloudplatform/unlock   r:/cloudplatform/unlock/*
+2019/12/04 08:50:21.587 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.858892ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 08:50:22.629 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.507364ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:04:35.643 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|   1.136549ms| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:04:35.644 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    743.395µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:04:40.723 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.487102ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:04:47.715 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.520227ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:36:46.588 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 09:36:46.885 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  33.517409ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:36:47.026 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.693559ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:36:47.033 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    792.086µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:36:47.041 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.10334ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:36:47.041 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.261876ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:36:47.042 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.118269ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:36:47.042 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.087649ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:36:47.048 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    460.337µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:36:47.051 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.005822ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:36:47.052 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    511.739µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:36:47.054 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    542.125µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:36:47.056 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    251.571µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:36:47.059 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    482.699µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:36:47.060 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.060504ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:36:47.122 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.021642ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:36:47.122 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    349.844µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:36:47.125 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    426.276µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:36:47.136 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    449.484µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:36:47.510 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.220907ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:36:47.662 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    857.748µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:36:47.662 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|     436.37µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:36:47.873 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    522.757µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:36:48.061 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.465748ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:36:49.651 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.030261ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:37:40.504 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  23.133773ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:37:40.570 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    380.402µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:37:40.572 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.771688ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:37:40.583 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.816039ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:37:40.583 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    690.176µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:37:40.584 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    115.089µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:37:40.588 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.699102ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:37:40.591 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    981.577µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:37:40.597 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.724502ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:37:40.600 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     2.9169ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:37:40.601 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    558.904µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:37:40.601 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    152.967µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:37:40.600 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    353.674µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:37:40.605 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    175.563µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:37:40.609 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.230947ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:37:40.611 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    2.65421ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:37:40.615 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.975955ms|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:37:40.616 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    777.035µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:37:40.923 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    519.134µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:37:41.073 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    800.954µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:37:41.074 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    747.613µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:37:41.108 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      61.65µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:37:41.178 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    843.734µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff
+2019/12/04 09:37:41.225 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.318125ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:37:42.641 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.594877ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:44:11.456 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  73.996892ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:44:11.655 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    715.661µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:44:11.655 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    3.44933ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:44:11.664 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    888.965µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:44:11.679 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    262.895µs|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:44:11.681 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    650.195µs|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:44:11.683 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     49.409µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:44:11.688 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    233.844µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:44:11.689 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    225.746µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:44:11.691 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    395.007µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:44:11.696 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    136.456µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:44:11.697 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     86.173µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:44:11.702 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    129.946µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:44:11.794 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    480.042µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:44:11.794 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    185.366µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:44:11.795 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     65.706µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:44:11.800 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    485.808µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:44:11.802 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    231.401µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:44:12.346 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    500.213µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:44:12.392 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    626.169µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:44:12.393 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|     868.28µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:44:12.494 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     72.147µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:44:12.675 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.507097ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:44:15.044 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:63: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:44:15.044 [E] [server.go:2774]  template: cloud_platform/modify.html:18:63: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:44:15.044 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    6.21542ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:44:24.168 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:63: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:44:24.172 [E] [server.go:2774]  template: cloud_platform/modify.html:18:63: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:44:24.172 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.966443ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:46:38.978 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  22.442769ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:46:39.057 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.092899ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:46:39.074 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.798642ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:46:39.075 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.731711ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:46:39.077 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.243995ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:46:39.076 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.385949ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:46:39.078 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    207.198µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:46:39.087 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.168733ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:46:39.087 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    983.461µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:46:39.094 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.084555ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:46:39.095 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    359.286µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:46:39.097 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.565735ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:46:39.095 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.588831ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:46:39.112 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    143.824µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:46:39.119 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.333121ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:46:39.121 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.136175ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:46:39.129 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    604.121µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:46:39.130 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    582.173µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:46:39.392 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    212.215µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:46:39.618 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    622.581µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:46:39.618 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    951.661µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:46:39.667 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     59.957µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:46:39.770 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.276004ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:46:42.717 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:78: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:46:42.717 [E] [server.go:2774]  template: cloud_platform/modify.html:18:78: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:46:42.717 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.731678ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:47:24.097 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.470979ms|   match|[97;44m GET     [0m /cloudplatform/create   r:/cloudplatform/create/*
+2019/12/04 09:48:45.677 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:48:45.678 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:48:45.678 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  25.732527ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:48:47.911 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   23.19625ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:48:47.979 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    397.336µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:48:47.986 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.575789ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:48:47.997 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    898.259µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:48:47.998 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.975253ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:48:48.000 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.974149ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:48:48.000 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    344.311µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:48:48.005 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    222.197µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:48:48.009 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.767494ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:48:48.011 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.264093ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:48:48.016 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     90.253µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:48:48.016 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    151.859µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:48:48.023 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.448687ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:48:48.023 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    985.186µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:48:48.026 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    150.786µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:48:48.030 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     70.536µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:48:48.031 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    141.007µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:48:48.034 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    338.374µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:48:48.384 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    229.571µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:48:48.422 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|     967.35µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:48:48.424 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|   1.679206ms| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:48:48.504 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    101.846µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:48:48.582 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.944107ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:48:51.419 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:48:51.419 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:48:51.419 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.675951ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:49:20.737 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  21.486046ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:49:20.796 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.562939ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:49:20.810 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  28.150218ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:49:20.826 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  10.500403ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:49:20.829 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.316709ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:49:20.827 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  28.526224ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:49:20.837 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.537191ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:49:20.842 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    3.70388ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:49:20.842 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.330445ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:49:20.842 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.582008ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:49:20.839 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  41.282566ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:49:20.850 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.127863ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:49:20.860 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.510207ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:49:20.895 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.971584ms|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:49:20.868 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.766479ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:49:20.888 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  25.690581ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:49:20.895 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  15.737104ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:49:20.895 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.024068ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:49:21.102 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    154.076µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:49:21.136 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    588.782µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:49:21.137 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    650.625µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:49:21.222 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    131.245µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:49:21.396 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    2.41916ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:49:22.638 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:49:22.638 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:49:22.638 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.754033ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:49:34.947 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 09:49:38.946 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  26.844855ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:49:39.025 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   12.76975ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:49:39.060 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  33.599235ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:49:39.060 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   46.21675ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:49:39.063 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  41.868103ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:49:39.065 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   39.01314ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:49:39.067 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  33.444794ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:49:39.069 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.314142ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:49:39.080 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    4.04787ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:49:39.083 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.351672ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:49:39.084 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.262729ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:49:39.085 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.313114ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:49:39.089 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.919149ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:49:39.094 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.287137ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:49:39.097 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.963267ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:49:39.097 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.30948ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:49:39.146 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    829.565µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:49:39.149 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    626.678µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:49:39.265 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.445002ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:49:39.526 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    731.375µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:49:39.527 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    526.838µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:49:39.538 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    509.376µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:49:39.632 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.685809ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:49:41.175 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:49:41.176 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:49:41.176 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.948873ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:50:13.860 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 09:50:13.987 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  20.594367ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:50:14.042 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.783071ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:50:14.045 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.737143ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:50:14.049 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.433685ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:50:14.049 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.464743ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:50:14.051 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.57254ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:50:14.051 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.21525ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:50:14.051 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    811.569µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:50:14.056 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.270539ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:50:14.056 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.003966ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:50:14.057 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     584.89µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:50:14.069 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    382.161µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:50:14.076 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.057068ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:50:14.080 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.624827ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:50:14.081 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.206917ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:50:14.081 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.468881ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:50:14.086 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    408.579µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:50:14.087 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    414.208µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:50:14.340 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    939.946µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:50:14.389 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    652.274µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:50:14.390 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    869.772µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:50:14.487 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    543.768µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:50:14.616 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    7.81568ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:50:15.878 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  18.847021ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:50:30.860 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 09:50:37.419 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  24.643791ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:50:37.500 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.623509ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:50:37.541 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  35.890574ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:50:37.552 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  53.562552ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:50:37.558 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  55.605568ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:50:37.561 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  38.267587ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:50:37.585 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   43.08335ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:50:37.590 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  33.689916ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:50:37.598 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.101783ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:50:37.625 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  44.931589ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:50:37.625 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.581753ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:50:37.628 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  58.234673ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:50:37.631 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  34.055167ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:50:37.638 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   27.32532ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:50:37.646 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.659615ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:50:37.646 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.104968ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:50:37.646 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.435116ms|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:50:37.647 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.147406ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:50:37.764 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    515.127µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:50:37.828 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    567.471µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:50:37.829 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    788.545µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:50:37.976 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    253.878µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:50:38.089 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.344182ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:50:40.545 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:50:40.545 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:50:40.545 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.856032ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:52:57.043 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  31.910447ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:52:57.121 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.027441ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:52:57.123 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.161676ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:52:57.124 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.678439ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:52:57.128 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    8.07327ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:52:57.123 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.436318ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:52:57.126 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.637785ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:52:57.129 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    195.926µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:52:57.148 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    231.849µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:52:57.152 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     60.506µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:52:57.152 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     66.674µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:52:57.156 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     67.775µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:52:57.182 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     84.346µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:52:57.186 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      157.5µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:52:57.186 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    181.597µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:52:57.190 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     61.728µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:52:57.191 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    162.786µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:52:57.197 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     120.35µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:52:57.508 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    372.037µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:52:57.635 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     80.047µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:52:57.640 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    618.058µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:52:57.642 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|   1.215029ms| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:52:57.754 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.829026ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:52:59.354 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:52:59.354 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:52:59.354 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.489609ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:53:13.915 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  25.527175ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:53:14.012 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.130529ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:53:14.016 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.757194ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:53:14.055 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    276.727µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:53:14.060 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    169.138µs|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:53:14.061 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    263.013µs|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:53:14.064 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     53.191µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:53:14.072 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    192.851µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:53:14.083 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    321.487µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:53:14.090 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    107.852µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:53:14.098 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    141.924µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:53:14.098 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      55.54µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:53:14.101 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     76.077µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:53:14.101 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    134.846µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:53:14.105 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    156.234µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:53:14.107 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      65.82µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:53:14.114 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.790131ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:53:14.117 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     75.934µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:53:14.442 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    149.881µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:53:14.448 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    568.106µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:53:14.448 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    402.184µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:53:14.606 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     63.494µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:53:14.826 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.761932ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:53:15.831 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:53:15.832 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:53:15.832 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.403735ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:53:21.227 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  26.182328ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:53:21.314 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.400363ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:53:21.315 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.249734ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:53:21.325 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.865298ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:53:21.329 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     649.33µs|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:53:21.329 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.854607ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:53:21.329 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.783298ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:53:21.334 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    164.925µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:53:21.334 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    177.932µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:53:21.337 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     72.921µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:53:21.340 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    118.755µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:53:21.343 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     63.987µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:53:21.345 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     81.412µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:53:21.347 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    129.083µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:53:21.347 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    180.866µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:53:21.445 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    105.166µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:53:21.447 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    460.313µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:53:21.450 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     81.979µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:53:21.819 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    213.641µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:53:21.823 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     77.182µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:53:21.825 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|      541.3µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:53:21.826 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|   1.587901ms| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:53:21.876 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.004467ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:53:23.542 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:53:23.543 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:53:23.543 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.137518ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:53:27.111 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  15.615076ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:53:27.202 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    341.403µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:53:27.233 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.666852ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:53:27.238 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  20.051054ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:53:27.239 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.043153ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:53:27.239 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.482333ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:53:27.241 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    321.183µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:53:27.239 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  19.380048ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:53:27.252 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    304.114µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:53:27.255 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    3.24927ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:53:27.259 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      2.218ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:53:27.262 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.138296ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:53:27.261 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.511469ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:53:27.269 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.384792ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:53:27.268 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.441954ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:53:27.273 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      78.72µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:53:27.274 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    103.417µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:53:27.277 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     66.627µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:53:27.520 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    177.102µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:53:27.583 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    460.238µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:53:27.583 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    391.588µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:53:27.700 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     70.969µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:53:27.839 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.298987ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:53:28.951 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:53:28.953 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:53:28.953 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    4.95101ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:53:31.790 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|   4.598587ms|   match|[97;44m GET     [0m /auth/logout   r:/auth/logout/*
+2019/12/04 09:53:31.816 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.833712ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/12/04 09:53:31.917 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    380.375µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:53:31.925 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.166131ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:53:31.986 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.921248ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:53:35.952 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|   8.252128ms|   match|[97;46m POST    [0m /auth/login   r:/auth/login/*
+2019/12/04 09:53:36.005 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  23.988237ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/12/04 09:53:36.105 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    430.806µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:53:36.117 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     94.945µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:53:36.117 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    329.679µs|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:53:36.118 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    283.337µs|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:53:36.118 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    324.897µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:53:36.118 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    479.977µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:53:36.131 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    218.686µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:53:36.135 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    225.995µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:53:36.135 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     71.887µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:53:36.135 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    126.413µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:53:36.136 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     49.856µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:53:36.139 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     86.511µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:53:36.142 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    115.275µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:53:36.143 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    100.251µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:53:36.144 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     43.694µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:53:36.146 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     62.726µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:53:36.147 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    108.533µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:53:36.446 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    336.506µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:53:36.465 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|      593.5µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:53:36.465 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    457.469µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:53:36.587 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     69.959µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:53:36.808 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.946098ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/12/04 09:53:40.304 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  20.809284ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:53:40.386 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.171845ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:53:40.392 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   12.33319ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:53:40.404 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.669516ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:53:40.408 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.805479ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:53:40.408 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.090793ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:53:40.420 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    7.64582ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:53:40.422 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.143772ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:53:40.424 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.196437ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:53:40.438 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    6.26846ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:53:40.447 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  55.021245ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:53:40.455 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  23.205722ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:53:40.458 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.370966ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:53:40.464 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.934148ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:53:40.465 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    976.141µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:53:40.470 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    977.578µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:53:40.465 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    6.55252ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:53:40.480 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   10.29787ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:53:40.715 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    163.518µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:53:40.851 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     80.158µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:53:40.855 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    901.868µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:53:40.864 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    648.896µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:53:41.018 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.512398ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:53:41.981 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:53:41.981 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:53:41.981 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.024548ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:54:11.826 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  22.079399ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:54:11.903 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    355.875µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:54:11.905 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    565.466µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:54:11.908 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.692467ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:54:11.909 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.066316ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:54:11.910 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    394.259µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:54:11.912 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.001566ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:54:11.924 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    745.225µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:54:11.929 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.360891ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:54:11.935 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.704693ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:54:11.935 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.760673ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:54:11.935 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.792196ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:54:11.944 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     72.921µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:54:11.949 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    135.177µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:54:11.963 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.610015ms|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:54:11.966 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    610.827µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:54:11.971 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.953126ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:54:11.973 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.703376ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:54:12.195 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    170.944µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:54:12.251 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    507.276µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:54:12.254 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    850.012µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:54:12.425 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     80.356µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:54:12.526 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.480791ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:54:13.762 [E] [controller.go:304]  parse template err: cloud_platform/modify.html template: cloud_platform/modify.html:23: undefined variable "$plugin"
+2019/12/04 09:54:13.763 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:54:13.763 [E] [server.go:2774]  template: cloud_platform/modify.html:18:56: executing "cloud_platform/modify.html" at <.object.Type>: can't evaluate field object in type cloud.ICloud
+2019/12/04 09:54:13.763 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.246541ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:54:32.401 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.582718ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:54:32.521 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  26.123203ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:54:32.531 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  25.585388ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:54:32.535 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  21.894726ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:54:32.534 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  20.766028ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:54:32.535 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    642.193µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:54:32.526 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  20.739036ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:54:32.545 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    100.257µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:54:32.546 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    212.205µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:54:32.554 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     93.555µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:54:32.560 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    125.796µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:54:32.562 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     49.797µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:54:32.567 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      62.07µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:54:32.570 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     108.85µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:54:32.570 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     93.524µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:54:32.576 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     78.643µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:54:32.577 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    101.334µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:54:32.579 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     66.654µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:54:32.830 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     167.13µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:54:32.893 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    564.223µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:54:32.893 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|     512.08µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:54:32.990 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     59.993µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:54:33.080 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.658955ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:54:34.281 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.779153ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:56:32.159 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  33.488309ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 09:56:32.216 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    406.589µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 09:56:32.221 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    228.662µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 09:56:32.238 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.471062ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 09:56:32.245 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.265056ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 09:56:32.246 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.131106ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 09:56:32.246 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.794914ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 09:56:32.259 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    254.793µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 09:56:32.265 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    189.313µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 09:56:32.281 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.786579ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 09:56:32.283 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.481925ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 09:56:32.295 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.891679ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 09:56:32.300 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.518432ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 09:56:32.310 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.978165ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 09:56:32.311 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.221297ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 09:56:32.312 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    849.052µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 09:56:32.316 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.072161ms|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 09:56:32.317 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    325.124µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 09:56:32.495 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.568792ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 09:56:32.652 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     82.418µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 09:56:32.653 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    581.423µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 09:56:32.655 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    740.995µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 09:56:32.721 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     2.3485ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 09:56:34.044 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.756705ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:56:53.056 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.714773ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:56:59.269 [D] [controller.go:306]  template Execute err: template: cloud_platform/modify.html:2:52: executing "cloud_platform/modify.html" at <.object.Id>: can't evaluate field Id in type interface {}
+2019/12/04 09:56:59.270 [E] [server.go:2774]  template: cloud_platform/modify.html:2:52: executing "cloud_platform/modify.html" at <.object.Id>: can't evaluate field Id in type interface {}
+2019/12/04 09:56:59.270 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.560804ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 09:59:06.912 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 09:59:09.247 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  33.371658ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:15:05.789 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:15:10.821 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  38.155108ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:16:29.729 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:16:30.451 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  36.291618ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:16:51.656 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  25.250799ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:17:24.822 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  25.289717ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 10:17:24.899 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.521929ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 10:17:24.905 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    781.656µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 10:17:24.929 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    6.80052ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 10:17:24.930 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.408751ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 10:17:24.931 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    2.20399ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 10:17:24.932 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     9.1651ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 10:17:24.933 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.289544ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 10:17:24.933 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.471903ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 10:17:24.941 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    322.342µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 10:17:24.944 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    476.763µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 10:17:24.945 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    344.723µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 10:17:24.949 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    494.616µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 10:17:24.951 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.104328ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 10:17:24.952 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.024416ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 10:17:24.956 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    344.774µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 10:17:24.957 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     577.76µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 10:17:24.960 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     615.97µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 10:17:25.308 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    2.09035ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 10:17:25.507 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    567.679µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 10:17:25.510 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    515.221µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 10:17:25.574 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.438608ms|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 10:17:25.783 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.208968ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:17:27.576 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.737064ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:17:34.148 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.567636ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:18:53.487 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:19:16.729 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  21.881796ms|   match|[97;44m GET     [0m /cloudplatform/create   r:/cloudplatform/create/*
+2019/12/04 10:20:08.430 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:20:09.388 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  65.968204ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 10:20:09.472 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.239095ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 10:20:09.475 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     748.51µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 10:20:09.476 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.41674ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 10:20:09.477 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.540531ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 10:20:09.478 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.065301ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 10:20:09.478 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.470158ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 10:20:09.489 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    515.156µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 10:20:09.490 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.328567ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 10:20:09.491 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.172969ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 10:20:09.491 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.924458ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 10:20:09.495 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    551.994µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 10:20:09.502 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    447.455µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 10:20:09.503 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.147045ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 10:20:09.503 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.972564ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 10:20:09.506 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    485.891µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 10:20:09.507 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    813.628µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 10:20:09.508 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.661362ms|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 10:20:09.774 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.246601ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 10:20:09.872 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    590.414µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 10:20:09.873 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    714.044µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 10:20:09.885 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    671.711µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 10:20:10.003 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.042395ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:20:11.724 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.421066ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:35:55.657 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:36:02.718 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  46.232008ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 10:36:02.858 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.597595ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 10:36:02.858 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.125843ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 10:36:02.883 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.261175ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 10:36:02.898 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      706.3µs|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 10:36:02.903 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    871.224µs|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 10:36:02.911 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    366.205µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 10:36:02.923 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    532.327µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 10:36:02.929 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.69922ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 10:36:02.931 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    558.051µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 10:36:02.939 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    518.795µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 10:36:02.951 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    254.479µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 10:36:02.959 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    508.225µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 10:36:02.964 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    629.982µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 10:36:02.968 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.585156ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 10:36:02.968 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    599.088µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 10:36:02.970 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    751.932µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 10:36:02.972 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    637.485µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 10:36:03.256 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.430851ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 10:36:03.369 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    484.698µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 10:36:03.378 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    629.657µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 10:36:03.500 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    449.979µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 10:36:03.589 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.187134ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:36:05.229 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.114253ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:36:13.163 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  10.282614ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:36:31.507 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  23.668629ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:37:11.983 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:37:19.004 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  35.538519ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 10:37:19.117 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    5.45754ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 10:37:19.121 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.440422ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 10:37:19.120 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.165308ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 10:37:19.121 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.092858ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 10:37:19.122 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.780692ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 10:37:19.123 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.335616ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 10:37:19.127 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    576.678µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 10:37:19.130 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.094418ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 10:37:19.130 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     843.59µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 10:37:19.131 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.805598ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 10:37:19.135 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    667.268µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 10:37:19.135 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    739.108µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 10:37:19.141 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.531945ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 10:37:19.142 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.702448ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 10:37:19.145 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    547.326µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 10:37:19.168 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.504261ms|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 10:37:19.168 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.234739ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 10:37:19.416 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.556423ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 10:37:19.656 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|   1.014875ms| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 10:37:19.657 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    495.586µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 10:37:19.657 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     473.89µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 10:37:19.776 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.932587ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:37:22.261 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.235485ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:37:27.409 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  21.905556ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:37:27.454 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.336144ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:37:32.174 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.174748ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:37:36.687 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.479457ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:37:36.753 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  23.437382ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:41:12.106 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:41:29.072 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  75.535829ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:41:29.210 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.350573ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:41:56.962 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.771484ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:45:28.502 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:45:32.541 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  61.758191ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:45:32.631 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  39.561659ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:46:39.760 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:46:42.065 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  50.718699ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:46:42.117 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.222819ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:47:10.224 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:47:11.725 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  56.098986ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:47:11.779 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.470843ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:47:28.437 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:47:29.474 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  53.075718ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:47:31.706 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   28.27781ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:47:31.765 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.670946ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:49:52.432 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:49:54.422 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  28.960965ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:49:58.084 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.514003ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:49:58.143 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    3.35738ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:51:46.366 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:51:51.529 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  34.666809ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 10:51:51.627 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.803075ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 10:51:51.697 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.188674ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 10:51:51.698 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  74.283989ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 10:51:51.698 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  18.083797ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 10:51:51.698 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.158653ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 10:51:51.699 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  43.207141ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 10:51:51.700 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  28.642127ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 10:51:51.715 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.147586ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 10:51:51.715 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    449.462µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 10:51:51.717 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    673.664µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 10:51:51.722 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    306.462µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 10:51:51.724 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    371.047µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 10:51:51.730 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.298347ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 10:51:51.732 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.231609ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 10:51:51.733 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    674.889µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 10:51:51.733 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    475.997µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 10:51:51.734 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.865706ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 10:51:52.050 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.426818ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 10:51:52.198 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    682.872µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 10:51:52.268 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.266295ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:51:52.355 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    545.505µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 10:51:52.357 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    735.618µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 10:51:53.323 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.048224ms|   match|[97;44m GET     [0m /cloudplatform/create   r:/cloudplatform/create/*
+2019/12/04 10:52:07.685 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m| 114.570836ms|   match|[97;46m POST    [0m /cloudplatform/create   r:/cloudplatform/create/*
+2019/12/04 10:52:07.719 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.536025ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:55:07.535 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:55:09.896 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  20.644101ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 10:55:09.974 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.922099ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 10:55:09.981 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  10.191159ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 10:55:09.984 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.801121ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 10:55:10.002 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.873393ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 10:55:10.005 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.313493ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 10:55:10.016 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.284195ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 10:55:10.022 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.005867ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 10:55:10.023 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    5.39714ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 10:55:10.028 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.767155ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 10:55:10.028 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  15.193252ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 10:55:10.029 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  19.322093ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 10:55:10.034 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    541.663µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 10:55:10.034 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.152173ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 10:55:10.040 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.110453ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 10:55:10.041 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.05666ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 10:55:10.041 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.588683ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 10:55:10.042 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.090095ms|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 10:55:10.285 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.353494ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 10:55:10.371 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|   1.004472ms| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 10:55:10.372 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    805.542µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 10:55:10.526 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    490.474µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 10:55:10.625 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.592164ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:55:13.186 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.253653ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:55:21.570 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   18.10305ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:55:21.643 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  10.626842ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 10:55:55.902 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 10:55:59.132 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  44.806515ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 10:55:59.221 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  37.101451ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:00:26.694 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:00:28.521 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  30.175659ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:00:28.565 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.157084ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:04:16.131 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:04:20.422 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  29.726235ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:04:20.473 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.530746ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:08:52.498 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:08:52.667 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  27.193529ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:09:30.283 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.592168ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:14:11.380 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:15:24.104 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:15:26.647 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  27.562884ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:16:07.669 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:16:15.429 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  44.157285ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:16:42.646 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:16:43.036 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  39.275341ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:22:45.294 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:22:52.632 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  45.023595ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:29:04.180 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:29:05.255 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  29.055958ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 11:29:05.395 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  39.617698ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 11:29:05.420 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  62.436173ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 11:29:05.424 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  37.566532ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 11:29:05.429 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  23.055378ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 11:29:05.429 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.890126ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 11:29:05.430 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  44.062399ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 11:29:05.431 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   35.82155ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 11:29:05.444 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.048129ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 11:29:05.444 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.127738ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 11:29:05.445 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    526.204µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 11:29:05.449 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    252.171µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 11:29:05.451 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    495.095µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 11:29:05.459 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.478227ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 11:29:05.460 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    876.222µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 11:29:05.462 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    434.795µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 11:29:05.464 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    859.482µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 11:29:05.465 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    978.453µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 11:29:05.895 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.296927ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 11:29:06.048 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    507.864µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 11:29:06.110 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    692.872µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 11:29:06.110 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    467.367µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 11:29:06.128 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    3.63676ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:29:07.432 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  22.092155ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:29:10.924 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.522041ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:29:42.314 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:29:42.346 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.705361ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 11:29:42.418 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    9.34063ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 11:29:42.419 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  22.367028ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 11:29:42.421 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  18.320724ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 11:29:42.433 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  25.682546ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 11:29:42.436 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  29.119179ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 11:29:42.436 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.11894ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 11:29:42.438 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.252113ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 11:29:42.438 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.696164ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 11:29:42.438 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  30.628386ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 11:29:42.451 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    438.777µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 11:29:42.453 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.030425ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 11:29:42.454 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    591.295µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 11:29:42.458 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    990.767µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 11:29:42.460 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    907.589µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 11:29:42.461 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    602.593µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 11:29:42.463 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    278.437µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 11:29:42.464 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    564.304µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 11:29:42.616 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.548204ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 11:29:42.665 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    501.364µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 11:29:42.665 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    399.381µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 11:29:42.731 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    513.001µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 11:29:42.845 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.757609ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:29:44.040 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.269348ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 11:29:44.102 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     446.81µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 11:29:44.107 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    195.179µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 11:29:44.114 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    341.551µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 11:29:44.124 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    206.793µs|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 11:29:44.131 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    165.095µs|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 11:29:44.131 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     77.431µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 11:29:44.146 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    165.832µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 11:29:44.151 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    576.865µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 11:29:44.151 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.01884ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 11:29:44.152 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    551.291µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 11:29:44.152 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.39346ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 11:29:44.153 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     55.875µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 11:29:44.158 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.091443ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 11:29:44.159 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.227381ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 11:29:44.164 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     81.677µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 11:29:44.165 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    132.117µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 11:29:44.167 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     78.411µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 11:29:44.399 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    191.974µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 11:29:44.438 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    537.644µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 11:29:44.443 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    504.269µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 11:29:44.456 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      72.19µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 11:29:44.548 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.117688ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:29:45.863 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  18.105459ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:29:49.069 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    8.21039ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:30:02.407 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  15.050402ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:31:27.169 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:31:29.177 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  40.609477ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:34:22.691 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:34:25.563 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m| 191.370031ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:35:31.712 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:35:36.276 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m| 458.464044ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:35:36.349 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  20.909687ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:35:52.282 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:35:58.038 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  28.793932ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 11:35:58.110 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  23.803028ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 11:35:58.110 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  10.933809ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 11:35:58.114 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  26.959269ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 11:35:58.124 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  24.079559ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 11:35:58.130 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  28.509101ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 11:35:58.131 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.506902ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 11:35:58.132 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.181162ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 11:35:58.134 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.230631ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 11:35:58.136 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.764648ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 11:35:58.136 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.899002ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 11:35:58.175 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    521.094µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 11:35:58.175 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.104517ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 11:35:58.189 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    878.785µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 11:35:58.211 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.431789ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 11:35:58.212 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.341802ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 11:35:58.212 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.793179ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 11:35:58.213 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.288965ms|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 11:35:58.417 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.197338ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 11:35:58.507 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    516.146µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 11:35:58.544 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    600.948µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 11:35:58.544 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    511.826µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 11:35:58.594 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.222537ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:35:59.951 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.619027ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:36:06.382 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m| 108.753262ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:36:18.878 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  79.773449ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:36:46.740 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  27.872554ms|   match|[97;44m GET     [0m /cloudplatformpage/index   r:/cloudplatformpage/index/*
+2019/12/04 11:36:46.842 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.978068ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/04 11:36:46.843 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.146711ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/04 11:36:46.846 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.262897ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/04 11:36:46.847 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.123264ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/04 11:36:46.850 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    754.246µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/04 11:36:46.848 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.001507ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/04 11:36:46.855 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    164.816µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/04 11:36:46.858 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.600476ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/04 11:36:46.865 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    3.18837ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/04 11:36:46.866 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.867382ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/04 11:36:46.872 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.978877ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/04 11:36:46.878 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.385375ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/04 11:36:46.885 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.150103ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/04 11:36:46.887 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.412254ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/12/04 11:36:46.893 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.779443ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/12/04 11:36:46.896 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    392.432µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/04 11:36:46.895 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.184877ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/04 11:36:47.065 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     210.97µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/04 11:36:47.201 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    724.747µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/12/04 11:36:47.208 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    643.948µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/12/04 11:36:47.236 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     86.605µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/12/04 11:36:47.291 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.746279ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:37:54.010 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/04 11:38:15.404 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.698395ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:38:43.311 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  81.094554ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:40:16.519 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.794819ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:40:22.992 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  75.926938ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:40:36.386 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  329.79962ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:40:36.438 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.435059ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:41:04.642 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.339313ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:41:21.350 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   69.50469ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:41:36.893 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m| 269.271365ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:41:49.254 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  465.15027ms|   match|[97;46m POST    [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:41:49.282 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.211604ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:42:07.731 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.258168ms|   match|[97;46m POST    [0m /cloudplatform/lock   r:/cloudplatform/lock/*
+2019/12/04 11:42:07.765 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.911204ms|   match|[97;44m GET     [0m /cloudplatform/list   r:/cloudplatform/list/*
+2019/12/04 11:42:23.611 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.416747ms|   match|[97;44m GET     [0m /cloudplatform/modify   r:/cloudplatform/modify/*
+2019/12/04 11:44:11.809 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  43.918382ms|   match|[97;44m GET     [0m /virtualmachinepage/index   r:/virtualmachinepage/index/*
+2019/12/04 11:44:12.204 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.863039ms|   match|[97;44m GET     [0m /virtualmachine/list   r:/virtualmachine/list/*
+2019/12/04 13:31:44.958 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  82.911595ms|   match|[97;44m GET     [0m /virtualmachinepage/index   r:/virtualmachinepage/index/*
+2019/12/04 13:31:45.441 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.627287ms|   match|[97;44m GET     [0m /virtualmachine/list   r:/virtualmachine/list/*

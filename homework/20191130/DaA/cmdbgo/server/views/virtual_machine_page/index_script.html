@@ -1,0 +1,73 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var table = jQuery("#virtual_machinepage_table").DataTable({
+            dom:'<"row" <"#buttons.col-1"><"col-2" f><"col-7"><"col-2" l>>t<"row" <"col-6" i><"col-6" p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `VirtualMachineController.List`}}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns:[
+                {data:function (row) {
+                        return htmlEncode(row['name']);
+                    },
+                    name:"name"},
+                {data:function (row) {
+                            return htmlEncode(row['platform']);
+                    },
+                    name:"type"},
+                {data:function (row) {
+                        return htmlEncode(row['os']);
+                    },
+                    name:"region"},
+                {data:function (row) {
+                        return htmlEncode(row['cpu'] + '/' + row['mem']);
+                    },
+                    name:"created_time"},
+                {data:function (row) {
+                        return htmlEncode(row['private_addrs']);
+                    },
+                    name:"sync_time"},
+                {data:function (row) {
+                        return htmlEncode(row['public_addrs']);
+                    },
+                    name:"remark"},
+                {data:function (row) {
+                        return htmlEncode(row['vm_created_time'] + '/' + row['vm_expired_time']);
+                    },
+                    name:"status"},
+                {data:function(row){
+                        var buttons = ['<div class="btn-group" role="group" aria-label="First group">'];
+                        buttons.push('<button type="button" class="btn btn-sm btn-secondary btn-control" data-title="确认开机吗?" data-url="{{ urlfor `CloudPlatformController.Start`}}" data-pk=":pk:" data-callback="reload_table">开机</button>');
+                        buttons.push('<button type="button" class="btn btn-sm btn-success btn-control" data-title="确认关机吗?" data-url="{{ urlfor `CloudPlatformController.Stop`}}" data-pk=":pk:" data-callback="reload_table">关机</button>');
+                        buttons.push('<button type="button" class="btn btn-sm btn-danger btn-control" data-title="确认重启吗?" data-url="{{ urlfor `CloudPlatformController.Restart`}}" data-pk=":pk:" data-callback="reload_table">重启</button>');
+                        buttons.push('</div>');
+                        return buttons.join("").replace(/:pk:/g,row['id']);
+                    },
+                    orderable: false,
+                    name:"active"}
+            ]
+        });
+
+        table.on("draw",function () {
+            if(!jQuery("#buttons").attr("initd")){
+                jQuery("#buttons").attr("inited","inited");
+            }
+        });
+
+        window["reload_table"] = function(response){
+            console.log("5. reload_table");
+            swal.close();
+            table.ajax.reload(null,false);
+        };
+    })
+
+</script>

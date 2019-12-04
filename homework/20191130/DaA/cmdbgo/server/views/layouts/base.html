@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ config "String" "appname" "CMDBGO" }}</title>
+    {{ assets_css "/static/css/main.css" }}
+    {{ assets_css "/static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css" }}
+    {{ .LayoutStyle }}
+    <style type="text/css">
+        div.dialog-content{
+            max-height: 500px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="app sidebar-mini pace-done sidenav-toggled">
+<!-- <body class="app sidebar-mini"> 默认打开列表-->
+<!-- Navbar-->
+<header class="app-header">
+    <a class="app-header__logo" href="index.html">cmdbgo</a>
+    <!-- Sidebar toggle button-->
+    <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
+    <!-- Navbar Right Menu-->
+    <ul class="app-nav">
+        <li class="app-search">
+            登录用户：{{ .user.Name }}
+        </li>
+        <!--Notification Menu-->
+        <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
+            <ul class="app-notification dropdown-menu dropdown-menu-right">
+                {{ template "layouts/notification.html" . }}
+            </ul>
+        </li>
+        <!-- User Menu-->
+        <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+            <ul class="dropdown-menu settings-menu dropdown-menu-right">
+                <li>
+                    <a class="dropdown-item btn-open-dialog" href="javascript:void(0)" data-title="修改密码" data-url="{{ urlfor `UserController.SetPassword`}}?id={{ .user.Id }}">
+                        <i class="fa fa-user fa-lg"></i>
+                        修改密码
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="{{ urlfor `AuthController.Logout` }}">
+                        <i class="fa fa-sign-out fa-lg"></i>
+                        退出登录
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</header>
+<!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar">
+    </div>
+
+    <aside class="app-sidebar">
+        <div class="app-sidebar__user">
+            <img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+            <div>
+                <p class="app-sidebar__user-name">总标签</p>
+                <p class="app-sidebar__user-designation">标签简介</p>
+            </div>
+        </div>
+
+        <ul class="app-menu">
+            {{ template "layouts/menu.html" . }}
+        </ul>
+    </aside>
+    <main class="app-content">
+        <div class="app-title">
+            <div>
+                <h1><i class="fa fa-dashboard"></i>大标题</h1>
+                <p>标题注释</p>
+            </div>
+            <ul class="app-breadcrumb breadcrumb">
+                <li class="breadcrumb-item">
+                    <i class="fa fa-home fa-lg"></i>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">大标题</a>
+                </li>
+            </ul>
+        </div>
+    {{ .LayoutContent }}
+    </main>
+    {{ template "layouts/dialog.html" . }}
+    {{ assets_js "/static/js/jquery-3.3.1.min.js" }}
+    {{ assets_js "/static/js/popper.min.js" }}
+    {{ assets_js "/static/js/bootstrap.min.js" }}
+    {{ assets_js "/static/js/main.js" }}
+    {{ assets_js "/static/js/plugins/pace.min.js" }}
+    {{ assets_js "/static/js/plugins/jquery.dataTables.min.js" }}
+    {{ assets_js "/static/js/plugins/dataTables.bootstrap.min.js" }}
+    {{ assets_js "/static/js/jquery.base64.js" }}
+    {{ assets_js "/static/js/jquery.cookie-1.4.1.min.js" }}
+    {{ assets_js "/static/js/utils.js" }}
+
+    {{ assets_js "/static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js"}}
+    {{ assets_js "/static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js"}}
+    {{ assets_js "/static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js"}}
+    {{ assets_js "/static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js"}}
+    {{ assets_js "/static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js"}}
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery.extend(jQuery.fn.dataTable.defaults,{
+            ordering: false,
+            language: {
+                url: '/static/json/datatables.i18n.zh-CN.json'
+            }
+        });
+        jQuery(document).on("focus","input[datepicker]",function(){
+            if(jQuery(this).attr("initd")){
+                return;
+            }
+            jQuery(this).attr("initd","initd").datepicker();
+        });
+    });
+</script>
+{{ template "layouts/dialog_script.html" . }}
+{{ template "layouts/control_script.html" . }}
+{{ .LayoutScript }}
+</body>
+</html>
