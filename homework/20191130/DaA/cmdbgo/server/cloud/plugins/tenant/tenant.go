@@ -6,9 +6,6 @@ import (
 	cvm "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/cvm/v20170312"
 	"github.com/xxdu521/cmdbgo/server/cloud"
 )
-//SecretId: AKIDmOluvixZeU5RYQaPWOzKPDl35rNdcMdh
-//SecretKey:2oKaaNuBCxShgPs89wTklW2HGzSt4zf5
-//cvm.tencentcloudapi.com
 
 type TenantCloud struct {
 	addr		string

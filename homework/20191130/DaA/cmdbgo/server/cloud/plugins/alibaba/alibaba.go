@@ -7,10 +7,6 @@ import (
 	"github.com/xxdu521/cmdbgo/server/cloud"
 )
 
-//import "github.com/aliyun/alibaba-cloud-sdk-go/tree/master/services/ecs"
-//LTAI4Ftu6kGNth8dAqpPkVv1 rWOpA52tJZaATuyw3TMQJkjvnchdOK cn-shenzhen ecs.aliyuncs.com 个人
-//LTAI4FkfkEVNFGV7S3294foA fzotL4uCygsstuie6WzUs0tIRd1Lfy3 cn-shanghai ecs.aliyuncs.com 公司
-
 type AliCloud struct {
 	addr		string
 	region		string
