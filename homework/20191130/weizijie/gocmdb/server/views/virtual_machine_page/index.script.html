@@ -1,0 +1,85 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#table").DataTable({
+        dom:'<"row"<"col-6"l><"col-4"f><"#buttons.col-1">>t<"row"<"col-6"i><"col-6"p>>',
+        serverSide: true,
+        ajax: {
+            url : "{{ urlfor `VirtualMachineController.List` }}",
+            data: function(data) {
+                return {
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q: data.search.value
+                };
+            },
+            dataSrc: "result"
+        },
+        columns: [
+            {
+                data: function(row) {
+                    return htmlEncode(row['name']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['platform']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['os']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row["cpu"]) + "核" + "/" + htmlEncode(row["mem"]) + "G";
+                    // return htmlEncode(row['cpu']) + "/" + htmlEncode(row['mem']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['public_addrs']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['private_addrs']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['vm_created_time']) + "~" + htmlEncode(row['vm_created_time']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['status']);
+                }
+            },
+            {
+                data: function(row) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+                    buttons.push('<button class="btn btn-sm btn-secondary btn-control" data-title="确定重启?" data-url="{{ urlfor `VirtualMachineController.Restart` }}" data-pk=":pk:" data-callback="reload_table">重启</div>');
+                    buttons.push('<button class="btn btn-sm btn-success btn-control" data-title="确定开机?" data-url="{{ urlfor `VirtualMachineController.Start` }}" data-pk=":pk:" data-callback="reload_table">开机</div>');
+                    buttons.push('<button class="btn btn-sm btn-danger btn-control"  data-title="确定关机?" data-url="{{ urlfor `VirtualMachineController.stop` }}" data-pk=":pk:" data-callback="reload_table">关机</div>');
+                    buttons.push('</div>');
+                    return buttons.join("").replace(/:pk:/g, row['id']);
+                }
+            }
+        ]
+    });
+    table.on("draw", function() {
+        if(!jQuery("#buttons").attr("initd")) {
+            jQuery("#buttons").attr("initd", "initd");
+        }
+    });
+    window["reload_table"] = function(response) {
+        table.ajax.reload(null, false);
+    };
+
+    setInterval(function() {
+        table.ajax.reload(null, false);
+    }, 10 * 1000);
+});
+</script>
