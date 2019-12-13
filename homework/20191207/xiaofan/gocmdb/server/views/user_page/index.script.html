@@ -1,0 +1,105 @@
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        // table style
+        var admin = jQuery("#table").data("manage");
+
+        var table = jQuery("#table").DataTable({
+            dom: '<"row"<"col-6" l><"col-5" f><"#buttons.col-1">>t<"row"<"col-6"i><"col-6"p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `UserController.List` }}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns: [
+                {
+                    data: function (row) {
+                        return htmlEncode(row["name"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        if (row["gender"] === 0) {
+                            return "男";
+                        } else {
+                            return "女";
+                        }
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["birthday"]).split("T")[0];
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["tel"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["email"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["addr"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["remark"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        if (row["status"] === 0) {
+                            return "正常";
+                        } else {
+                            return "锁定";
+                        }
+                    }
+                },
+                {
+                    data: function (row) {
+                        var buttons = ['<div class="btn-group" role="group">'];
+                        if (row["name"] !== "admin" && admin) {
+                            buttons.push('<button class="btn btn-sm btn-warning btn-open-dialog fa fa-pencil-square-o"  data-title="编辑用户" data-url="{{ urlfor `UserController.Modify`}}?pk=:pk:"></button>');
+                            buttons.push('<button class="btn btn-sm btn-secondary btn-control fa fa-lock" data-title="确定锁定？" data-url="{{ urlfor `UserController.Lock`}}" data-pk=":pk:" data-callback="reload_table"></button>');
+                            buttons.push('<button class="btn btn-sm btn-success btn-control fa fa-unlock-alt" data-title="确定解锁？" data-url="{{ urlfor `UserController.UnLock`}}" data-pk=":pk:" data-callback="reload_table"></button>');
+                            buttons.push('<button class="btn btn-sm btn-danger btn-control fa fa-exclamation-triangle" data-title="确定删除？" data-url="{{ urlfor `UserController.Delete`}}" data-pk=":pk:" data-callback="reload_table"></button>');
+                        }
+                        buttons.push('<button class="btn btn-sm btn-info btn-open-dialog fa fa-key" data-title="查看token" data-url="{{ urlfor `TokenController.Generate`}}?pk=:pk:" data-look="look"></button>');
+                        return buttons.join("").replace(/:pk:/g, row["id"])
+                    }
+                },
+            ]
+        });
+
+        // draw button
+        table.on("draw", function () {
+            if (!jQuery("#buttons").attr("initd")) {
+                jQuery("#buttons").attr("initd", "initd").html('<button class="btn btn-primary btn-sm btn-block btn-open-dialog " data-title="新建用户" data-url="{{urlfor `UserController.Create`}}">新建</button>')
+            }
+        });
+
+        // 回调函数
+        window["reload_table"] = function (response) {
+            table.ajax.reload(null, false)
+        };
+        jQuery(document).on("click", ".btn-token", function () {
+            var pk = jQuery(this).data("pk");
+            ajaxRequest("POST", '{{ urlfor `TokenController.Generate`}}', {pk: pk}, function () {
+                jQuery(".dialog-content").load('{{ urlfor `TokenController.Generate`}}?pk=' + pk);
+            })
+        })
+    });
+</script>
