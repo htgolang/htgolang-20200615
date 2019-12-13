@@ -135,10 +135,24 @@ func (c *TenantCloud) StartInstance(uuid string) error {
 	return err
 }
 func (c *TenantCloud) StopInstance(uuid string) error {
-	return nil
+	client, err := cvm.NewClient(c.credential, c.region, c.profile)
+	if err != nil {
+		return err
+	}
+	request := cvm.NewStopInstancesRequest()
+	request.InstanceIds = []*string{&uuid}
+	_, err = client.StopInstances(request)
+	return err
 }
 func (c *TenantCloud) RestartInstance(uuid string) error {
-	return nil
+	client, err := cvm.NewClient(c.credential, c.region, c.profile)
+	if err != nil {
+		return err
+	}
+	request := cvm.NewRebootInstancesRequest()
+	request.InstanceIds = []*string{&uuid}
+	_, err = client.RebootInstances(request)
+	return err
 }
 
 func init(){
