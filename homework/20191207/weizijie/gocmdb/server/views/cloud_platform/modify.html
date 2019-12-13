@@ -1,0 +1,71 @@
+<form data-url="{{ urlfor `CloudPlatformController.Modify` }}" data-callback="reload_table">
+    <input type="hidden" name="id" value="{{ .object.Id }}" />
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="name">名称<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="name" name="name" placeholder="名称" value="{{ .object.Name }}"/>
+            <small class="form-text text-muted">
+                只能由大小写英文、数字、下划线和中划线组成，长度为5~32位，且必须唯一
+            </small>
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        <label class="col-2 col-form-label">类型</label>
+        <div class="col-10">
+                <!-- <input class="form-control" type="type" id="type" name="type" placeholder="类型" value="{{ .object.Type }}"/> -->
+            <select class="form-control" name="type">
+                {{ range $type, $plugin := .types }}
+                <option value="{{ $type }}" {{ if eq $type $.object.Type }}selected{{ end }}>{{ $plugin.Name }}</option>
+                <!-- <option value="{{ $type }}">{{ $plugin.Name }}</option> -->
+                {{ end }}
+            </select>
+            <small class="form-text text-muted">
+                请选择对应的平台类型
+            </small>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="addr">地址</label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="addr" name="addr" placeholder="地址" value="{{ .object.Addr }}"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="region">区域</label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="region" name="region" placeholder="区域" value="{{ .object.Region }}"/>
+            <small class="form-text text-muted">
+                地址不能为空，且长度必须在1024之内
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="access_key">AccessKey</label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="access_key" name="access_key" placeholder="AccessKey" value="{{ .object.AccessKey }}"/>
+            <small class="form-text text-muted">
+                AccessKey不能为空，且长度必须在1024之内
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="secrect_key">SecrectKey</label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="secrect_key" name="secrect_key" placeholder="SecrectKey" value="{{ .object.SecrectKey }}"/>
+            <small class="form-text text-muted">
+                SecrectKey不能为空，且长度必须在1024之内
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="remark">备注</label>
+        <div class="col-10">
+            <textarea class="form-control" id="remark" name="remark" rows="3" placeholder="备注" >{{ .object.Remark }}</textarea>
+            <small class="form-text text-muted">
+                长度为0~512位
+            </small>
+        </div>
+    </div>
+</form>
