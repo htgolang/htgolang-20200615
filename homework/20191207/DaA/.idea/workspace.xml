@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="388861f7-3564-423e-9a83-d815baebcefd" name="默认更改列表" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../course/20191130/gocmdb/server/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../../course/20191130/gocmdb/server/models/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/controllers/auth/plugin.go" beforeDir="false" afterPath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/controllers/auth/plugin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/logs/web.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/logs/web.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/temp/session/2/3/23086d0cbac91c86d653cd1a70759cf2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/temp/session/2/7/27f7ffc6e66c01e05e0c27794302dbf1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/temp/session/a/4/a47cb1b9bdf800516e324bb859d58157" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/temp/session/c/2/c2206b07020ddafa163c445f72a0498c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/temp/session/d/5/d570b0caf2b4ddf211d34b037d6e1e4c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/views/user_page/index_script.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../20191123/DaA/cmdbgo/server/views/user_page/index_script.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../20191123/xiaofan/gocmdb/server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20191123/xiaofan/gocmdb/server/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1UeN9cOPfG6gc0Oy9UO2LREY9vX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

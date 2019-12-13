@@ -1,0 +1,117 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var table = jQuery("#usertable").DataTable({
+            dom:'<"row" <"#buttons.col-1"><"col-2" f><"col-7"><"col-2" l>>t<"row" <"col-6" i><"col-6" p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `UserController.List`}}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns:[
+                {data:function (row) {
+                        return htmlEncode(row['name']);
+                    },
+                    name:"name"},
+                {data:function (row) {
+                        if(row['gender'] === 0){
+                            return "男";
+                        } else if(row['gender'] === 1){
+                            return "女";
+                        } else {
+                            return htmlEncode(row['gender']);
+                        }
+                    },
+                    name:"gender"},
+                {data:function (row) {
+                        return htmlEncode(row['birthday']);
+                    },
+                    name:"birthday"},
+                {data:function (row) {
+                        return htmlEncode(row['tel']);
+                    },
+                    name:"tel"},
+                {data:function (row) {
+                        return htmlEncode(row['email']);
+                    },
+                    name:"email"},
+                {data:function (row) {
+                        return htmlEncode(row['addr']);
+                    },
+                    name:"addr"},
+                {data:function (row) {
+                        return htmlEncode(row['remark']);
+                    },
+                    name:"remark"},
+                {data:function (row) {
+                        if(row['status'] === 0){
+                            return "正常";
+                        } else if(row['status'] === 1){
+                            return "锁定";
+                        } else {
+                            return htmlEncode(row['status']);
+                        }
+                    },
+                    name:"status"},
+                {data:function(row){
+                        var buttons = ['<div class="btn-group" role="group" aria-label="First group">'];
+                            buttons.push('<button type="button" class="btn btn-sm btn-warning btn-open-dialog" data-title="编辑用户" data-url="{{ urlfor `UserController.Modify`}}?id=:pk:" data-callback="reload_table">编辑</button>');
+                            if(row['id'] != {{ .user.Id }} ){
+                                buttons.push('<button type="button" class="btn btn-sm btn-secondary btn-control" data-title="锁定用户?" data-url="{{ urlfor `UserController.Lock`}}" data-pk=":pk:" data-callback="reload_table">锁定</button>');
+                                buttons.push('<button type="button" class="btn btn-sm btn-success btn-control" data-title="解锁用户?" data-url="{{ urlfor `UserController.UnLock`}}" data-pk=":pk:" data-callback="reload_table">解锁</button>');
+                                buttons.push('<button type="button" class="btn btn-sm btn-danger btn-control" data-title="删除用户?" data-url="{{ urlfor `UserController.Delete`}}" data-pk=":pk:" data-callback="reload_table">删除</button>');
+                            } else {
+                                buttons.push('<button type="button" class="btn btn-sm btn-info btn-open-dialog" data-title="查看Token" data-url="{{ urlfor `TokenController.Generate`}}?id=:pk:" data-look="look">Token</button>');
+                            }
+                            buttons.push('</div>');
+                        return buttons.join("").replace(/:pk:/g,row['id']);
+                    },
+                    orderable: false,
+                    name:"active"}
+            ]
+        });
+
+        table.on("draw",function () {
+            if(!jQuery("#buttons").attr("initd")){
+                jQuery("#buttons").attr("inited","inited").html('<a data-toggle="tooltip" data-placement="top" title="新建用户" class="btn btn-primary btn-sm btn-block btn-open-dialog" data-url="{{ urlfor `UserController.Create`}}" data-title="新建用户" href="javascript:void(0);">新建用户</a>');
+            }
+        });
+
+        window["reload_table"] = function(response){
+            console.log("5. reload_table");
+            swal.close();
+            table.ajax.reload(null,false);
+        };
+
+        jQuery(document).on("click",".btn-token",function(){
+            var id = jQuery(this).data("pk"),
+                title = jQuery(this).data("title");
+
+            swal({
+                    title: "",
+                    text: title,
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "确定",
+                    cancelButtonText: "取消",
+                    closeOnConfirm: false,
+                    closeOnCancel: true
+                },
+                function(){
+                    ajaxRequest("POST","{{ urlfor `TokenController.Generate`}}",{id:id},function(){
+                        swal.close()
+                        jQuery(".dialog-content").load("{{ urlfor `TokenController.Generate`}}?id=" + id)
+                    });
+                });
+        });
+    })
+
+</script>

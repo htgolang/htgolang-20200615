@@ -1,0 +1,118 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var table = jQuery("#virtual_machinepage_table").DataTable({
+            dom:'<"row" <"#buttons.col-3"><"col-1"><"col-2" f><"col-4"><"col-2" l>>t<"row" <"col-6" i><"col-6" p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `VirtualMachineController.List`}}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                        platform: jQuery("select.query").val()
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns:[
+                {data:function (row) {
+                        return htmlEncode(row['name']);
+                    },
+                    name:"name"},
+                {data:function (row) {
+                            return htmlEncode(row['platform']['type']);
+                    },
+                    name:"platform"},
+                {data:function (row) {
+                        return htmlEncode(row['platform']['name']);
+                    },
+                    name:"platform_name"},
+                {data:function (row) {
+                        return htmlEncode(row['os']);
+                    },
+                    name:"os"},
+                {data:function (row) {
+                        return htmlEncode(row['cpu'] + "C" + '/' + row['mem'] + "MB" );
+                    },
+                    name:"cpu_mem"},
+                {data:function (row) {
+                        return htmlEncode(row['private_addrs']);
+                    },
+                    name:"private_addrs"},
+                {data:function (row) {
+                        return htmlEncode(row['public_addrs']);
+                    },
+                    name:"public_addrs"},
+                {data:function (row) {
+                        return htmlEncode(row['vm_created_time'] + '/' + row['vm_expired_time']);
+                    },
+                    name:"vm_time"},
+                {data:function (row) {
+                        return htmlEncode(row['status']);
+                    },
+                    name:"status"},
+                {data:function(row){
+                        var buttons = ['<div class="btn-group" role="group" aria-label="First group">'];
+                        buttons.push('<button type="button" class="btn btn-sm btn-success btn-control" data-title="确认开机吗?" data-url="{{ urlfor `VirtualMachineController.Start`}}" data-pk=":pk:" data-callback="reload_table">开机</button>');
+                        buttons.push('<button type="button" class="btn btn-sm btn-secondary btn-control" data-title="确认关机吗?" data-url="{{ urlfor `VirtualMachineController.Stop`}}" data-pk=":pk:" data-callback="reload_table">关机</button>');
+                        buttons.push('<button type="button" class="btn btn-sm btn-danger btn-control" data-title="确认重启吗?" data-url="{{ urlfor `VirtualMachineController.Restart`}}" data-pk=":pk:" data-callback="reload_table">重启</button>');
+                        buttons.push('</div>');
+                        return buttons.join("").replace(/:pk:/g,row['id']);
+                    },
+                    orderable: false,
+                    name:"active"}
+            ]
+        });
+
+        table.on("draw",function () {
+            if(!jQuery("#buttons").attr("initd")){
+                jQuery("#buttons").attr("initd", "initd").html('<form><div class="form-group row"><label class="col-3 col-form-label col-form-label-sm text-right">云账号:</label><div class="col-sm-9"><select class="form-control query form-control-sm"></select></div></div></form>');
+                jQuery("select.query").select2({
+                    ajax:{
+                        url:"{{ urlfor `CloudPlatformController.List`}}",
+                        data:function(params){
+                            return {
+                                q: params.term
+                            };
+                        },
+                        processResults: function(response){
+                            var results = [];
+                            if(response["code"] == 200){
+                                results.push({
+                                    id: -1,
+                                    text:"ALL"
+                                });
+                                jQuery.each(response["result"], function(index, value){
+                                    results.push({
+                                        id: value['id'],
+                                        text: value['name']
+                                    });
+                                })
+                            }
+                            return {
+                                results: results
+                            };
+                        },
+                    }
+                })
+            }
+        });
+
+
+        window["reload_table"] = function(response){
+            console.log("5. reload_table");
+            swal.close();
+            table.ajax.reload(null,false);
+        };
+
+        jQuery(document).on("change","select.query",function(){
+            table.ajax.reload();
+        });
+
+        setInterval(window["reload_table"], 10*1000);
+
+    })
+
+</script>
