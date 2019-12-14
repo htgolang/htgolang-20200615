@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>AccessKey</th>
+            <th>SecrectKey</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        {{ if .object.Token }}
+            <td>{{ .object.Token.AccessKey }}</td>
+            <td>{{ .object.Token.SecrectKey }}</td>
+            <td><a href="javascript:void(0);" class="btn-token" data-pk="{{ .object.Id }}">更新</a></td>
+        {{ else }}
+            <td colspan="2">暂无token</td>
+            <td><a href="javascript:void(0);" class="btn-token" data-pk="{{ .object.Id }}">生成</a></td>
+        {{ end }}
+        </tr>
+    </tbody>
+</table>
