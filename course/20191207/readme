@@ -1,0 +1,51 @@
+10点
+
+腾讯云
+a 10点
+b 10点
+
+
+=>
+a
+b
+
+删了b
+
+11 点
+
+a 11点
+
+
+11 点之前 更新未删除
+
+多个云平台
+
+A.
+for 云平台
+    B.
+    for 虚拟机
+        C.
+
+    D. 统一将当前平台中的状态更新（platform过滤）
+
+E. 统一将数据库中的更新
+
+
+
+b B KB MB GB TB PB
+ /8
+b
+function FileSizeb(size) {
+    if(size < 8) {
+        return size.toFixed(2) + "b";
+    }
+    size /= 8;
+    var index = 0;
+    var units = ["B", "KB", "MB", "GB", "TB", "PB"];
+
+    while(size >= 1024) {
+        size /= 1024;
+        index += 1;
+    }
+    return size.toFixed(2) + units[index];
+}

@@ -1,0 +1,95 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#table").DataTable({
+        dom:'<"row"<"col-6"l><"col-4"f><"#buttons.col-1">>t<"row"<"col-6"i><"col-6"p>>',
+        serverSide: true,
+        ajax: {
+            url : "{{ urlfor `UserController.List` }}",
+            data: function(data) {
+                return {
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q: data.search.value
+                };
+            },
+            dataSrc: "result"
+        },
+        columns: [
+            {
+                data: function(row) {
+                    return htmlEncode(row['name']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['gender']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['birthday']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['tel']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['email']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['addr']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['remark']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['status']);
+                }
+            },
+            {
+                data: function(row) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+                    buttons.push('<button class="btn btn-sm btn-warning btn-open-dialog" data-title="编辑用户" data-url="{{ urlfor `UserController.Modify` }}?pk=:pk:">编辑</div>')
+                    if(row['id'] != {{ .user.Id }}) {
+                        buttons.push('<button class="btn btn-sm btn-secondary btn-control" data-title="确定锁定?" data-url="{{ urlfor `UserController.Lock` }}" data-pk=":pk:" data-callback="reload_table">锁定</div>');
+                        buttons.push('<button class="btn btn-sm btn-success btn-control" data-title="确定解锁?" data-url="{{ urlfor `UserController.UnLock` }}" data-pk=":pk:" data-callback="reload_table">解锁</div>');
+                        buttons.push('<button class="btn btn-sm btn-danger btn-control"  data-title="确定删除?" data-url="{{ urlfor `UserController.Delete` }}" data-pk=":pk:" data-callback="reload_table">删除</div>');
+                    } else {
+                        buttons.push('<button class="btn btn-sm btn-info btn-open-dialog" data-title="查看token" data-url="{{ urlfor `TokenController.Generate` }}?pk=:pk:" data-look="look">Token</div>');
+                    }
+                    buttons.push('</div>');
+                    return buttons.join("").replace(/:pk:/g, row['id']);
+                }
+            }
+        ]
+    });
+
+    table.on("draw", function() {
+        if(!jQuery("#buttons").attr("initd")) {
+            jQuery("#buttons").attr("initd", "initd").html('<button class="btn btn-primary btn-sm btn-block btn-open-dialog" data-url="{{ urlfor `UserController.Create` }}" data-title="新建用户">新建</button>');
+        }
+    });
+
+    window["reload_table"] = function(response) {
+        console.log("6 reload table");
+        table.ajax.reload(null, false);
+    };
+
+    jQuery(document).on("click", ".btn-token", function() {
+        var pk = jQuery(this).data("pk");
+        ajaxRequest("POST", '{{ urlfor `TokenController.Generate` }}', {pk: pk}, function() {
+            jQuery(".dialog-content").load('{{ urlfor `TokenController.Generate` }}?pk='+ pk);
+        });
+    })
+});
+</script>
