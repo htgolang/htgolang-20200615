@@ -8,3 +8,7 @@
     查询 显示 (uuid => 终端名称)
     查询条件: agent uuid
              时间 [start_time, end_time]
+
+3. agent -v
+    有-v 日志设置为debug， 开启req.DEBUG
+    无 日志设置为info，关闭req.DEBUG
