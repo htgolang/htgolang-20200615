@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>AccessKey</th>
+            <th>SecrectKey</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {{ if .object.Token }}
+            <td>{{ .object.Token.AccessKey }}</td>
+            <td>{{ .object.Token.SecrectKey }}</td>
+            <td><button type="button" class="btn btn-sm btn-info btn-token" data-title="确定更新?" data-url="{{ urlfor `TokenController.Generate`}}" data-pk="{{ .object.Id }}" >更新</button></td>
+            {{ else }}
+            <td colspan="2">暂无Token</td>
+            <td><button type="button" class="btn btn-sm btn-success btn-token" data-title="确定生成?" data-url="{{ urlfor `TokenController.Generate`}}" data-pk="{{ .object.Id }}" >生成</button></td>
+            {{ end }}
+        </tr>
+    </tbody>
+</table>
