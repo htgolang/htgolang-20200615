@@ -566,3 +566,307 @@
 2019/11/29 18:34:48.237 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.030423ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
 2019/11/29 18:34:48.265 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    537.999µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
 2019/11/29 18:34:48.266 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    445.532µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:03:26.119 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/30 10:03:26.915 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.569625ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/30 10:03:27.049 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.925654ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:03:27.049 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.793742ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:03:27.136 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    1.45766ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:03:36.177 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|  21.409378ms|   match|[97;46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/30 10:03:36.199 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.736101ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:03:36.259 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.272799ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:03:36.261 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.654179ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:03:36.274 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.236891ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:03:36.282 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.392154ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:03:36.285 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  15.151461ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:03:36.285 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.027189ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:03:36.293 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    610.777µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:03:36.297 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.207474ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:03:36.297 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    782.147µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:03:36.305 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    661.655µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:03:36.308 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    411.871µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:03:36.311 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    614.218µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:03:36.313 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    626.704µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:03:36.314 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.155888ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:03:36.316 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    421.622µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:03:36.317 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    640.425µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:03:36.516 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    165.488µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:03:36.659 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    506.513µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:03:36.685 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    811.011µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:03:36.685 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    591.502µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:03:36.850 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.285654ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:03:50.385 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   16.19395ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:03:51.014 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    2.00495ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:04:25.722 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|    669.956µs|   match|[97;44m GET     [0m /auth/logout   r:/auth/logout/*
+2019/11/30 10:04:25.758 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.374457ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/30 10:14:30.053 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|   1.165058ms| nomatch|[97;44m GET     [0m /  
+2019/11/30 10:14:38.049 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  34.917825ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/30 10:14:38.136 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.300517ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:14:38.140 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.172969ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:14:38.330 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    466.833µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:14:42.101 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|   14.05616ms|   match|[97;46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/30 10:14:42.124 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  15.584616ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:14:42.199 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.649904ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:14:42.202 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.763211ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:14:42.208 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.349248ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:14:42.208 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.253034ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:14:42.208 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.044339ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:14:42.209 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    362.439µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:14:42.213 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    200.502µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:14:42.215 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    399.749µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:14:42.219 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.196795ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:14:42.219 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    230.144µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:14:42.219 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    581.058µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:14:42.227 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    111.735µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:14:42.233 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.050519ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:14:42.235 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.987114ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:14:42.242 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.921293ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:14:42.243 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.519689ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:14:42.436 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    242.748µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:14:42.581 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     95.804µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:14:42.622 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|   1.010928ms| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:14:42.625 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    769.975µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:14:42.697 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.167629ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:14:45.267 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  74.747416ms|   match|[97;46m POST    [0m /user/delete   r:/user/delete/*
+2019/11/30 10:14:45.290 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.274777ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:28:00.702 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  25.398323ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:28:00.819 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.529423ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:28:00.836 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.807721ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:28:00.844 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.813425ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:28:00.847 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  26.172463ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:28:00.848 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    125.879µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:28:00.856 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.967604ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:28:00.861 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.787728ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:28:00.861 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.706597ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:28:00.868 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.370987ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:28:00.869 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    322.543µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:28:00.877 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     76.263µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:28:00.895 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     1.9627ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:28:00.897 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.298836ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:28:00.903 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    470.969µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:28:00.903 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    824.339µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:28:00.922 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    138.112µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:28:01.079 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    309.348µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:28:01.220 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      72.92µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:28:01.308 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.479198ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:28:01.402 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    910.856µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:28:01.405 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    418.068µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:30:30.050 [D] [controller.go:306]  template Execute err: template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/30 10:30:30.050 [E] [server.go:2774]  template: token/index.html:11:25: executing "token/index.html" at <.object.Token>: can't evaluate field Token in type interface {}
+2019/11/30 10:30:30.050 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  26.156656ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/30 10:30:32.250 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.954452ms|   match|[97;44m GET     [0m /token/generate   r:/token/generate/*
+2019/11/30 10:33:20.947 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  31.658163ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:33:21.031 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     215.67µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:33:21.054 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.468842ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:33:21.062 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   23.53721ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:33:21.063 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.685399ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:33:21.072 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    5.51493ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:33:21.073 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    9.83114ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:33:21.077 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.985557ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:33:21.081 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.432907ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:33:21.082 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.305773ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:33:21.087 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.022248ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:33:21.089 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.025146ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:33:21.094 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    699.815µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:33:21.094 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    469.472µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:33:21.094 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    168.294µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:33:21.119 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     93.739µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:33:21.126 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    130.799µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:33:21.322 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    241.872µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:33:21.507 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     55.044µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:33:21.570 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.874093ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:33:21.573 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    382.231µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:33:21.574 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    337.492µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:33:41.968 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.237281ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:33:42.026 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.678061ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:33:42.028 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.245775ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:33:42.035 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    3.17797ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:33:42.040 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.788083ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:33:42.040 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.897712ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:33:42.040 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.701314ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:33:42.045 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    157.694µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:33:42.053 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    289.274µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:33:42.058 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.070112ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:33:42.059 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    139.255µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:33:42.062 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.802152ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:33:42.068 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.724874ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:33:42.073 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.809268ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:33:42.079 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    102.326µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:33:42.079 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    376.134µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:33:42.079 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    330.731µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:33:42.254 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    196.442µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:33:42.347 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     59.859µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:33:42.441 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    571.766µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:33:42.442 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    523.221µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:33:42.467 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.122259ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:34:06.908 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|    944.202µs|   match|[97;44m GET     [0m /auth/logout   r:/auth/logout/*
+2019/11/30 10:34:06.927 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.642741ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/30 10:34:07.011 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    363.499µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:34:07.017 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    225.138µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:34:07.076 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    464.349µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:34:14.071 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|   1.348168ms|   match|[97;46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/30 10:34:14.097 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.220665ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:34:14.168 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    454.417µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:34:14.172 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    159.417µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:34:14.184 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    322.492µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:34:14.189 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    239.691µs|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:34:14.195 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    166.674µs|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:34:14.197 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     62.869µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:34:14.198 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    127.099µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:34:14.200 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    186.363µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:34:14.205 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     89.109µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:34:14.207 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     84.989µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:34:14.207 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      41.62µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:34:14.209 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     66.663µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:34:14.210 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    171.033µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:34:14.212 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    192.337µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:34:14.214 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     59.299µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:34:14.216 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    112.965µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:34:14.370 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    193.308µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:34:14.544 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     75.677µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:34:14.668 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.964516ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:34:14.720 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    506.051µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:34:14.721 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    759.484µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:34:18.108 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.942962ms|   match|[97;46m POST    [0m /user/delete   r:/user/delete/*
+2019/11/30 10:34:18.164 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  18.438472ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:34:20.445 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.764888ms|   match|[97;44m GET     [0m /user/create   r:/user/create/*
+2019/11/30 10:34:41.284 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.513765ms|   match|[97;46m POST    [0m /user/create   r:/user/create/*
+2019/11/30 10:34:53.229 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.261434ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:34:53.332 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  31.669254ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:34:53.341 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  46.298081ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:34:53.341 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.885378ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:34:53.341 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  40.430053ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:34:53.341 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  31.789887ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:34:53.369 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.362538ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:34:53.371 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.289146ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:34:53.374 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.913236ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:34:53.377 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.299415ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:34:53.377 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  68.580532ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:34:53.377 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.180058ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:34:53.386 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.722644ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:34:53.377 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     353.85µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:34:53.390 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.690052ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:34:53.391 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.485085ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:34:53.405 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    114.639µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:34:53.562 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    204.067µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:34:53.716 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    548.228µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:34:53.718 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    808.725µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:34:53.808 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     59.868µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:34:53.915 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    3.47172ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:36:24.059 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.812984ms|   match|[97;44m GET     [0m /user/create   r:/user/create/*
+2019/11/30 10:36:46.582 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.559592ms|   match|[97;46m POST    [0m /user/create   r:/user/create/*
+2019/11/30 10:40:16.957 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  48.269956ms|   match|[97;46m POST    [0m /user/create   r:/user/create/*
+2019/11/30 10:40:17.012 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.140307ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:40:22.170 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  28.574798ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:40:22.263 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.803762ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:40:22.266 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    520.748µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:40:22.284 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    671.112µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:40:22.284 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    474.745µs|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:40:22.284 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    752.815µs|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:40:22.287 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     78.078µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:40:22.303 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    7.91302ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:40:22.303 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    344.621µs|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:40:22.303 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      64.66µs|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:40:22.348 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    150.355µs|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:40:22.348 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     68.148µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:40:22.402 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    126.273µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:40:22.404 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    351.483µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:40:22.405 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    250.698µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:40:22.407 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      64.98µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:40:22.411 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    184.158µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:40:22.692 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    374.523µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:40:22.855 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    195.797µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:40:22.895 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    557.008µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:40:22.912 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    398.041µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:40:22.940 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.794467ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:40:31.776 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.328482ms|   match|[97;44m GET     [0m /user/modify   r:/user/modify/*
+2019/11/30 10:43:35.272 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.406179ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/30 10:43:37.948 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.981304ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:43:38.011 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    367.721µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:43:38.022 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.494681ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:43:38.022 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.478892ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:43:38.023 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     627.57µs|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:43:38.022 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.570047ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:43:38.028 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.775302ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:43:38.040 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.347287ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:43:38.040 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.856591ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:43:38.041 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    283.096µs|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:43:38.041 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.031755ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:43:38.043 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.143714ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:43:38.047 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      90.38µs|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:43:38.048 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     64.032µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:43:38.051 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.093719ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:43:38.053 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    270.529µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:43:38.056 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    122.946µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:43:38.267 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    196.115µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:43:38.308 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    446.184µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:43:38.309 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    361.728µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:43:38.378 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     78.328µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:43:38.483 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.512504ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:43:44.553 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.704986ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:43:44.879 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.195732ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:43:47.189 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|    639.589µs|   match|[97;44m GET     [0m /auth/logout   r:/auth/logout/*
+2019/11/30 10:43:47.204 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.504858ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/30 10:44:00.772 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|   1.191426ms|   match|[97;46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/30 10:44:00.787 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   8.654923ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:44:01.079 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.963538ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:44:08.075 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/11/30 10:44:08.626 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.436534ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:44:08.777 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   6.852125ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:44:13.280 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.796523ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:44:13.380 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  20.063766ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:44:13.397 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  22.315985ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:44:13.402 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  10.899706ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:44:13.403 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.977529ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:44:13.415 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  21.977603ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:44:13.420 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  26.272606ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:44:13.424 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  30.190468ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:44:13.455 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  20.183284ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:44:13.464 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  33.191179ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:44:13.479 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  29.185141ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:44:13.483 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.797677ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:44:13.484 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.143191ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:44:13.484 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  37.039846ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:44:13.486 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.835741ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:44:13.487 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.706436ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:44:13.495 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.165035ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:44:13.679 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.001437ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:44:13.818 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    762.878µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:44:13.819 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    638.164µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:44:13.819 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    500.081µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:44:13.886 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.897169ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:44:15.698 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|    707.288µs|   match|[97;44m GET     [0m /auth/logout   r:/auth/logout/*
+2019/11/30 10:44:15.711 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    3.36349ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/30 10:44:19.798 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/30 10:44:27.657 [server.go:3010]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/11/30 10:44:27.710 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    849.535µs| nomatch|[97;44m GET     [0m /  
+2019/11/30 10:44:30.737 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   3.022285ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/11/30 10:44:30.848 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    349.985µs|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:44:30.853 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    165.663µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:44:31.034 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.242323ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:44:36.189 [D] [server.go:2774]  |            ::1|[90;47m 302 [0m|  17.420393ms|   match|[97;46m POST    [0m /auth/login   r:/auth/login/*
+2019/11/30 10:44:36.211 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.128139ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/11/30 10:44:36.293 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  18.570752ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/11/30 10:44:36.293 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.747174ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/11/30 10:44:36.301 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.284445ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/11/30 10:44:36.307 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   27.38647ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/11/30 10:44:36.317 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   4.796254ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/11/30 10:44:36.295 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  21.108215ms|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/11/30 10:44:36.301 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.423916ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/11/30 10:44:36.322 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   9.023902ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/11/30 10:44:36.318 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    5.01095ms|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/11/30 10:44:36.333 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   1.513092ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/11/30 10:44:36.336 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.653639ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/11/30 10:44:36.339 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.629236ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/11/30 10:44:36.347 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    2.16616ms|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/11/30 10:44:36.357 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     203.57µs|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/locales/bootstrap-datepicker.zh-CN.min.js
+2019/11/30 10:44:36.357 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   7.871298ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-notify-3.1.3/dist/bootstrap-notify.min.js
+2019/11/30 10:44:36.370 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.755866ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.min.js
+2019/11/30 10:44:36.529 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    259.325µs|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/11/30 10:44:36.680 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     83.095µs|   match|[97;44m GET     [0m /static/json/datatables.i18n.zh-CN.json
+2019/11/30 10:44:36.686 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    694.014µs| nomatch|[97;44m GET     [0m /static/js/popper.min.js.map
+2019/11/30 10:44:36.687 [D] [server.go:2774]  |            ::1|[97;43m 404 [0m|    442.843µs| nomatch|[97;44m GET     [0m /static/js/bootstrap.min.js.map
+2019/11/30 10:44:36.790 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    2.05919ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:44:39.273 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  39.558105ms|   match|[97;46m POST    [0m /user/lock   r:/user/lock/*
+2019/11/30 10:44:39.293 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.734551ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/11/30 10:44:45.581 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   5.931473ms|   match|[97;46m POST    [0m /user/unlock   r:/user/unlock/*
+2019/11/30 10:44:45.613 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  10.110012ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*

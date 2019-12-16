@@ -32,7 +32,17 @@ func (s *Session) IsLogin(c *LoginRequiredController) *models.User {
 }
 
 func (s *Session) GoToLoginPage(c *LoginRequiredController) {
-	c.Redirect(beego.URLFor(beego.AppConfig.String("login")),http.StatusFound)
+	if c.Ctx.Input.IsAjax() {
+		c.Data["json"] = map[string]interface{}{
+			"code": 401,
+			"text": "请登录",
+			"result": nil,
+		}
+		c.ServeJSON()
+		c.Redirect(beego.URLFor(beego.AppConfig.String("login")),http.StatusFound)
+	} else {
+		beego.ReadFromRequest(&c.Controller)
+	}
 }
 
 func (s *Session) Login(c *AuthController) bool {

@@ -63,10 +63,13 @@
                 {data:function(row){
                         var buttons = ['<div class="btn-group" role="group" aria-label="First group">'];
                             buttons.push('<button type="button" class="btn btn-sm btn-warning btn-open-dialog" data-title="编辑用户" data-url="{{ urlfor `UserController.Modify`}}?id=:pk:" data-callback="reload_table">编辑</button>');
-                            buttons.push('<button type="button" class="btn btn-sm btn-secondary btn-control" data-title="锁定用户?" data-url="{{ urlfor `UserController.Lock`}}" data-pk=":pk:" data-callback="reload_table">锁定</button>');
-                            buttons.push('<button type="button" class="btn btn-sm btn-success btn-control" data-title="解锁用户?" data-url="{{ urlfor `UserController.UnLock`}}" data-pk=":pk:" data-callback="reload_table">解锁</button>');
-                            buttons.push('<button type="button" class="btn btn-sm btn-info btn-open-dialog" data-title="查看Token" data-url="{{ urlfor `TokenController.Generate`}}?id=:pk:" data-look="look">Token</button>');
-                            buttons.push('<button type="button" class="btn btn-sm btn-danger btn-control" data-title="删除用户?" data-url="{{ urlfor `UserController.Delete`}}" data-pk=":pk:" data-callback="reload_table">删除</button>');
+                            if(row['id'] != {{ .user.Id }} ){
+                                buttons.push('<button type="button" class="btn btn-sm btn-secondary btn-control" data-title="锁定用户?" data-url="{{ urlfor `UserController.Lock`}}" data-pk=":pk:" data-callback="reload_table">锁定</button>');
+                                buttons.push('<button type="button" class="btn btn-sm btn-success btn-control" data-title="解锁用户?" data-url="{{ urlfor `UserController.UnLock`}}" data-pk=":pk:" data-callback="reload_table">解锁</button>');
+                                buttons.push('<button type="button" class="btn btn-sm btn-danger btn-control" data-title="删除用户?" data-url="{{ urlfor `UserController.Delete`}}" data-pk=":pk:" data-callback="reload_table">删除</button>');
+                            } else {
+                                buttons.push('<button type="button" class="btn btn-sm btn-info btn-open-dialog" data-title="查看Token" data-url="{{ urlfor `TokenController.Generate`}}?id=:pk:" data-look="look">Token</button>');
+                            }
                             buttons.push('</div>');
                         return buttons.join("").replace(/:pk:/g,row['id']);
                     },
