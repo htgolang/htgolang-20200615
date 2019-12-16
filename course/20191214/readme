@@ -1,0 +1,49 @@
+agent
+    主要功能:
+        下=>上(server)
+        心跳
+        Agent所在服务器信息
+            IP/Hostname/CPU/内存/硬盘
+        采集数据信息
+            CPU/内存/磁盘使用率/IO...
+
+
+每秒 遍历所有循环插件
+    比较插件下一次执行时间是否<当前时间
+        该执行了
+1. url?a=b&c=d
+2. form: post
+    body 编码 => file/ not file
+    file: multipart/form-data
+            application/x-www-form-urlencode
+
+    body json
+
+      json
+agent => server
+
+request
+
+请求行 GET url?params HTTP/1.1
+请求头 COOKIE: xxx
+       HOST: XX
+
+请求体
+
+url =》 controlelr/action
+
+api/heartbeat/123123123123/
+:uuid
+
+api/xxx/uuid/
+
+
+uuid
+Hostname
+IP
+OS
+ARCH
+CPU
+RAM
+DISK
+BootTime

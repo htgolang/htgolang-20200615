@@ -1,0 +1,28 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+
+    jQuery(document).on("click", ".btn-control", function() {
+        var url = jQuery(this).data("url"),
+            title = jQuery(this).data("title"),
+            pk = jQuery(this).data("pk"),
+            callback = jQuery(this).data("callback");
+
+            swal({
+                title: title,
+                text: "",
+                type: "warning",
+                showCancelButton: true,
+                cancelButtonText: "取消",
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "确定",
+                closeOnConfirm: false
+            }, function(){
+                ajaxRequest("POST", url, {pk: pk}, function(response) {
+                    if(callback && callback in window && typeof(window[callback]) == "function") {
+                        window[callback](response);
+                    }
+                });
+            });
+    });
+});
+</script>
