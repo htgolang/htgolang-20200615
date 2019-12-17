@@ -38,6 +38,10 @@ func main() {
 	request.InstanceId = "i-wz962mggaelnnz3kupfw"
 	response, err := ecsClient.DescribeInstanceAttribute(request)
 	fmt.Printf("值:%v \n", response.ImageId)
+
+	fmt.Sprintf("1 " +
+		"2" +
+		"3")
 }
 
 

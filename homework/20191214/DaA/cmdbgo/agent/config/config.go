@@ -9,16 +9,16 @@ import (
 )
 
 type Config struct {
-	UUID string
-	UUIDFile string
+	UUID 		string
+	UUIDFile 	string
 
-	Endpoint string
-	Token string
+	Endpoint 	string
+	Token 		string
 
-	LogFile string
+	LogFile 	string
 
-	PID int
-	PidFile string
+	PID 		int
+	PidFile 	string
 
 	Heartbeat 	chan interface{}
 	Register 	chan interface{}

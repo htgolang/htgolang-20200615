@@ -45,6 +45,7 @@ func (m *Manager) StartCycle(){
 						"name" : name,
 						"result": evt,
 					}).Debug("插件执行成功")
+					//写内容 到 通道里
 					plugin.Pipline() <- evt
 				} else {
 					logrus.WithFields(logrus.Fields{

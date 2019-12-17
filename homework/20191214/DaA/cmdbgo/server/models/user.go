@@ -8,23 +8,23 @@ import (
 
 //用户模型
 type User struct {
-	Id          int        `orm:"column(id);" json:"id"`
-	Name        string     `orm:"column(name);size(32);" json:"name"`
-	Password    string     `orm:"column(password);size(1024);" json:"-"`
-	Gender      int        `orm:"column(gender);default(0);" json:"gender"`
-	Birthday    *time.Time `orm:"column(birthday);null;default(null);" json:"birthday"`
-	Tel         string     `orm:"column(tel);size(1024);" json:"tel"`
-	Email       string     `orm:"column(email);size(1024);" json:"email"`
-	Addr        string     `orm:"column(addr);size(1024);" json:"addr"`
-	Remark      string     `orm:"column(remark);size(1024);" json:"remark"`
-	IsSuperUser bool      `orm:"column(is_super_user);default(false);" json:"is_super_user"`
-	Status      int        `orm:"column(status);" json:"status"`
-	CreatedTime *time.Time `orm:"column(created_time);auto_now_add;" json:"created_time"`
-	UpdatedTime *time.Time `orm:"column(updated_time);auto_now;" json:"updated_time"`
-	DeletedTime *time.Time `orm:"column(deleted_time);null;" json:"-"`
+	Id          	int        			`orm:"column(id);" json:"id"`
+	Name        	string     			`orm:"column(name);size(32);" json:"name"`
+	Password    	string     			`orm:"column(password);size(1024);" json:"-"`
+	Gender      	int        			`orm:"column(gender);default(0);" json:"gender"`
+	Birthday    	*time.Time 			`orm:"column(birthday);null;default(null);" json:"birthday"`
+	Tel         	string     			`orm:"column(tel);size(1024);" json:"tel"`
+	Email       	string     			`orm:"column(email);size(1024);" json:"email"`
+	Addr        	string     			`orm:"column(addr);size(1024);" json:"addr"`
+	Remark      	string     			`orm:"column(remark);size(1024);" json:"remark"`
+	IsSuperUser 	bool      			`orm:"column(is_super_user);default(false);" json:"is_super_user"`
+	Status      	int        			`orm:"column(status);" json:"status"`
+	CreatedTime 	*time.Time 			`orm:"column(created_time);auto_now_add;" json:"created_time"`
+	UpdatedTime 	*time.Time 			`orm:"column(updated_time);auto_now;" json:"updated_time"`
+	DeletedTime 	*time.Time 			`orm:"column(deleted_time);null;" json:"-"`
 
-	Token *Token `orm:"reverse(one);" json:"token"`
-	CloudPlatforms []*CloudPlatform `orm:"reverse(many);" json:"cloud_platforms"`
+	Token 			*Token 				`orm:"reverse(one);" json:"token"`
+	CloudPlatforms 	[]*CloudPlatform 	`orm:"reverse(many);" json:"cloud_platforms"`
 }
 func (u *User) SetPassword(password string) {
 	u.Password = utils.Md5Salt(password,"")

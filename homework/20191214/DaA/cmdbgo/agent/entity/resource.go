@@ -14,13 +14,13 @@ const (
 )
 
 type Resource struct {
-	Load string `json:"load"`
-	CPUPrecent float64 `json:"cpu_precent"`
-	RAMPrecent float64 `json:"ram_precent"`
-	DiskPrecent string `json:"disk_precent"`
+	Load 		string 	`json:"load"`
+	CPUPrecent 	float64 `json:"cpu_precent"`
+	RAMPrecent 	float64 `json:"ram_precent"`
+	DiskPrecent string 	`json:"disk_precent"`
 }
 
-func NewResource () Resource {
+func NewResource() Resource {
 	loadAvgStat,_ := load.Avg()
 	load,_ := json.Marshal(loadAvgStat)
 

@@ -11,25 +11,25 @@ import (
 
 //云平台模型
 type CloudPlatform struct {
-	Id          int			`orm:"column(id);" json:"id"`
-	Name        string		`orm:"column(name);size(64);" json:"name"`
-	Type    	string		`orm:"column(type);size(32);" json:"type"`
-	Addr		string		`orm:"column(addr);size(1024);" json:"addr"`
-	Region 		string		`orm:"column(region);size(64);" json:"region"`
-	AccessKey   string		`orm:"column(access_key);size(1024);null;" json:"-"`
-	SecrectKey  string		`orm:"column(secret_key);size(1024);null;" json:"-"`
-	Remark      string		`orm:"column(remark);size(1024);null;" json:"remark"`
+	Id          	int					`orm:"column(id);" json:"id"`
+	Name        	string				`orm:"column(name);size(64);" json:"name"`
+	Type    		string				`orm:"column(type);size(32);" json:"type"`
+	Addr			string				`orm:"column(addr);size(1024);" json:"addr"`
+	Region 			string				`orm:"column(region);size(64);" json:"region"`
+	AccessKey   	string				`orm:"column(access_key);size(1024);null;" json:"-"`
+	SecrectKey  	string				`orm:"column(secret_key);size(1024);null;" json:"-"`
+	Remark      	string				`orm:"column(remark);size(1024);null;" json:"remark"`
 
-	CreatedTime *time.Time	`orm:"column(created_time);auto_now_add;" json:"created_time"`
-	UpdatedTime *time.Time	`orm:"column(updated_time);auto_now;" json:"updated_time"`
-	DeletedTime *time.Time	`orm:"column(deleted_time);null;" json:"-"`
+	CreatedTime 	*time.Time			`orm:"column(created_time);auto_now_add;" json:"created_time"`
+	UpdatedTime 	*time.Time			`orm:"column(updated_time);auto_now;" json:"updated_time"`
+	DeletedTime 	*time.Time			`orm:"column(deleted_time);null;" json:"-"`
 
-	SyncTime	*time.Time	`orm:"column(sync_time);null;" json:"sync_time"`
-	Status      int			`orm:"column(status);" json:"status"`
-	Msg 		string 		`orm:"column(msg);size(1024);" json:"msg"`
+	SyncTime		*time.Time			`orm:"column(sync_time);null;" json:"sync_time"`
+	Status      	int					`orm:"column(status);" json:"status"`
+	Msg 			string 				`orm:"column(msg);size(1024);" json:"msg"`
 
-	User		*User		`orm:"column(user);rel(fk);null;" json:"user"`
-	VirtualMachines []*VirtualMachine `orm:"reverse(many);" json:"virtual_machines"`
+	User			*User				`orm:"column(user);rel(fk);null;" json:"user"`
+	VirtualMachines []*VirtualMachine 	`orm:"reverse(many);" json:"virtual_machines"`
 }
 func (p *CloudPlatform) IsEnable() bool {
 	return p.Status == 0

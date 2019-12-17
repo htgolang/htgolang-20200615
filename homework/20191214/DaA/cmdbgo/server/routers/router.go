@@ -25,6 +25,12 @@ func init(){
 	beego.AutoRouter(&controllers.VirtualMachinePageController{})
 	beego.AutoRouter(&controllers.VirtualMachineController{})
 
+	//自建机房管理 （客户端/资源使用/告警历史）
+	beego.AutoRouter(&controllers.AgentPageController{})
+	beego.AutoRouter(&controllers.AgentController{})
+	beego.AutoRouter(&controllers.ResourcePageController{})
+	beego.AutoRouter(&controllers.ResourceController{})
+
 	//api（heartbeat/register/log）
 	v1Namespace := beego.NewNamespace("/v1",
 		beego.NSRouter("api/heartbeat/:uuid/", &v1.APIController{}, "*:Heartbeat"),

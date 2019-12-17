@@ -1,0 +1,75 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var table = jQuery("#resource_page_table").DataTable({
+            dom:'<"row" <"col-1"><"col-2" f><"col-7"><"col-2" l>>t<"row" <"col-6" i><"col-6" p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `ResourceController.List`}}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                        platform: jQuery("select.query").val()
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns:[
+                {data:function (row) {
+                        return htmlEncode("通过UUid查主机名");
+                    },
+                    name:"uuid"},
+                {data:function (row) {
+                        return htmlEncode(row['uuid']);
+                    },
+                    name:"uuid"},
+                {data:function (row) {
+                        var json = JSON.parse(row['load']);
+                        return htmlEncode(json['load1'].toFixed(2) + "/" +  json['load5'].toFixed(2) + "/" +  json['load15'].toFixed(2));
+                    },
+                    name:"load"},
+                {data:function (row) {
+                        return htmlEncode(row['cpu_precent'].toFixed(0) + '%');
+                    },
+                    name:"cpu"},
+                {data:function (row) {
+                        return htmlEncode(row['ram_precent'].toFixed(0) + '%');
+                    },
+                    name:"ram"},
+                {data:function (row) {
+                        return htmlEncode(row['disk_precent']);
+                    },
+                    name:"disk"},
+                {data:function(row){
+                        var buttons = ['<div class="btn-group" role="group" aria-label="First group">'];
+                        buttons.push('<button type="button" class="btn btn-sm btn-danger btn-control" data-title="确认删除吗?" data-url="{{ urlfor `ResourceController.Delete`}}" data-pk=":pk:" data-callback="reload_table">删除</button>');
+                        buttons.push('</div>');
+                        return buttons.join("").replace(/:pk:/g,row['id']);
+                    },
+                    orderable: false,
+                    name:"active"}
+            ]
+        });
+
+        table.on("draw",function () {
+            if(!jQuery("#buttons").attr("initd")){
+                jQuery("#buttons").attr("initd", "initd");
+            }
+        });
+
+
+        window["reload_table"] = function(response){
+            swal.close();
+            table.ajax.reload(null,false);
+        };
+
+        jQuery(document).on("change","select.query",function(){
+            table.ajax.reload();
+        });
+
+        setInterval(window["reload_table"], 10 * 1000 );
+
+    })
+</script>

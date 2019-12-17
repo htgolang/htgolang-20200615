@@ -9,7 +9,6 @@ import (
 
 type ENS struct {
 	conf *config.Config
-
 }
 
 func NewENS(conf *config.Config) *ENS{

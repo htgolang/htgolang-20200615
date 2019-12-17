@@ -26,6 +26,33 @@
     </ul>
 </li>
 
+<li class="treeview {{ if eq .expand `machine_room_management` }}is-expanded{{ end }}">
+    <a class="app-menu__item" href="#" data-toggle="treeview">
+        <i class="app-menu__icon fa fa-bank"></i>
+        <span class="app-menu__label">自建机房</span>
+        <i class="treeview-indicator fa fa-angle-right"></i></a>
+    <ul class="treeview-menu">
+        <li>
+            <a class="treeview-item {{ if eq .menu `agent_management` }}active{{ end }} " href="{{ urlfor `AgentPageController.Index`}}">
+                <i class="icon fa fa-television"></i>
+                客  户  端
+            </a>
+        </li>
+        <li>
+            <a class="treeview-item {{ if eq .menu `resource_management` }}active{{ end }}" href="{{ urlfor `ResourcePageController.Index` }}">
+                <i class="icon fa fa-globe"></i>
+                资源使用
+            </a>
+        </li>
+        <li>
+            <a class="treeview-item {{ if eq .menu `alarm_settings` }}active{{ end }}" href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">
+                <i class="icon fa fa-bell"></i>
+                告警历史
+            </a>
+        </li>
+    </ul>
+</li>
+
 <li class="treeview {{ if eq .expand `system_management` }}is-expanded{{ end }}">
     <a class="app-menu__item" href="#" data-toggle="treeview">
     <i class="app-menu__icon fa fa-cog"></i>
@@ -36,12 +63,6 @@
             <a class="treeview-item {{ if eq .menu `user_management` }}active{{ end }} " href="{{ urlfor `UserPageController.Index`}}">
                 <i class="icon fa fa-users"></i>
                 用户管理
-            </a>
-        </li>
-        <li>
-            <a class="treeview-item {{ if eq .menu `alarm_settings` }}active{{ end }}" href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener">
-                <i class="icon fa fa-bell"></i>
-                告警设置
             </a>
         </li>
     </ul>

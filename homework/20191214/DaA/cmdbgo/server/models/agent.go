@@ -6,35 +6,30 @@ import (
 )
 
 type Agent struct {
-	Id 			int 	`orm:"column(id);" json:"id"`
-	UUID 		string 	`orm:"column(uuid);size(64);" json:"uuid"`
-	HostName 	string 	`orm:"column(host_name);size(128);" json:"host_name"`
-	IP 			string 	`orm:"column(ip);size(4096);" json:"ip"`
-	OS 			string 	`orm:"column(os);size(64);" json:"os"`
-	Arch 		string 	`orm:"column(arch);size(64);" json:"arch"`
-	CPU 		int		`orm:"column(cpu);" json:"cpu"`
-	RAM 		int64 	`orm:"column(ram);" json:"ram"` //MB
-	Disk 		string 	`orm:"column(disk);size(4096);" json:"disk"`
-	BootTime 	*time.Time `orm:"column(boot_time);null" json:"boot_time"`
-	Time 		*time.Time `orm:"column(time);null;" json:"time"`
+	Id 				int 		`orm:"column(id);" json:"id"`
+	UUID 			string 		`orm:"column(uuid);size(64);" json:"uuid"`
+	HostName 		string 		`orm:"column(host_name);size(128);" json:"host_name"`
+	IP 				string 		`orm:"column(ip);size(4096);" json:"ip"`
+	OS 				string 		`orm:"column(os);size(64);" json:"os"`
+	Arch 			string 		`orm:"column(arch);size(64);" json:"arch"`
+	CPU 			int			`orm:"column(cpu);" json:"cpu"`
+	RAM 			int64 		`orm:"column(ram);" json:"ram"` //MB
+	Disk 			string 		`orm:"column(disk);size(4096);" json:"disk"`
+	BootTime 		*time.Time 	`orm:"column(boot_time);null" json:"boot_time"`
+	Time 			*time.Time 	`orm:"column(time);null;" json:"time"`
 
 	HeartbeatTime 	*time.Time 	`orm:"column(heartbeat_time);null;" json:"heartbeat_time"`
 	CreatedTime 	*time.Time 	`orm:"column(created_time);auto_now_add;null;" json:"created_time"`
 	DeletedTime 	*time.Time 	`orm:"column(deleted_time);null;"json:"deleted_time"`
 
 	//json用信息
-	IsOnline 	bool `orm:"-" json:"is_online"`
-
+	IsOnline 		bool 		`orm:"-" json:"is_online"`
 }
 
-type AgentManager struct {
-
-}
-
+type AgentManager struct {}
 func NewAgentManager() *AgentManager{
 	return &AgentManager{}
 }
-
 func (m *AgentManager) CreateOrReplace(agent *Agent) (*Agent, bool, error){
 	ormer := orm.NewOrm()
 	orgAgent := &Agent{UUID: agent.UUID}
@@ -57,11 +52,35 @@ func (m *AgentManager) CreateOrReplace(agent *Agent) (*Agent, bool, error){
 		return orgAgent, created, nil
 	}
 }
-
 func (m *AgentManager) Heartbeat(uuid string) {
 	ormer := orm.NewOrm()
 	ormer.QueryTable(&Agent{}).Filter("UUID__exact", uuid).Update(orm.Params{"HeartbeatTime":time.Now()})
 }
+func (m *AgentManager) Query(q string, start int64, length int) ([]*Agent, int64, int64){
+	ormer := orm.NewOrm()
+	queryset := ormer.QueryTable(&Agent{})
+
+	condition := orm.NewCondition()
+	condition = condition.And("deleted_time__isnull",true)
+
+	total,_ := queryset.SetCond(condition).Count()
+
+	qtotal := total
+	if q != "" {
+		query := orm.NewCondition()
+		query = query.Or("host_name__icontains",q)
+		query = query.Or("ip__icontains",q)
+		condition = condition.AndCond(query)
+
+		qtotal, _ = queryset.SetCond(condition).Count()
+	}
+	var result []*Agent
+
+	queryset.SetCond(condition).Limit(length).Offset(start).All(&result)
+	return result,total,qtotal
+}
+
+
 
 
 var DefaultAgentManager = NewAgentManager()

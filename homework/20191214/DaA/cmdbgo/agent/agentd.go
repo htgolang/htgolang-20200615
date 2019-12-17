@@ -1,6 +1,8 @@
 package main
 
 import (
+	"flag"
+	"fmt"
 	"github.com/sirupsen/logrus"
 	"github.com/xxdu521/cmdbgo/agent/config"
 	"github.com/xxdu521/cmdbgo/agent/ens"
@@ -12,8 +14,14 @@ import (
 )
 
 func main(){
-	logrus.SetLevel(logrus.DebugLevel)
+	varbose := flag.Bool("v",false,"debug")
+	flag.Usage = func(){
+		fmt.Println("usage: agent -h")
+		flag.PrintDefaults()
+	}
+	flag.Parse()
 
+	//读取配置信息
 	gconf,err := config.NewConfig()
 	if err != nil {
 		logrus.Error("读取配置出错")
@@ -23,18 +31,26 @@ func main(){
 		os.Remove(gconf.PidFile)
 	}()
 
+	//打开日志文件
 	logfile, err := os.OpenFile("logs/agent.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0777)
 	if err != nil {
 		logrus.Error("日志文件打开失败", err)
 		os.Exit(-1)
 	}
+	defer func(){ logfile.Close() }()
 
-	defer func(){
-		logfile.Close()
-	}()
+	//日志级别设置
+	if !*varbose {
+		logrus.SetLevel(logrus.DebugLevel)  //设置info日志级别
+		logrus.SetOutput(logfile) //输入日志到文件
+	} else {
+		logrus.SetLevel(logrus.DebugLevel)  //设置debug日志级别
+		//日志默认打印在控制台
+	}
 	//logrus.SetFormatter(&logrus.TextFormatter{}) //文本格式
 	logrus.SetFormatter(&logrus.JSONFormatter{}) //Json格式
-	//logrus.SetOutput(logfile)
+
+
 	logrus.WithFields(logrus.Fields{
 		"PID": gconf.PID,
 		"UUID": gconf.UUID,
@@ -54,7 +70,6 @@ func main(){
 			logrus.Info(now)
 		}
 	}()
-
 	 */
 
 	ch := make(chan os.Signal, 1)
