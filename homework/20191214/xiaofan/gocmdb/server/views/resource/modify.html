@@ -1,0 +1,31 @@
+<form data-url="{{ urlfor `ResourceController.Modify` }}" data-callback="reload_table">
+    <input type="hidden" name="id" value="{{.object.Id}}">
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="name">名称<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="name" name="name" value="{{.object.Name}}" placeholder="名称"/>
+            <small class="form-text text-muted">
+                只能由大小写英文、数字、下划线和中划线组成，长度为5~32位，且必须唯一
+            </small>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="name">UUID</label>
+        <div class="col-10">
+            <input class="form-control" disabled type="text" id="name" name="name" value="{{.object.UUID}}"/>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="desc">描述</label>
+        <div class="col-10">
+            <textarea class="form-control" id="desc" name="desc" rows="3"
+                      placeholder="描述">{{.object.Desc}}</textarea>
+            <small class="form-text text-muted">
+                长度为0~512位
+            </small>
+        </div>
+    </div>
+
+</form>

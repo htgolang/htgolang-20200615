@@ -1,0 +1,101 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var table = jQuery("#table").DataTable({
+            dom: '<"row"<"col-5" l><"col-5" f><"#buttons.col-2">>t<"row"<"col-6"i><"col-6"p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `ResourceController.List` }}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns: [
+                {
+                    data: function (row) {
+                        return htmlEncode(row["name"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["uuid"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["hostname"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        let ips = "";
+                        jQuery.each(JSON.parse(row["ip"]), function (index, ip) {
+                            ips = ips + ip + "<br>";
+                        });
+                        return ips;
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["os"] + "/" + row["arch"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["cpu"] + "C/" + row["ram"] + "MB");
+                    }
+                },
+                {
+                    data: function (row) {
+                        let disks = "";
+                        jQuery.each(JSON.parse(row["disk"]), function (disk, total) {
+                            disks = disks + disk + "\:" + total + "<br>";
+                        });
+                        return disks;
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row["boot_time"])))
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row["time"])))
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["desc"])
+                    }
+                },
+                {
+                    data: function (row) {
+                        var buttons = ['<div class="btn-group" role="group">'];
+                        buttons.push('<button class="btn btn-sm btn-warning btn-open-dialog fa fa-pencil-square-o"  data-title="编辑" data-url="{{ urlfor `ResourceController.Modify`}}?pk=:pk:">编辑</button>');
+                        buttons.push('<button class="btn btn-sm btn-danger btn-control fa fa-lock" data-title="确定删除？" data-url="{{ urlfor `ResourceController.Delete`}}" data-pk=":pk:" data-callback="reload_table">删除</button>');
+                        return buttons.join("").replace(/:pk:/g, row["id"])
+                    }
+                },
+            ]
+        });
+
+
+        // draw button
+        table.on("draw", function () {
+            if (!jQuery("#buttons").attr("initd")) {
+                jQuery("#buttons").attr("initd", "initd")
+            }
+        });
+
+        // 回调函数
+        window["reload_table"] = function (response) {
+            table.ajax.reload(null, false)
+        };
+    });
+</script>

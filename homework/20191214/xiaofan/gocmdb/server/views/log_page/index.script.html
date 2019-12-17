@@ -1,0 +1,108 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var startTime = "";
+        var endTime = "";
+        var table = jQuery("#table").DataTable({
+            dom: '<"row"<"col-5" l><"col-5" f><"#buttons.col-2">>t<"row"<"col-6"i><"col-6"p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `LogController.List` }}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                        startTime: startTime,
+                        endTime: endTime,
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns: [
+                {
+                    data: function (row) {
+                        return htmlEncode(row["name"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["uuid"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(JSON.parse(row["load"])["load1"].toFixed(2));
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(JSON.parse(row["load"])["load5"].toFixed(2));
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(JSON.parse(row["load"])["load15"].toFixed(2));
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["cpu_percent"].toFixed(0) + "%");
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["ram_percent"].toFixed(0) + "%");
+                    }
+                },
+                {
+                    data: function (row) {
+                        let disks = "";
+                        jQuery.each(JSON.parse(row["disk_percent"]), function (disk, total) {
+                            disks = disks + disk + "\: " + total + ", ";
+                        });
+                        return disks;
+                    }
+                },
+            ]
+        });
+
+
+        // draw button
+        table.on("draw", function () {
+            if (!jQuery("#buttons").attr("initd")) {
+                jQuery("#buttons").attr("initd", "initd").html('<input type="text" name="datetimes" class="form-control col-form-label-sm pull-right">');
+
+                jQuery('input[name="datetimes"]').daterangepicker({
+                    timePicker: true,
+                    showDropdowns: true,
+                    timePicker24Hour: true,
+                    alwaysShowCalendars: false,
+                    timePickerSeconds: true,
+                    startDate: moment().startOf('hour').add(-23, 'hour'),
+                    endDate: moment().startOf('hour').add(1, 'hour'),
+                    locale: {
+                        format: 'YYYY-MM-DD HH:MM:SS',
+                        applyLabel: '确定',
+                        cancelLabel: '取消',
+                        fromLabel: '起始时间',
+                        toLabel: '结束时间',
+                        customRangeLabel: '手动选择',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                        firstDay: 1
+                    },
+                }, function (start, end, label) {
+                    startTime = start.format('YYYY-MM-DD HH:MM:SS');
+                    endTime = end.format('YYYY-MM-DD HH:MM:SS');
+                    table.ajax.reload(null, false)
+                });
+            }
+        });
+
+        // 回调函数
+        window["reload_table"] = function (response) {
+            table.ajax.reload(null, false)
+        };
+    });
+</script>
