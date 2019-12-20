@@ -1,0 +1,5 @@
+uuid_file: agentd.uuid
+pid_file: agentd.pid
+log_file: logs/agent.log
+endpoint: http://localhost:8888/v1/api
+token:

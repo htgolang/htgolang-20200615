@@ -1,0 +1,54 @@
+<form data-url="{{ urlfor `CloudPlatformController.Create` }}" data-callback="reload_table">
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="name">名称<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="name" name="name" placeholder="名称"/>
+            <small class="form-text text-muted">
+                只能由大小写英文、数字、下划线和中划线组成，长度为5~32位，且必须唯一
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label">类型</label>
+        <div class="col-10">
+            <select class="form-control" name="type">
+                {{ range $key, $plugin := .types }}
+                <option value="{{ $key }}">{{ $plugin.Name }}</option>
+                {{ end }}
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="addr">地址<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="addr" name="addr" placeholder="地址"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="region">区域<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="region" name="region" placeholder="区域"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="access_key">AccessKey<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="access_key" name="access_key" placeholder="AccessKey"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="secrect_key">SecrectKey<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="secrect_key" name="secrect_key" placeholder="SecrectKey"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="remark">备注</label>
+        <div class="col-10">
+            <textarea class="form-control" id="remark" name="remark" rows="3" placeholder="备注"></textarea>
+            <small class="form-text text-muted">
+                长度为0~512位
+            </small>
+        </div>
+    </div>
+</form>

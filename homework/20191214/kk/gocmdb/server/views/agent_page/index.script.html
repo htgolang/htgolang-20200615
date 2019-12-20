@@ -1,0 +1,93 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#table").DataTable({
+        dom:'<"row"<"col-5"l><"col-6"f><"#buttons.col-1">>t<"row"<"col-6"i><"col-6"p>>',
+        serverSide: true,
+        ajax: {
+            url : "{{ urlfor `AgentController.List` }}",
+            data: function(data) {
+                return {
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q: data.search.value
+                };
+            },
+            dataSrc: "result"
+        },
+        columns: [
+            {
+                data: function(row) {
+                    return htmlEncode(row['hostname']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['ip']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['os']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['cpu']) + "核/" + htmlEncode(row['ram']) + "MB";
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['disk']);
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['time']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['time'])));
+                    }
+                    return "";
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['boottime']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['boottime'])));
+                    }
+                    return "";
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['created_time']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['created_time'])));
+                    }
+                    return "";
+                }
+            },
+            {
+                data: function(row) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+                    buttons.push('<button class="btn btn-sm btn-danger btn-control"  data-title="确定删除?" data-url="{{ urlfor `AgentController.Delete` }}" data-pk=":pk:" data-callback="reload_table">删除</div>');
+                    buttons.push('</div>');
+                    return buttons.join("").replace(/:pk:/g, row['id']);
+                }
+            }
+        ]
+    });
+
+    table.on("draw", function() {
+        if(!jQuery("#buttons").attr("initd")) {
+            jQuery("#buttons").attr("initd", "initd").html('');
+        }
+    });
+
+    window["reload_table"] = function(response) {
+        table.ajax.reload(null, false);
+    };
+
+    setInterval(function() {
+        table.ajax.reload(null, false);
+    }, 10 * 1000);
+});
+</script>
