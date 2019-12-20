@@ -1,0 +1,376 @@
+time="2019-12-14T09:44:14+08:00" level=info msg="Agent启动"
+time="2019-12-14T09:45:45+08:00" level=info msg="Agent启动"
+time="2019-12-14T09:47:57+08:00" level=info msg="Agent启动"
+time="2019-12-14T09:47:58+08:00" level=info msg="2019-12-14 09:47:58.3131064 +0800 CST m=+1.215567901"
+time="2019-12-14T09:47:59+08:00" level=info msg="2019-12-14 09:47:59.3143346 +0800 CST m=+2.216796101"
+time="2019-12-14T09:48:00+08:00" level=info msg="2019-12-14 09:48:00.3132321 +0800 CST m=+3.215693601"
+time="2019-12-14T09:48:01+08:00" level=info msg="2019-12-14 09:48:01.3131283 +0800 CST m=+4.215589801"
+time="2019-12-14T09:48:02+08:00" level=info msg="2019-12-14 09:48:02.3141683 +0800 CST m=+5.216629801"
+time="2019-12-14T09:48:03+08:00" level=info msg="2019-12-14 09:48:03.3169519 +0800 CST m=+6.219413401"
+time="2019-12-14T09:48:04+08:00" level=info msg="2019-12-14 09:48:04.3141482 +0800 CST m=+7.216609701"
+time="2019-12-14T09:48:05+08:00" level=info msg="2019-12-14 09:48:05.3125436 +0800 CST m=+8.215005101"
+time="2019-12-14T09:48:06+08:00" level=info msg="2019-12-14 09:48:06.3139004 +0800 CST m=+9.216361901"
+time="2019-12-14T09:48:07+08:00" level=info msg="2019-12-14 09:48:07.3138773 +0800 CST m=+10.216338801"
+time="2019-12-14T09:48:08+08:00" level=info msg="2019-12-14 09:48:08.3139467 +0800 CST m=+11.216408201"
+time="2019-12-14T09:48:09+08:00" level=info msg="2019-12-14 09:48:09.3128858 +0800 CST m=+12.215347301"
+time="2019-12-14T09:48:10+08:00" level=info msg="2019-12-14 09:48:10.3133087 +0800 CST m=+13.215770201"
+time="2019-12-14T09:48:11+08:00" level=info msg="2019-12-14 09:48:11.3127861 +0800 CST m=+14.215247601"
+time="2019-12-14T09:48:12+08:00" level=info msg="2019-12-14 09:48:12.3139356 +0800 CST m=+15.216397101"
+time="2019-12-14T09:48:13+08:00" level=info msg="2019-12-14 09:48:13.3129171 +0800 CST m=+16.215378601"
+time="2019-12-14T09:48:14+08:00" level=info msg="2019-12-14 09:48:14.3144151 +0800 CST m=+17.216876601"
+time="2019-12-14T09:48:15+08:00" level=info msg="2019-12-14 09:48:15.3132549 +0800 CST m=+18.215716401"
+time="2019-12-14T09:48:16+08:00" level=info msg="2019-12-14 09:48:16.3126808 +0800 CST m=+19.215142301"
+time="2019-12-14T09:48:17+08:00" level=info msg="2019-12-14 09:48:17.3141261 +0800 CST m=+20.216587601"
+time="2019-12-14T09:48:18+08:00" level=info msg="2019-12-14 09:48:18.3126035 +0800 CST m=+21.215065001"
+time="2019-12-14T09:48:19+08:00" level=info msg="2019-12-14 09:48:19.3172468 +0800 CST m=+22.219708301"
+time="2019-12-14T09:48:20+08:00" level=info msg="2019-12-14 09:48:20.3262274 +0800 CST m=+23.228688901"
+time="2019-12-14T09:48:21+08:00" level=info msg="2019-12-14 09:48:21.323645 +0800 CST m=+24.226106501"
+time="2019-12-14T09:48:22+08:00" level=info msg="2019-12-14 09:48:22.3257917 +0800 CST m=+25.228253201"
+time="2019-12-14T09:48:23+08:00" level=info msg="2019-12-14 09:48:23.312626 +0800 CST m=+26.215087501"
+time="2019-12-14T09:48:24+08:00" level=info msg="2019-12-14 09:48:24.3124915 +0800 CST m=+27.214953001"
+time="2019-12-14T09:48:25+08:00" level=info msg="2019-12-14 09:48:25.3143106 +0800 CST m=+28.216772101"
+time="2019-12-14T09:48:26+08:00" level=info msg="2019-12-14 09:48:26.3130018 +0800 CST m=+29.215463301"
+time="2019-12-14T09:48:27+08:00" level=info msg="2019-12-14 09:48:27.3241323 +0800 CST m=+30.226593801"
+time="2019-12-14T09:48:28+08:00" level=info msg="2019-12-14 09:48:28.3143843 +0800 CST m=+31.216845801"
+time="2019-12-14T09:48:29+08:00" level=info msg="2019-12-14 09:48:29.3130329 +0800 CST m=+32.215494401"
+time="2019-12-14T09:48:30+08:00" level=info msg="2019-12-14 09:48:30.3229046 +0800 CST m=+33.225366101"
+time="2019-12-14T09:48:31+08:00" level=info msg="2019-12-14 09:48:31.3147284 +0800 CST m=+34.217189901"
+time="2019-12-14T09:48:32+08:00" level=info msg="2019-12-14 09:48:32.3125501 +0800 CST m=+35.215011601"
+time="2019-12-14T09:48:33+08:00" level=info msg="2019-12-14 09:48:33.3138814 +0800 CST m=+36.216342901"
+time="2019-12-14T09:48:34+08:00" level=info msg="2019-12-14 09:48:34.3534901 +0800 CST m=+37.255951601"
+time="2019-12-14T09:48:35+08:00" level=info msg="2019-12-14 09:48:35.3141969 +0800 CST m=+38.216658401"
+time="2019-12-14T09:49:13+08:00" level=info msg="Agent启动"
+time="2019-12-14T09:49:14+08:00" level=info msg="2019-12-14 09:49:14.777937 +0800 CST m=+1.438705301"
+time="2019-12-14T09:49:15+08:00" level=info msg="2019-12-14 09:49:15.7864499 +0800 CST m=+2.447218201"
+time="2019-12-14T09:49:16+08:00" level=info msg="2019-12-14 09:49:16.7773125 +0800 CST m=+3.438080801"
+time="2019-12-14T09:49:17+08:00" level=info msg="2019-12-14 09:49:17.7789049 +0800 CST m=+4.439673201"
+time="2019-12-14T09:49:18+08:00" level=info msg="2019-12-14 09:49:18.7789361 +0800 CST m=+5.439704401"
+time="2019-12-14T09:49:19+08:00" level=info msg="2019-12-14 09:49:19.7777676 +0800 CST m=+6.438535901"
+time="2019-12-14T09:49:20+08:00" level=info msg="2019-12-14 09:49:20.7811922 +0800 CST m=+7.441960501"
+time="2019-12-14T09:49:21+08:00" level=info msg="2019-12-14 09:49:21.7783095 +0800 CST m=+8.439077801"
+time="2019-12-14T09:49:22+08:00" level=info msg="2019-12-14 09:49:22.7791792 +0800 CST m=+9.439947501"
+time="2019-12-14T09:49:23+08:00" level=info msg="2019-12-14 09:49:23.7775438 +0800 CST m=+10.438312101"
+time="2019-12-14T09:49:24+08:00" level=info msg="2019-12-14 09:49:24.7776884 +0800 CST m=+11.438456701"
+time="2019-12-14T09:49:25+08:00" level=info msg="2019-12-14 09:49:25.7849846 +0800 CST m=+12.445752901"
+time="2019-12-14T09:49:26+08:00" level=info msg="2019-12-14 09:49:26.7774338 +0800 CST m=+13.438202101"
+time="2019-12-14T09:49:27+08:00" level=info msg="2019-12-14 09:49:27.8103041 +0800 CST m=+14.471072401"
+time="2019-12-14T09:49:28+08:00" level=info msg="2019-12-14 09:49:28.778354 +0800 CST m=+15.439122301"
+time="2019-12-14T09:49:29+08:00" level=info msg="2019-12-14 09:49:29.7773347 +0800 CST m=+16.438103001"
+time="2019-12-14T09:49:30+08:00" level=info msg="2019-12-14 09:49:30.7787891 +0800 CST m=+17.439557401"
+time="2019-12-14T09:49:31+08:00" level=info msg="2019-12-14 09:49:31.779126 +0800 CST m=+18.439894301"
+time="2019-12-14T09:49:32+08:00" level=info msg="2019-12-14 09:49:32.7773361 +0800 CST m=+19.438104401"
+time="2019-12-14T09:49:33+08:00" level=info msg="2019-12-14 09:49:33.7971107 +0800 CST m=+20.457879001"
+time="2019-12-14T09:49:34+08:00" level=info msg="2019-12-14 09:49:34.777544 +0800 CST m=+21.438312301"
+time="2019-12-14T09:49:35+08:00" level=info msg="2019-12-14 09:49:35.7790086 +0800 CST m=+22.439776901"
+time="2019-12-14T09:49:36+08:00" level=info msg="2019-12-14 09:49:36.7782019 +0800 CST m=+23.438970201"
+time="2019-12-14T09:49:37+08:00" level=info msg="Agent退出"
+time="2019-12-14T10:29:25+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:29:27+08:00" level=info msg="2019-12-14 10:29:27.2833078 +0800 CST m=+1.692788101"
+time="2019-12-14T10:29:28+08:00" level=info msg="2019-12-14 10:29:28.2778197 +0800 CST m=+2.687300001"
+time="2019-12-14T10:29:29+08:00" level=info msg="2019-12-14 10:29:29.2775924 +0800 CST m=+3.687072701"
+time="2019-12-14T10:29:30+08:00" level=info msg="2019-12-14 10:29:30.2735941 +0800 CST m=+4.683074401"
+time="2019-12-14T10:29:31+08:00" level=info msg="2019-12-14 10:29:31.2743205 +0800 CST m=+5.683800801"
+time="2019-12-14T10:29:32+08:00" level=info msg="2019-12-14 10:29:32.2794597 +0800 CST m=+6.688940001"
+time="2019-12-14T10:29:33+08:00" level=info msg="2019-12-14 10:29:33.2744821 +0800 CST m=+7.683962401"
+time="2019-12-14T10:29:34+08:00" level=info msg="2019-12-14 10:29:34.287522 +0800 CST m=+8.697002301"
+time="2019-12-14T10:29:35+08:00" level=info msg="2019-12-14 10:29:35.2729751 +0800 CST m=+9.682455401"
+time="2019-12-14T10:29:36+08:00" level=info msg="2019-12-14 10:29:36.2735385 +0800 CST m=+10.683018801"
+time="2019-12-14T10:29:37+08:00" level=info msg="2019-12-14 10:29:37.2736688 +0800 CST m=+11.683149101"
+time="2019-12-14T10:29:38+08:00" level=info msg="2019-12-14 10:29:38.2876791 +0800 CST m=+12.697159401"
+time="2019-12-14T10:29:39+08:00" level=info msg="2019-12-14 10:29:39.2737214 +0800 CST m=+13.683201701"
+time="2019-12-14T10:29:40+08:00" level=info msg="2019-12-14 10:29:40.276528 +0800 CST m=+14.686008301"
+time="2019-12-14T10:29:41+08:00" level=info msg="2019-12-14 10:29:41.2740477 +0800 CST m=+15.683528001"
+time="2019-12-14T10:29:42+08:00" level=info msg="2019-12-14 10:29:42.2733749 +0800 CST m=+16.682855201"
+time="2019-12-14T10:29:43+08:00" level=info msg="2019-12-14 10:29:43.2730384 +0800 CST m=+17.682518701"
+time="2019-12-14T10:29:44+08:00" level=info msg="2019-12-14 10:29:44.2799158 +0800 CST m=+18.689396101"
+time="2019-12-14T10:29:45+08:00" level=info msg="2019-12-14 10:29:45.2728674 +0800 CST m=+19.682347701"
+time="2019-12-14T10:29:46+08:00" level=info msg="2019-12-14 10:29:46.2744325 +0800 CST m=+20.683912801"
+time="2019-12-14T10:29:47+08:00" level=info msg="2019-12-14 10:29:47.3453984 +0800 CST m=+21.754878701"
+time="2019-12-14T10:29:48+08:00" level=info msg="2019-12-14 10:29:48.2731247 +0800 CST m=+22.682605001"
+time="2019-12-14T10:29:49+08:00" level=info msg="2019-12-14 10:29:49.274238 +0800 CST m=+23.683718301"
+time="2019-12-14T10:29:50+08:00" level=info msg="2019-12-14 10:29:50.2833302 +0800 CST m=+24.692810501"
+time="2019-12-14T10:29:51+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:30:13+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:30:14+08:00" level=info msg="2019-12-14 10:30:14.5231832 +0800 CST m=+1.130626701"
+time="2019-12-14T10:30:15+08:00" level=info msg="2019-12-14 10:30:15.524511 +0800 CST m=+2.131954501"
+time="2019-12-14T10:30:16+08:00" level=info msg="2019-12-14 10:30:16.5335785 +0800 CST m=+3.141022001"
+time="2019-12-14T10:30:17+08:00" level=info msg="2019-12-14 10:30:17.5523552 +0800 CST m=+4.159798701"
+time="2019-12-14T10:30:18+08:00" level=info msg="2019-12-14 10:30:18.5246544 +0800 CST m=+5.132097901"
+time="2019-12-14T10:30:19+08:00" level=info msg="2019-12-14 10:30:19.5231048 +0800 CST m=+6.130548301"
+time="2019-12-14T10:30:20+08:00" level=info msg="2019-12-14 10:30:20.5384329 +0800 CST m=+7.145876401"
+time="2019-12-14T10:30:21+08:00" level=info msg="2019-12-14 10:30:21.5232764 +0800 CST m=+8.130719901"
+time="2019-12-14T10:30:22+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:31:23+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:31:24+08:00" level=info msg="2019-12-14 10:31:24.9551912 +0800 CST m=+1.231445501"
+time="2019-12-14T10:31:25+08:00" level=info msg="2019-12-14 10:31:25.9414559 +0800 CST m=+2.217710201"
+time="2019-12-14T10:31:26+08:00" level=info msg="2019-12-14 10:31:26.9403989 +0800 CST m=+3.216653201"
+time="2019-12-14T10:31:27+08:00" level=info msg="2019-12-14 10:31:27.9405426 +0800 CST m=+4.216796901"
+time="2019-12-14T10:31:28+08:00" level=info msg="2019-12-14 10:31:28.9415407 +0800 CST m=+5.217795001"
+time="2019-12-14T10:31:29+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:32:41+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:32:43+08:00" level=info msg="2019-12-14 10:32:43.3727838 +0800 CST m=+1.535567201"
+time="2019-12-14T10:32:44+08:00" level=info msg="2019-12-14 10:32:44.3729609 +0800 CST m=+2.535744301"
+time="2019-12-14T10:32:45+08:00" level=info msg="2019-12-14 10:32:45.3752517 +0800 CST m=+3.538035101"
+time="2019-12-14T10:32:46+08:00" level=info msg="2019-12-14 10:32:46.3737196 +0800 CST m=+4.536503001"
+time="2019-12-14T10:32:47+08:00" level=info msg="2019-12-14 10:32:47.3721051 +0800 CST m=+5.534888501"
+time="2019-12-14T10:32:48+08:00" level=info msg="2019-12-14 10:32:48.3737812 +0800 CST m=+6.536564601"
+time="2019-12-14T10:32:49+08:00" level=info msg="2019-12-14 10:32:49.3755003 +0800 CST m=+7.538283701"
+time="2019-12-14T10:32:50+08:00" level=info msg="2019-12-14 10:32:50.3724294 +0800 CST m=+8.535212801"
+time="2019-12-14T10:32:51+08:00" level=info msg="2019-12-14 10:32:51.3735486 +0800 CST m=+9.536332001"
+time="2019-12-14T10:32:52+08:00" level=info msg="2019-12-14 10:32:52.3796467 +0800 CST m=+10.542430101"
+time="2019-12-14T10:32:52+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:51:39+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:51:40+08:00" level=info msg="2019-12-14 10:51:40.2115878 +0800 CST m=+1.169063901"
+time="2019-12-14T10:51:41+08:00" level=info msg="2019-12-14 10:51:41.2135624 +0800 CST m=+2.171038501"
+time="2019-12-14T10:51:42+08:00" level=info msg="2019-12-14 10:51:42.2135732 +0800 CST m=+3.171049301"
+time="2019-12-14T10:51:43+08:00" level=info msg="2019-12-14 10:51:43.2113515 +0800 CST m=+4.168827601"
+time="2019-12-14T10:51:44+08:00" level=info msg="2019-12-14 10:51:44.2113006 +0800 CST m=+5.168776701"
+time="2019-12-14T10:51:45+08:00" level=info msg="2019-12-14 10:51:45.2125144 +0800 CST m=+6.169990501"
+time="2019-12-14T10:51:46+08:00" level=info msg="2019-12-14 10:51:46.2109316 +0800 CST m=+7.168407701"
+time="2019-12-14T10:51:47+08:00" level=info msg="2019-12-14 10:51:47.2297561 +0800 CST m=+8.187232201"
+time="2019-12-14T10:51:48+08:00" level=info msg="2019-12-14 10:51:48.211142 +0800 CST m=+9.168618101"
+time="2019-12-14T10:51:49+08:00" level=info msg="2019-12-14 10:51:49.2457947 +0800 CST m=+10.203270801"
+time="2019-12-14T10:51:50+08:00" level=info msg="2019-12-14 10:51:50.2121077 +0800 CST m=+11.169583801"
+time="2019-12-14T10:51:51+08:00" level=info msg="2019-12-14 10:51:51.2106729 +0800 CST m=+12.168149001"
+time="2019-12-14T10:51:52+08:00" level=info msg="2019-12-14 10:51:52.2106197 +0800 CST m=+13.168095801"
+time="2019-12-14T10:51:53+08:00" level=info msg="2019-12-14 10:51:53.2119004 +0800 CST m=+14.169376501"
+time="2019-12-14T10:51:54+08:00" level=info msg="2019-12-14 10:51:54.2108252 +0800 CST m=+15.168301301"
+time="2019-12-14T10:51:55+08:00" level=info msg="2019-12-14 10:51:55.2111993 +0800 CST m=+16.168675401"
+time="2019-12-14T10:51:56+08:00" level=info msg="2019-12-14 10:51:56.211113 +0800 CST m=+17.168589101"
+time="2019-12-14T10:51:57+08:00" level=info msg="2019-12-14 10:51:57.2113823 +0800 CST m=+18.168858401"
+time="2019-12-14T10:51:58+08:00" level=info msg="2019-12-14 10:51:58.2111041 +0800 CST m=+19.168580201"
+time="2019-12-14T10:51:59+08:00" level=info msg="2019-12-14 10:51:59.2124446 +0800 CST m=+20.169920701"
+time="2019-12-14T10:52:00+08:00" level=info msg="2019-12-14 10:52:00.2113081 +0800 CST m=+21.168784201"
+time="2019-12-14T10:52:01+08:00" level=info msg="2019-12-14 10:52:01.2106108 +0800 CST m=+22.168086901"
+time="2019-12-14T10:52:02+08:00" level=info msg="2019-12-14 10:52:02.2165107 +0800 CST m=+23.173986801"
+time="2019-12-14T10:52:03+08:00" level=info msg="2019-12-14 10:52:03.2114491 +0800 CST m=+24.168925201"
+time="2019-12-14T10:52:04+08:00" level=info msg="2019-12-14 10:52:04.210839 +0800 CST m=+25.168315101"
+time="2019-12-14T10:52:05+08:00" level=info msg="2019-12-14 10:52:05.2106332 +0800 CST m=+26.168109301"
+time="2019-12-14T10:52:06+08:00" level=info msg="2019-12-14 10:52:06.2125658 +0800 CST m=+27.170041901"
+time="2019-12-14T10:52:07+08:00" level=info msg="2019-12-14 10:52:07.2115032 +0800 CST m=+28.168979301"
+time="2019-12-14T10:52:08+08:00" level=info msg="2019-12-14 10:52:08.2107475 +0800 CST m=+29.168223601"
+time="2019-12-14T10:52:09+08:00" level=info msg="2019-12-14 10:52:09.213632 +0800 CST m=+30.171108101"
+time="2019-12-14T10:52:10+08:00" level=info msg="2019-12-14 10:52:10.2117376 +0800 CST m=+31.169213701"
+time="2019-12-14T10:52:11+08:00" level=info msg="2019-12-14 10:52:11.2121962 +0800 CST m=+32.169672301"
+time="2019-12-14T10:52:12+08:00" level=info msg="2019-12-14 10:52:12.2123265 +0800 CST m=+33.169802601"
+time="2019-12-14T10:52:13+08:00" level=info msg="2019-12-14 10:52:13.210689 +0800 CST m=+34.168165101"
+time="2019-12-14T10:52:14+08:00" level=info msg="2019-12-14 10:52:14.210621 +0800 CST m=+35.168097101"
+time="2019-12-14T10:52:15+08:00" level=info msg="2019-12-14 10:52:15.2124195 +0800 CST m=+36.169895601"
+time="2019-12-14T10:52:16+08:00" level=info msg="2019-12-14 10:52:16.2106436 +0800 CST m=+37.168119701"
+time="2019-12-14T10:52:17+08:00" level=info msg="2019-12-14 10:52:17.2113162 +0800 CST m=+38.168792301"
+time="2019-12-14T10:52:18+08:00" level=info msg="2019-12-14 10:52:18.2123822 +0800 CST m=+39.169858301"
+time="2019-12-14T10:52:19+08:00" level=info msg="2019-12-14 10:52:19.2125765 +0800 CST m=+40.170052601"
+time="2019-12-14T10:52:20+08:00" level=info msg="2019-12-14 10:52:20.2113789 +0800 CST m=+41.168855001"
+time="2019-12-14T10:52:21+08:00" level=info msg="2019-12-14 10:52:21.2107957 +0800 CST m=+42.168271801"
+time="2019-12-14T10:52:22+08:00" level=info msg="2019-12-14 10:52:22.2107911 +0800 CST m=+43.168267201"
+time="2019-12-14T10:52:23+08:00" level=info msg="2019-12-14 10:52:23.2107429 +0800 CST m=+44.168219001"
+time="2019-12-14T10:52:24+08:00" level=info msg="2019-12-14 10:52:24.2111244 +0800 CST m=+45.168600501"
+time="2019-12-14T10:52:25+08:00" level=info msg="2019-12-14 10:52:25.2121323 +0800 CST m=+46.169608401"
+time="2019-12-14T10:52:26+08:00" level=info msg="2019-12-14 10:52:26.2113936 +0800 CST m=+47.168869701"
+time="2019-12-14T10:52:27+08:00" level=info msg="2019-12-14 10:52:27.2118465 +0800 CST m=+48.169322601"
+time="2019-12-14T10:52:28+08:00" level=info msg="2019-12-14 10:52:28.2148445 +0800 CST m=+49.172320601"
+time="2019-12-14T10:52:29+08:00" level=info msg="2019-12-14 10:52:29.2120183 +0800 CST m=+50.169494401"
+time="2019-12-14T10:52:30+08:00" level=info msg="2019-12-14 10:52:30.2107031 +0800 CST m=+51.168179201"
+time="2019-12-14T10:52:31+08:00" level=info msg="2019-12-14 10:52:31.2149736 +0800 CST m=+52.172449701"
+time="2019-12-14T10:52:32+08:00" level=info msg="2019-12-14 10:52:32.2127666 +0800 CST m=+53.170242701"
+time="2019-12-14T10:52:33+08:00" level=info msg="2019-12-14 10:52:33.2124636 +0800 CST m=+54.169939701"
+time="2019-12-14T10:52:34+08:00" level=info msg="2019-12-14 10:52:34.2106241 +0800 CST m=+55.168100201"
+time="2019-12-14T10:52:35+08:00" level=info msg="2019-12-14 10:52:35.211895 +0800 CST m=+56.169371101"
+time="2019-12-14T10:52:36+08:00" level=info msg="2019-12-14 10:52:36.2127024 +0800 CST m=+57.170178501"
+time="2019-12-14T10:52:37+08:00" level=info msg="2019-12-14 10:52:37.2121732 +0800 CST m=+58.169649301"
+time="2019-12-14T10:52:38+08:00" level=info msg="2019-12-14 10:52:38.2139502 +0800 CST m=+59.171426301"
+time="2019-12-14T10:52:39+08:00" level=info msg="2019-12-14 10:52:39.2124137 +0800 CST m=+60.169889801"
+time="2019-12-14T10:52:39+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:54:58+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:54:59+08:00" level=info msg="2019-12-14 10:54:59.4451086 +0800 CST m=+1.231812701"
+time="2019-12-14T10:55:00+08:00" level=info msg="2019-12-14 10:55:00.444954 +0800 CST m=+2.231658101"
+time="2019-12-14T10:55:01+08:00" level=info msg="2019-12-14 10:55:01.4466058 +0800 CST m=+3.233309901"
+time="2019-12-14T10:55:02+08:00" level=info msg="2019-12-14 10:55:02.445439 +0800 CST m=+4.232143101"
+time="2019-12-14T10:55:03+08:00" level=info msg="2019-12-14 10:55:03.4468715 +0800 CST m=+5.233575601"
+time="2019-12-14T10:55:04+08:00" level=info msg="2019-12-14 10:55:04.4457314 +0800 CST m=+6.232435501"
+time="2019-12-14T10:55:05+08:00" level=info msg="2019-12-14 10:55:05.4502191 +0800 CST m=+7.236923201"
+time="2019-12-14T10:55:06+08:00" level=info msg="2019-12-14 10:55:06.4464213 +0800 CST m=+8.233125401"
+time="2019-12-14T10:55:07+08:00" level=info msg="2019-12-14 10:55:07.4452744 +0800 CST m=+9.231978501"
+time="2019-12-14T10:55:08+08:00" level=info msg="2019-12-14 10:55:08.4452617 +0800 CST m=+10.231965801"
+time="2019-12-14T10:55:09+08:00" level=info msg="2019-12-14 10:55:09.4450283 +0800 CST m=+11.231732401"
+time="2019-12-14T10:55:10+08:00" level=info msg="2019-12-14 10:55:10.4463692 +0800 CST m=+12.233073301"
+time="2019-12-14T10:55:11+08:00" level=info msg="2019-12-14 10:55:11.4674806 +0800 CST m=+13.254184701"
+time="2019-12-14T10:55:12+08:00" level=info msg="2019-12-14 10:55:12.4644353 +0800 CST m=+14.251139401"
+time="2019-12-14T10:55:13+08:00" level=info msg="2019-12-14 10:55:13.4449795 +0800 CST m=+15.231683601"
+time="2019-12-14T10:55:14+08:00" level=info msg="2019-12-14 10:55:14.4463168 +0800 CST m=+16.233020901"
+time="2019-12-14T10:55:15+08:00" level=info msg="2019-12-14 10:55:15.4464306 +0800 CST m=+17.233134701"
+time="2019-12-14T10:55:16+08:00" level=info msg="2019-12-14 10:55:16.4467067 +0800 CST m=+18.233410801"
+time="2019-12-14T10:55:17+08:00" level=info msg="2019-12-14 10:55:17.4456982 +0800 CST m=+19.232402301"
+time="2019-12-14T10:55:18+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:56:58+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:56:59+08:00" level=info msg="2019-12-14 10:56:59.7434835 +0800 CST m=+1.499890001"
+time="2019-12-14T10:57:00+08:00" level=info msg="2019-12-14 10:57:00.7350799 +0800 CST m=+2.491486401"
+time="2019-12-14T10:57:01+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:57:21+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T10:57:22+08:00" level=info msg="2019-12-14 10:57:22.0635854 +0800 CST m=+1.399888901"
+time="2019-12-14T10:57:23+08:00" level=info msg="2019-12-14 10:57:23.0466288 +0800 CST m=+2.382932301"
+time="2019-12-14T10:57:24+08:00" level=info msg="2019-12-14 10:57:24.04649 +0800 CST m=+3.382793501"
+time="2019-12-14T10:57:25+08:00" level=info msg="2019-12-14 10:57:25.0459819 +0800 CST m=+4.382285401"
+time="2019-12-14T10:57:25+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T11:38:27+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T11:38:27+08:00" level=info msg="初始化插件" Name=heartbeat
+time="2019-12-14T11:38:28+08:00" level=info msg="2019-12-14 11:38:28.7201957 +0800 CST m=+1.313007601"
+time="2019-12-14T11:38:28+08:00" level=debug msg="插件执行" Name=heartbeat
+time="2019-12-14T11:38:29+08:00" level=info msg="2019-12-14 11:38:29.7257319 +0800 CST m=+2.318543801"
+time="2019-12-14T11:38:30+08:00" level=info msg="2019-12-14 11:38:30.6760948 +0800 CST m=+3.268906701"
+time="2019-12-14T11:38:31+08:00" level=info msg="2019-12-14 11:38:31.6724565 +0800 CST m=+4.265268401"
+time="2019-12-14T11:38:32+08:00" level=info msg="2019-12-14 11:38:32.663929 +0800 CST m=+5.256740901"
+time="2019-12-14T11:38:33+08:00" level=info msg="2019-12-14 11:38:33.6649593 +0800 CST m=+6.257771201"
+time="2019-12-14T11:38:34+08:00" level=info msg="2019-12-14 11:38:34.6629914 +0800 CST m=+7.255803301"
+time="2019-12-14T11:38:35+08:00" level=info msg="2019-12-14 11:38:35.6668637 +0800 CST m=+8.259675601"
+time="2019-12-14T11:38:36+08:00" level=info msg="2019-12-14 11:38:36.6647915 +0800 CST m=+9.257603401"
+time="2019-12-14T11:38:37+08:00" level=info msg="2019-12-14 11:38:37.6748783 +0800 CST m=+10.267690201"
+time="2019-12-14T11:38:37+08:00" level=debug msg="插件执行" Name=heartbeat
+time="2019-12-14T11:38:38+08:00" level=info msg="2019-12-14 11:38:38.6628916 +0800 CST m=+11.255703501"
+time="2019-12-14T11:38:39+08:00" level=info msg="2019-12-14 11:38:39.6639706 +0800 CST m=+12.256782501"
+time="2019-12-14T11:38:40+08:00" level=info msg="2019-12-14 11:38:40.6741561 +0800 CST m=+13.266968001"
+time="2019-12-14T11:38:41+08:00" level=info msg="2019-12-14 11:38:41.6666731 +0800 CST m=+14.259485001"
+time="2019-12-14T11:38:42+08:00" level=info msg="2019-12-14 11:38:42.6692704 +0800 CST m=+15.262082301"
+time="2019-12-14T11:38:43+08:00" level=info msg="2019-12-14 11:38:43.6635431 +0800 CST m=+16.256355001"
+time="2019-12-14T11:38:44+08:00" level=info msg="2019-12-14 11:38:44.6623387 +0800 CST m=+17.255150601"
+time="2019-12-14T11:38:45+08:00" level=info msg="2019-12-14 11:38:45.6638878 +0800 CST m=+18.256699701"
+time="2019-12-14T11:38:46+08:00" level=info msg="2019-12-14 11:38:46.6653423 +0800 CST m=+19.258154201"
+time="2019-12-14T11:38:47+08:00" level=info msg="2019-12-14 11:38:47.6626447 +0800 CST m=+20.255456601"
+time="2019-12-14T11:38:47+08:00" level=debug msg="插件执行" Name=heartbeat
+time="2019-12-14T11:38:48+08:00" level=info msg="2019-12-14 11:38:48.6678832 +0800 CST m=+21.260695101"
+time="2019-12-14T11:38:49+08:00" level=info msg="2019-12-14 11:38:49.6640081 +0800 CST m=+22.256820001"
+time="2019-12-14T11:38:50+08:00" level=info msg="2019-12-14 11:38:50.6649375 +0800 CST m=+23.257749401"
+time="2019-12-14T11:38:51+08:00" level=info msg="2019-12-14 11:38:51.6640618 +0800 CST m=+24.256873701"
+time="2019-12-14T11:38:52+08:00" level=info msg="2019-12-14 11:38:52.6619856 +0800 CST m=+25.254797501"
+time="2019-12-14T11:38:53+08:00" level=info msg="2019-12-14 11:38:53.6627092 +0800 CST m=+26.255521101"
+time="2019-12-14T11:38:54+08:00" level=info msg="2019-12-14 11:38:54.6626426 +0800 CST m=+27.255454501"
+time="2019-12-14T11:38:55+08:00" level=info msg="2019-12-14 11:38:55.6654522 +0800 CST m=+28.258264101"
+time="2019-12-14T11:38:56+08:00" level=info msg="2019-12-14 11:38:56.6644556 +0800 CST m=+29.257267501"
+time="2019-12-14T11:38:57+08:00" level=debug msg="插件执行" Name=heartbeat
+time="2019-12-14T11:38:57+08:00" level=info msg="2019-12-14 11:38:57.6696569 +0800 CST m=+30.262468801"
+time="2019-12-14T11:38:58+08:00" level=info msg="2019-12-14 11:38:58.6651382 +0800 CST m=+31.257950101"
+time="2019-12-14T11:38:59+08:00" level=info msg="2019-12-14 11:38:59.6662652 +0800 CST m=+32.259077101"
+time="2019-12-14T11:39:00+08:00" level=info msg="2019-12-14 11:39:00.6723347 +0800 CST m=+33.265146601"
+time="2019-12-14T11:39:01+08:00" level=info msg="2019-12-14 11:39:01.6673613 +0800 CST m=+34.260173201"
+time="2019-12-14T11:39:02+08:00" level=info msg="2019-12-14 11:39:02.6636193 +0800 CST m=+35.256431201"
+time="2019-12-14T11:39:03+08:00" level=info msg="2019-12-14 11:39:03.6617223 +0800 CST m=+36.254534201"
+time="2019-12-14T11:39:04+08:00" level=info msg="2019-12-14 11:39:04.662823 +0800 CST m=+37.255634901"
+time="2019-12-14T11:39:05+08:00" level=info msg="2019-12-14 11:39:05.6617484 +0800 CST m=+38.254560301"
+time="2019-12-14T11:39:06+08:00" level=info msg="2019-12-14 11:39:06.6649757 +0800 CST m=+39.257787601"
+time="2019-12-14T11:39:07+08:00" level=info msg="2019-12-14 11:39:07.6634549 +0800 CST m=+40.256266801"
+time="2019-12-14T11:39:07+08:00" level=debug msg="插件执行" Name=heartbeat
+time="2019-12-14T11:39:08+08:00" level=info msg="2019-12-14 11:39:08.6634496 +0800 CST m=+41.256261501"
+time="2019-12-14T11:39:09+08:00" level=info msg="2019-12-14 11:39:09.6635102 +0800 CST m=+42.256322101"
+time="2019-12-14T11:39:10+08:00" level=info msg="2019-12-14 11:39:10.6617561 +0800 CST m=+43.254568001"
+time="2019-12-14T11:39:11+08:00" level=info msg="2019-12-14 11:39:11.6677875 +0800 CST m=+44.260599401"
+time="2019-12-14T11:39:12+08:00" level=info msg="2019-12-14 11:39:12.6652138 +0800 CST m=+45.258025701"
+time="2019-12-14T11:39:13+08:00" level=info msg="2019-12-14 11:39:13.663242 +0800 CST m=+46.256053901"
+time="2019-12-14T11:39:14+08:00" level=info msg="2019-12-14 11:39:14.661909 +0800 CST m=+47.254720901"
+time="2019-12-14T11:39:15+08:00" level=info msg="2019-12-14 11:39:15.6623993 +0800 CST m=+48.255211201"
+time="2019-12-14T11:39:16+08:00" level=info msg="2019-12-14 11:39:16.6620113 +0800 CST m=+49.254823201"
+time="2019-12-14T11:39:17+08:00" level=debug msg="插件执行" Name=heartbeat
+time="2019-12-14T11:39:17+08:00" level=info msg="2019-12-14 11:39:17.6657593 +0800 CST m=+50.258571201"
+time="2019-12-14T11:39:18+08:00" level=info msg="2019-12-14 11:39:18.6673663 +0800 CST m=+51.260178201"
+time="2019-12-14T11:39:19+08:00" level=info msg="2019-12-14 11:39:19.661967 +0800 CST m=+52.254778901"
+time="2019-12-14T11:39:20+08:00" level=info msg="2019-12-14 11:39:20.6618744 +0800 CST m=+53.254686301"
+time="2019-12-14T11:39:21+08:00" level=info msg="2019-12-14 11:39:21.6632093 +0800 CST m=+54.256021201"
+time="2019-12-14T11:39:22+08:00" level=info msg="2019-12-14 11:39:22.6620073 +0800 CST m=+55.254819201"
+time="2019-12-14T11:39:22+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T11:51:34+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T11:51:34+08:00" level=info msg="初始化插件" Name=heartbeat
+time="2019-12-14T11:51:34+08:00" level=info msg="ENS 开始执行"
+time="2019-12-14T11:51:35+08:00" level=debug msg="插件执行" Name=heartbeat
+time="2019-12-14T11:51:35+08:00" level=debug msg="发送消息到服务器2019-12-14 11:51:35.2390339 +0800 CST m=+1.491100301"
+time="2019-12-14T11:51:36+08:00" level=debug msg="发送消息到服务器2019-12-14 11:51:36.2295843 +0800 CST m=+2.481650701"
+time="2019-12-14T11:51:37+08:00" level=debug msg="发送消息到服务器2019-12-14 11:51:37.2370219 +0800 CST m=+3.489088301"
+time="2019-12-14T11:51:38+08:00" level=debug msg="发送消息到服务器2019-12-14 11:51:38.240672 +0800 CST m=+4.492738401"
+time="2019-12-14T11:51:39+08:00" level=debug msg="发送消息到服务器2019-12-14 11:51:39.2294651 +0800 CST m=+5.481531501"
+time="2019-12-14T11:51:40+08:00" level=debug msg="发送消息到服务器2019-12-14 11:51:40.2354316 +0800 CST m=+6.487498001"
+time="2019-12-14T11:51:41+08:00" level=debug msg="发送消息到服务器2019-12-14 11:51:41.23073 +0800 CST m=+7.482796401"
+time="2019-12-14T11:51:42+08:00" level=debug msg="发送消息到服务器2019-12-14 11:51:42.2542977 +0800 CST m=+8.506364101"
+time="2019-12-14T11:51:42+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T12:03:24+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T12:03:24+08:00" level=info msg="初始化插件" Name=heartbeat
+time="2019-12-14T12:03:24+08:00" level=info msg="ENS 开始执行"
+time="2019-12-14T12:03:25+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T12:03:25+08:00" level=debug msg="发送心跳消息:heartbeat"
+time="2019-12-14T12:03:34+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T12:03:34+08:00" level=debug msg="发送心跳消息:heartbeat"
+time="2019-12-14T12:03:44+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T12:03:44+08:00" level=debug msg="发送心跳消息:heartbeat"
+time="2019-12-14T12:03:54+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T12:03:54+08:00" level=debug msg="发送心跳消息:heartbeat"
+time="2019-12-14T12:04:04+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T12:04:04+08:00" level=debug msg="发送心跳消息:heartbeat"
+time="2019-12-14T12:04:14+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T12:04:14+08:00" level=debug msg="发送心跳消息:heartbeat"
+time="2019-12-14T12:04:15+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T22:03:54+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T22:03:54+08:00" level=info msg="初始化插件" Name=heartbeat
+time="2019-12-14T22:03:54+08:00" level=info msg="ENS 开始执行"
+time="2019-12-14T22:03:55+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:04:04+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:04:14+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:04:24+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:04:34+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:04:44+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:04:54+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:05:04+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:05:14+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:05:24+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:05:34+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:05:44+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:05:54+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:06:04+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:06:14+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:06:24+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:06:34+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:06:44+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:06:54+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:07:04+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:07:14+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:07:24+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:07:34+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:07:35+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T22:07:40+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T22:07:40+08:00" level=info msg="初始化插件" Name=heartbeat
+time="2019-12-14T22:07:40+08:00" level=info msg="ENS 开始执行"
+time="2019-12-14T22:07:41+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:07:41+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:07:50+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:07:50+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:08:00+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:08:00+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:08:10+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:08:10+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:08:20+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:08:20+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:08:30+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:08:30+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:08:40+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:08:42+08:00" level=debug msg="上传心跳信息失败" error="Post http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/: dial tcp [::1]:8080: connectex: No connection could be made because the target machine actively refused it."
+time="2019-12-14T22:08:50+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:08:52+08:00" level=debug msg="上传心跳信息失败" error="Post http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/: dial tcp [::1]:8080: connectex: No connection could be made because the target machine actively refused it."
+time="2019-12-14T22:09:00+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:09:01+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:09:10+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:09:10+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:09:20+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:09:20+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:09:30+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:09:30+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:09:39+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T22:09:43+08:00" level=info msg="Agent启动" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a
+time="2019-12-14T22:09:43+08:00" level=info msg="初始化插件" Name=heartbeat
+time="2019-12-14T22:09:43+08:00" level=info msg="ENS 开始执行"
+time="2019-12-14T22:09:44+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:09:44+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:09:53+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:09:53+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:10:03+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:10:03+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:10:13+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:10:13+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:10:23+08:00" level=debug msg="插件执行" Name=heartbeat Result=heartbeat
+time="2019-12-14T22:10:23+08:00" level=debug msg="上传心跳信息成功" response="POST http://localhost:8080/v1/api/heartbeat/d1782f7aae5b409b86abc4214c40b01a/\n heartbeat\n {\n  \"code\": 200,\n  \"result\": null,\n  \"text\": \"成功\"\n}"
+time="2019-12-14T22:10:30+08:00" level=info msg="Agent退出" PID=-1 UUID=d1782f7aae5b409b86abc4214c40b01a

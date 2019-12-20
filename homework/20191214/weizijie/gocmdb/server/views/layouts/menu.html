@@ -1,0 +1,67 @@
+<li>
+    <a class="app-menu__item {{ if eq .menu `dashboard` }}active{{ end }}" href="dashboard.html">
+        <i class="app-menu__icon fa fa-dashboard"></i>
+        <span class="app-menu__label">Dashboard</span>
+    </a>
+</li>
+
+
+<li class="treeview {{ if eq .expand `cloud_management` }}is-expanded{{end}}">
+    <a class="app-menu__item" href="#" data-toggle="treeview">
+        <i class="app-menu__icon fa fa-cloud"></i>
+        <span class="app-menu__label">云管理</span>
+        <i class="treeview-indicator fa fa-angle-right"></i>
+    </a>
+    <ul class="treeview-menu">
+        <li>
+            <a class="treeview-item {{ if eq .menu `cloud_plateform_management` }}active{{ end }}" href="{{ urlfor `CloudPlatformPageController.Index` }}">
+                <i class="icon fa fa-cubes"></i> 云平台管理
+            </a>
+        </li>
+        <li>
+            <a class="treeview-item {{ if eq .menu `virtual_machine_management` }}active{{ end }}" href="{{ urlfor `VirtualMachinePageController.Index`}}">
+                <i class="icon fa fa-server"></i> 云主机管理
+            </a>
+        </li>
+    </ul>
+</li>
+
+<li class="treeview {{ if eq .expand `system_management` }}is-expanded{{end}}">
+    <a class="app-menu__item" href="#" data-toggle="treeview">
+        <i class="app-menu__icon fa fa-cog"></i>
+        <span class="app-menu__label">系统管理</span>
+        <i class="treeview-indicator fa fa-angle-right"></i>
+    </a>
+    <ul class="treeview-menu">
+        <li>
+            <a class="treeview-item {{ if eq .menu `user_management` }}active{{ end }}" href="{{ urlfor `UserPageController.Index` }}">
+                <i class="icon fa fa-users"></i> 用户管理
+            </a>
+        </li>
+        <li>
+            <a class="treeview-item {{ if eq .menu `alarm_settings` }}active{{ end }}" href="widgets.html">
+                <i class="icon fa fa-bell"></i> 告警设置
+            </a>
+        </li>
+    </ul>
+</li>
+
+<li class="treeview {{ if eq .expand `terminal_management` }}is-expanded{{end}}">
+    <a class="app-menu__item" href="#" data-toggle="treeview">
+        <i class="app-menu__icon fa fa-desktop"></i>
+        <span class="app-menu__label">终端管理</span>
+        <i class="treeview-indicator fa fa-angle-right"></i>
+    </a>
+    <ul class="treeview-menu">
+        <li>
+            <a class="treeview-item {{ if eq .menu `agent_management` }}active{{ end }}" href="{{ urlfor `AgentPageController.Index` }}">
+                <i class="icon fa fa-circle-o"></i> Agent管理
+            </a>
+        </li>
+        <li>
+            <a class="treeview-item {{ if eq .menu `log_management` }}active{{ end }}" href="{{ urlfor `LogPageController.Index` }}">
+                <i class="icon fa fa-edit"></i> 日志管理
+            </a>
+        </li>
+    </ul>
+</li>

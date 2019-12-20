@@ -1,0 +1,151 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#table").DataTable({
+        dom:'<"row"<"col-6"l><"col-6"f>>',
+        processing: true,
+        serverSide: true,
+        ajax: {
+            url : "{{ urlfor `AgentController.List` }}",
+            data: function(data) {
+                return {
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q: data.search.value
+                };
+            },
+            dataSrc: "result"
+        },
+        columns: [
+            {
+                data: function(row) {
+                    return htmlEncode(row['hostname']);
+                }
+            },
+            {
+                data: function(row) {
+                    var texts = '<a href="javascript:void(0);" popover="popover" data-html="true" data-content=":content:">:ip:</a>';
+                    var content = [];
+                    var ip_str = "";
+                    var data = htmlEncode(row['ip']).split("[")[1].split("]")[0].split(",");
+                    
+                    if(data) {
+                        jQuery.each(data, function(index, value) {
+                            
+                            if(index === 0) {
+                                // console.log(htmlEncode(value).split("&amp")[1].split(";")[2])
+                                ip_str = htmlEncode(value).split("&amp")[1].split(";")[2];
+
+                            } else {
+                                d = value.split(";")[1].split("&")[0]
+                                content.push(htmlEncode(d));   
+                                // // d = value.split(";")[1].split("&")[0]
+                                // content.push(htmlEncode(value));
+                            }
+                        })
+                    }
+                    // console.log(texts.replace(/:ip:/, ip_str).replace(/:content:/g, content.join("<br />")))
+                    return texts.replace(/:ip:/, ip_str).replace(/:content:/g, content.join("<br />"));
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['arch']) {
+                        return htmlEncode(row['os']) + ' | ' + htmlEncode(row['arch']);
+                    } else {
+                        return htmlEncode(row['os']);
+                    }
+                    
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['cpu'] + "核");
+                }
+            },
+            {
+                data: function(row) {
+                    
+                    return parseFloat(htmlEncode(row['ram']/1024)).toFixed(2) + "GB";
+                }
+            },
+            {
+                data: function(row) {
+                    var texts = '<a href="javascript:void(0);" popover="popover" data-html="true" data-content=":content:">:disk_str:</a>';
+                    var disks = htmlEncode(row['disk']).split("{")[1].split("}")[0].split(",")
+                    var content = [];
+                    var disk_str = "";
+
+                    if(disks) {
+                        var index = 0
+                        jQuery.each(disks, function(_, value) {
+                            var key = value.split(";")[1].split(":")[0]
+                            value_str = value.split(";")[2].split(":")[1];
+                            var text = ':name:(:value:GB)'.replace(/:name:/g, key).replace(/:value:/g, parseFloat(value_str).toFixed(2));
+                            if(index === 0) {
+                                disk_str = htmlEncode(text);
+                            } else {
+                                content.push(htmlEncode(text));
+                            }
+                            index++;
+                            
+                        })
+                    }
+                    return texts.replace(/:disk_str:/, disk_str).replace(/:content:/g, content.join("<br />"));
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['boottime']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['boottime'])));
+                    };
+                    return htmlEncode('');
+                    // return htmlEncode(row['created_time']);
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['heartbeat_time']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['heartbeat_time'])));
+                    };
+                    return htmlEncode('');
+                    // return htmlEncode(row['created_time']);
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['created_time']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['created_time'])));
+                    };
+                    return htmlEncode('');
+                    // return htmlEncode(row['created_time']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['remark']);
+                }
+            },
+            {
+                data: function(row) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+                    buttons.push('<button class="btn btn-sm btn-warning btn-open-dialog" data-title="编辑" data-url="{{ urlfor `AgentController.Modify` }}?pk=:pk:">编辑</div>')
+                    buttons.push('<button class="btn btn-sm btn-danger btn-control"  data-title="确定删除?" data-url="{{ urlfor `AgentController.Delete` }}" data-pk=":pk:" data-callback="reload_table">删除</div>');
+                    buttons.push('</div>');
+                    return buttons.join("").replace(/:pk:/g, row['id']);
+                }
+            }
+        ]
+    });
+    
+
+    table.on("draw", function() {
+        jQuery('a[popover]').popover({trigger: 'hover'});
+    });
+
+    window["reload_table"] = function(response) {
+        console.log("6 reload table");
+        table.ajax.reload(null, false);
+    };
+});
+</script>

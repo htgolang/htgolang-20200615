@@ -1,0 +1,162 @@
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var startTime = "";
+        var endTime = "";
+        var table = jQuery("#table").DataTable({
+            dom: '<"row"<"col-5" l><"col-5" f><"#buttons.col-2">>t<"row"<"col-6"i><"col-6"p>>',
+            // dom:'<"row"<"col-6"l><"col-6"f>>',
+            serverSide: true,
+            ajax: {
+                url : "{{ urlfor `LogController.List` }}",
+                data: function(data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                        startTime: startTime,
+                        endTime: endTime,
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns: [
+                {
+                    data: function(row) {
+                        return htmlEncode(row['id']);
+                    }
+                },
+                {
+                    data: function(row) {
+                        return htmlEncode(row['hostname']);
+                    }
+                },
+                {
+                    data: function(row) {
+                        return htmlEncode(row['uuid']);
+                    }
+                },
+                {
+                    data: function(row) {
+                        return htmlEncode(JSON.parse(row["load"])["load1"].toFixed(1) + "/" 
+                        + JSON.parse(row["load"])["load5"].toFixed(1) + "/" 
+                        + JSON.parse(row["load"])["load15"].toFixed(1));
+                        // return htmlEncode(row['load']);
+                    }
+                },
+                {
+                    data: function(row) {
+                        // return htmlEncode(row['cpu_precent']);
+                        parseFloat
+                        return parseFloat(htmlEncode(row['cpu_precent'])).toFixed(2) + "%";
+                    }
+                },
+                {
+                    data: function(row) {
+                        return parseFloat(htmlEncode(row['ram_precent'])).toFixed(2) + "%";
+                        // return htmlEncode(row['ram_precent']);
+                    }
+                },
+                {
+                    data: function(row) {
+                        var texts = '<a href="javascript:void(0);" popover="popover" data-html="true" data-content=":content:">:disk_str:</a>';
+                        var content = [];
+                        var disk_str = "";
+
+                        var disks = htmlEncode(row['disk_precent']).split("{");
+                        
+                        // 判断split分割之后是否为空
+                        if (disks[1]) {
+                            disks_list = disks[1].split("}")[0].split(",");
+
+                            if(disks_list) {
+                                var index = 0
+                                jQuery.each(disks_list, function(_, value) {
+                                    var key = value.split(";")[1].split(":")[0]
+                                    var value_str = value.split(";")[2].split(":")[1]
+                                    
+                                    var text = ':name:(:value:%)'.replace(/:name:/g, key).replace(/:value:/g, parseFloat(value_str).toFixed(2));
+                                    if(index === 0) {
+                                        disk_str = htmlEncode(text);
+                                    } else {
+                                        content.push(htmlEncode(text));
+                                    }
+                                    index++;
+                                })
+                            }
+                        }
+                        // console.log(disks_list)
+                        return texts.replace(/:disk_str:/, disk_str).replace(/:content:/g, content.join("<br />"));   
+                    }
+                },
+                {
+                    data: function(row) {
+                        if(row['created_time']) {
+                            return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['created_time'])));
+                        };
+                        return htmlEncode('');
+                        // return htmlEncode(row['created_time']);
+                    }
+                },
+                {
+                    data: function(row) {
+                        if(row['time']) {
+                            return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['time'])));
+                        };
+                        return htmlEncode('');
+                        // return htmlEncode(row['created_time']);
+                    }
+                },
+                {
+                    data: function(row) {
+                        var buttons = ['<div class="btn-group" role="group">'];
+                        buttons.push('<button class="btn btn-sm btn-danger btn-control"  data-title="确定删除?" data-url="{{ urlfor `LogController.Delete` }}" data-pk=":pk:" data-callback="reload_table">删除</div>');
+                        buttons.push('</div>');
+                        return buttons.join("").replace(/:pk:/g, row['id']);
+                    }
+                }
+            ]
+        });
+
+        // draw button
+        table.on("draw", function () {
+            if (!jQuery("#buttons").attr("initd")) {
+                jQuery("#buttons").attr("initd", "initd").html('<input type="text" name="datetimes" class="form-control col-form-label-sm pull-right">');
+
+                jQuery('input[name="datetimes"]').daterangepicker({
+                    timePicker: true,
+                    showDropdowns: true,
+                    timePicker24Hour: true,
+                    alwaysShowCalendars: false,
+                    timePickerSeconds: true,
+                    startDate: moment().startOf('hour').add(-23, 'hour'),
+                    endDate: moment().startOf('hour').add(1, 'hour'),
+                    locale: {
+                        format: 'YYYY-MM-DD HH:MM:SS',
+                        applyLabel: '确定',
+                        cancelLabel: '取消',
+                        fromLabel: '起始时间',
+                        toLabel: '结束时间',
+                        customRangeLabel: '手动选择',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                        firstDay: 1
+                    },
+                }, function (start, end, label) {
+                    startTime = start.format('YYYY-MM-DD HH:MM:SS');
+                    endTime = end.format('YYYY-MM-DD HH:MM:SS');
+                    table.ajax.reload(null, false)
+                });
+            }
+        });
+
+        table.on("draw", function() {
+            jQuery('a[popover]').popover({trigger: 'hover'});
+        });
+
+        window["reload_table"] = function(response) {
+            console.log("6 reload table");
+            table.ajax.reload(null, false);
+        };
+    });
+    </script>
