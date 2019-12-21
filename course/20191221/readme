@@ -1,0 +1,155 @@
+
+
+请求行： GET URL?a=b HTTP/1.1
+请求头： Host:
+        Cookie:
+        Token:
+空行
+请求体 a=b&c=d
+      {"a":1, "b":2}
+
+register/uuid/
+
+
+1. 终端显示
+    查询 hostname/ip
+
+    操作: 删除
+    编辑：与终端上传不相关的属性
+            描述
+
+
+    打开页面 /url/ render view
+        table datatable
+
+    AgentPageController
+        LayoutController
+
+    Index()
+        menu = ""
+        expand = ""
+        tplName = ""
+
+
+    ajax list
+    AgentController
+        List
+        Delete
+
+
+2. 日志:
+    查询 显示 (uuid => 终端名称)
+    查询条件: agent uuid
+             时间 [start_time, end_time]
+
+3. agent -v
+    有-v 日志设置为debug， 开启req.DEBUG
+    无 日志设置为info，关闭req.DEBUG
+
+
+公司有200台虚拟机
+
+开发 => 5天
+v1 => 10台机器测试功能(5天)
+    => 20台机器
+
+1个月后
+20 跑 v1版本
+
+问题：
+url curl发起请求
+认证： Token
+
+我去开发：
+
+我再原有基础上改 服务端 v1 => 改代码
+                开发终端 重新编译 重新部署
+
+服务端 v2 => v1的基础之上加认证，v1 api v2 api
+    服务端上线
+
+    在原有代码之上去添加Token参数
+    重新部署
+
+
+    自动升级
+        二进制文件
+        配置
+
+Token : 自己存储Token值 app.conf
+Agent 上传Token
+Header: Token: xxx
+
+
+最近12小时
+
+13:30 - 16:00 没有启动
+
+17:30
+
+5:30 - 17:30
+
+13:229 16:01
+
+
+1 2 3 4 5
+a b 0 0 c
+
+1 2 5
+a b c
+
+1: a
+2: b
+5: c
+
+
+1 2 3 4 5
+a b 0 0 c
+
+
+startTime endTime 1min
+
+starTime starTime + 1min startTime + 2min  startTime + 3min .... startTime + n min <= endTime
+
+17 ：45：32
+
+17：45：30
+key 时间 ： record
+
+for range []*Resource
+    resoruce.create_time => resource
+
+
+[]*Resource
+
+
+连续3次 CPU 使用率 > 90 % 告警
+
+1 agent1 CPU 80
+2 agent2 CPU 60
+3 agent3 CPU 90
+4 agent1 CPU 88
+5 agent2 CPU 98
+6 99
+7 91
+
+
+最近X时间段内出现Y次使用率超过Z
+select uuid, count(*) where created_Time > startTime and cpu > 90 group by uuid hanving  count(*) > Y
+
+
+having
+
+
+alarm
+
+created_time 产生时间
+uuid 终端
+type 类型（1： 离线， 2： CPU， 3： 内存）
+description 告警描述
+status 状态(0, 未处理, 1: 正在处理， 1： 已处理)
+dealed_time 处理时间
+reason 告警原因说明
+
+
+notices 通知方式(sms, email)
