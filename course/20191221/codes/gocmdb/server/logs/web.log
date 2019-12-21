@@ -15926,3 +15926,11 @@
 2019/12/21 19:15:32.718 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     4.0063ms|   match|[46m POST    [0m /v2/api/register/cefa7658d0a54b23aa77c6dd927436b9/   r:/v2api/register/:uuid/
 2019/12/21 19:15:41.162 [D] [server.go:2774]  |            ::1|[42m 200 [0m|          2ms|   match|[46m POST    [0m /v2/api/heartbeat/cefa7658d0a54b23aa77c6dd927436b9/   r:/v2api/heartbeat/:uuid/
 2019/12/21 19:15:42.200 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9901ms|   match|[44m GET     [0m /agent/list   r:/agent/list/*
+2019/12/21 19:15:51.165 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     3.9987ms|   match|[46m POST    [0m /v2/api/heartbeat/cefa7658d0a54b23aa77c6dd927436b9/   r:/v2api/heartbeat/:uuid/
+2019/12/21 19:15:52.211 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    14.0008ms|   match|[44m GET     [0m /agent/list   r:/agent/list/*
+2019/12/21 19:16:01.163 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9993ms|   match|[46m POST    [0m /v2/api/heartbeat/cefa7658d0a54b23aa77c6dd927436b9/   r:/v2api/heartbeat/:uuid/
+2019/12/21 19:16:02.200 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     1.9987ms|   match|[44m GET     [0m /agent/list   r:/agent/list/*
+2019/12/21 19:16:02.966 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.0023ms|   match|[46m POST    [0m /v2/api/register/cefa7658d0a54b23aa77c6dd927436b9/   r:/v2api/register/:uuid/
+2019/12/21 19:16:03.986 [D] [server.go:2774]  |            ::1|[42m 200 [0m|    25.0031ms|   match|[46m POST    [0m /v2/api/log/cefa7658d0a54b23aa77c6dd927436b9/   r:/v2api/log/:uuid/
+2019/12/21 19:16:11.165 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     5.0036ms|   match|[46m POST    [0m /v2/api/heartbeat/cefa7658d0a54b23aa77c6dd927436b9/   r:/v2api/heartbeat/:uuid/
+2019/12/21 19:16:12.200 [D] [server.go:2774]  |            ::1|[42m 200 [0m|     2.9999ms|   match|[44m GET     [0m /agent/list   r:/agent/list/*
