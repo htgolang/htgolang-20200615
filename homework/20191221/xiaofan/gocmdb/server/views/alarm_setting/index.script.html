@@ -1,0 +1,61 @@
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        // table style
+        var table = jQuery("#table").DataTable({
+            dom: '<"row"<"col-5" l><"col-3" f><"#buttons.col-3">>t<"row"<"col-6"i><"col-6"p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `AlarmSettingController.List` }}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns: [
+                {
+                    data: function (row) {
+                        return htmlEncode(row["name"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        if (row["type"] === 1) {
+                            return htmlEncode("终端离线" + row["time"] + "分钟以上");
+                        } else {
+                            return htmlEncode(row["name"] + "使用率在" + row["time"] + "分钟以内,连续" + row["counter"] + "次超过" +
+                                row["threshold"] + "%");
+                        }
+                    }
+                },
+                {
+                    data: function (row) {
+                        var buttons = ['<div class="btn-group" role="group">'];
+                        buttons.push('<button class="btn btn-sm btn-warning btn-open-dialog fa fa-pencil-square-o" data-type=":type:" data-title="编辑" data-url="{{ urlfor `AlarmSettingController.Modify`}}?pk=:pk:">编辑</button>');
+                        return buttons.join("").replace(/:pk:/g, row["id"]).replace(/:type:/g, row["type"])
+                    }
+                },
+            ]
+        });
+
+
+        // draw button
+        table.on("draw", function () {
+            if (!jQuery("#buttons").attr("initd")) {
+                jQuery("#buttons").attr("initd", "initd")
+            }
+        });
+
+
+        // 回调函数
+        window["reload_table"] = function (response) {
+            table.ajax.reload(null, false)
+        };
+
+    });
+</script>

@@ -1,0 +1,69 @@
+<div class="row">
+
+    <div class="col-md-6 col-lg-3">
+        <div class="widget-small info coloured-icon"><i class="icon fa fa-cloud fa-3x"></i>
+            <div class="info">
+                <h4>云平台</h4>
+                <p><b>{{.platformTotal}}</b></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="widget-small warning coloured-icon"><i class="icon fa fa-server fa-3x"></i>
+            <div class="info">
+                <h4>虚拟机</h4>
+                <p><b>{{.virtualmachineTotal}}</b></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
+            <div class="info">
+                <h4>用户</h4>
+                <p><b>{{.userTotal}}</b></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+        <div class="widget-small danger coloured-icon"><i class="icon fa fa-star fa-3x"></i>
+            <div class="info">
+                <h4>告警</h4>
+                <p><b>{{.alertTotal}}</b></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="tile">
+            <h3 class="tile-title">Monthly Sales</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+                <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="tile">
+            <h3 class="tile-title">Support Requests</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+                <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="tile">
+            <h3 class="tile-title">Support Requests</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+                <canvas class="embed-responsive-item" id="piChartDemo"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>

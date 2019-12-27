@@ -1,0 +1,64 @@
+time="2019-12-21T10:56:38+08:00" level=info msg="Agent启动" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T10:56:38+08:00" level=info msg="插件管理器: 初始化插件" Name=heartbeat
+time="2019-12-21T10:56:38+08:00" level=info msg="插件管理器: 初始化插件" Name=resource
+time="2019-12-21T10:56:38+08:00" level=info msg="插件管理器: 初始化插件" Name=register
+time="2019-12-21T10:56:38+08:00" level=info msg="ENS 开始运行"
+time="2019-12-21T10:56:47+08:00" level=info msg="Agent退出" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T10:57:02+08:00" level=info msg="Agent启动" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T10:57:02+08:00" level=info msg="插件管理器: 初始化插件" Name=heartbeat
+time="2019-12-21T10:57:02+08:00" level=info msg="插件管理器: 初始化插件" Name=resource
+time="2019-12-21T10:57:02+08:00" level=info msg="插件管理器: 初始化插件" Name=register
+time="2019-12-21T10:57:02+08:00" level=info msg="ENS 开始运行"
+time="2019-12-21T10:57:08+08:00" level=info msg="Agent退出" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T10:57:31+08:00" level=info msg="Agent启动" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T10:57:31+08:00" level=info msg="插件管理器: 初始化插件" Name=heartbeat
+time="2019-12-21T10:57:31+08:00" level=info msg="插件管理器: 初始化插件" Name=resource
+time="2019-12-21T10:57:31+08:00" level=info msg="插件管理器: 初始化插件" Name=register
+time="2019-12-21T10:57:31+08:00" level=info msg="ENS 开始运行"
+time="2019-12-21T10:57:32+08:00" level=debug msg="插件执行" Name=register Result="{14eb22c4d68a42dd9b3a114445c91b1d tonnydeMacBook-Pro.local [\"192.168.50.154\"] darwin x86_64 4 13934 {\"/dev/disk1s1\":0,\"/dev/disk1s4\":0,\"/dev/disk1s5\":0} 2019-12-19 10:50:10 +0800 CST 2019-12-21 10:57:32.407869 +0800 CST m=+1.041829962}"
+time="2019-12-21T10:57:32+08:00" level=debug msg="插件执行" Name=heartbeat Result="{14eb22c4d68a42dd9b3a114445c91b1d 2019-12-21 10:57:32.408063 +0800 CST m=+1.042023574}"
+time="2019-12-21T10:57:32+08:00" level=debug msg="注册成功" response="map[]"
+time="2019-12-21T10:57:32+08:00" level=debug msg="上传心跳消息" response="map[]"
+time="2019-12-21T10:57:33+08:00" level=debug msg="插件执行" Name=resource Result="{14eb22c4d68a42dd9b3a114445c91b1d 1 {\"load\":\"{\\\"load1\\\":2.486328125,\\\"load5\\\":2.6123046875,\\\"load15\\\":2.552734375}\",\"cpu_percent\":15.96009975062344,\"ram_percent\":57.79249668121338,\"disk_percent\":\"{\\\"/dev/disk1s1\\\":100,\\\"/dev/disk1s4\\\":100,\\\"/dev/disk1s5\\\":100}\"} 2019-12-21 10:57:33.413298 +0800 CST m=+2.047288115}"
+time="2019-12-21T10:57:33+08:00" level=debug msg="日志上传成功" response="map[]"
+time="2019-12-21T10:57:40+08:00" level=info msg="Agent退出" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T10:58:48+08:00" level=info msg="Agent启动" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T10:58:48+08:00" level=info msg="插件管理器: 初始化插件" Name=register
+time="2019-12-21T10:58:48+08:00" level=info msg="插件管理器: 初始化插件" Name=heartbeat
+time="2019-12-21T10:58:48+08:00" level=info msg="插件管理器: 初始化插件" Name=resource
+time="2019-12-21T10:58:48+08:00" level=info msg="ENS 开始运行"
+time="2019-12-21T10:58:49+08:00" level=debug msg="插件执行" Name=register Result="{14eb22c4d68a42dd9b3a114445c91b1d tonnydeMacBook-Pro.local [\"192.168.50.154\"] darwin x86_64 4 13934 {\"/dev/disk1s1\":0,\"/dev/disk1s4\":0,\"/dev/disk1s5\":0} 2019-12-19 10:50:10 +0800 CST 2019-12-21 10:58:49.625229 +0800 CST m=+1.039432942}"
+time="2019-12-21T10:58:49+08:00" level=debug msg="插件执行" Name=heartbeat Result="{14eb22c4d68a42dd9b3a114445c91b1d 2019-12-21 10:58:49.625332 +0800 CST m=+1.039536176}"
+time="2019-12-21T10:58:49+08:00" level=debug msg="上传心跳消息" response="map[]"
+time="2019-12-21T10:58:49+08:00" level=debug msg="注册成功" response="map[]"
+time="2019-12-21T10:58:50+08:00" level=debug msg="插件执行" Name=resource Result="{14eb22c4d68a42dd9b3a114445c91b1d 1 {\"load\":\"{\\\"load1\\\":2.23046875,\\\"load5\\\":2.46142578125,\\\"load15\\\":2.49560546875}\",\"cpu_percent\":11.610486891385769,\"ram_percent\":58.10682773590088,\"disk_percent\":\"{\\\"/dev/disk1s1\\\":100,\\\"/dev/disk1s4\\\":100,\\\"/dev/disk1s5\\\":100}\"} 2019-12-21 10:58:50.629767 +0800 CST m=+2.044000619}"
+time="2019-12-21T10:58:50+08:00" level=debug msg="日志上传成功" response="map[]"
+time="2019-12-21T10:58:52+08:00" level=info msg="Agent退出" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T11:00:07+08:00" level=info msg="Agent启动" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T11:00:07+08:00" level=info msg="插件管理器: 初始化插件" Name=register
+time="2019-12-21T11:00:07+08:00" level=info msg="插件管理器: 初始化插件" Name=heartbeat
+time="2019-12-21T11:00:07+08:00" level=info msg="插件管理器: 初始化插件" Name=resource
+time="2019-12-21T11:00:07+08:00" level=info msg="ENS 开始运行"
+time="2019-12-21T11:00:08+08:00" level=debug msg="插件执行" Name=register Result="{14eb22c4d68a42dd9b3a114445c91b1d tonnydeMacBook-Pro.local [\"192.168.50.154\"] darwin x86_64 4 13934 {\"/dev/disk1s1\":0,\"/dev/disk1s4\":0,\"/dev/disk1s5\":0} 2019-12-19 10:50:10 +0800 CST 2019-12-21 11:00:08.807035 +0800 CST m=+1.042905387}"
+time="2019-12-21T11:00:08+08:00" level=debug msg="插件执行" Name=heartbeat Result="{14eb22c4d68a42dd9b3a114445c91b1d 2019-12-21 11:00:08.807195 +0800 CST m=+1.043065050}"
+time="2019-12-21T11:00:08+08:00" level=debug msg="上传心跳消息" response="map[code:200 result:<nil> text:成功]"
+time="2019-12-21T11:00:08+08:00" level=debug msg="注册成功" response="map[code:200 result:map[agent:map[arch:x86_64 boot_time:2019-12-19T10:50:10+08:00 cpu:4 created_time:2019-12-17T09:30:12+08:00 deleted_time:<nil> desc: disk:{\"/dev/disk1s1\":0,\"/dev/disk1s4\":0,\"/dev/disk1s5\":0} heartbeat_time:2019-12-21T11:00:08.814056+08:00 hostname:tonnydeMacBook-Pro.local id:1 ip:[\"192.168.50.154\"] is_online:false name:RMBP15inch os:darwin ram:13934 time:2019-12-21T11:00:08.807035+08:00 uuid:14eb22c4d68a42dd9b3a114445c91b1d] created:false] text:成功]"
+time="2019-12-21T11:00:09+08:00" level=debug msg="插件执行" Name=resource Result="{14eb22c4d68a42dd9b3a114445c91b1d 1 {\"load\":\"{\\\"load1\\\":2.98583984375,\\\"load5\\\":2.5888671875,\\\"load15\\\":2.5361328125}\",\"cpu_percent\":10.049627791563276,\"ram_percent\":56.11739158630371,\"disk_percent\":\"{\\\"/dev/disk1s1\\\":100,\\\"/dev/disk1s4\\\":100,\\\"/dev/disk1s5\\\":100}\"} 2019-12-21 11:00:09.812484 +0800 CST m=+2.048383596}"
+time="2019-12-21T11:00:09+08:00" level=debug msg="日志上传成功" response="map[code:200 result:<nil> text:成功]"
+time="2019-12-21T11:00:17+08:00" level=debug msg="插件执行" Name=heartbeat Result="{14eb22c4d68a42dd9b3a114445c91b1d 2019-12-21 11:00:17.770465 +0800 CST m=+10.006601173}"
+time="2019-12-21T11:00:17+08:00" level=debug msg="上传心跳消息" response="map[code:200 result:<nil> text:成功]"
+time="2019-12-21T11:00:23+08:00" level=info msg="Agent退出" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T11:23:07+08:00" level=info msg="Agent启动" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d
+time="2019-12-21T11:23:07+08:00" level=info msg="插件管理器: 初始化插件" Name=register
+time="2019-12-21T11:23:07+08:00" level=info msg="插件管理器: 初始化插件" Name=heartbeat
+time="2019-12-21T11:23:07+08:00" level=info msg="插件管理器: 初始化插件" Name=resource
+time="2019-12-21T11:23:07+08:00" level=info msg="ENS 开始运行"
+time="2019-12-21T11:23:09+08:00" level=debug msg="插件执行" Name=register Result="{14eb22c4d68a42dd9b3a114445c91b1d tonnydeMacBook-Pro.local [\"192.168.50.154\"] darwin x86_64 4 13934 {\"/dev/disk1s1\":0,\"/dev/disk1s4\":0,\"/dev/disk1s5\":0} 2019-12-19 10:50:10 +0800 CST 2019-12-21 11:23:09.028597 +0800 CST m=+1.038861586}"
+time="2019-12-21T11:23:09+08:00" level=debug msg="插件执行" Name=heartbeat Result="{14eb22c4d68a42dd9b3a114445c91b1d 2019-12-21 11:23:09.02871 +0800 CST m=+1.038974355}"
+time="2019-12-21T11:23:09+08:00" level=debug msg="注册成功" response="map[code:200 result:map[agent:map[arch:x86_64 boot_time:2019-12-19T10:50:10+08:00 cpu:4 created_time:2019-12-17T09:30:12+08:00 deleted_time:<nil> desc: disk:{\"/dev/disk1s1\":0,\"/dev/disk1s4\":0,\"/dev/disk1s5\":0} heartbeat_time:2019-12-21T11:23:09.032872+08:00 hostname:tonnydeMacBook-Pro.local id:1 ip:[\"192.168.50.154\"] is_online:false name:RMBP15inch os:darwin ram:13934 time:2019-12-21T11:23:09.028597+08:00 uuid:14eb22c4d68a42dd9b3a114445c91b1d] created:false] text:成功]"
+time="2019-12-21T11:23:09+08:00" level=debug msg="上传心跳消息" response="map[code:200 result:<nil> text:成功]"
+time="2019-12-21T11:23:10+08:00" level=debug msg="插件执行" Name=resource Result="{14eb22c4d68a42dd9b3a114445c91b1d 1 {\"load\":\"{\\\"load1\\\":2.458984375,\\\"load5\\\":2.40087890625,\\\"load15\\\":2.40234375}\",\"cpu_percent\":12.686567164179104,\"ram_percent\":56.560492515563965,\"disk_percent\":\"{\\\"/dev/disk1s1\\\":100,\\\"/dev/disk1s4\\\":100,\\\"/dev/disk1s5\\\":100}\"} 2019-12-21 11:23:10.034029 +0800 CST m=+2.044323241}"
+time="2019-12-21T11:23:10+08:00" level=debug msg="日志上传成功" response="map[code:200 result:<nil> text:成功]"
+time="2019-12-21T11:23:17+08:00" level=debug msg="插件执行" Name=heartbeat Result="{14eb22c4d68a42dd9b3a114445c91b1d 2019-12-21 11:23:17.995668 +0800 CST m=+10.006198771}"
+time="2019-12-21T11:23:18+08:00" level=debug msg="上传心跳消息" response="map[code:200 result:<nil> text:成功]"
+time="2019-12-21T11:23:19+08:00" level=info msg="Agent退出" PID=20 UUID=14eb22c4d68a42dd9b3a114445c91b1d

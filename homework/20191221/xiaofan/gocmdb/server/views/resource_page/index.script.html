@@ -1,0 +1,242 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var table = jQuery("#table").DataTable({
+            dom: '<"row"<"col-5" l><"col-5" f><"#buttons.col-2">>t<"row"<"col-6"i><"col-6"p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `ResourceController.List` }}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns: [
+                {
+                    data: function (row) {
+                        var prefix = "";
+                        if (row["is_online"]) {
+
+                            prefix = '<i class="fa fa-circle text-success" aria-hidden="true"></i>'
+                        } else {
+                            prefix = '<i class="fa fa-circle text-danger" aria-hidden="true"></i>'
+                        }
+                        return prefix + " " + htmlEncode(row["name"]);
+                    }
+                },
+                // {
+                //     data: function (row) {
+                //         return htmlEncode(row["uuid"]);
+                //     }
+                // },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["hostname"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        var text = '<a href="javascript:void(0)" popover="popover" data-content=":content:">:ip:</a>';
+                        try {
+                            var ipList = JSON.parse(row["ip"]);
+                            var ip = "";
+                            var content = [];
+
+                            jQuery.each(ipList, function (index, value) {
+                                if (index === 0) {
+                                    ip = htmlEncode(value);
+                                } else {
+                                    content.push(htmlEncode(value))
+                                }
+                            });
+                            return text.replace(/:ip:/g, ip).replace(/:content:/g, content.join("<br/>"));
+                        } catch (e) {
+                            return ""
+                        }
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["os"] + "/" + row["arch"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["cpu"] + "C/" + row["ram"] + "MB");
+                    }
+                },
+                {
+                    data: function (row) {
+                        var text = '<a href="javascript:void(0)" popover="popover" data-content=":content:">:disk:</a>';
+                        try {
+                            var diskList = JSON.parse(row["disk"]);
+                            var disk = "";
+                            var content = [];
+                            var count = 0;
+
+                            jQuery.each(diskList, function (key, value) {
+                                if (count === 0) {
+                                    disk = htmlEncode(key + ":" + value);
+                                    count += 1
+                                } else {
+                                    content.push(htmlEncode(key + ":" + value))
+                                }
+                            });
+                            return text.replace(/:disk:/g, disk).replace(/:content:/g, content.join("<br/>"));
+                        } catch (e) {
+                            return ""
+                        }
+
+
+                        let disks = "";
+                        jQuery.each(JSON.parse(row["disk"]), function (disk, total) {
+                            disks = disks + disk + "\:" + total + "<br>";
+                        });
+                        return disks;
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row["boot_time"])))
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row["time"])))
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["desc"])
+                    }
+                },
+                {
+                    data: function (row) {
+                        var buttons = ['<div class="btn-group" role="group">'];
+                        buttons.push('<button class="btn btn-sm btn-info btn-monitor fa fa-info-circle"  data-uuid=":uuid:" data-title="监控">监控</button>');
+                        buttons.push('<button class="btn btn-sm btn-warning btn-open-dialog fa fa-pencil-square-o"  data-title="编辑" data-url="{{ urlfor `ResourceController.Modify`}}?pk=:pk:">编辑</button>');
+                        buttons.push('<button class="btn btn-sm btn-danger btn-control fa fa-lock" data-title="确定删除？" data-url="{{ urlfor `ResourceController.Delete`}}" data-pk=":pk:" data-callback="reload_table">删除</button>');
+                        return buttons.join("").replace(/:uuid:/g, row["uuid"])
+                    }
+                },
+            ]
+        });
+
+
+        // draw button
+        table.on("draw", function () {
+            if (!jQuery("#buttons").attr("initd")) {
+                jQuery("#buttons").attr("initd", "initd")
+            }
+
+            jQuery("[popover]").popover({
+                trigger: "hover",
+                html: true
+            })
+        });
+
+        // 回调函数
+        window["reload_table"] = function (response) {
+            table.ajax.reload(null, false)
+        };
+
+        var chart = echarts.init(document.getElementById("mytest"), 'walden');
+        var options = {
+            title: {
+                text: "CPU、内存使用率",
+                show: false
+            },
+            tooltip: {
+                trigger: "axis",
+                axisPointer: {
+                    type: "cross",
+                    lable: {
+                        backgroundColor: "#6a7985"
+                    }
+                }
+            },
+            legend: {
+                data: ["CPU", "内存"]
+            },
+            grid: {
+                left: "3%",
+                right: "4%",
+                bottom: "3%",
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: "CPU",
+                    data: [820, 932, 901, 934, 1290, 1330, 1320],
+                    type: 'line',
+                    areaStyle: {},
+                    smooth: true
+                },
+                {
+                    name: "内存",
+                    data: [120, 2932, 3901, 4934, 5290, 6330, 3320],
+                    type: 'line',
+                    areaStyle: {},
+                    smooth: true
+                }
+            ]
+        };
+
+        function reload(uuid) {
+            jQuery.get('{{urlfor `LogController.Trend`}}', {uuid: uuid}, function (response) {
+                if (response['code'] !== 200) {
+                    return
+                }
+                var xAxis = [], cpu = [], ram = [];
+                jQuery.each(response['result'], function (index, value) {
+                    xAxis.push(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(value['created_time'])));
+                    cpu.push(value['cpu_percent']);
+                    ram.push(value['ram_percent']);
+                });
+                options['xAxis']['data'] = xAxis;
+                options['series'][0]['data'] = cpu;
+                options['series'][1]['data'] = ram;
+                chart.setOption(options);
+            }, 'json');
+        }
+
+        var interval = null;
+
+        jQuery("table").on("click", "button.btn-monitor", function () {
+            var uuid = jQuery(this).data("uuid");
+            if (interval !== null) {
+                return;
+            }
+
+            reload(uuid);
+            interval = setInterval(function () {
+                reload(uuid)
+            }, 10 * 1000);
+            jQuery(".monitor-dialog").modal({
+                    show: true,
+                    backdrop: "static",
+                    keyboard: false
+                }
+            )
+        });
+
+        jQuery(".monitor-dialog").on("hide.bs.modal", function () {
+                if (interval != null) {
+                    clearInterval(interval);
+                    interval = null
+                }
+            }
+        )
+    });
+</script>

@@ -1,0 +1,144 @@
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        // table style
+        var table = jQuery("#table").DataTable({
+            dom: '<"row"<"col-5" l><"col-3" f><"#buttons.col-3">>t<"row"<"col-6"i><"col-6"p>>',
+            serverSide: true,
+            ajax: {
+                url: "{{ urlfor `AlarmController.List` }}",
+                data: function (data) {
+                    return {
+                        draw: data.draw,
+                        start: data.start,
+                        length: data.length,
+                        q: data.search.value,
+                    };
+                },
+                dataSrc: "result"
+            },
+            columns: [
+                {
+                    data: function (row) {
+                        return htmlEncode(row["name"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(row["uuid"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        switch (row["type"]) {
+                            case 1:
+                                return "离线告警";
+                            case 2:
+                                return "CPU告警";
+                            case 3:
+                                return "内存告警";
+                        }
+                    }
+                },
+
+                {
+                    data: function (row) {
+                        return htmlEncode(row["reason"]);
+                    }
+                },
+                {
+                    data: function (row) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row["created_time"])));
+                    }
+                },
+                {
+                    data: function (row) {
+                        switch (row["status"]) {
+                            case 0:
+                                return "未处理";
+                            case 1:
+                                return "处理中";
+                            case 2:
+                                return "处理完成";
+                        }
+                    }
+                },
+                {
+                    data: function (row) {
+                        if (row["dealed_time"] == null) {
+                            return ""
+                        }
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row["dealed_time"])));
+                    }
+                },
+                // {
+                //     data: function (row) {
+                //         return htmlEncode(row["desc"]);
+                //     }
+                // },
+                {
+                    data: function (row) {
+                        var buttons = ['<div class="btn-group" role="group">'];
+                        switch (row["status"]) {
+                            case 0:
+                                buttons.push('<button class="btn btn-sm btn-warning btn-control fa" data-title="确定处理？" data-url="{{ urlfor `AlarmController.Dealed`}}" data-pk=":pk:" data-callback="reload_table">立即处理</button>');
+                                break;
+                            case 1:
+                                buttons.push('<button class="btn btn-sm btn-primary btn-control fa" data-title="确定完成？" data-url="{{ urlfor `AlarmController.Complete`}}" data-pk=":pk:" data-callback="reload_table">确认完成</button>');
+                                break;
+                            case 2:
+                                return "";
+                        }
+                        return buttons.join("").replace(/:pk:/g, row["id"])
+                    }
+                },
+            ]
+        });
+
+
+        // draw button
+        table.on("draw", function () {
+            if (!jQuery("#buttons").attr("initd")) {
+                jQuery("#buttons").attr("initd", "initd").html('<form><div class="form-group row"><label class="col-4 col-form-label col-form-label-sm text-right">告警类型: </label><div class="col-6"><select class="form-control query form-control-sm"></select></div></div></form>');
+                jQuery("select.query").select2({
+                    ajax: {
+                        url: '{{ urlfor `CloudPlatformController.List`}}',
+                        data: function (params) {
+                            return {
+                                q: params.term
+                            };
+                        },
+                        processResults: function (response) {
+                            var results = [];
+                            if (response['code'] === 200) {
+                                results.push({
+                                    id: -1,
+                                    text: "ALL"
+                                });
+                                jQuery.each(response["result"], function (index, value) {
+                                    results.push({
+                                        id: value["id"],
+                                        text: value["name"]
+                                    })
+                                })
+                            }
+                            return {
+                                results: results
+                            }
+                        }
+                    }
+                })
+            }
+        });
+
+
+        // 回调函数
+        window["reload_table"] = function (response) {
+            table.ajax.reload(null, false)
+        };
+
+        setInterval(function () {
+            table.ajax.reload(null, false)
+        }, 10 * 1000);
+    });
+</script>

@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        // 带有btn-open-dialog class属性的按钮点击事件
+        jQuery(document).on("click", ".btn-open-dialog", function () {
+            var title = jQuery(this).data("title"),
+                url = jQuery(this).data("url"),
+                look = jQuery(this).data("look") === "look";
+
+            jQuery(".dialog-content").load(url, function (response) {
+                var dialog = jQuery(".dialog");
+                if (look) {
+                    dialog.find(".btn-dialog-commit").hide()
+                    console.log("hide")
+                } else {
+                    dialog.find(".btn-dialog-commit").show()
+                    console.log("show")
+                }
+                dialog.find(".dialog-title").text(title);
+                dialog.modal({
+                    show: true,
+                    backdrop: "static",
+                    keyboard: false
+                })
+            });
+        });
+
+        jQuery(".btn-dialog-commit").on("click", function () {
+            var dialog = jQuery(".dialog");
+            var form = dialog.find("form");
+            var url = form.data("url"),
+                callback = form.data("callback");
+
+            ajaxRequest("POST", url, form.serializeArray(), function (response) {
+                dialog.modal("hide");
+                if (callback && callback in window && typeof window[callback] == "function") {
+                    window[callback](response);
+                }
+            })
+        })
+    })
+</script>

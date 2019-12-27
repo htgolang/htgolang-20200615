@@ -1,0 +1,36 @@
+<form data-url="{{ urlfor `AlarmSettingController.Modify` }}" data-callback="reload_table">
+    <input type="hidden" name="id" value="{{.object.Id}}">
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="name">名称</label>
+        <div class="col-10">
+            <input class="form-control" type="text" disabled id="name" name="name" value="{{.object.Name}}"/>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="time">时间设置<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="time" name="time" value="{{.object.Time}}"
+                   placeholder="时间"/>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="time">阈值设置<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="threshold" name="threshold" value="{{.object.Threshold}}"
+                   placeholder="使用率"/>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="counter">次数设置<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="counter" name="counter" value="{{.object.Counter}}"
+                   placeholder="次数"/>
+        </div>
+    </div>
+
+</form>

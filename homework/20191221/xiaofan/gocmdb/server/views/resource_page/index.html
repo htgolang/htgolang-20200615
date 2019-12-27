@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="tile">
+            <div class="tile-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="table">
+                        <thead>
+                        <tr>
+                            <th>终端名称</th>
+                            {{/*                            <th>UUID</th>*/}}
+                            <th>主机名</th>
+                            <th>IP地址</th>
+                            <th>操作系统/平台</th>
+                            <th>配置(CPU/内存)</th>
+                            <th>磁盘容量</th>
+                            <th>系统启动时间</th>
+                            <th>心跳时间</th>
+                            <th>描述</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal monitor-dialog" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title monitor-dialog-title">CPU、内存使用率</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body monitor-dialog-content">
+                <div id="mytest" style="height: 500px;width:750px"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary btn-dialog-commit">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
