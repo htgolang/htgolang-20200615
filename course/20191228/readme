@@ -1,0 +1,119 @@
+1. 邮件发送服务器 stmp协议
+    socket server
+
+    ip, port
+    认证(用户名/密码)
+
+    发送邮件
+    Form
+    To
+    CC
+    title
+    content html/text
+
+
+提供web服务 发送邮件
+调用web服务
+
+beego
+
+url
+
+认证(Token)
+
+to, subject, content
+
+发送邮件
+
+限制频率
+
+内存中计数
+1 小时
+uuid type count createTime 1 2
+
+uuid+type
+
+判断createTime < now - 1h
+    重新计数
+否则
+    计数 + 1
+
+
+借助第三方的内存存储
+redis/mem
+
+
+uuid type ttl
+
+1. 手机 ==> 短信猫
+2. 短信服务 API
+    阿里云
+    腾讯云
+
+
+a := 1
+
+b := &a
+
+c := []*int{}
+c = append(b)
+c = append(b)
+c = append(b)
+
+*b = 3
+
+
+a
+*c[0], *c[1], *c[2]
+
+
+问题：
+    短信发送失败，无重试机制
+
+    做一个短信服务(web)
+        限制别人
+        重试 为了保障短信发送成功
+
+
+
+code 一次有效
+
+使用邮箱验证码登录
+
+使用手机验证码登录
+    1. 用户填写手机号码 (发送验证码) => 提交请求到服务端(phone)
+    2. 验证手机号码的有效性
+        不在 => 手机号码有误
+        在 => 可以发送短信
+            限制频率(1分钟发送一次)
+                有发送 => 提示已发送给
+                无发送
+                    => 生成随机验证码
+                        => 发送给用户 并且存储 手机对应登录验证码  创建/更新 phone code code_created_time （code过期时间为5分钟）
+    3. 用户填写验证码进行登录 => 提交数据到服务端(phone, code)
+        phone 查找数据
+            无数据 => 手机号码或验证码错误
+            有 => 验证code是否为""
+                为空=> 已使用， 手机号码或验证码错误
+                不为空 => 验证code是否正确
+                    不正确 => 手机号码或验证码错误
+                    正确 => 判断code_created_time 是否过期
+                        已过期 =>  手机号码或验证码错误
+                        未过期 => 登录成功
+                            清空code
+
+                            删除记录
+
+审计日志/操作日志
+
+
+告警管理
+    时间，终端，类型，状态
+
+    告警处理 打开dialog 修改状态及原因
+
+
+最近7天 每天的, 每种告警，每种处理状态的数量
+
+where deleted_time alarmed_time
+group 天，告警类型，状态

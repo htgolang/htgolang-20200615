@@ -1,0 +1,61 @@
+<form data-url="{{ urlfor `UserController.Modify` }}" data-callback="reload_table">
+    <input type="hidden" name="id" value="{{ .object.Id }}" />
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="name">用户名<span class="text-danger"> * </span></label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="name" name="name" placeholder="用户名" value="{{ .object.Name }}"/>
+            <small class="form-text text-muted">
+                只能由大小写英文、数字、下划线和中划线组成，长度为5~32位，且必须唯一
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label">性别</label>
+        <div class="col-10">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="male" name="gender" class="custom-control-input" value="0" {{ if eq 0 .object.Gender }}checked="checked"{{ end }} />
+                <label class="custom-control-label" for="male">男</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="female" name="gender" class="custom-control-input" value="1" {{ if eq 1 .object.Gender }}checked="checked"{{ end }} />
+                <label class="custom-control-label" for="female">女</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="birthday">出生日期</label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="birthday" name="birthday" datepicker="datepicker" placeholder="出生日期" {{ if .object.Birthday }}value="{{ dateformat  .object.Birthday `2006-01-02` }}"{{ end }}/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="tel">联系方式</label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="tel" name="tel" placeholder="联系方式" value="{{ .object.Tel }}"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="email">邮箱</label>
+        <div class="col-10">
+            <input class="form-control" type="text" id="email" name="email" placeholder="邮箱" value="{{ .object.Email }}"/>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="addr">住址</label>
+        <div class="col-10">
+            <textarea class="form-control" id="addr" name="addr" rows="3" placeholder="住址">{{ .object.Addr }}</textarea>
+            <small class="form-text text-muted">
+                长度为0~512位
+            </small>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label" for="remark">备注</label>
+        <div class="col-10">
+            <textarea class="form-control" id="remark" name="remark" rows="3" placeholder="备注">{{ .object.Remark }}</textarea>
+            <small class="form-text text-muted">
+                长度为0~512位
+            </small>
+        </div>
+    </div>
+</form>
