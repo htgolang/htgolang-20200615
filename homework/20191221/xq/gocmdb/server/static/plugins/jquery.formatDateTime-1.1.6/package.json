@@ -1,0 +1,67 @@
+{
+  "name": "jquery-formatdatetime",
+  "title": "jQuery Format Date/Time",
+  "description": "A jQuery plugin that converts a date object to a supplied format. It was forked from the jQuery UI DatePicker module to support time formatting as well as the original date formatting.",
+  "keywords": [
+    "format",
+    "date",
+    "time",
+    "datetime"
+  ],
+  "version": "1.1.6",
+  "author": {
+    "name": "Adam Gschwender",
+    "email": "adam.gschwender@gmail.com",
+    "url": "http://gschwa.com/"
+  },
+  "maintainers": [
+    {
+      "name": "Adam Gschwender",
+      "email": "adam.gschwender@gmail.com",
+      "url": "http://gschwa.com/"
+    },
+    {
+      "name": "Rafael Gonzaque",
+      "email": "rafaelgonzaque@gmail.com",
+      "url": "http://www.iamrgon.com/"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/agschwender/jquery.formatDateTime/blob/master/MIT-LICENSE.txt"
+    },
+    {
+      "type": "GPLv2",
+      "url": "https://github.com/agschwender/jquery.formatDateTime/blob/master/GPL-LICENSE.txt"
+    }
+  ],
+  "bugs": "https://github.com/agschwender/jquery.formatDateTime/issues",
+  "homepage": "https://github.com/agschwender/jquery.formatDateTime",
+  "docs": "https://github.com/agschwender/jquery.formatDateTime/blob/master/README.md",
+  "download": "https://github.com/agschwender/jquery.formatDateTime/archive/master.zip",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/agschwender/jquery.formatDateTime.git"
+  },
+  "main": "jquery.formatDateTime",
+  "files": [
+    "jquery.formatDateTime.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "test": "grunt test --verbose"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jasmine": "~0.5.1",
+    "grunt-contrib-jshint": "~0.6.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-jquerymanifest": "~0.1.2"
+  }
+}

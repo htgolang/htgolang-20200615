@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="tile">
+            <div class="tile-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="table">
+                        <thead>
+                            <tr>
+                                <th>UUID</th>
+                                <th>主机名</th>
+                                <th>IP</th>
+                                <th>OS</th>
+                                <th>CPU</th>
+                                <th>MEM</th>
+                                <th>DISK</th>
+                                <th>启动时间</th>
+                                <th>创建时间</th>
+                                <th>心跳时间</th>
+                                <th>操作</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade monitor-dialog" tabindex="-1" role="dialog" aria-labelledby="dialog-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title monitor-dialog-title" id="dialog-label">CPU | MEM 使用率</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body monitor-dialog-content">
+                <div id="my_echart" style="width: 700px; height: 500px"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+{{/*                <button type="button" class="btn btn-primary btn-dialog-commit">保存</button>*/}}
+            </div>
+        </div>
+    </div>
+</div>
+
+

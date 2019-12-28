@@ -1,0 +1,37 @@
+2019/12/27 22:12:28.382 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/27 22:12:37.473 [D] [server.go:2774]  |      127.0.0.1|[97;42m 200 [0m|   2.387879ms|   match|[97;44m GET     [0m /auth/login   r:/auth/login/*
+2019/12/27 22:12:37.522 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   1.847493ms|   match|[97;44m GET     [0m /static/css/main.css
+2019/12/27 22:12:37.541 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|    1.96915ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/css/font-awesome.min.css
+2019/12/27 22:12:37.699 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   1.625447ms|   match|[97;44m GET     [0m /static/plugins/Font-Awesome-4.7.0/fonts/fontawesome-webfont.woff2
+2019/12/27 22:12:37.729 [D] [server.go:2774]  |      127.0.0.1|[97;43m 404 [0m|    420.721µs| nomatch|[97;44m GET     [0m /favicon.ico
+2019/12/27 22:12:42.544 [D] [server.go:2774]  |      127.0.0.1|[90;47m 302 [0m|   9.587003ms|   match|[97;46m POST    [0m /auth/login   r:/auth/login/*
+2019/12/27 22:12:42.563 [D] [server.go:2774]  |      127.0.0.1|[97;42m 200 [0m|  15.840057ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/12/27 22:12:42.594 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|    337.256µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.css
+2019/12/27 22:12:42.600 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|    867.707µs|   match|[97;44m GET     [0m /static/js/jquery-3.3.1.min.js
+2019/12/27 22:12:42.600 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|    987.796µs|   match|[97;44m GET     [0m /static/js/plugins/pace.min.js
+2019/12/27 22:12:42.601 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   1.741692ms|   match|[97;44m GET     [0m /static/js/plugins/jquery.dataTables.min.js
+2019/12/27 22:12:42.602 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   2.982894ms|   match|[97;44m GET     [0m /static/js/popper.min.js
+2019/12/27 22:12:42.603 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   3.558804ms|   match|[97;44m GET     [0m /static/js/bootstrap.min.js
+2019/12/27 22:12:42.603 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   3.862852ms|   match|[97;44m GET     [0m /static/js/main.js
+2019/12/27 22:12:42.603 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|    3.07815ms|   match|[97;44m GET     [0m /static/js/plugins/dataTables.bootstrap.min.js
+2019/12/27 22:12:42.604 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   2.953183ms|   match|[97;44m GET     [0m /static/js/jquery.base64.js
+2019/12/27 22:12:42.605 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   1.040739ms|   match|[97;44m GET     [0m /static/js/plugins/select2.min.js
+2019/12/27 22:12:42.605 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   2.857498ms|   match|[97;44m GET     [0m /static/js/jquery.cookie-1.4.1.min.js
+2019/12/27 22:12:42.605 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   2.331179ms|   match|[97;44m GET     [0m /static/js/utils.js
+2019/12/27 22:12:42.606 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   1.088323ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0/js/bootstrap-datepicker.min.js
+2019/12/27 22:12:42.607 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   1.995677ms|   match|[97;44m GET     [0m /static/plugins/bootstrap-datepicker-1.9.0/locales/bootstrap-datepicker.zh-CN.min.js
+2019/12/27 22:12:42.608 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|    419.689µs|   match|[97;44m GET     [0m /static/plugins/sweetalert-1.1.3/dist/sweetalert.min.js
+2019/12/27 22:12:42.610 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|    609.054µs|   match|[97;44m GET     [0m /static/plugins/jquery.formatDateTime-1.1.6/dist/jquery.formatDateTime.min.js
+2019/12/27 22:12:42.614 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|   4.810159ms|   match|[97;44m GET     [0m /static/plugins/incubator-echarts-4.6.0-rc.1/dist/echarts.min.js
+2019/12/27 22:12:42.866 [D] [server.go:2774]  |      127.0.0.1|[90;47m 304 [0m|    529.346µs|   match|[97;44m GET     [0m /static/json/datatable.i18n.zh_CN.json
+2019/12/27 22:12:42.957 [D] [server.go:2774]  |      127.0.0.1|[97;42m 200 [0m|   4.925178ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/12/27 22:12:47.740 [D] [server.go:2774]  |      127.0.0.1|[97;43m 404 [0m|     469.16µs| nomatch|[97;44m GET     [0m /userpage/widgets.html
+2019/12/27 22:12:55.212 [D] [server.go:2774]  |      127.0.0.1|[97;42m 200 [0m|   1.181549ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/12/27 22:35:04.487 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/27 22:36:20.828 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/12/27 22:36:24.959 [D] [server.go:2774]  |      127.0.0.1|[97;42m 200 [0m|  13.673283ms|   match|[97;44m GET     [0m /userpage/index   r:/userpage/index/*
+2019/12/27 22:36:25.183 [D] [server.go:2774]  |      127.0.0.1|[97;42m 200 [0m|   2.536144ms|   match|[97;44m GET     [0m /user/list   r:/user/list/*
+2019/12/27 22:36:27.715 [D] [server.go:2774]  |      127.0.0.1|[97;42m 200 [0m|   9.176684ms|   match|[97;44m GET     [0m /alarmpage/index   r:/alarmpage/index/*
+2019/12/27 22:38:18.144 [D] [server.go:2774]  |      127.0.0.1|[97;42m 200 [0m|  10.301724ms|   match|[97;44m GET     [0m /alarmpage/index   r:/alarmpage/index/*
+2019/12/27 22:38:21.923 [D] [server.go:2774]  |      127.0.0.1|[97;42m 200 [0m|   9.242772ms|   match|[97;44m GET     [0m /alarmpage/index   r:/alarmpage/index/*
+2019/12/27 23:21:10.562 [I] [asm_amd64.s:1337]  http server Running on http://:8080

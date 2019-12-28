@@ -1,0 +1,314 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#table").DataTable({
+        dom:'<"row"<"col-6"l><"col-6"f>>',
+        serverSide: true,
+
+        ajax: {
+            url : "{{ urlfor `AgentController.List` }}",
+            data: function(data) {
+                return {
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q: data.search.value
+                };
+            },
+            dataSrc: "result"
+
+        },
+
+        columns: [
+            {
+                data: function(row) {
+                    return htmlEncode(row['uuid']);
+                }
+            },
+            {
+                data: function(row) {
+                    var prefix = "";
+                    if(row['is_online']){
+                        prefix = '<i class="fa fa-circle text-success" aria-hidden="true"></i>';
+                    }else {
+                        prefix = '<i class="fa fa-circle text-danger" aria-hidden="true"></i>';
+                    }
+
+                    return prefix + " " + htmlEncode(row['hostname']);
+
+
+                }
+            },
+            {
+                data: function(row) {
+
+                    // ip 只有一个悬浮框不显示
+                    // ip 多个时，展示
+                    var text = '<a href="javascript:void(0);" popover="popover" data-content=":content:">:IP:</a>';
+
+                    // 判断格式是否正确
+                    try {
+                        var ipList = JSON.parse(row['ip']);
+                        var ip ="";
+                        var content = [];
+                        $.each(ipList, function (index, value) {
+                            if (index == 0){
+                                ip = htmlEncode(value)
+                            }else {
+                                content.push(htmlEncode(value));
+                            }
+                        });
+                        // return htmlEncode(row['ip']);
+                        return text.replace(/:IP:/g, ip).replace(/:content:/, content.join("<br/>"))
+                    }catch (e) {
+                        return "";
+                    }
+
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['os']) + ' | ' + htmlEncode(row['arch']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['cpu']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['mem']);
+                }
+            },
+            {
+                data: function(row) {
+
+
+                    // return htmlEncode(row['disk']);
+
+                    var text = '<a href="javascript:void(0);" popover="popover" data-content=":content:">:DISK:</a>';
+
+                    // 判断格式是否正确
+                    try {
+                        var diskObj = JSON.parse(row['disk']);
+                        console.log(diskObj);
+                        var disk ="";
+                        var content = [];
+                        var index=0;
+                        $.each(diskObj, function (k, v) {
+                            console.log(v);
+                            if (index == 0){
+                                disk = htmlEncode(k+":"+v);
+
+                                console.log(disk)
+                            }else {
+                                content.push(htmlEncode(k+":"+v));
+                            }
+                            index++;
+                        });
+
+                        return text.replace(/:DISK:/g, disk).replace(/:content:/, content.join("<br/>"))
+                    }catch (e) {
+                        return "";
+                    }
+                }
+            },
+            {
+                data: function(row) {
+                    if (row['boot_time']){
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['boot_time'])));
+                    }
+                    return htmlEncode('');
+
+                }
+            },
+            {
+                data: function(row) {
+                    if (row['created_time']){
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['created_time'])));
+                    }
+                    return htmlEncode('');
+
+                }
+            },
+            {
+                data: function(row) {
+                    if (row['heartbeat_time']){
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['heartbeat_time'])));
+                    }
+                    return htmlEncode('');
+                }
+            },
+
+
+            {
+                data: function(row) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+                    buttons.push('<button class="btn btn-sm btn-info btn-monitor" data-uuid=":uuid:">监控</div>');
+
+                    buttons.push('<button class="btn btn-sm btn-danger btn-control"  data-title="确定删除?" data-url="{{ urlfor `AgentController.Delete` }}" data-pk=":pk:" data-callback="reload_table">删除</div>');
+
+                    buttons.push('</div>');
+                    return buttons.join("").replace(/:pk:/g, row['id']).replace(/:uuid:/, row['uuid']);
+                }
+            }
+        ]
+    });
+
+
+    table.on("draw", function() {
+        if(!jQuery("#buttons").attr("initd")) {
+            jQuery("#buttons").attr("initd", "initd").html()
+        }
+        jQuery("[popover]").popover({
+            trigger:"hover",
+            html: true
+
+        })
+
+    });
+
+    window["reload_table"] = function(response) {
+        console.log("6 reload table");
+        table.ajax.reload(null, false);
+
+    };
+
+
+    var myChart = echarts.init(document.getElementById('my_echart'));
+
+    var option = {
+        // title: {
+        //     text: 'CPU|MEM 使用率'
+        //
+        // },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            },
+            // formatter:function(params){
+            //
+            //     var name = params[0].name = "<br/>";
+            //     params[0].seriesName + ":" + params[0].value + "%"
+            //     params[1].seriesName + ":" + params[1].value + "%"
+            //
+            // }
+        },
+        legend: {
+            data:['CPU', 'MEM']
+        },
+
+        grid: {
+            left: '3%',
+            right: '2%',
+            bottom: '1%',
+            containLabel: true
+
+        },
+        xAxis : [
+            {
+                type : 'category',
+                boundaryGap : false,
+                data : []
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+
+            {
+                name:'CPU',
+                type:'line',
+                smooth: true,
+
+                data:[]
+            },
+            {
+                name:'MEM',
+                type:'line',
+                smooth: true,
+
+                data:[]
+            },
+
+        ]
+    };
+
+
+    function reload(uuid){
+
+        jQuery.get('{{ urlfor `LogController.Trend` }}', {uuid: uuid},function (response) {
+
+            if (response['code'] != 200){
+                return;
+            }
+            var xAxis=[], cpu=[], mem=[];
+
+            jQuery.each(response['result'], function (index, value) {
+
+                xAxis.push(value['created_time']);
+
+                cpu.push(value['cpu_precent']);
+                mem.push(value['mem_precent']);
+            });
+
+            option['xAxis'][0]["data"] = xAxis;
+            option['series'][0]['data'] = cpu;
+            option['series'][1]['data'] = mem;
+
+            // console.log(option);
+
+            myChart.setOption(option);
+        }, 'json');
+
+    }
+
+    // 关闭定时器
+    var interval = null;
+
+    // 绑定模态框
+    table.on("click", "button.btn-monitor", function () {
+
+        // var uuid="d6cc30fd5a2a4eadad67e7beee822119";
+
+        var uuid = $(this).data("uuid");
+        if (interval != null){
+            return;
+        }
+
+
+        interval = setInterval(function () {
+
+            reload(uuid);
+            // table.ajax.reload(null, false);
+
+        }, 10*1000);
+
+        reload(uuid);
+
+        $(".monitor-dialog").modal({
+            show: true,
+            backdrop:"static",
+            keyboard: false,
+
+        })
+    });
+    // 模态框关闭后，关闭定时器
+    jQuery('.monitor-dialog').on('hide.bs.modal', function () {
+        if (interval != null){
+            clearInterval(interval);
+            interval = null;
+        }
+    })
+
+
+
+});
+</script>

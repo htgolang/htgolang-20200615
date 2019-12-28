@@ -1,0 +1,39 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    jQuery(document).on("click", ".btn-open-dialog", function() {
+        var title = jQuery(this).data("title"),
+            url = jQuery(this).data("url")
+            look = jQuery(this).data("look") == "look";
+
+        jQuery(".dialog-content").load(url, function(response) {
+            var dialog = jQuery(".dialog");
+            dialog.find(".dialog-title").text(title);
+            if(look) {
+                dialog.find(".btn-dialog-commit").hide();
+            } else {
+                dialog.find(".btn-dialog-commit").show();
+            }
+            dialog.modal({
+                show: true,
+                backdrop: 'static',
+                keyboard: false
+            });
+        });
+    });
+
+    jQuery(".btn-dialog-commit").on("click", function() {
+        var dialog = jQuery(".dialog");
+        var form = dialog.find("form");
+        var url = form.data("url"),
+            callback = form.data("callback");
+        console.log("1. btn commit")
+        ajaxRequest("POST", url, form.serialize(), function(response) {
+            console.log("4.btn callback")
+            dialog.modal("hide");
+            if(callback && callback in window && typeof(window[callback]) == "function") {
+                window[callback](response);
+            }
+        });
+    });
+});
+</script>

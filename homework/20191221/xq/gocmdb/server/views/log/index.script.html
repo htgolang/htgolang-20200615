@@ -1,0 +1,185 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#table").DataTable({
+        // dom:'<"row"<"col-6"l><"col-3"f><"#buttons.col-1">>t<"row"<"col-6"i><"col-6"p>>',
+        dom:'<"row"<"col-5"l><"col-4"f><"#buttons.col-3">>t<"row"<"col-6"i><"col-6"p>>',
+        serverSide: true,
+
+        ajax: {
+            url : "{{ urlfor `LogController.List` }}",
+            data: function(data) {
+                return {
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q: data.search.value
+                };
+            },
+            dataSrc: "result"
+
+        },
+        columns: [
+            {
+                data: function(row) {
+                    return htmlEncode(row['uuid']);
+                }
+            },
+            {
+                data: function(row) {
+
+                    return htmlEncode(Number(row['cpu_precent']).toFixed(2));
+
+
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(Number(row['mem_precent']).toFixed(2));
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['disk_precent']);
+                }
+            },
+
+            {
+                data: function(row) {
+                    // return htmlEncode(row['load']);
+
+                    var text = '<a href="javascript:void(0);" popover="popover" data-content=":content:">:LOAD:</a>';
+
+                    // 判断格式是否正确
+                    try {
+                        var loadObj = JSON.parse(row['load']);
+
+                        var load ="";
+                        var content = [];
+                        var index=0;
+                        $.each(loadObj, function (k, v) {
+                            console.log(v);
+                            if (index == 0){
+                                load = htmlEncode(k+":"+v);
+
+                            }else {
+                                content.push(htmlEncode(k+":"+v));
+                            }
+                            index++;
+                        });
+
+                        return text.replace(/:LOAD:/g, load).replace(/:content:/, content.join("<br/>"))
+                    }catch (e) {
+                        return "";
+                    }
+
+                }
+            },
+            {
+                data: function(row) {
+                    if (row['created_time']){
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['created_time'])));
+                    }
+                    return htmlEncode('');
+
+                }
+            },
+
+            {
+                data: function(row) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+                    buttons.push('<button class="btn btn-sm btn-danger btn-control"  data-title="确定删除?" data-url="{{ urlfor `LogController.Delete` }}" data-pk=":pk:" data-callback="reload_table">删除</div>');
+
+                    buttons.push('</div>');
+                    return buttons.join("").replace(/:pk:/g, row['id']);
+                }
+            }
+        ]
+    });
+
+
+    table.on("draw", function() {
+        if(!jQuery("#buttons").attr("initd")) {
+            jQuery("#buttons").attr("initd", "initd").html(
+                '<div class="content"><div class="jeitem">'+
+                '<div class="col-10 jeinpbox">' +
+                '<input type="text" class="orm-control query form-control-sm jeinput" id="dateinfo"  readonly></div>' +
+                '</div></div>');
+
+            // 绑定事件，鼠标移动
+            jQuery("[popover]").popover({
+                trigger:"hover",
+                html: true
+
+            });
+
+            jeDate("#dateinfo",{
+                language:{
+                    name   : "cn",
+                    month  : ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+                    weeks  : [ "日", "一", "二", "三", "四", "五", "六" ],
+
+                    timetxt: ["时间选择","开始时间","结束时间"],
+                    backtxt: "返回日期",
+                    clear  : "清空",
+                    today  : "现在",
+                    yes    : "确定"
+                },
+                multiPane:false,
+                shortcut:[
+                    {name:"一周",val:{DD:7}},
+                    {name:"一个月",val:{DD:30}},
+                    {name:"二个月",val:{MM:2}},
+                    {name:"三个月",val:{MM:3}},
+                    {name:"一年",val:{DD:365}}
+                ],
+                format: "YYYY-MM-DD"
+            });
+            // jQuery("select.query").select2({
+                {{/*ajax:{*/}}
+                {{/*    url: '{{ urlfor `CloudPlatformController.List` }}',*/}}
+                {{/*    data: function (params) {*/}}
+                {{/*        return {*/}}
+                {{/*            q: params.term,*/}}
+                {{/*        }*/}}
+                {{/*    },*/}}
+                {{/*    processResults: function (response) {*/}}
+                {{/*        var results = [];*/}}
+                {{/*        if (response['code']==200){*/}}
+
+                {{/*            results.push({*/}}
+                {{/*                id: -1,*/}}
+                {{/*                text: "全部",*/}}
+                {{/*            });*/}}
+
+                {{/*            jQuery.each(response["result"], function (index,value) {*/}}
+                {{/*                results.push({*/}}
+                {{/*                    id: value['id'],*/}}
+                {{/*                    text:value['name']*/}}
+                {{/*                })*/}}
+
+                {{/*            })*/}}
+                {{/*        }*/}}
+                {{/*        return {*/}}
+                {{/*            results: results*/}}
+                {{/*        }*/}}
+
+                {{/*    }*/}}
+
+                {{/*}*/}}
+
+            // });
+        }
+
+    });
+
+
+
+    window["reload_table"] = function(response) {
+        console.log("6 reload table");
+        table.ajax.reload(null, false);
+
+    };
+
+
+});
+</script>
