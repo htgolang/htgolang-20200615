@@ -23,11 +23,12 @@ func (s *ENS) Start() {
 	logrus.Info("ENS 开始运行")
 
 	headers := req.Header{"Token": s.conf.Token}
+	request := req.New()
 
 	go func() {
 		endpoint := fmt.Sprintf("%s/heartbeat/%s/", s.conf.Endpoint, s.conf.UUID)
 		for evt := range s.conf.Heartbeat {
-			response, err := req.New().Post(endpoint, req.BodyJSON(evt), headers)
+			response, err := request.Post(endpoint, req.BodyJSON(evt), headers)
 			if err == nil {
 				result := map[string]interface{}{}
 				response.ToJSON(&result)
@@ -47,7 +48,7 @@ func (s *ENS) Start() {
 	go func() {
 		endpoint := fmt.Sprintf("%s/register/%s/", s.conf.Endpoint, s.conf.UUID)
 		for evt := range s.conf.Register {
-			response, err := req.New().Post(endpoint, req.BodyJSON(evt), headers)
+			response, err := request.Post(endpoint, req.BodyJSON(evt), headers)
 			if err == nil {
 				result := map[string]interface{}{}
 				response.ToJSON(&result)
@@ -67,7 +68,7 @@ func (s *ENS) Start() {
 	go func() {
 		endpoint := fmt.Sprintf("%s/log/%s/", s.conf.Endpoint, s.conf.UUID)
 		for evt := range s.conf.Log {
-			response, err := req.New().Post(endpoint, req.BodyJSON(evt), headers)
+			response, err := request.Post(endpoint, req.BodyJSON(evt), headers)
 			if err == nil {
 				result := map[string]interface{}{}
 				response.ToJSON(&result)
@@ -87,7 +88,7 @@ func (s *ENS) Start() {
 	go func() {
 		endpoint := fmt.Sprintf("%s/result/%s/", s.conf.Endpoint, s.conf.UUID)
 		for evt := range s.conf.TaskResult {
-			response, err := req.New().Post(endpoint, req.BodyJSON(evt), headers)
+			response, err := request.Post(endpoint, req.BodyJSON(evt), headers)
 			if err == nil {
 				result := map[string]interface{}{}
 				response.ToJSON(&result)
@@ -107,7 +108,7 @@ func (s *ENS) Start() {
 	go func() {
 		endpoint := fmt.Sprintf("%s/task/%s/", s.conf.Endpoint, s.conf.UUID)
 		for now := range time.Tick(10 * time.Second) {
-			response, err := req.New().Get(endpoint, req.QueryParam{"time": now.Unix()}, headers)
+			response, err := request.Get(endpoint, req.QueryParam{"time": now.Unix()}, headers)
 			if err == nil {
 				result := map[string]interface{}{}
 				response.ToJSON(&result)
