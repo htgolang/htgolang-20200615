@@ -1,0 +1,242 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#table").DataTable({
+        dom:'<"row"<"col-5"l><"col-6"f><"#buttons.col-1">>t<"row"<"col-6"i><"col-6"p>>',
+        serverSide: true,
+        ajax: {
+            url : "{{ urlfor `AgentController.List` }}",
+            data: function(data) {
+                return {
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q: data.search.value
+                };
+            },
+            dataSrc: "result"
+        },
+        columns: [
+            {
+                data: function(row) {
+                    var prefix = "";
+                    if(row["is_online"]) {
+                        prefix = '<i class="fa fa-circle text-success" aria-hidden="true"></i> ';
+                    } else {
+                        prefix = '<i class="fa fa-circle text-danger" aria-hidden="true"></i> ';
+                    }
+                    return prefix + htmlEncode(row['hostname']);
+                }
+            },
+            {
+                data: function(row) {
+                    // ip只有一个的时候, 不用悬浮框
+                    // 多个IP >>
+
+                    var text = '<a href="javascript:void(0);" popover="popover" data-content=":content:">:ip:</a>';
+                    try {
+                        var ipList = JSON.parse(row['ip']);
+                        var ip = "";
+                        var content = [];
+                        jQuery.each(ipList, function(index, value) {
+                            if(index == 0) {
+                                ip = htmlEncode(value);
+                            } else {
+                                content.push(htmlEncode(value));
+                            }
+                        });
+                        return text.replace(/:ip:/g, ip).replace(/:content:/g, content.join("<br/>"));
+                    } catch(e) {
+                        return "";
+                    }
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['os']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['cpu']) + "核/" + htmlEncode(row['ram']) + "MB";
+                }
+            },
+            {
+                data: function(row) {
+                    var text = '<a href="javascript:void(0);" popover="popover" data-content=":content:">:disk:</a>';
+                    try {
+                        var diskObject = JSON.parse(row['disk']);
+                        var disk = "";
+                        var content = [];
+                        var index = 0;
+                        jQuery.each(diskObject, function(key, value) {
+                            if(index == 0) {
+                                disk = htmlEncode(key + " " + value + "GB");
+                            } else {
+                                content.push(htmlEncode(key + " " + value + "GB"));
+                            }
+                            index++;
+                        });
+                        return text.replace(/:disk:/g, disk).replace(/:content:/g, content.join("<br/>"));
+                    } catch(e) {
+                        return "";
+                    }
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['time']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['time'])));
+                    }
+                    return "";
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['boottime']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['boottime'])));
+                    }
+                    return "";
+                }
+            },
+            {
+                data: function(row) {
+                    if(row['created_time']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['created_time'])));
+                    }
+                    return "";
+                }
+            },
+            {
+                data: function(row) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+                    buttons.push('<button class="btn btn-sm btn-info btn-monitor" data-uuid=":uuid:">监控</div>');
+                    buttons.push('<button class="btn btn-sm btn-danger btn-control"  data-title="确定删除?" data-url="{{ urlfor `AgentController.Delete` }}" data-pk=":pk:" data-callback="reload_table">删除</div>');
+                    buttons.push('</div>');
+                    return buttons.join("").replace(/:pk:/g, row['id']).replace(/:uuid:/, row["uuid"]);
+                }
+            }
+        ]
+    });
+
+    table.on("draw", function() {
+        if(!jQuery("#buttons").attr("initd")) {
+            jQuery("#buttons").attr("initd", "initd").html('');
+        }
+        jQuery("[popover]").popover({
+            trigger:"hover",
+            html: true
+        });
+    });
+
+    window["reload_table"] = function(response) {
+        table.ajax.reload(null, false);
+    };
+
+    setInterval(function() {
+        table.ajax.reload(null, false);
+    }, 10 * 1000);
+
+
+    var chart = echarts.init(document.getElementById("monitor-chart"));
+    var option = {
+        title: {
+            text: 'CPU、内存使用率',
+            show: false
+        },
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            },
+            formatter: function(params) {
+                return params[0].name  + "<br/>" +
+                params[0].seriesName + ":" + params[0].data + "%" + "<br/>" +
+                params[1].seriesName + ":" + params[1].data + "%";
+
+            }
+        },
+        legend: {
+            data:['CPU','内存']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                boundaryGap : false,
+                data : []
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'CPU',
+                type:'line',
+                data:[],
+                smooth: true
+            },
+            {
+                name:'内存',
+                type:'line',
+                data:[],
+                smooth: true
+            },
+        ]
+    };
+
+    function reload(uuid) {
+        jQuery.get('{{ urlfor `ResourceController.Trend` }}', {uuid: uuid}, function(response) {
+            if(response['code'] != 200) {
+                return;
+            }
+            var xAsis = [], cpu = [], ram = [];
+            jQuery.each(response['result'], function(index, value) {
+                xAsis.push(value['created_time']);
+                cpu.push(value['cpu_percent']);
+                ram.push(value['ram_percent']);
+            });
+            option["xAxis"][0]["data"] = xAsis;
+            option["series"][0]["data"] = cpu;
+            option["series"][1]["data"] = ram;
+            chart.setOption(option);
+        }, 'json');
+    }
+
+    var interval = null;
+    // chart.setOption(option);
+    jQuery("table").on("click", "button.btn-monitor", function() {
+        var uuid = jQuery(this).data("uuid");
+        if(interval != null) {
+            return;
+        }
+        interval = setInterval(function() {
+            reload(uuid);
+        }, 20 * 1000);
+        reload(uuid);
+        jQuery(".monitor-dialog").modal({
+            show: true,
+            backdrop:"static",
+            keyboard: false
+        });
+    });
+
+    jQuery(".monitor-dialog").on("hide.bs.modal", function() {
+        if(interval != null) {
+            clearInterval(interval);
+            interval = null;
+        }
+    });
+
+});
+</script>

@@ -1,0 +1,128 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#table").DataTable({
+        dom:'<"row"<"col-5"l><"col-3"f><"#buttons.col-3">>t<"row"<"col-6"i><"col-6"p>>',
+        serverSide: true,
+        ajax: {
+            url : "{{ urlfor `VirtualMachineController.List` }}",
+            data: function(data) {
+                return {
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    q: data.search.value,
+                    platform: jQuery('select.query').val()
+                };
+            },
+            dataSrc: "result"
+        },
+        columns: [
+            {
+                data: function(row) {
+                    return htmlEncode(row['name']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['platform']['name']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['os']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['cpu']) + "核/" + htmlEncode(row['mem']) + "MB";
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['public_addrs']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['private_addrs']);
+                }
+            },
+            {
+                data: function(row) {
+                    var times = [];
+                    if(row['vm_created_time']) {
+                        times.push(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['vm_created_time'])));
+                    }
+
+                    if(row['vm_created_time']) {
+                        times.push(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['vm_expired_time'])));
+                    }
+
+                    return htmlEncode(times.join(" ~ "));
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['status']);
+                }
+            },
+            {
+                data: function(row) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+                    buttons.push('<button class="btn btn-sm btn-secondary btn-control" data-title="确定重启?" data-url="{{ urlfor `VirtualMachineController.Reboot` }}" data-pk=":pk:" data-callback="reload_table">重启</div>');
+                    buttons.push('<button class="btn btn-sm btn-success btn-control" data-title="确定开机?" data-url="{{ urlfor `VirtualMachineController.Start` }}" data-pk=":pk:" data-callback="reload_table">开机</div>');
+                    buttons.push('<button class="btn btn-sm btn-danger btn-control"  data-title="确定关机?" data-url="{{ urlfor `VirtualMachineController.Stop` }}" data-pk=":pk:" data-callback="reload_table">关机</div>');
+                    buttons.push('</div>');
+                    return buttons.join("").replace(/:pk:/g, row['id']);
+                }
+            }
+        ]
+    });
+
+    table.on("draw", function() {
+        if(!jQuery("#buttons").attr("initd")) {
+            jQuery("#buttons").attr("initd", "initd").html('<form><div class="form-group row"><label class="col-4 col-form-label col-form-label-sm text-right">云平台: </label><div class="col-6"><select class="form-control query form-control-sm"></select></div></div></form>');
+            jQuery("select.query").select2({
+                ajax: {
+                    url: '{{ urlfor `CloudPlatformController.List` }}',
+                    data: function (params) {
+                        return {
+                            q: params.term
+                        };
+                    },
+                    processResults: function (response) {
+                        var results = [];
+                        if(response['code'] == 200) {
+                            results.push({
+                                id: -1,
+                                text: "全部"
+                            });
+                            jQuery.each(response["result"], function(index, value) {
+                                results.push({
+                                    id: value['id'],
+                                    text: htmlEncode(value['name'])
+                                });
+                            });
+                        }
+                        return {
+                            results: results
+                        };
+                    }
+                }
+            });
+        }
+    });
+
+    window["reload_table"] = function(response) {
+        table.ajax.reload(null, false);
+    };
+
+    jQuery(document).on("change", "select.query", function() {
+        table.ajax.reload(null, false);
+    });
+
+    setInterval(function() {
+        table.ajax.reload(null, false);
+    }, 10 * 1000);
+});
+</script>

@@ -1,0 +1,105 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var table = jQuery("#table").DataTable({
+        dom:'<"row"<"col-4"l><"#buttons1.col-4"><"#buttons2.col-3">>t<"row"<"col-6"i><"col-6"p>>',
+        serverSide: true,
+        searching: false,
+        ajax: {
+            url : "{{ urlfor `AlarmController.List` }}",
+            data: function(data) {
+                return {
+                    draw: data.draw,
+                    start: data.start,
+                    length: data.length,
+                    startTime: jQuery('input.startTime').val(),
+                    endTime: jQuery('input.endTime').val(),
+                    agent: jQuery('select.query').val()
+                };
+            },
+            dataSrc: "result"
+        },
+        columns: [
+            {
+                data: function(row) {
+                    if(row['alarmed_time']) {
+                        return htmlEncode(jQuery.formatDateTime("yy-mm-dd hh:ii:ss", new Date(row['alarmed_time'])));
+                    }
+                    return "";
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['uuid']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['type']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['content']);
+                }
+            },
+            {
+                data: function(row) {
+                    return htmlEncode(row['status']);
+                }
+            },
+            {
+                data: function(row) {
+                    var buttons = ['<div class="btn-group" role="group">'];
+                    buttons.push('<button class="btn btn-sm btn-info" data-pk=":pk:">处理</div>');
+                    buttons.push('</div>');
+                    return buttons.join("").replace(/:pk:/g, row['id']);
+                }
+            }
+        ]
+    });
+
+    table.on("draw", function() {
+        if(!jQuery("#buttons1").attr("initd")) {
+            jQuery("#buttons1").attr("initd", "initd").html('<form><div class="form-group row"><label class="col-3 col-form-label col-form-label-sm text-right">时间: </label><div class="col-9 input-group input-daterange"><input type="text" class="form-control startTime" datepicker="datepicker" value="" /><div class="input-group-addon"> ~ </div><input type="text" class="form-control endTime" datepicker="datepicker" value="" /></div></div></form>');
+            jQuery("#buttons2").attr("initd", "initd").html('<form><div class="form-group row"><label class="col-3 col-form-label col-form-label-sm text-right">终端: </label><div class="col-9"><select class="form-control query form-control-sm"></select></div></div></form>');
+
+            jQuery("select.query").select2({
+                ajax: {
+                    url: '{{ urlfor `AgentController.List` }}',
+                    data: function (params) {
+                        return {
+                            q: params.term
+                        };
+                    },
+                    processResults: function (response) {
+                        var results = [];
+                        if(response['code'] == 200) {
+                            results.push({
+                                id: -1,
+                                text: "全部"
+                            });
+                            jQuery.each(response["result"], function(index, value) {
+                                results.push({
+                                    id: value['uuid'],
+                                    text: htmlEncode(value['hostname']) + "(" + htmlEncode(value["ip"]) + ")"
+                                });
+                            });
+                        }
+                        return {
+                            results: results
+                        };
+                    }
+                }
+            });
+        }
+    });
+
+
+    jQuery(document).on("changeDate", "input[datepicker]", function() {
+        table.ajax.reload(null, false);
+    });
+    jQuery(document).on("change", "select.query", function() {
+        table.ajax.reload(null, false);
+    });
+});
+</script>

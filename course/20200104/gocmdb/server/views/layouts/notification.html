@@ -1,0 +1,14 @@
+<li class="app-notification__title">新产生告警{{ .alarm.count }}条</li>
+<div class="app-notification__content">
+    {{ range .alarm.list }}
+    <li>
+        <a class="app-notification__item" href="javascript:;">
+            <div>
+                <p class="app-notification__message">{{ .Content }}</p>
+                <p class="app-notification__meta">{{ dateformat .AlarmedTime "15:04:05" }}</p>
+            </div>
+        </a>
+    </li>
+    {{ end }}
+</div>
+<li class="app-notification__footer"><a href="{{ urlfor `AlarmPageController.Index` }}">查看所有告警</a></li>
