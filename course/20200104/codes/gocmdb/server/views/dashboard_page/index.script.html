@@ -1,0 +1,120 @@
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var alarmDistChart = echarts.init(document.getElementById("alarmDist"));
+    var alarmDistOption = option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data:['CPU使用率告警','内存使用率告警', '终端离线告警']
+        },
+        series: [
+            {
+                name:'告警',
+                type:'pie',
+                radius: ['0%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[]
+            }
+        ]
+    };;
+
+    var alarmTrendChart = echarts.init(document.getElementById("alarmTrend"));
+    var alarmTrendOption =  {
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        legend: {
+            data:['CPU(新增)','CPU(正在处理)','CPU(已处理)','内存(新增)','内存(正在处理)','内存(已处理)','终端离线(新增)','终端离线(正在处理)','终端离线(已处理)',]
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : []
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : []
+    };
+
+
+    jQuery.get("{{ urlfor `DashboardController.Stat`}}", function(response) {
+        if(response["code"] != 200) {
+            return;
+        }
+
+        var result = response["result"];
+        jQuery("#offline").text(result["agent_offline_count"]);
+        jQuery("#online").text(result["agent_online_count"]);
+        jQuery("#alarmCount").text(result["alarm_count"]);
+
+
+        var arlamDistData = [];
+        var alarmTypes = {0: "终端离线告警", 1 : "CPU使用率告警", 2:"内存使用率告警"}
+        jQuery.each(result["alarm_dist"], function(k, v) {
+            arlamDistData.push({name: alarmTypes[k], value: v});
+        })
+        alarmDistOption["series"][0]["data"] = arlamDistData;
+
+
+        var alarmTrendData = [];
+        var alarmTypeStatus = {
+            "0-0": '终端离线(新增)', "0-1": '终端离线(正在处理)', "0-2" :'终端离线(已处理)',
+            "1-0": 'CPU(新增)', "1-1": 'CPU(正在处理)', "1-2" :'CPU(已处理)',
+            "2-0": '内存(新增)', "2-1": '内存(正在处理)', "2-2" :'内存(已处理)',
+        }
+        jQuery.each(result["alarm_trend"]["data"], function(k, v) {
+            alarmTrendData.push({
+                name:alarmTypeStatus[k],
+                type:"bar",
+                data: v
+            })
+        });
+
+        alarmTrendOption["xAxis"][0]["data"] = result["alarm_trend"]["days"];
+        alarmTrendOption["series"] = alarmTrendData;
+
+
+        alarmDistChart.setOption(alarmDistOption);
+        alarmTrendChart.setOption(alarmTrendOption);
+
+    }, "json");
+
+
+});
+
+</script>

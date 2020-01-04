@@ -1,0 +1,5 @@
+endpoint: http://localhost:8888/v2/api
+token: abc1234567
+uuidfile: agentd.uuid
+pidfile: agentd.pid
+logfile: logs/agent.log
